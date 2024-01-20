@@ -1,0 +1,65 @@
+%% RML
+
+function [theta, Inn, J, lambda,epsilon] = RML(n_a, n_b, z, u, L)
+nd=2;
+nMax = max(n_a, n_b);
+h = zeros(n_a + n_b, L + nMax);
+s = zeros(L + nMax, 1);
+Inn = zeros(L + nMax, 1); % new information
+K = zeros(n_a + n_b+nd, L + nMax); % gain
+P = ones(n_a + n_b+ nd, n_a + n_b+ nd, L + nMax); % Covariance matrix
+P(:, :, nMax) = eye(n_a + n_b+nd) * 1000;
+theta = ones(n_a + n_b+nd, L + nMax) * 0.0001; % model parameter
+J = zeros(L + nMax, 1); %loss function
+uf = zeros(nMax, 1);  % yf(k-i)输入
+zf = zeros(nMax, 1);  % zf(k-i)输出
+v1 = zeros(nMax, 1);
+v1f = zeros(nMax, 1);
+
+for k = nMax + 1 : L + nMax
+    % 构造数据向量和滤波数据向量
+    for i = 1:n_a
+        h(i, k) = -z(k - i);
+        hf(i, k) = -zf(k - i);
+    end
+    
+    for i = 1:n_b
+        h(n_a + i, k) = u(k - i);
+        hf(n_a + i, k) = uf(k - i);
+    end
+    
+    for i = 1:nd
+       h(n_a + n_b + i, k) = v1(k - i);
+        hf(n_a + n_b + i, k) = v1f(k - i);
+    end
+    
+    % 辨识算法
+    s(k) = hf(:, k)' * P(:, :, k-1) * hf(:, k) + 1.0;
+    Inn(k) = z(k) - h(:, k)' * theta(:, k-1);
+    K(:, k) = P(:, :, k-1) * hf(:, k) / s(k);
+    P(:, :, k) = P(:, :, k-1) - K(:, k) * K(:, k)' * s(k);
+    theta(:, k) = theta(:, k-1) + K(:, k) * Inn(k);
+    
+    % 损失函数
+    J(k) = J(k-1) + Inn(k)^2 / s(k);
+    
+    % 噪声估计
+    v1(k) = z(k) - h(:, k)' * theta(:, k);
+    
+    % 输入、输出和噪声估计滤波值
+    zf(k) = z(k);
+    uf(k) = u(k);
+    v1f(k) = v1(k);
+    for i = 1:nd
+        zf(k) = zf(k) - theta(n_a + n_b + i, k) * zf(k - i);
+        uf(k) = uf(k) - theta(n_a + n_b + i, k) * uf(k - i);
+        v1f(k) = v1f(k) - theta(n_a + n_b + i, k) * v1f(k - i);
+    end
+end
+
+theta = theta(:, nMax+1 : end);
+Inn = Inn(nMax+1 : end);
+lambda = sqrt(J(L + nMax) / L);
+epsilon = z(nMax+1:nMax+L) - h(:, nMax + 1 : nMax + L)' * theta(:, end);
+
+end
