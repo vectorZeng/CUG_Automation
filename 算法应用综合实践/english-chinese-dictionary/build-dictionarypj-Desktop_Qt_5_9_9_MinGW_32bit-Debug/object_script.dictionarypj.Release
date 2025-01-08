@@ -1,0 +1,15 @@
+INPUT(
+./release\form1.o
+./release\form2.o
+./release\form3.o
+./release\hashmap.o
+./release\main.o
+./release\orderedlist.o
+./release\tool.o
+./release\trietree.o
+./release\widget.o
+./release\moc_form1.o
+./release\moc_form2.o
+./release\moc_form3.o
+./release\moc_widget.o
+);

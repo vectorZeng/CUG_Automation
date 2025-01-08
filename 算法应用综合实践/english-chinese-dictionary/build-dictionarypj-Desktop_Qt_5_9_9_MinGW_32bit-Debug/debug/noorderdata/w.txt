@@ -1,0 +1,225 @@
+wade   v.消，跋涉
+wag   v.摇，摆
+wage   n.工资 v.进行
+wagon   n.货车
+waist   n.腰(部)
+wait   v.等候，伺候
+waiter   n.服务员，侍者
+waitress   n.女服务员
+waive   v.放弃(要求、权利)
+wake   v.醒来
+waken   v.唤醒，使觉醒
+walk   v.步行，走 n.散步
+walker   n.步行者，散步者
+wall   n.墙壁
+wallet   n.钱夹
+walnut   n.核桃
+wander   v.徘徊，离题，迷失
+want   v.想要，通辑 n.缺乏
+war   n.战争，斗争
+ward   n.病房，牢房
+wardrobe   n.衣柜
+ware   n.货物
+warehouse   n.仓库，货栈
+warehousing   n.仓储
+warfare   n.战争(状态)
+warm   adj.温暖的，热情的
+warmly   adv.热烈地，热情地
+warmth   n.温暖，暖和，热烈
+warn   v.警告，预先通知
+warning   n.警告
+warrant   n.许可证，正当理由
+warranted   adj.担保的
+warranty   n.担保，保证
+warrior   n.勇士，战士
+warship   n.军舰
+wash   v.洗，冲走
+washing-machine   n.洗衣机
+wasp   n.黄蜂，马蜂
+waste   v.浪费 n.垃圾，废料
+wasteful   adj.浪费的，挥霍的
+watch   v.观看，看过 n.手表
+watchful   adj.注意的，警惕的
+water   n.水 v.浇水，垂涎
+waterfall   n.瀑布
+waterfront   n.水边，滩
+waterproof   adj.防水的
+watertight   adj.不透水的
+watery   adj.水汪汪的，淡的
+watt   n.瓦特
+wave   n.波浪，波 v.挥手
+wavelength   n.波长
+waver   n.晃动，动摇
+waving   adj.波浪状的
+wax   n.蜡 v.打蜡
+way   n.方法，路，方向
+we   pron.我们
+weak   adj.弱的，差的
+weakness   n.弱点，软弱
+wealth   n.财富，丰富
+wealthy   adj.富裕的，富庶的
+weapon   n.武器
+wear   v.穿，戴，磨损，耐久
+weary   adj.疲倦的
+weather   n.天气 v.经受住
+weave   v.编织
+weaver   n.织布工，编织者
+web   n.网，蛛网，圈套
+wedding   n.婚礼
+wedge   n.楔子，起因 v.楔住
+wednesday   n.星期三
+weed   n.杂草 v.除草，清除
+week   n.星期，周，工作周
+weekday   n.工作日
+weekend   n.周末
+weekly   adj.每周的 n.周刊
+weep   v.哭泣，哀悼
+weigh   v.重...，称，权衡
+weight   n.重量，重担，重物
+welcome   adj.受欢迎的 v.欢迎
+weld   v.焊接
+welfare   n.福利
+well   n.井 adv.好，充分
+well-known   adj.有名的，著名的
+west   n.西方 adj.向西的
+western   adj.西的，西方的
+westerner   n.西方人，欧美人
+westward   adj.,adv.向西(的)
+wet   adj.湿的，多雨的
+whale   n.鲸
+whaling   n.捕鲸(业)
+wharf   n.码头，停泊处
+what   pron.什么 adj.什么的
+whatever   pron.无论什么
+wheat   n.小麦
+wheel   n.轮，车轮
+when   adv.何时
+whenever   conj.无论何时
+where   adv.哪里
+whereabouts   n.下落
+whereas   conj.而，却
+whereby   adv.借此
+wherein   adv.在何处
+wherever   adv.无论哪里
+whether   conj.是否，还是...
+which   pron.,adj.哪个，那个
+whichever   pron.无论哪个
+while   n.一会儿 conj.当..时
+whilst   conj.当...时，尽管
+whip   v.抽打，搅 n.鞭子
+whirl   v.,n.旋转，飞转
+whisker   n.络腮胡子
+whisky   n.威士忌洒
+whisper   v.,n.耳语，发飒飒声
+whistle   v.吹哨，鸣笛，啸叫
+white   adj.白的 n.白色,蛋清
+whitewash   v.粉刷，掩饰
+who   pron.谁
+whoever   pron.无论谁
+whole   adj.全部的 n.全部
+wholesale   n.,v.批发
+wholesaler   n.批发商
+wholesaling   n.批发
+wholesome   adj.卫生的
+wholly   adv.完全，一概
+whom   pron.谁(宾格)
+whose   pron.谁的
+why   adv.为什么
+wicked   adj.坏的，不道德的
+wide   adj.宽的，广阔的
+widely   adv.广泛地，非常
+widen   v.加宽，扩大
+widespread   adj.流传广泛的
+widow   n.寡妇
+widower   n.鳏夫
+width   n.宽度
+wield   v.挥动，行使
+wife   n.妻子，夫人
+wild   adj.野生的，狂暴的
+wilderness   n.荒原
+will   v.aux.将，愿 n.意志
+willing   adj.乐意的，自愿的
+willingly   adv.乐意地，自愿地
+willingness   n.乐意，自愿
+willow   n.柳树
+win   v.赢得，成功
+wind   n.风，风声 v.绕
+winding   adj.弯曲的，蜿蜒的
+windmill   n.风车
+window   n.窗户
+windowsill   n.窗台
+windy   adj.刮风的
+wine   n.酒，葡萄酒
+winery   n.酿酒厂
+wing   n.翅膀，翼，派别
+wink   v.眨眼，使眼色
+winner   n.得胜者，获奖者
+winter   n.冬季
+wipe   v.擦，抹掉
+wire   n.金属线，电线
+wireless   adj.,n.无线电
+wisdom   n.智慧，明智
+wise   adj.智慧的，博学的
+wish   v.希望，祝愿，想要
+wit   n.机智，才智
+with   prep.同...一起，用
+withdraw   v.撤消，退出，提款
+withdrawal   n.撤退，取款
+wither   v.枯萎，凋谢，衰弱
+withhold   v.坚持
+within   prep.,adv.在...内
+without   prep.没有，在...外部
+withstand   v.抵挡，顶住
+witness   n.目击者,证人 v.目睹
+witty   adj.机智的，风趣的
+woe   n.悲痛，苦恼
+wolf   n.狼
+woman   n.妇女，女人
+wonder   v.想知道,诧异 n.奇迹
+wonderful   adj.奇妙的，精彩的
+wood   n.木，木材
+wooden   adj.木制的
+woodpecker   n.啄木鸟
+woods   n.树林
+wool   n.羊毛，毛线
+woollen   adj.羊毛的，毛织的
+word   n.字，词，诺言，音讯
+wording   n.措辞
+wordy   adj.冗长的，罗嗦的
+work   n.劳动，工作，作品
+workable   adj.可行的，起作用的
+worker   n.工人
+workman   n.工作者
+workmanship   n.工艺，手艺
+works   n.工厂
+workshop   n.车间，工场，学习班
+world   n.世界，...界，世间
+worldwide   adj.,adv.全世界的
+worm   n.蠕虫，幼虫
+worry   v.,v.烦恼，担心
+worse   adj.更坏的，更差的
+worship   v.,n.崇拜，礼拜
+worst   adj.最坏的，最差的
+worth   n.价值 adj.值...的
+worthless   adj.不值钱的
+worthwhile   adj.值得做的
+worthy   adj.值得的，配...的
+wound   v.受伤 n.伤口，创伤
+wounded   adj.受伤的 n.伤员
+wrap   v.包，裹
+wrapper   n.(饺子)皮，包装用品
+wrath   n.暴怒
+wreath   n.花圈，花环
+wreck   v.毁坏 n.失事
+wrench   v.拧，扭伤 n.扳手
+wrestle   v.,n.摔交，搏斗
+wretched   adj.可怜的，可耻的
+wring   v.拧，扭
+wrinkle   n.皱纹 v.折皱
+wrist   n.腕
+write   v.写，写信，写作
+writer   n.作者，作家
+writing   n.写作
+written   adj.写作的，书面的
+wrong   adj.错误的，有毛病的
+wrongly   adv.错误地，不正当地

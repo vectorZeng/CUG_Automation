@@ -1,0 +1,39 @@
+[System]
+Name='drill'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='e'
+Range=[-20 20]
+NumMFs=5
+MF1='NB':'zmf',[-20 -10]
+MF2='NS':'trimf',[-20 -10 0]
+MF3='ZO':'trimf',[-10 0 10]
+MF4='PS':'trimf',[0 10 20]
+MF5='PB':'smf',[10 20]
+
+[Output1]
+Name='u'
+Range=[-20 20]
+NumMFs=5
+MF1='NB':'zmf',[-20 -10]
+MF2='NS':'trimf',[-20 -10 0]
+MF3='ZO':'trimf',[-10 0 10]
+MF4='PS':'trimf',[0 10 20]
+MF5='PB':'smf',[10 20]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1

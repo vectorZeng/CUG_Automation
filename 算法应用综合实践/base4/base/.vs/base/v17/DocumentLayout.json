@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\code\\c\u002B\u002B\\base4\\base\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|E:\\code\\c\u002B\u002B\\base4\\base\\base\\binary_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|solutionrelative:base\\binary_tree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|E:\\code\\c\u002B\u002B\\base4\\base\\base\\timetable.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|solutionrelative:base\\timetable.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|E:\\code\\c\u002B\u002B\\base4\\base\\base\\max_rect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|solutionrelative:base\\max_rect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|E:\\code\\c\u002B\u002B\\base4\\base\\base\\reverse_k.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D59C046A-A918-41AF-A4A3-298672C5852C}|base\\base.vcxproj|solutionrelative:base\\reverse_k.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "binary_tree.cpp",
+              "DocumentMoniker": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\binary_tree.cpp",
+              "RelativeDocumentMoniker": "base\\binary_tree.cpp",
+              "ToolTip": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\binary_tree.cpp",
+              "RelativeToolTip": "base\\binary_tree.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAF0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-19T08:17:17.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "timetable.cpp",
+              "DocumentMoniker": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\timetable.cpp",
+              "RelativeDocumentMoniker": "base\\timetable.cpp",
+              "ToolTip": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\timetable.cpp",
+              "RelativeToolTip": "base\\timetable.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-19T07:26:02.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "max_rect.cpp",
+              "DocumentMoniker": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\max_rect.cpp",
+              "RelativeDocumentMoniker": "base\\max_rect.cpp",
+              "ToolTip": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\max_rect.cpp",
+              "RelativeToolTip": "base\\max_rect.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-19T05:57:58.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "reverse_k.cpp",
+              "DocumentMoniker": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\reverse_k.cpp",
+              "RelativeDocumentMoniker": "base\\reverse_k.cpp",
+              "ToolTip": "E:\\code\\c\u002B\u002B\\base4\\base\\base\\reverse_k.cpp",
+              "RelativeToolTip": "base\\reverse_k.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-19T02:50:37.099Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

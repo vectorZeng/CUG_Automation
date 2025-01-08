@@ -1,0 +1,404 @@
+table   n.桌子，表格
+tablet   n.药片
+tabulate   v.制表，将...列表
+tack   n.图钉
+tackle   n.用具，辘轳 v.抓住
+tact   n.机敏，圆滑
+tactful   adj.机智的，老练的
+tactics   n.战术，策略
+tag   n.标签，货签
+tail   n.尾巴，尾部
+tailor   n.裁缝 v.缝制
+take   v.拿，带，吃，乘
+take-off   n.起飞
+tale   n.故事
+talent   n.人才，天资
+talk   v.谈话 n.讲话，会谈
+talkative   adj.罗嗦的
+tall   adj.高的
+tally   v.吻合，符合
+tame   v.驯养，制报
+tan   n.黄褐色 v.鞣草
+tangle   v.缠绕，纠缠
+tank   n.油箱，水箱，坦克
+tanker   n.油轮
+tap   v.叩击 n.轻敲
+tape   n.条，带，磁带
+tape-recorder   n.录音机
+tape-recording   n.录音
+tar   n.沥青，柏油
+target   n.目标，对象，靶
+tare   n.皮重
+tariff   n.关税
+task   n.工作，任务
+taste   n.味道，趣味 v.品尝
+tasteful   adj.有滋味的，好吃的
+tax   n.税 v.征税
+taxation   n.税(总称)，税务
+taxi   n.出租汽车
+tea   n.茶，茶叶
+teach   v.教，教书，教导
+teacher   n.教员，老师
+teaching   n.教学，教导
+teacup   n.茶杯
+team   n.小队 v.协同工作
+teapot   n.茶壶
+tear   n.眼泪 v.撕，拔
+tease   v.取笑，逗乐
+technical   adj.技术的，技能的
+technician   n.技术员，技师
+technique   n.技术，技巧
+technological   adj.技术的，工艺的
+technology   n.技术，工艺
+tedious   adj.腻烦的，乏味的
+teenager   n.(十几岁的)少年
+teens   n.十多岁
+telefax   n.传真 v.发传真
+telegram   n.电报
+telegraph   n.电报
+telephone   n.电话 v.打电话
+telescope   n.望远镜
+television   n.电视，电视机
+telex   n.电传 v.发电传
+tell   v.告诉，讲，说出
+teller   n.出纳
+temper   n.情绪，脾气
+temperature   n.温度，体温
+temple   n.庙，寺院，太阳穴
+temporary   adj.暂时的，临时的
+tempt   v.引诱，诱惑
+tempatation   n.诱惑，引诱
+ten   num.十
+tenant   n.房客，承租人
+tend   v.趋向，照料，投标
+tendency   n.趋势，倾向
+tender   n.投标人 adj.温柔的
+tenis   n.网球
+tenor   n.(支票)限期
+tense   adj.紧张的 v.拉紧
+tension   n.紧张状态，张力
+tent   n.帐篷
+tentative   adj.试探性的
+tenth   num.第十，十分之一
+term   n.期限，学期，术语
+terminable   adj.可终止的
+terminal   n.终点 adj.末端的
+terminate   v.终止，结束
+termination   n.终止，结束
+terminology   n.术语(总称)
+terrace   n.平台，台阶
+terrible   adj.可怕的，极度的
+terribly   adv.可怕地，极
+terrific   adj.了不起的，极好的
+terrify   v.惊吓，使恐怖
+territory   n.领土，领域，地区
+terror   n.恐怖，令人恐怖的事
+terrorism   n.恐怖主义
+terrorist   n.恐怖分子
+test   v.,n.测验，试验
+testify   v.证明，证实
+testimony   n.证据
+text   n.正文，课文，原文
+textbook   n.课本，教科书
+textile   n.纺织品
+textual   adj.课文的，正文的
+than   conj.比，除...外
+thank   v.谢谢，感谢
+thankful   adj.感谢的，欣慰的
+thanks   n.感谢 int.谢谢
+thanksgiving day   ]n.感恩节
+that   adj.那,那个 adv.那么
+the   (定冠词)那，这
+theatre   n.剧场，戏剧，舞台
+theatrical   adj.戏剧的
+theft   n.偷盗
+their   adj.他们的，它们的
+them   pron.他(她)们，它们
+theme   n.主题，题目
+themselves   pron.他们、它们自己
+then   adv.当时，然后，那么
+theoretical   adj.理论的
+theory   n.理论，学说
+there   adv.那里，到那里
+thereafter   adv.此后，其后
+thereby   adv.因此，由此
+therefor   adv.为此
+therefore   adv.因而，所以
+therefrom   adv.由此
+therein   adv.在那里，其中
+thereof   adv.及其，由此，它的
+thereon   adv.关于那
+therewith   adv.对此
+thermometer   n.温度计
+these   pron.这些
+thesis   n.论文
+they   pron.他(她)们，它们
+thick   adj.厚的，浓的
+thicken   v.加厚，变浓
+thickness   n.厚，厚度，浓
+thief   n.窃贼，小偷
+thigh   n.大腿
+thin   adj.薄的，瘦的
+thing   n.东西，事情
+think   v.想，相信，认为
+thinking   n.思想
+thinker   n.思想家
+third   num.第三，三分之一
+thirst   n.渴，渴望
+thirsty   adj.渴的，渴望的
+thirteen   num.十三
+thirty   num.三十
+this   adj.,pron.这，这个
+thorn   n.刺，荆棘
+thorough   adj.充分的，彻底的
+thoroughly   adv.充分地，彻底地
+those   pron.,adj.那些
+though   conj.虽然，可是
+thought   n.想法，思想，关怀
+thoughtful   adj.深思的，体贴的
+thoughtless   adj.轻率的，粗心的
+thousand   num.千
+thrash   v.抽打
+thread   n.线，思路
+threat   n.恐吓，威胁
+threaten   v.恐吓，威胁
+three   num.三
+threshold   n.开端，门槛
+thrift   n.节俭
+thrifty   adj.节俭的
+thrill   v.发抖 n.激动
+thriller   n.惊险小说，电影
+thrive   v.兴旺，繁荣
+throat   n.咽喉
+throne   n.王位
+throng   n.一群人 v.挤满
+through   prep.通过，借助
+throughout   prep.贯穿 adv.全部
+throw   v.,n.投，扔，抛
+thrust   v.强推，插入，刺
+thumb   n.拇指
+thumbtack   n.按钉，图钉
+thunder   n.雷 v.隆隆响
+thunderstorm   n.雷雨
+thursday  ]n.星期四
+thus   adv.如此，这样，因而
+tick   n.滴答声 v.打勾号
+ticket   n.票，标签，价目单
+tickle   v.挠，搔，逗乐
+tide   n.潮汐，潮流 v.度过
+tidy   adj.整齐的，整洁的
+tie   v.捆，打结 n.领带
+tie-up   n.(资金)占用，冻结
+tiger   n.虎
+tight   adj.紧的，密封的
+tighten   v.拉紧
+tightly   adv.紧紧地，紧密地
+tigress   n.母虎
+tile   n.瓦，瓷砖
+till   prep.直到
+tilt   v.,n.倾斜
+timber   n.木材
+time   n.时间，时候，次数
+timely   adj.及时的
+timetable   n.时刻表，时间表
+timid   adj.胆怯的，害羞的
+tin   n.锡，锡器
+tiny   adj.微小的
+tip   n.梢，尖，小费
+tiptoe   v.用脚尖走
+tire   v.疲劳，厌倦
+tired   adj.疲劳的，厌倦的
+tiresome   adj.使人厌倦的
+tissue   n.组织，卫生纸
+title   n.标题，题目，称号
+to   prep.向，到
+toad   n.蟾蜍，癞蛤蟆
+toast   n.烤面包，祝酒 v.烘
+tobacco   n.烟草
+today   adv.今天,现在 n.今日
+toe   n.脚趾，鞋头
+together   adv.共同，一起，同时
+toil   v.苦干
+toilet   n.卫生间，便桶
+token   n.象征，纪念章
+tolerable   adj.可容忍的
+tolerance   n.宽容，容忍
+tolerant   adj.宽容的，宽大的
+tolerate   v.容忍，宽容
+toll   n.税
+tomato   n.蕃茄，西红柿
+tomb   n.坟
+tombstone   n.墓碑
+tomorrow   n.明天 adv.在明天
+ton   n.吨
+tone   n.语气，腔调，市况
+tongue   n.舌，语言
+tonight   n.今晚 adv.在今晚
+tonnage   n.吨位，吨数
+tonne   n.公吨
+too   adv.也，非常
+tool   n.工具，手段
+tooth   n.牙齿
+toothache   n.牙疼
+toothbrush   n.牙刷
+toothpaste   n.牙膏
+top   n.顶，盖子 v.高于
+topic   n.课题，主题
+torch   n.火炬，手电筒
+torment   v.,n.折磨，虐待
+torpedo   n.鱼雷
+torrent   n.激流，山洪
+tortoise   n.龟
+torture   v.,n.拷打，折磨
+toss   v.向上扔，颠簸，辗转
+total   adj.总 n.总和，合计
+totally   adv.统统，完全地
+touch   v.碰，接触，触动
+tough   adj.坚韧的，难嚼烂的
+tour   n.,v.旅行，周游
+tourism   n.旅游业
+tourist   n.旅游者，游客
+tow   v.,n.拖，牵引
+toward   prep.向，对于，将近
+towel   n.毛巾
+tower   n.塔 v.高耸
+town   n.市镇，城市，闹市
+toy   n.玩具
+trace   n.痕迹，微量 v.追踪
+track   n.径赛，轨道，路径
+tractor   n.拖拉机
+trade   n.贸易，交换 v.经商
+trader   n.商人
+trademark   n.商标
+tradesman   n.商人
+tradition   n.传统，惯例
+traditional   adj.传统的
+traffic   n.交通，交易，运输
+tragedy   n.悲剧，惨事，灾难
+tragic   adj.悲剧的，悲惨的
+trail   v.拖曳，尾随 n.踪迹
+train   n.列车，一列 v.训练
+trainee   n.受训练者
+trainer   n.教练
+training   n.训练
+traitor   n.叛徒
+tram   n.有轨电车
+tramp   n.跋涉，流浪者
+trample   v.践踏，蹂躏
+tranquil   adj.平静的，安宁的
+transact   v.交易
+transaction   n.交易
+transfer   v.转移，转让
+transferable   adj.可转让的
+transform   v.转变，转化
+transformation   n.转化，转变
+transformer   n.变压器
+transcient   adj.短暂的，瞬时的
+transistor   n.晶体管(收音机)
+transit   v.运输，转运
+transition   n.过渡，转变
+translate   v.翻译
+translation   n.翻译，译文
+translator   n.译音
+transmission   n.传送，播送
+transmit   v.传播，传导，发射
+transparent   adj.透明的
+transplant   v.移植
+transport   v.运送 v.运输
+transportation   n.运输，交通
+transship   v.转运，转船
+transshipment   n.转运
+transverse   adj.横向的，横断的
+trap   n.陷井，圈套 v.诱捕
+traverse   n.,v.横断，横过
+travel   v.旅行，传导
+traveler   n.旅行者
+tray   n.托盘
+tread   v.踩，践踏
+treason   n.谋反，叛国
+treasure   n.财宝，珍宝 v.珍藏
+treasurer   n.司库
+treat   v.对待，医治，论述
+treatment   n.待遇，疗法
+treaty   n.条约
+tree   n.树
+tremble   v.哆嗦，发抖
+tremendous   adj.巨大的，惊人的
+trench   n.沟，壕
+trend   n.走向，趋势
+trial   n.审讯，尝试，试验
+triangle   n.三角(形)
+triangular   adj.三角形的，三方的
+tribe   n.部落
+tribute   n.颂词，献礼
+trick   n.诡计，骗局，伎俩
+trickle   v.滴下，流下
+tricky   adj.巧妙的，狡猾的
+trifle   n.小事，琐事
+trigger   n.扳机 v.触发
+trim   v.修剪，修整
+trip   n.旅行，远足
+triple   adj.三倍的，三重的
+triplicate   n.一式二份
+triumph   n.胜利 v.战胜
+triumphant   adj.得胜的，得意的
+trivial   adj.琐碎的
+trolley   n.手推车，电车
+troop   n.队，军队
+tropic   n.回归线，热带
+tropical   adj.热带的
+trot   v.,n.小跑，快步走
+trouble   n.,v.麻烦
+troublesome   adj.讨厌的，麻烦的
+trousers   n.裤子
+truck   n.卡车，载重汽车
+true   adj.真实的，真正的
+truly   adv.真正地，确实
+trumpet   n.喇叭
+trunk   n.树干，躯干，皮箱
+trust   n.v.委托，信任，信托
+truth   n.真相，真理
+truthful   adj.诚实的，真正的
+try   v.尝试，审讯 n.尝试
+tub   n.浴  缸，木盆
+tube   n.管子，试管
+tuberculosis   n.结核，肺结核
+tuck   v.卷起，塞进
+tuesday   ]n.星期二
+tug   v.,n.用力拖，拖船
+tuition   n.学费
+tulip   n.郁金香
+tumble   v.跌倒，摔跤，打滚
+tumult   n.骚动，暴动，吵闹
+tuna   n.金枪鱼
+tune   n.调子 v.调谐
+tunnel   n.隧道，地道，坑道
+turbine   n.汽轮机，涡轮机
+turbulent   adj.骚动的
+turk   ]n.土耳其人
+turkey   n.火鸡adj.,n.土耳其
+turn   v.转向，旋转 n.轮流
+turning   n.拐角 adj.旋转的
+turnip   n.萝卜
+turnover   n.周转，营业额
+turtle   n.海龟
+tutor   n.辅导教师
+twelfth   num.第十二
+twelve   num.十二
+twentieth   num.第二十
+twenty   num.二十
+twice   adv.两次，两倍
+twig   n.细枝
+twilight   n.黎明，黄昏，微亮
+twin   n.,adj.孪生(的)
+twinkle   v.,n.闪烁，眨眼
+twist   v.拧，扭，搓，歪曲
+two   num.二
+type   n.类型，典型 v.打字
+typewriter   n.打字机
+typhoon   n.台风
+typical   adj.典型的
+typist   n.打字员
+tyranny   n.暴政，暴行
+tyrant   n.暴君，专制
+tyre   n.轮胎

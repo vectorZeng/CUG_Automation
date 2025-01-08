@@ -1,0 +1,397 @@
+baby   n.婴儿，年龄最小的人
+baby-sit   v.(替人)看护小孩
+baby-sitter   n.看护小孩的人
+bachelor   n.单身汉，学士
+back   n.背 adj.背后的
+backbone   n.脊梁骨
+backdate   v.回溯
+background   n.背景，经历
+backing   n.倒退，支持物
+backlog   n.未交付的订货
+backward   adv.向后，逆
+backwardness   n.落后(状态)
+bacon   n.咸肉，熏肉
+bacterium   n.细菌
+bad   adj.坏的，低劣的
+badge   n.徽章
+badly   adv.坏，非常，严重地
+badminton   n.羽毛球
+baffle   v.困扰，难倒
+bag   n.袋子，提包
+baggage   n.行李
+baggy   adj.袋状的
+bait   n.饵，诱饵
+bake   v.烤，烘
+baker   n.面包师
+bakery   n.面包店
+balance   n.平衡，天平，余额
+balcony   n.阳台
+bald   adj.秃的
+ball   n.球，球状物，舞会
+ballet   n.芭蕾舞
+balloon   n.气球
+ballooning   n.热气球飞行运动
+ball-point pen   n.圆珠笔
+ballroom   n.舞厅
+bamboo   n.竹
+bamboo-shoot   n.竹笋
+banana   n.香蕉
+band   n.乐队，带子 v.联合
+bandage   n.绷带
+bandit   n.盗匪，歹徒
+bang   n.,v.砰的一响
+bank   n.岸，银行
+banker   n.银行家
+banking   n.银行业务、金融业
+bankrupt   n.,v.,adj.破产
+banner   n.旗帜，横幅
+banquet   n.宴会
+bar   n.棒，杆，酒吧
+barber   n.理发师
+bare   adj.裸的，直率的
+barely   adv.赤裸裸地
+bargain   n.交易，便宜货
+barge   n.驳船
+bark   n.狗吠，树皮 v.吠
+barn   n.谷仓，牲口棚
+barometer   n.晴雨表，标记
+baron   n.男爵
+baroness   n.男爵夫人，女男爵
+barrel   n.桶，枪(炮)管
+barren   adj.不育的，贫瘠的
+barrier   n.障碍，壁垒
+barter   n.易货贸易
+base   n.基础，基地 v.基于
+baseball   n.棒球
+basement   n.地下室，地窖
+basic   adj.基本的，基础的
+basically   adv.基本上，主要地
+basin   n.盆，盆地
+basis   n.基础，根据
+basket   n.篮子，筐
+basketball   n.篮球
+bat   n.球拍，蝙蝠 v.击打
+bath   n.洗澡，浴室
+bathe   v.洗澡，冲洗
+bathroom   n.浴室，洗手间
+batter   v.打击
+battery   n.电池
+battle   n.战斗，战役
+bay   n.海湾，湾
+bazaar   n.集市
+b.c.   (缩)公元前
+be   v.是，存在
+beach   n.海滩，湖滨
+bead   n.有孔小珠
+beak   n.鸟嘴
+beam   n.梁，射线 v.发光
+bean   n.豆子
+bear   v.负担，忍受，生育
+bearing   n.举止，意义，轴承
+bearish   adj.熊市的
+beast   n.野兽，牲畜
+beat   v.打，击败 n.击打
+beautiful   adj.美丽的，绝妙的
+beauty   n.美，美女
+because   conj.因为，由于
+become   v.变成
+bed   n.床，河床，苗圃
+bedroom   n.卧室
+bee   n.蜜蜂
+beef   n.牛肉
+beer   n.啤酒
+beetle   n.甲虫
+before   prep.在...前面
+beforehand   adv.事先，预先
+beg   v.乞讨，恳求
+beggar   n.乞丐
+begin   v.开始，着手进行
+beginner   n.初学者
+beginning   n.开端，起点
+behalf   n.代表
+behave   v.行为，举动
+behavior   n.行为，举止
+behind   prep.在...后面
+behindhand   adj.落后，事后
+being   n.生物，存在
+belief   n.信仰，信心
+believe   v.相信，认为
+bell   n.钟，铃
+belly   n.肚子
+belong   v.属于
+beloved   adj.敬爱的 n.爱人
+below   adj.,prep.在...下面
+belt   n.带，腰带
+bench   n.长凳，工作台
+bend   v.弯曲，俯身 n.拐弯
+beneath   prep.在...之下
+beneficial   adj.有益的，有利的
+beneficiary   n.受益者
+benefit   n.益处，利益
+benevolence   n.慈悲，捐助
+benevolent   adj.乐善好施的
+bent   adj.弯曲的
+berry   n.浆果
+beside   prep.在...之旁
+besides   adj.而且 prep...之外
+best   adj.最好的
+best-seller   n.畅销书(货)
+best-selling   adj.畅销的
+bestow   v.赠给，授予
+bet   n.,v.打赌
+betray   v.背叛，泄露
+betrayal   n.背叛，暴露
+better   adj.更好的 adv.较好
+better-off   adj.经济情况较好的
+between   prep.在两者之间
+beverage   n.饮料
+beware   v.当心
+bewilder   v.迷惑，茫然
+beyond   prep.在...那边，超出
+bias   n.偏好
+bible   n.圣经
+bicycle   n.自行车
+bid   n.,v.报价，投标
+bidding   n.投标
+big   adj.大的，重大的
+bike   n.自行车
+bill   n.帐单，议案，钞票
+billion   n.十亿
+bind   v.捆绑，约束
+binding   n.装订
+biographer   n.传记记者
+biography   n.传记
+biologist   n.生物学家
+biology   n.生物学
+bird   n.鸟
+birth   n.出生，创始
+birthday   n.生日，诞辰
+birthplace   n.出生地
+biscuit   n.饼干
+bishop   n.主教
+bit   n.小片，一点
+bite   n.,v.咬，叮 n.一口
+bitter   adj.苦的，痛苦的
+bitterly   adv.惨痛地，辛酸地
+bitterness   n.苦味，苦难
+b/l   n.(缩)提单
+black   adj.黑的 n.黑色
+blackboard   n.黑板
+blacksmith   n.铁匠
+blade   n.刀刃，叶片
+blame   v.责备 n.过失
+blank   adj.空白的 n.空格
+blanket   n.毛毯
+blast   n.阵风 v.爆炸
+blaze   n.火光，光亮
+bleach   v.漂白，变白
+bleed   v.出血，流血
+blend   v.混合，掺混
+bless   v.保佑，祝福
+blessing   n.祝福
+blind   adj.瞎的 v.使失明
+blink   adj.眨眼，闪烁
+block   n.大块，街区，障碍物
+blockage   n.封锁
+blond   adj.金发的
+blood   n.血，血统
+bloody   adj.流血的，残忍的
+bloom   n.花 v.开花
+blossom   n.(果树的)花
+blot   n.污迹
+blouse   n.女衫
+blow   v.吹，吹掉，刮风
+blue   adj.蓝色的，忧郁的
+blunder   n.大错
+blunt   adj.钝的，生硬的
+blush   v.脸红，害臊
+blushy   adj.害羞的
+board   n.木板，伙食，董事会
+boarding   n.伙食
+boast   v.夸口，以...而自豪
+boat   n.小船，艇
+body   n.身体，尸体，团体
+bodyguard   n.保镖
+boil   v.沸腾，煮沸
+boiler   n.锅炉
+boiling   adj.沸腾的
+bold   adj.大胆的
+boldness   n.胆略
+bolt   n.螺检，插销 v.闩门
+bomb   n.炸弹 v.轰炸
+bomber   n.轰炸机
+bona fide   adj.真诚的，无欺的
+bond   n.束缚，联结，债券
+bonded   adj.保税的
+bone   n.骨，骨骼
+bony   adj.骨头的
+bonus   n.红利
+book   n.书 v.预订(票)
+booking   adj.定货
+booklet   n.小册子
+bookcase   n.书橱
+bookshelf   n.书架
+bookstore   n.书店
+boom   v.隆隆响，兴旺，繁荣
+booming   adj.兴旺的，繁荣的
+boost   v.抬高，促进
+boot   n.靴子
+booth   n.货摊，电话亭
+border   n.国界，边境
+bore   v.烦扰，使厌烦，钻孔
+boring   adj.讨厌的
+born   adj.出生的，天生的
+borrow   v.借，借用
+borrowings   n.借款
+bosom   n.胸，胸怀
+boss   n.上司，老板
+bossy   adj.好发号施令的
+both   pron.,adj.双方，两
+bother   v.打扰，麻烦 n.麻烦
+bottle   n.瓶子
+bottle-neck   n.影响...的环节
+bottom   n.底部，末尾
+bottom-line   n.末行数字，结果
+bough   n.大树枝
+bounce   v.跳起 n.跳跃
+bound   v.缚，以...为界
+boundary   n.界线，边界
+bourgeois   n.资产阶级分子
+bow   v.鞠躬，服从 n.弓
+bowl   n.碗，钵
+bowling   n.保龄球
+box   n.箱，盒 v.拳击
+boxer   n.拳击运动员
+boxing   n.拳击
+boxing-day   n.节礼日
+boy   n.男孩，小伙子
+boycott   v.,n.抵制
+brace   n.支撑 v.激励
+bracket   n.括号
+brag   v.吹嘘，夸口
+brain   n.脑子，头脑，智能
+brake   n. 制动器 v.刹车
+branch   n.树枝，分支，分部
+brand   n.牌子，商标
+brandy   n.白兰地
+brass   n.黄铜
+brave   adj.勇敢的 v.冒着
+bravely   adv.勇敢地
+bravery   n.勇敢
+brazil   n.巴西
+brazilian   adj.,n.巴西的(人)
+breach   n.违反(契约)
+bread   n.面包，生计
+bread-earner   n.挣钱养家的人
+breadth   n.宽度，大量
+break   n.打破，破坏 n.裂口
+breakage   n.裂口
+breakdown   n.故障，衰竭
+breakthrough   n.突破
+breakfast   n.早饭
+breast   n.乳房，胸脯
+breath   n.呼吸，气息
+breathe   v.呼吸
+breed   v.繁殖，饲养 n.品种
+breeze   n.微风
+bribe   v.贿赂
+bribery   v.贿赂
+brick   n.砖
+bride   n.新娘
+bridegroom   n.新郎
+bridge   n.桥梁，桥牌
+bridle   n.约束 v.抑制
+brief   adj.简短的
+briefing   n.简要情况
+briefly   adv.简单地，简短地
+bright   adj.明亮的，鲜明的
+brighten   v.使发光
+brightness   n.光辉，明亮
+brilliance   n.辉煌，光彩
+brilliant   v.辉煌的，杰出的
+brim   n.边，边缘
+bring   v.拿来，带来
+brink   n.边缘
+brisk   adj.敏捷的，活跃的
+bristle   n.鬃毛
+britain   n.不列颠，英国
+british   adj.英国的，英属的
+brittle   adj.易碎的，脆的
+broad   adj.宽的，辽阔的
+broadcast   v.,n.广播
+broadcasting   n.广播节目
+broaden   v.加宽，扩大
+brochure   n.产品介绍手册
+broken   adj.破碎的，毁坏了的
+broker   n.经纪人
+bronze   n.青铜
+brood   n.一窝
+brook   n.小河，溪流
+broom   n.扫帚
+brother   n.兄弟，同胞
+brotherhood   n.兄弟情谊
+brother-in-law   n.姻兄(弟)
+brow   n.眉毛，额
+brown   n.,adj.褐色(的)
+bruise   n.青肿 v.打伤
+brush   n.刷子，画笔 v.刷
+brutal   adj.野蛮的
+brute   n.禽兽，畜生
+bubble   n.气泡
+bucket   n.水桶
+bud   n.芽，蓓蕾
+buddhism   n.佛教
+buddhist   n.佛教徒
+budget   n.预算
+buffalo   n.水牛，野牛
+buffet   n.冷餐
+bug   n.臭虫，虫子
+bugle   n.喇叭
+build   v.建造，建设
+builder   n.建筑工人，建设者
+building   n.建筑物，大楼
+bulb   n.球形物，灯泡
+bulk   n.体积，大半
+bulky   adj.庞大的，笨重的
+bull   n.公牛
+bullet   n.子弹
+bulletin   n.公报
+bullion   n.金块，金条
+bullish   adj.行情看涨的
+bump   v.碰，颠簸 n.碰撞
+bumpy   adj.颠簸不平的
+bunch   n.一束
+bundle   n.,v.捆，包
+burden   n.担子，负担
+burdensome   adj.沉重的
+bureau   n.局，司，办公室
+bureaucracy   n.官僚主义
+bureaucratic   adj.官僚主义的
+burglar   n.夜盗，窃贼
+burglary   n.盗窃
+burial   n.埋葬
+burn   v.烧，燃烧，烧伤
+burner   n.喷灯
+burnt   adj.烧焦的，烧坏的
+burst   v.,n.爆炸，破裂
+bury   v.掩埋，安葬
+bus   n.公共汽车
+bush   n.灌木
+bushel   n.蒲式耳(重量单位)
+business   n.行业，买卖，商号
+businesslike   adj.事务式的
+busy   adj.忙碌的，热闹的
+but   prep.但是，除了
+butcher   n.屠夫 v.屠宰
+butchery   n.肉食店
+butt   n.根端 v.顶撞
+butter   n.黄油
+butterfly   n.蝴蝶
+button   n.钮扣，按钮
+buy   v.买，购买
+buyer   n.购买者
+buzz   v.嗡嗡叫 n.嗡嗡声
+by   prep.在...旁边，按照
+bygone   n.已往的，过时的
+bypass   n.旁道，分路
+by-product   n.副产品 

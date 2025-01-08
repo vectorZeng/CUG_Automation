@@ -1,0 +1,15 @@
+INPUT(
+./debug\form1.o
+./debug\form2.o
+./debug\form3.o
+./debug\hashmap.o
+./debug\main.o
+./debug\orderedlist.o
+./debug\tool.o
+./debug\trietree.o
+./debug\widget.o
+./debug\moc_form1.o
+./debug\moc_form2.o
+./debug\moc_form3.o
+./debug\moc_widget.o
+);

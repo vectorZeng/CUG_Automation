@@ -1,0 +1,376 @@
+fable   n.寓言
+fabric   n.织物，结构，组织
+fabricate   v.制作，捏造
+fabrication   n.制作，虚构
+face   n.脸，正面 v.面对
+facilitate   v.使便利，使容易
+facility   n.方便，设施，便利
+fact   n.事实，真相
+faction   n.宗派，派别
+factor   n.因素，因数，要素
+factory   n.工厂，制造厂
+faculty   n.本领，学系
+fade   v.褪色，枯萎
+fahrenheit   n.,adj.华氏(的)
+fail   v.失败，不及格，不能
+failing   adj.缺点
+failure   n.失败，疏忽，破产
+faint   adj.软弱的，模糊的
+fair   adj.公平的 n.交易会
+fairly   adj.公平地，相当
+fairy   n.妖精，仙女
+faith   n.信任，信念
+faithful   adj.忠诚的，可靠的
+faithfully   adv.忠诚地
+fake   adj.冒片的 n.冒牌货
+fall   v.落下，跌倒 n.瀑布
+false   adj.假的，假造的
+fame   n.名声，声誉
+familiarity   n.熟悉，相似
+familiar   adj.熟悉的，亲近的
+family   n.家庭，家属
+famine   n.饥荒，饥饿
+famous   adj.著名的
+fan   n.扇子，...迷 v.扇
+fanatic   adj.狂热的，入迷的
+fancy   n.幻想，爱好 v.想象
+fantastic   adj.奇异的，荒谬的
+far   adj.遥远的 adv.远
+fare   n.车费 v.饮食
+farewell   int.再见 adj.告别的
+farm   n.农场，农庄
+farmer   n.农夫，农场主
+farmhand   n.农工，农场工人
+farmhouse   n.农舍
+farming   n.农业，种植业
+farther   adv.较远，更进一步
+fascinate   v.吸引，入迷，蛊惑
+fascination   n.入迷
+fascism   n.法西斯
+fascist   n.法西斯分子
+fashion   n.方式，时髦，时装
+fashionable   adj.流行的，时髦的
+fast   adj.快的 adv.快
+fasten   v.捆紧，钉牢
+fat   n.脂肪 adj.肥胖的
+fatal   adj.致命的
+fate   n.命运，厄运，宿命
+father   n.父亲，神父，始祖
+father-in-law   n.岳父，公公
+fathom   v.领会，推测
+fatigue   n.,v.(使)疲劳
+fault   n.缺点，过失，断层
+faultless   adj.完美的
+faulty   adj.有缺点的
+favor   n.帮助，偏爱 v.宠爱
+favorable   adj.赞成的，有利的
+favorably   adv.有利地，顺利地
+favorite   n.adj.最喜爱的人或物
+fbi   國際刑警
+fear   n.,v.害怕，担忧
+fearful   adj.可怕的，吓人的
+fearless   adj.毫不畏惧的
+feasibility   n.可行性
+feasible   adj.可行的，做得到的
+feast   n.,v.宴会，宴请
+feat   n.功绩
+feather   n.羽毛
+feature   n.相貌，特征，特写
+february   n.二月
+federal   adj.联邦的
+federation   n.联邦
+fee   n.费用，酬金
+feeble   adj.虚弱的，无力的
+feed   v.喂养，吃东西
+feedback   n.反馈
+feel   v.感到，摸，意识到
+feeling   n.知觉，感觉，感情
+fell   v.砍到
+fellow   n.家伙，同事
+fellowship   n.交情，会员资格
+female   adj.女性的，雌的
+feminine   adj.女性的，妇女的
+fence   n.围栏，篱笆
+ferocious   adj.凶猛的，野蛮的
+ferrous   adj.铁的，含铁的
+ferry   n.渡船 v.渡运
+ferryboat   n.渡船
+fertile   adj.肥沃，多产的
+fertilizer   n.肥料，化肥
+fervent   adj.强烈的，热烈的
+festival   n.节日 adj.喜庆的
+fetch   v.去取来，去请来
+feud   n.纠纷，封地
+feudal   adj.封建的
+feudalism   n.封建主义
+fever   n.发烧，狂热
+few   adj.少的 n.少数
+fiber   n.纤维，质地
+fiction   n.小说，虚构
+fictional   adj.虚构的
+fiddle   n.提琴
+field   n.田野，战场，场
+fierce   adj.凶猛的，猛烈的
+fiery   adj.火的
+fifteen   num.十五
+fifth   num.第五，五分之一
+fifty   num.五十
+fig   n.无花果
+fight   v.打仗，战斗，作斗争
+fighter   n.战士
+figurative   adj.比喻的，修饰的
+figure   n.数字，图形，人物
+file   n.档案，纵列，锉刀
+filing   n.档案管理
+fill   v.装满，充满，补缺
+filling   n.充填物，馅
+film   n.胶片，电影，薄膜
+filter   n.滤器 v.过滤
+filth   n.污秽，污物
+filthy   adj.污秽的
+final   adj.最终的 n.决赛
+finalize   v.落实，定下来
+finally   adv.最终，终于
+finance   n.金融 v.资助
+financial   adj.金融的，财政的
+financier   n.金融家
+financing   n.金融业，财政学
+find   v.寻找，找到，发现
+finding   n.发现，发现物
+fine   adj.好的，精细的
+finger   n.手指
+finish   v.,n.结束，抛光
+finished   adj.制成的
+finite   adj.有限的，限定的
+fir   n.裘皮
+fire   n.火，火灾 v.开火
+fire-engine   n.消防车
+fireman   n.消防队员
+fireplace   n.壁炉
+firework   n.焰火
+firm   adj.坚固的 n.商号
+firmly   adv.坚定地，坚固地
+firmness   n.坚定，坚固
+first   adj.第一的 adv.首先
+first-rate   adj.第一流的
+fish   n.鱼 v.捞取，探听
+fisherman   n.渔夫
+fishery   n.渔业
+fission   n.裂变，分裂
+fist   n.拳头
+fit   adj.适合的，健康的
+fitness   n.适合，健康
+fitting   adj.适当的
+five   num.五
+fix   v.固定，确定，修理
+fixed   adj.固定的，已确定的
+fixture   n.固定物，固定装置
+flag   n.旗
+flake   n.片，片状物
+flame   n.火焰，热情
+flank   n.侧面，胁腹
+flannel   n.法兰绒
+flap   v.拍打 n.垂下物
+flare   v.,n.闪烁
+flash   n.,v.闪光，闪现
+flask   n.瓶，烧瓶
+flat   adj.平的，平淡的
+flatten   v.弄平，变平
+flatter   v.奉承，谄媚
+flavor   n.滋味，风趣
+flaw   n.裂缝，瑕疵，缺点
+flee   v.逃走，消散
+fleece   n.羊毛
+fleet   n.船队
+flesh   n.肌肉，骨肉，果肉
+fleshy   adj.肉的
+flexibility   n.柔韧，灵活性
+flexible   adj.柔韧的，灵活的
+flicker   v.闪烁
+flight   n.飞，航班，逃走
+fling   v.抛，掷
+float   v.浮，漂 n.彩车
+flock   n.群 v.群集
+flood   n.洪水，大量
+floor   n.地板，(楼)层
+flour   n.面粉
+flourish   v.茂盛，兴旺
+flow   v.流动 n.流动，流量
+flower   n.花，盛期
+flu   n.流感
+fluctuate   v.波动，起伏
+fluctuation   n.波动
+fluency   n.流利，流畅
+fluent   adj.流利的
+fluid   n.液体 adj.流动的
+flush   v.(脸)发红 n.红晕
+flute   n.长笛，笛子
+flutter   v.飘动，振翼
+flux   n.流动，变迁
+fly   v.飞，驾机 n.苍蝇
+foam   n.泡沫 v.起泡
+fob   (缩)离岸价
+focus   n.焦点，中心 v.集中
+fodder   n.饲料
+foe   n.敌人，宿敌
+fog   n.雾，翳
+foggy   adj.有雾的，雾蒙蒙的
+fold   v.折叠 n.折痕
+foliage   n.叶子(总称)
+folk   n.人们，乡亲，亲属
+follow   v.跟随，听懂，遵循
+follower   n.追随者，信徒
+following   adj.下列的，其次的
+follow-up   n.,adj.后续(的)
+fond   adj.喜爱..的，慈爱的
+food   n.食物，食粮
+foodstuff   n.食品
+fool   n.蠢人，傻瓜 v.愚弄
+foolish   n.愚蠢的，笨的
+foot   n.脚，英尺，最下部
+football   n.足球
+footing   n.立足点，立场
+footstep   n.足迹，脚步声
+for   prep.给，作...用的
+forbid   v.禁止，不许
+forbidden   adj.禁止的
+force   n.力，力量 v.强迫
+fore   adj.前面的adv.在前面
+forecast   n.,v.预测，预报
+forefather   n.祖先，先辈
+forefinger   n.食指
+foregoing   adj.先行的，上述的
+forehead   n.前额
+foreign   adj.外国的，对外的
+foreigner   n.外国人，异乡人
+foreman   n.领班
+foremost   adj.最初的，第一流的
+foresee   v.预见，预知
+forest   n.森林
+forestry   n.林业
+foretell   v.预告，预言
+forever   adv.永远，总是
+forge   v.打铁，锻造，伪造
+forgery   n.锻炉，锻造厂
+forget   v.忘记，疏忽，没想到
+forgive   v.饶恕，原谅，豁免
+fork   n.餐叉，岔口
+form   n.形状，类型，表格
+formal   adj.形式上的，正式的
+formality   n.礼节，正式
+format   n.格式，样式
+formation   n.形成，构成
+former   adj.以前的，前者
+formerly   adv.从前，以前
+formidable   adj.可怕的，难对付的
+formula   n.公式
+formulate   v.系统阐述
+formulation   n.确切表述
+forsake   v.遗弃，抛弃
+fort   n.堡垒，要塞
+forth   adv.向前，向外
+forthcoming   adj.即将到来的
+fortitude   n.坚毅
+fortnight   n.两星期
+fortress   n.堡垒，城堡
+fortuity   n.偶然事件
+fortunate   adj.幸运的，侥幸的
+fortunately   adv.幸运地，幸而
+fortune   n.运气，财富
+forty   num.四十
+forum   n.讨论会，座谈会
+forward   adj.向前的 adv.向前
+fossil   n.化石，守旧者
+foster   v.养育，抚养
+foul   adj.肮脏的，邪恶的
+found   v.创办，使有根据
+foundation   n.建立，基金，基础
+founder   n.创办人，奠基人
+fountain   n.泉，源泉，喷泉
+four   num.四
+fourteen   num.十四
+fourth   num.第四，四分之一
+fowl   n.家禽，鸡，禽肉
+fox   n.狐狸，狡猾的人
+fraction   n.片断，分数
+fractional   adj.零碎的，不足的
+fracture   n.断裂 v.折断
+fragile   adj.易碎的，脆的
+fragment   n.碎片，片断
+fragrance   n.芬芳，香气
+fragrant   adj.香的，芬芳的
+frail   adj.脆弱的，虚弱的
+frame   n.框架，骨骼 v.构造
+framework   n.构架，机构
+france   n.法国
+franchise   n.特许权
+frank   adj.坦率的，真诚的
+frankly   adv.坦率地
+free   adj.自由的，空闲的
+freedom   n.自由，免除
+freely   adv.自由地，随意地
+freeze   v.结冰，楞住，冻结
+freezer   n.冷冻箱
+freight   n.货运，货物，运费
+french   adj.法国的 n.法语
+frenchman   n.法国人
+frequency   n.频繁，频率
+frequent   adj.频繁的，经常的
+frequently   adv.时常，往往
+fresh   adj.新鲜的，崭新的
+freshen   v.使新鲜，使振作
+freshman   n.新人，新生
+fret   v.使烦恼 n.烦燥
+friction   n.摩擦，摩擦力
+friday   n.星期五
+friend   n.朋友
+friendly   adj.友好的，和气的
+friendship   n.友谊，友好
+fright   n.恐怖，惊吓
+frighten   v.惊吓，吓唬
+frightening   adj.令人害怕的
+frightful   adj.可怕的
+fringe   n.边缘，花边，穗子
+frock   n.女上衣，童上装
+frog   n.蛙
+from   prep.自，从...来
+front   n.正面，前线 v.面对
+frontier   n.边界，国境，新领域
+frost   n.霜，霜冻
+frosty   adj.霜的
+frown   v.皱眉头，厌恶
+frugal   adj.节俭的
+fruit   n.果子，水果，成果
+fruitful   adj.果实累累的
+frustrate   v.阻挠，使灰心
+frustration   n.挫折，灰心
+fry   v.油煎，炸
+frying-pan   n.煎锅
+fuck   渾蛋，辱駡
+fuel   n.燃料
+fulfil   v.完成，满足要求
+fulfillment   n.完成，成就
+full   adj.满的，完全的
+fully   adv.完全，彻底
+fumble   v.摸索
+fun   n.娱乐，玩笑，乐趣
+function   n.作用，集会，函数
+functional   adj.功能的
+fund   n.基金，资金，蕴藏
+fundamental   adj.基本的，根本的
+funeral   n.葬礼
+funny   adj.有趣的，好笑的
+fur   n.毛皮，裘衣
+furious   adj.狂怒的，狂暴的
+furnace   n.熔炉
+furnish   v.供应，装备，摆家具
+furniture   n.家具(总称)
+furrow   n.犁沟
+further   adv.更远，进一步
+furthermore   adv.而且
+fury   n.狂暴，狂怒
+fuse   n.保险丝，导火线
+fuss   n.忙乱，大惊小怪的
+fussy   adj.爱大惊小怪的
+future   n.将来，前途
+futures   n.期货

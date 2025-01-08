@@ -1,0 +1,45 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[付蒙(2019)]{付蒙}
+付蒙.
+\newblock
+  钻柱系统非线性振动机理分析及控制方法研究\allowbreak[D].
+\newblock 西北工业大学, 2019.
+
+\bibitem[吴永强(2019)]{吴永强}
+吴永强.
+\newblock
+  抑制钻机粘滑振动和钻头反弹的建模与控制\allowbreak[D].
+\newblock 西安石油大学, 2019.
+
+\bibitem[巩全成(2016)]{巩全成}
+巩全成.
+\newblock
+  钻柱粘滑振动非线性特征分析与鲁棒控制研究\allowbreak[D].
+\newblock 西北工业大学, 2016.
+
+\bibitem[许帅(2020)]{许帅}
+许帅.
+\newblock 钻柱粘滑振动的机理分析及其抑制的研究\allowbreak[D].
+\newblock 西安石油大学, 2020.
+
+\bibitem[Cheng et~al.(2018)Cheng, Wu, and Chen]{chengjun}
+CHENG J, WU M, CHEN L.
+\newblock Observer-based tracking control for suppressing stick-slip vibration
+  of drillstring system\allowbreak[C/OL]//\allowbreak
+2018 37th Chinese Control Conference (CCC).
+\newblock 2018: 10254-10258.
+\newblock DOI: \doi{10.23919/ChiCC.2018.8483801}.
+
+\end{thebibliography}

@@ -1,0 +1,5 @@
+﻿  binary_tree.cpp
+E:\code\c++\base4\base\base\binary_tree.cpp(34,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\code\c++\base4\base\base\binary_tree.cpp(101,36): error C2014: preprocessor command must start as first nonwhite space
+E:\code\c++\base4\base\base\binary_tree.cpp(102,5): error C2062: type 'double' unexpected
+E:\code\c++\base4\base\base\binary_tree.cpp(105,58): error C2065: 'target2': undeclared identifier

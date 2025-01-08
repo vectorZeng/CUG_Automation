@@ -1,0 +1,249 @@
+lab   n.(缩)实验室
+label   n.标签 v.标明
+laboratory   n.实验室
+labor   n.劳动，劳动力
+laborer   n.劳工，劳动者
+labor-intensive   adj.劳动密集型的
+lace   n.花边，鞋带
+lack   v.,n.缺少
+lad   n.少年，小伙子
+ladder   n.梯子，阶梯
+lady   n.女士，贵妇人，夫人
+lag   v.,n.落后，滞后
+lake   n.湖，湖泊
+lamb   n.羔羊，小羊肉
+lame   adj.跛的，站不住脚的
+lamp   n.灯
+land   n.陆地，土地 v.着陆
+landed   adj.卸货的
+landing   n.楼梯平台，着陆
+landlady   n.女房东
+landlord   n.房东，地主
+landscape   n.风景(画)，地形
+lane   n.小巷，跑道，行车道
+langkap   冷甲(馬來西亞,霹靂洲内一地方名)
+language   n.语言
+lantern   n.灯笼
+lap   n.膝盖
+lapse   v.(时间)流失
+large   adj.大的，巨大的
+largely   adv.大部分，基本上
+lark   n.云雀，百灵鸟
+laser   n.激光
+last   adj.最后的 adv.上次
+lasting   adj.持久的，持续的
+late   adj.迟到的，晚的
+lately   adv.近来，最后
+latent   adj.潜伏的，潜在的
+later   adv.更晚，以后，过后
+lateral   adj.横向的，侧向的
+lathe   n.车床
+latin   n.,adj.拉丁语(的)
+latitude   n.纬度，活动余地
+latter   adj.后面的，后者的
+lattice   n.结构，点阵
+laugh   v.笑，嘲笑
+laughter   n.笑，笑声
+launch   v.发射，发动，开始
+laundry   n.洗衣店，送洗的衣物
+lavatory   n.盥洗室，厕所
+law   n.法律，定律
+lawful   adj.合法的，法律的
+lawn   n.草地，草坪
+lawyer   n.律师，法学家
+lay   v.放，安排，打基础
+layday   n.装卸日期
+layer   n.层，层次
+layout   n.设计，规划，图案
+laziness   n.懒惰
+lazy   adj.懒惰的
+l/c   n.(缩)信用证
+lead   v.引导，领先，率领
+leader   n.领导，领袖
+leadership   n.领导
+leading   adj.领先的，一流的
+leaf   n.叶子，页
+leaflet   n.传单，单页宣传品
+league   n.同盟，协会
+leak   v.漏，泄漏
+leakage   n.渗漏
+lean   v.俯身，倚 adj.瘦的
+leap   v.,n.跳跃 adj.闰年的
+learn   v.学习，获悉
+learned   adj.有学问的
+learner   n.学习者，学生
+learning   n.学问，学习
+lease   v.租凭，出租 n.租约
+least   adj.最少的
+leather   n.皮革 adj.皮革制的
+leave   v.出发，离开 n.休假
+lecture   n.,v.演讲，讲课
+lecturer   n.演讲者，讲师
+leeway   adj.活动余地
+left   adj.左的 adv.向左
+left-handed   adj.左手的，左侧的
+leftover   n.剩余物
+leg   n.腿，裤脚
+legal   adj.合法的，法律的
+legend   n.传说，传奇
+legendary   adj.传说的，传奇的
+legislation   n.立法，法规
+legitimate   adj.合法的，合理的
+legitimation   n.合法
+leisure   n.闲暇，闲空
+lemon   n.柠檬
+lemonade   n.柠檬汽水
+lend   v.出借，贷款
+lending   n.贷款，借款
+length   n.长度，期限
+lengthen   v.延长，变长
+leninism   n.列宁主义
+lens   n.透镜，镜片，晶体
+leopard   n.豹
+less   adj.更少的 adv.较小
+lessen   v.减少，变小，变弱
+lesson   n.功课，课程，教训
+lest   prep.唯恐，以免
+let   v.让，使
+letter   n.字母，信，函件
+level   n.水平，级 v.弄平
+lever   n.杠杆
+levy   v.征税 n.关税
+liability   n.责任，义务，债务
+liable   adj.有责任的
+liar   n.说谎者
+liberal   adj.思想开放的
+liberate   v.解放，释放，使自由
+liberation   n.解放
+liberty   n.自由
+librarian   n.图书管理员
+library   n.图书馆，藏书
+license   n.许可(证)，执照
+lick   v.舔
+lid   n.盖，脸
+lie   v.躺，位于 v.,n.说谎
+lieutenant   n.中尉，副职
+life   n.生活，生命，一生
+lifetime   n.一生
+lift   v.举起，吊 n.电梯
+light   n.光，灯 adj.明亮的
+lighten   v.发亮，使...愉快
+lighter   n.打火机
+lighthouse   n.灯塔
+lightly   adv.轻轻地，轻易地
+lightning   n.闪电
+like   v.喜欢 prep.像
+likelihood   n.可能，相似性
+likely   adj.可信的adv.很可能
+likeness   n.相像，类似
+likewise   adv.同样，照样
+liking   n.兴趣，嗜好
+lily   n.百合，睡莲
+limb   n.肢，树枝
+lime   n.石灰
+limestone   n.石灰岩
+limit   n.界限，限度 v.限制
+limitation   n.限制，局限
+limited   adj.有限的，限定的
+limousine   n.豪华轿车
+limp   adj.柔软的 v.跛行
+line   n.行，线条，界线
+linear   adj.线性的，线状的
+linen   n.亚麻(织物)
+liner   n.班轮，班机
+linger   v.徘徊，逗留，拖延
+linguist   n.语言学者
+linguistics   n.语言学
+lining   n.夹里，衬里
+link   v.联系，连结 n.纽带
+lion   n.狮子
+lioness   n.母狮子
+lip   n.嘴唇
+lipstick   n.口红，唇膏
+liquid   n.液体 adj.液体的
+liquor   n.烈性酒
+list   n.表，名单 v.列表
+listen   v.听，听从
+listener   n.听者
+literacy   n.识字
+literal   adj.字面的，不夸张的
+literally   adv.简直，字面上
+literary   adj.文学的
+literate   n.有文化的
+literature   n.文学，文献
+litre   n.公升
+litter   v.乱丢废物 n.废物
+little   adj.小的，一点，少的
+live   v.居住,生存 adj.活的
+livelihood   n.生活
+lively   adj.活跃的，热闹的
+liver   n.肝
+livestock   n.牲畜
+living   adj.活着的 n.生计
+living-room   n.客厅，起居室
+load   n.负载，负担 v.装载
+loaf   n.面包 v.游荡
+loan   n.贷款 v.出借
+lobby   n.前厅 v.游说
+lobster   n.龙虾
+local   adj.地方的，当地的
+locality   n.地点，现场
+locate   v.找出，确定地点
+location   n.地点，位置
+lock   v.锁上 n.锁，绺
+lock-up   n.锁，固定资本
+locomotive   n.火车头，机车
+locust   n.蝗虫
+lodge   v.寄宿
+lodging   n.住处，住房
+lofty   adj.崇高的，高耸的
+log   n.原木，航海日志
+logic   n.逻辑，论理学
+logical   adj.逻辑的
+loneliness   n.孤独，寂寞
+lonely   adj.孤独的，寂寞的
+lonesome   adj.寂寞的
+long   adj.长的 adv.长久
+longevity   n.长寿
+longing   n.渴望，思慕
+longitude   n.经度，经线
+long-term   adj.长期的
+look   v.看，看上去 n.外表
+loom   v.隐隐出现 n.织布机
+loop   n.环，回路 v.环绕
+loose   adj.松的，自由自在的
+loosen   v.解开，放松
+lord   n.君主，贵族，上帝
+lorry   n.卡车，载重汽车
+lose   v.失去，丢失，输
+loss   n.丧失，失利，损失
+lost   adj.失去的
+lot   n.许多，地 adv.相当
+lottery   n.抽彩，抓阄，彩票
+loud   adj.响亮的，大声的
+loudness   n.响亮
+loudspeaker   n.扬声器，扩音器
+lounge   n.休息室
+lovable   adj.可爱的
+love   v.爱，喜欢 n.爱情
+lovely   adj.好看的，可爱的
+lover   n.爱人，情人，爱好者
+low   adj.低的，低廉的
+lower   v.降低，减弱
+loyal   adj.忠诚的，忠贞的
+loyalty   n.忠诚，忠贞
+lubricate   v.润滑
+lubrication   n.润滑
+luck   n.运气，幸运
+lucky   adj.幸运的
+luggage   n.行李
+lumber   n.木材，木料
+luminous   adj.发光的，明晰的
+lump   n.块，肿块
+lumpsum   n.总数
+lunar   adj.月亮的，阴历的
+lunch   n.午饭，便餐
+luncheon   n.午餐，午宴
+lung   n.肺
+luxurious   adj.豪华的，奢侈的
+luxury   n.奢侈(品)
