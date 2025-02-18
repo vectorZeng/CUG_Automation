@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sortstu</class>
+ <widget class="QDialog" name="sortstu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/images/纯色.gif);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="text">
+    <string>统计和排序</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>0</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/可可排序.gif);</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>1141</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,2,1,1">
+      <item>
+       <widget class="QComboBox" name="sortwhat">
+        <item>
+         <property name="text">
+          <string>选择就读状况</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>小学生</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>中学生</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>大学生</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="sortway">
+        <item>
+         <property name="text">
+          <string>请先选择前一项</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="sortflag">
+        <item>
+         <property name="text">
+          <string>升序</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>降序</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sortbtn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>排序</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,13">
+      <item>
+       <widget class="QTableView" name="tableView3"/>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>610</y>
+     <width>531</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1,1,1">
+      <item>
+       <widget class="QLabel" name="sumShow1">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;黑体&quot;;
+color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>XXX</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>人数为</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="sumShow2">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;黑体&quot;;
+color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string>XX</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;黑体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>人，统计信息如下</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableView" name="tableView2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>670</y>
+     <width>911</width>
+     <height>111</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>widget</zorder>
+  <zorder>label</zorder>
+  <zorder>layoutWidget_2</zorder>
+  <zorder>tableView2</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>sortbtn</tabstop>
+  <tabstop>sortwhat</tabstop>
+  <tabstop>sortway</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/下载.jpg</file>
+        <file>images/唐可可.gif</file>
+        <file>images/皮卡丘纵.gif</file>
+        <file>images/纯色.gif</file>
+        <file>images/七海.gif</file>
+        <file>images/可可喇叭.gif</file>
+        <file>images/可可排序.gif</file>
+        <file>images/生气鲨鱼.gif</file>
+    </qresource>
+</RCC>

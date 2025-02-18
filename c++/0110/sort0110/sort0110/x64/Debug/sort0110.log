@@ -1,0 +1,3 @@
+﻿  sort0110.cpp
+E:\filereceive\c++\0110\sort0110\sort0110\sort0110.cpp(205,13): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  sort0110.vcxproj -> E:\filereceive\c++\0110\sort0110\x64\Debug\sort0110.exe

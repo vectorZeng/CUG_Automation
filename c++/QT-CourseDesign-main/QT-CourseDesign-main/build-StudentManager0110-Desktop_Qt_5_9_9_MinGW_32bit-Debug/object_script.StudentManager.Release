@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\addstu.o
+./release\querystu.o
+./release\sortstu.o
+./release\changestu.o
+./release\qrc_images.o
+./release\moc_mainwindow.o
+./release\moc_addstu.o
+./release\moc_querystu.o
+./release\moc_sortstu.o
+./release\moc_changestu.o
+);

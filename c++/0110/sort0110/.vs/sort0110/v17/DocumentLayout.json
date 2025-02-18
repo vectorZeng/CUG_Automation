@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\sort0110.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|solutionrelative:sort0110\\sort0110.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|solutionrelative:sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{78FFC9D6-B491-4E28-96B1-7A0D5C3A5081}|sort0110\\sort0110.vcxproj|solutionrelative:sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt",
+              "DocumentMoniker": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt",
+              "RelativeDocumentMoniker": "sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt",
+              "ToolTip": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt",
+              "RelativeToolTip": "sort0110\\\u6570\u5B66\u7269\u7406\u82F1\u8BED.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-11T01:34:46.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt",
+              "DocumentMoniker": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt",
+              "RelativeDocumentMoniker": "sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt",
+              "ToolTip": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt",
+              "RelativeToolTip": "sort0110\\\u5BFC\u8BBAC\u8BED\u8A00\u601D\u4FEE.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-11T01:34:45.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sort0110.cpp",
+              "DocumentMoniker": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\sort0110.cpp",
+              "RelativeDocumentMoniker": "sort0110\\sort0110.cpp",
+              "ToolTip": "E:\\filereceive\\c\u002B\u002B\\0110\\sort0110\\sort0110\\sort0110.cpp",
+              "RelativeToolTip": "sort0110\\sort0110.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T12:06:22.414Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

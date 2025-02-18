@@ -1,0 +1,7 @@
+﻿  sort0110.cpp
+E:\filereceive\c++\0110\sort0110\sort0110\sort0110.cpp(205,13): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 222 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  sort0110.vcxproj -> E:\filereceive\c++\0110\sort0110\x64\Release\sort0110.exe
