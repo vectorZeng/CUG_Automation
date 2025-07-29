@@ -4,18 +4,18 @@
 \contentsline {section}{\numberline {2}钻柱粘滑振动的机理分析}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}钻柱系统的组成及工作原理}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}钻柱粘滑振动的机理分析}{3}{subsection.2.2}%
-\contentsline {section}{\numberline {3}钻柱系统的建模}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}钻柱系统的结构简化}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}钻柱系统动力学建模}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}钻柱系统仿真模型的建立}{10}{subsection.3.3}%
-\contentsline {section}{\numberline {4}钻柱系统仿真实验}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}未加控制的钻柱模型}{13}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Simulink仿真}{13}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}用ode函数的求解比较}{15}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}状态观测器控制的钻柱模型}{17}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}PID控制的钻柱模型}{19}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}单神经元PID控制}{21}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}控制效果对比}{22}{subsection.4.5}%
-\contentsline {section}{\numberline {5}总结}{23}{section.5}%
-\contentsline {section}{附录 \numberline {A}文件列表}{26}{appendix.1.A}%
-\contentsline {section}{附录 \numberline {B}代码}{26}{appendix.1.B}%
+\contentsline {section}{\numberline {3}钻柱系统的建模}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}钻柱系统的结构简化}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}钻柱系统动力学建模}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}钻柱系统仿真模型的建立}{11}{subsection.3.3}%
+\contentsline {section}{\numberline {4}钻柱系统仿真实验}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}未加控制的钻柱模型}{14}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Simulink仿真}{14}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}用ode函数的求解比较}{16}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}状态观测器控制的钻柱模型}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}PID控制的钻柱模型}{20}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}单神经元PID控制}{22}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}控制效果对比}{23}{subsection.4.5}%
+\contentsline {section}{\numberline {5}总结}{24}{section.5}%
+\contentsline {section}{附录 \numberline {A}文件列表}{27}{appendix.1.A}%
+\contentsline {section}{附录 \numberline {B}代码}{27}{appendix.1.B}%

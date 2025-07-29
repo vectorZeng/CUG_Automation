@@ -6,6 +6,7 @@
 \usepackage{fontspec}
 \usepackage{setspace}
 \setstretch{1.5} % 设置全局行距为1.5倍
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 
 \usepackage{enumitem} % 载入enumitem包以便自定义列表环境
 \setlist[itemize]{itemsep=0pt, parsep=0pt} % 设置itemize环境的项目间距和段落间距
@@ -173,6 +174,63 @@
 	\end{table}
 	
 	\fi
+	
+
+	\begin{algorithm*}[H]
+		\caption{钻进参数推荐控制逻辑（简化版）}
+		\KwIn{cluster: 当前地层硬度聚类（1:软, 2:中, 3:硬）\\
+			\hspace{2.5em}kr: 当前给进阻尼}
+		\KwOut{set\_speed: 推荐给进速度\\
+			\hspace{2.5em}set\_rpm: 推荐转速}
+		
+		\If{cluster == 1}{
+			set\_speed $\gets$ 13， set\_rpm $\gets$ 160\;
+			\If{kr $<$ 1.0}{
+				set\_speed $\gets$ set\_speed + 2，set\_rpm $\gets$ set\_rpm + 10\;
+				
+			}
+			\ElseIf{kr $<$ 3.0}{
+				set\_speed $\gets$ set\_speed + 1，
+				set\_rpm $\gets$ set\_rpm + 5，
+			}
+			\Else{
+				set\_speed $\gets$ set\_speed - 1，
+				set\_rpm $\gets$ set\_rpm - 5，
+			}
+		}
+		\ElseIf{cluster == 2}{
+			set\_speed $\gets$ 10，
+			set\_rpm $\gets$ 150\;
+			\If{kr $<$ 1.0}{
+				set\_speed $\gets$ set\_speed + 2，
+				set\_rpm $\gets$ set\_rpm + 10，
+			}
+			\ElseIf{kr $<$ 3.0}{
+				set\_speed $\gets$ set\_speed + 1，
+				set\_rpm $\gets$ set\_rpm + 5，
+			}
+			\Else{
+				set\_speed $\gets$ set\_speed - 1，
+				set\_rpm $\gets$ set\_rpm - 5，
+			}
+		}
+		\ElseIf{cluster == 3}{
+			set\_speed $\gets$ 8，
+			set\_rpm $\gets$ 140\;
+			\If{kr $<$ 1.0}{
+				set\_speed $\gets$ set\_speed + 2，
+				set\_rpm $\gets$ set\_rpm + 10\;
+			}
+			\ElseIf{kr $<$ 3.0}{
+				set\_speed $\gets$ set\_speed + 1，
+				set\_rpm $\gets$ set\_rpm + 5\;
+			}
+			\Else{
+				set\_speed $\gets$ set\_speed - 1，
+				set\_rpm $\gets$ set\_rpm - 5，
+			}
+		}
+	\end{algorithm*}
 	
 	\section{钻柱系统的建模}
 	在上一章中对钻柱系统的组成及各种原理进行了描述，本章主要讲述钻柱系统动力 学模型的建立。由于钻柱系统的复杂程度过高，其动力学模型的建立难度过大，但为了 能对钻柱系统进行系统分析，必须先对钻柱系统进行结构简化，合理的简化不会影响对 钻柱系统的分析，所以对简化后的钻柱系统进行动力学建模是可取的。对钻柱系统的结构简化通常会分为低自由度和多自由度模型，研究领域大多将其简化为两自由度和四自 由度，两自由度一般分为旋转转盘和钻头两部分，四自由度一般包含旋转转盘、钻杆、井底钻具组合（BHA）和井底钻头四部分。本章将钻柱系统简化为四自由度模型，分别 对旋转转盘、钻杆、BHA 和井底钻头建立动力学方程。
