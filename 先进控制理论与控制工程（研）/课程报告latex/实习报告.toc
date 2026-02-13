@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}引言}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}研究背景}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}研究现状}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}系统建模}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}机器人臂结构}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}正向运动学}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}逆向运动学}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}不确定性建模}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}控制方法介绍}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}2DOF PID控制器原理}{3}{subsection.3.1}%
+\contentsline {section}{\numberline {4}仿真实现}{3}{section.4}%
+\contentsline {section}{\numberline {5}结果分析}{3}{section.5}%
+\contentsline {section}{\numberline {6}结论}{3}{section.6}%

@@ -175,7 +175,7 @@
 	
 	\fi
 	
-
+	
 	\begin{algorithm*}[H]
 		\caption{钻进参数推荐控制逻辑（简化版）}
 		\KwIn{cluster: 当前地层硬度聚类（1:软, 2:中, 3:硬）\\
@@ -482,19 +482,19 @@
 	
 	图 8 是钻压为 97.4kN 时的钻盘角速度和钻头角速度的变化曲线，保持其余钻井参数不变，分别将钻压 由 97.4kN 增大到 98.0kN 和 107.2kN。两种钻压下的钻头角速度变化曲线如图 \ref{fig:W_b=90kN和W_b=85kN 时钻头角速度的变化} 所示。由图可得，当钻压为 98.0kN 时，钻头仍然处于粘滞与滑动的周期性变化中，并没有因钻压的增大而发生其他变化；当钻压增大为 107.2kN 时，钻头出现持续的粘滞状态，没了滑动现象。
 	
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.6\linewidth]{figures/W_b=90kN和W_b=85kN 时钻头角速度的变化}
-	\caption{$W_b$=90kN和$W_b$=85kN时钻头角速度的变化}
-	\label{fig:W_b=90kN和W_b=85kN 时钻头角速度的变化}
-\end{figure}
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[width=0.6\linewidth]{figures/W_b=90kN和W_b=85kN 时钻头角速度的变化}
+		\caption{$W_b$=90kN和$W_b$=85kN时钻头角速度的变化}
+		\label{fig:W_b=90kN和W_b=85kN 时钻头角速度的变化}
+	\end{figure}
 	
 	
 	
 	
 	保持其余钻井参数不变，将钻柱系统的钻压由 97.4kN 减小为 90kN，此时的钻头角速度变化曲线如图 \ref{fig:W_b=98kN和W_b=107.2kN 时钻头角速度的变化} 黄线所示。由图可得，当钻压减小时，钻头除了在Wb开始由钻柱带动旋转的时间内处于静止状态以外，钻头的角速度随着钻柱的带动迅速增大，然后由于钻头岩石的摩擦力矩影响又开始降低，随后又开始增加，经过几次增大减小后，最终稳定在6.0rad/s，并持续稳定。继续由97.4kN 减小到85kN，此时钻头的角速度变化曲线如图 4-3 蓝线所示。由图可得，当钻柱系统的钻压再次减小时，钻头的角速度在前期的变化和钻压值为 90kN 时一样，不一样的在于最终稳定状态时的钻头角速度为 7.0rad/s。
 	
-		\begin{figure}[!htbp]
+	\begin{figure}[!htbp]
 		\centering
 		\includegraphics[width=0.6\linewidth]{figures/W_b=98kN和W_b=107.2kN 时钻头角速度的变化}
 		\caption{$W_b$=98kN和$W_b$=107.2kN时钻头角速度的变化}
@@ -700,34 +700,7 @@
 	
 	可见该参数的控制最好。
 	
-	\subsection{单神经元PID控制}
-	单神经元PID控制是一种结合了经典PID（比例-积分-微分）控制器与神经网络技术的控制方法。其核心思想是利用单个神经元的学习能力来调整PID控制器的参数，以实现对动态系统的自适应控制。
-	
-	单神经元PID控制Simulink模型：
-	\begin{figure}[!htbp]
-		\centering
-		\includegraphics[width=0.7\linewidth]{figures/单神经元PID控制模型.png}
-		\caption{单神经元PID控制模型}
-		\label{fig:单神经元PID控制模型}
-	\end{figure}
-	
-	\begin{figure}[!htbp]
-		\centering
-		\includegraphics[width=0.7\linewidth]{figures/单神经元PID控制子系统.png}
-		\caption{单神经元PID控制子系统}
-		\label{fig:单神经元PID控制子系统}
-	\end{figure}
-	
-	控制效果：
-	
-	\begin{figure}[!htbp]
-		\centering
-		\includegraphics[width=0.7\linewidth]{figures/spid控制效果}
-		\caption{spid控制效果}
-		\label{fig:spid控制效果}
-	\end{figure}
-	
-	由于控制效果不佳，所以接下来不与前两种控制方法进行对比。
+
 	
 	\subsection{控制效果对比}
 	
@@ -822,34 +795,7 @@
 	
 	
 	\newpage
-	\begin{appendices}
-		
-		\section{文件列表}
-		
-		\begin{table}[h]  
-			\centering  
-			\caption{文件列表}  
-			\renewcommand{\arraystretch}{1.25} % 增加行间距  
-			\begin{tabular}{c@{\hspace{20pt}}c} % 增加列间距   
-				\toprule  
-				文件名   & 功能描述 \\
-				\midrule  
-				main.m & 主程序代码 \\
-				drillstring.m & 钻柱模型代码 \\
-				LQRPolePlacement.m & LQR极点配置代码 \\
-				\toprule  
-			\end{tabular}  
-			\label{tab:文件列表}  
-		\end{table}  
-		
-		\section{代码}
-		\noindent main.m
-		\lstinputlisting[language=matlab]{code/main.m}
-		drillstring.m
-		\lstinputlisting[language=matlab]{code/drillstring.m}
-		LQRPolePlacement.m
-		\lstinputlisting[language=matlab]{code/LQRPolePlacement.m}
-	\end{appendices}
+
 	
 	
 \end{document}

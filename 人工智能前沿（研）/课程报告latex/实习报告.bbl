@@ -1,0 +1,100 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Zitkovich et~al.(2023)]{zitkovich2023rt}
+ZITKOVICH B, et~al.
+\newblock Rt-2: Vision-language-action models transfer web knowledge to robotic
+  control\allowbreak[M]//\allowbreak
+CoRL.
+\newblock 2023.
+
+\bibitem[Comanici et~al.(2025)]{comanici2025gemini}
+COMANICI G, et~al.
+\newblock Gemini 2.5: Pushing the frontier with advanced reasoning,
+  multimodality, long context, and next generation agentic
+  capabilities\allowbreak[A].
+\newblock 2025.
+
+\bibitem[Du et~al.(2023)]{du2023vision}
+DU Y, et~al.
+\newblock Vision-language models as success detectors\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Rocamonde et~al.(2023)]{rocamonde2023vision}
+ROCAMONDE J, et~al.
+\newblock Vision-language models are zero-shot reward models for reinforcement
+  learning\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Todorov et~al.(2012)Todorov, Erez, and Tassa]{TodorovET12}
+TODOROV E, EREZ T, TASSA Y.
+\newblock Mujoco: A physics engine for model-based
+  control\allowbreak[C]//\allowbreak
+IROS.
+\newblock 2012.
+
+\bibitem[Bjorck et~al.(2025)]{bjorck2025gr00t}
+BJORCK J, et~al.
+\newblock Gr00t n1: An open foundation model for generalist humanoid
+  robots\allowbreak[A].
+\newblock 2025.
+
+\bibitem[Wen et~al.(2025)]{wen2025dexvla}
+WEN J, et~al.
+\newblock Dexvla: Vision-language model with plug-in diffusion expert for
+  general robot control\allowbreak[A].
+\newblock 2025.
+
+\bibitem[Song et~al.(2025)]{song2025robospatial}
+SONG C~H, et~al.
+\newblock Robospatial: Teaching spatial understanding to 2d and 3d
+  vision-language models for robotics\allowbreak[C]//\allowbreak
+CVPR.
+\newblock 2025.
+
+\bibitem[Cheng et~al.(2025)]{cheng2025pointarena}
+CHENG L, et~al.
+\newblock Pointarena: Probing multimodal grounding through language-guided
+  pointing\allowbreak[A].
+\newblock 2025.
+
+\bibitem[Li et~al.(2023)]{li2023interactive}
+LI B, et~al.
+\newblock Interactive task planning with language models\allowbreak[A].
+\newblock 2023.
+
+\bibitem[Chen et~al.(2024)]{chen2024automating}
+CHEN H, et~al.
+\newblock Automating robot failure recovery using vision-language models with
+  optimized prompts\allowbreak[A].
+\newblock 2024.
+
+\bibitem[Ahn et~al.(2022)]{2022_palm_saycan}
+AHN M, et~al.
+\newblock Do as i can, not as i say: Grounding language in robotic
+  affordances\allowbreak[J].
+\newblock CoRL, 2022.
+
+\bibitem[Huang et~al.(2022)]{huang2022inner}
+HUANG W, et~al.
+\newblock Inner monologue: Embodied reasoning through planning with language
+  models\allowbreak[A].
+\newblock 2022.
+
+\bibitem[Sermanet et~al.(2025)]{sermanet2025generating}
+SERMANET P, et~al.
+\newblock Generating safety benchmarks for vision-language models in
+  robotics\allowbreak[A].
+\newblock 2025.
+
+\end{thebibliography}

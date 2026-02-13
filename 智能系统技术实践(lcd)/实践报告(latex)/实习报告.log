@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.1)  17 JUN 2025 20:44
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.1)  21 JAN 2026 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1481,32 +1481,25 @@ File: figures/Rotary_Speed_PID控制.eps Graphic file (type eps)
 File: figures/Rotary_Speed_PID控制_P1500_I300.eps Graphic file (type eps)
 <figures/Rotary_Speed_PID控制_P1500_I300.eps>
  [21]
-File: figures/单神经元PID控制模型.png Graphic file (type bmp)
-<figures/单神经元PID控制模型.png>
-File: figures/单神经元PID控制子系统.png Graphic file (type bmp)
-<figures/单神经元PID控制子系统.png>
-File: figures/spid控制效果.jpg Graphic file (type bmp)
-<figures/spid控制效果.jpg>
- [22]
 File: figures/Rotary_Speed控制对比.eps Graphic file (type eps)
 <figures/Rotary_Speed控制对比.eps>
 File: figures/Bit_Speed控制对比.eps Graphic file (type eps)
 <figures/Bit_Speed控制对比.eps>
- [23] [24] [25] (./实习报告.bbl)
-[26]
+ [22] [23] [24] (./实习报告.bbl)
+[25]
 (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 847.
+nput line 820.
 
-(./code/main.m [27]
+(./code/main.m [26]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <9.03374> not
  available
 (Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
 t line 50.
- [28] [29]) (./code/drillstring.m [30] [31])
-(./code/LQRPolePlacement.m [32] [33]) [34] (./实习报告.aux)
+ [27] [28]) (./code/drillstring.m [29] [30])
+(./code/LQRPolePlacement.m [31] [32]) [33] (./实习报告.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1516,15 +1509,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `实习报告.out' has not changed.
-(rerunfilecheck)             Checksum: 01917CA0BFE5828D15C09783DCAC66AF;2478.
+(rerunfilecheck)             Checksum: D5F38BDE5290C4AD653F8C9BACA0B0F7;2357.
  ) 
 Here is how much of TeX's memory you used:
- 35119 strings out of 474773
- 740709 string characters out of 5753725
+ 35075 strings out of 474773
+ 739585 string characters out of 5753725
  2271842 words of memory out of 5000000
- 56605 multiletter control sequences out of 15000+600000
+ 56564 multiletter control sequences out of 15000+600000
  577024 words of font info for 175 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,16n,106p,1220b,1856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 实习报告.pdf (37 pages).
+Output written on 实习报告.pdf (36 pages).

@@ -1,0 +1,3342 @@
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.1)  9 JAN 2026 19:04
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main_external.tex
+(./main_external.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(./googledeepmind.cls
+Document Class: googledeepmind 
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count184
+\calc@Bcount=\count185
+\calc@Adimen=\dimen140
+\calc@Bdimen=\dimen141
+\calc@Askip=\skip48
+\calc@Bskip=\skip49
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count186
+\calc@Cskip=\skip50
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen142
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip51
+\belowcaptionskip=\skip52
+\bibindent=\dimen143
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen144
+\l@unhyphenated=\language89
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/babel/xebabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count196
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/babel-english/english.
+ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language23). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language23). Reported on input line 108.
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-
+english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks24
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen145
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks26
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks27
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks28
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+
+
+Package cmap Warning: pdftex not detected - exiting.
+
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks30
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.st
+y
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.
+sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.st
+y
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count275
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
+)
+\@linkdim=\dimen154
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
+ (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count279
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4062.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count280
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen155
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.
+sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count281
+\Field@Width=\dimen156
+\Fld@charsize=\dimen157
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring ON on input line 6081.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-01-20 v7.01h Hyperref driver for XeTeX
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.st
+y
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count285
+\HyField@AnnotCount=\count286
+\Fld@listcount=\count287
+\c@bookmark@seq@number=\count288
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfile
+check.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniqueco
+unter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip59
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2023/07/27 v1.04 Text only upper/lower case changing (DPC)
+Package textcase Info: Defining Legacy names on input line 20.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cf
+g
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box54
+\extrarowheight=\dimen161
+\NC@list=\toks31
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box55
+)
+\everycr=\toks32
+\minrowclearance=\skip62
+\rownum=\count289
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count290
+\@cmidlb=\count291
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count292
+\@lastruleclass=\count293
+\@thisrulewidth=\dimen174
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/changepage/changepage.st
+y
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count294
+\cp@tempcnt=\count295
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen175
+\enit@toks=\toks33
+\enit@inbox=\box56
+\enit@count@id=\count296
+\enitdp@description=\count297
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen176
+\TX@old@table=\dimen177
+\TX@old@col=\dimen178
+\TX@target=\dimen179
+\TX@delta=\dimen180
+\TX@cols=\count298
+\TX@ftn=\toks34
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fmtcount 2020/01/30 v3.07
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
+)
+\XKV@depth=\count299
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fcprefix 2012/09/28
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count300
+))
+\c@padzeroesN=\count301
+\fc@tmpcatcode=\count302
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+File: fc-english.def 2016/01/12
+)
+\@DT@modctr=\count303
+\@ordinalctr=\count304
+\@orgargctr=\count305
+\@strctr=\count306
+\@tmpstrctr=\count307
+\@DT@loopN=\count308
+\@DT@X=\count309
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/datetime/datetime-defaul
+ts.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count310
+\@month=\count311
+\@year=\count312
+\c@HOUR=\count313
+\c@HOURXII=\count314
+\c@MINUTE=\count315
+\c@TOHOUR=\count316
+\c@TOMINUTE=\count317
+\c@SECOND=\count318
+\currenthour=\count319
+\currentminute=\count320
+\currentsecond=\count321
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count322
+\dayofyear=\count323
+\dayofweek=\count324
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks37
+\dt@b=\toks38
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2023/10/14 v2.0e lastpage: 2.09 or 2e? (HMM)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2023/10/14 v2.0e Decide which 2e lastpage version to use (H
+MM)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.
+sty
+Package: lastpagemodern 2023-10-14 v2.0e Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count325
+) 
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box57
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
+\ttl@plus=\dimen181
+\ttl@minus=\dimen182
+\ttl@toksa=\toks39
+\titlewidth=\dimen183
+\titlewidthlast=\dimen184
+\titlewidthfirst=\dimen185
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/natbib/bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse
+.sty (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-02-20 L3 programming layer (loader) 
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xete
+x.def
+File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
+\g__graphics_track_int=\count326
+\l__pdf_internal_box=\box58
+\g__pdf_backend_object_int=\count327
+\g__pdf_backend_annotation_int=\count328
+\g__pdf_backend_link_int=\count329
+))
+Package: xparse 2024-02-18 L3 Experimental document command parser
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count330
+Package zref Info: New property: abspage on input line 67.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip75
+\c@mdf@globalstyle@cnt=\count331
+\mdf@skipabove@length=\skip76
+\mdf@skipbelow@length=\skip77
+\mdf@leftmargin@length=\skip78
+\mdf@rightmargin@length=\skip79
+\mdf@innerleftmargin@length=\skip80
+\mdf@innerrightmargin@length=\skip81
+\mdf@innertopmargin@length=\skip82
+\mdf@innerbottommargin@length=\skip83
+\mdf@splittopskip@length=\skip84
+\mdf@splitbottomskip@length=\skip85
+\mdf@outermargin@length=\skip86
+\mdf@innermargin@length=\skip87
+\mdf@linewidth@length=\skip88
+\mdf@innerlinewidth@length=\skip89
+\mdf@middlelinewidth@length=\skip90
+\mdf@outerlinewidth@length=\skip91
+\mdf@roundcorner@length=\skip92
+\mdf@footenotedistance@length=\skip93
+\mdf@userdefinedwidth@length=\skip94
+\mdf@needspace@length=\skip95
+\mdf@frametitleaboveskip@length=\skip96
+\mdf@frametitlebelowskip@length=\skip97
+\mdf@frametitlerulewidth@length=\skip98
+\mdf@frametitleleftmargin@length=\skip99
+\mdf@frametitlerightmargin@length=\skip100
+\mdf@shadowsize@length=\skip101
+\mdf@extratopheight@length=\skip102
+\mdf@subtitleabovelinewidth@length=\skip103
+\mdf@subtitlebelowlinewidth@length=\skip104
+\mdf@subtitleaboveskip@length=\skip105
+\mdf@subtitlebelowskip@length=\skip106
+\mdf@subtitleinneraboveskip@length=\skip107
+\mdf@subtitleinnerbelowskip@length=\skip108
+\mdf@subsubtitleabovelinewidth@length=\skip109
+\mdf@subsubtitlebelowlinewidth@length=\skip110
+\mdf@subsubtitleaboveskip@length=\skip111
+\mdf@subsubtitlebelowskip@length=\skip112
+\mdf@subsubtitleinneraboveskip@length=\skip113
+\mdf@subsubtitleinnerbelowskip@length=\skip114
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box59
+\mdf@footnotebox=\box60
+\mdf@splitbox@one=\box61
+\mdf@splitbox@two=\box62
+\mdf@splitbox@save=\box63
+\mdfsplitboxwidth=\skip115
+\mdfsplitboxtotalwidth=\skip116
+\mdfsplitboxheight=\skip117
+\mdfsplitboxdepth=\skip118
+\mdfsplitboxtotalheight=\skip119
+\mdfframetitleboxwidth=\skip120
+\mdfframetitleboxtotalwidth=\skip121
+\mdfframetitleboxheight=\skip122
+\mdfframetitleboxdepth=\skip123
+\mdfframetitleboxtotalheight=\skip124
+\mdffootnoteboxwidth=\skip125
+\mdffootnoteboxtotalwidth=\skip126
+\mdffootnoteboxheight=\skip127
+\mdffootnoteboxdepth=\skip128
+\mdffootnoteboxtotalheight=\skip129
+\mdftotallinewidth=\skip130
+\mdfboundingboxwidth=\skip131
+\mdfboundingboxtotalwidth=\skip132
+\mdfboundingboxheight=\skip133
+\mdfboundingboxdepth=\skip134
+\mdfboundingboxtotalheight=\skip135
+\mdf@freevspace@length=\skip136
+\mdf@horizontalwidthofbox@length=\skip137
+\mdf@verticalmarginwhole@length=\skip138
+\mdf@horizontalspaceofbox=\skip139
+\mdfsubtitleheight=\skip140
+\mdfsubsubtitleheight=\skip141
+\c@mdfcountframes=\count332
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count333
+\c@mdf@env@i=\count334
+\c@mdf@env@ii=\count335
+\c@mdf@zref@counter=\count336
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen186
+\captionmargin=\dimen187
+\caption@leftmargin=\dimen188
+\caption@rightmargin=\dimen189
+\caption@width=\dimen190
+\caption@indent=\dimen191
+\caption@parindent=\dimen192
+\caption@hangindent=\dimen193
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count337
+\c@continuedfloat=\count338
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen194
+\caption@adjustwidth@linewidth=\dimen195
+Package caption Info: hyperref package is loaded.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xcharter/XCharter.sty
+Package: XCharter 2023/07/21 v1.25
+
+`XCharter' v1.25, 2023/07/21 Text macros for XCharter, an extension of Charter 
+(msharpe)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count339
+\xs_countb=\count340
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+\xch@cnt=\count341
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-xetex.
+sty
+Package: fontspec-xetex 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count342
+\l__fontspec_language_int=\count343
+\l__fontspec_strnum_int=\count344
+\l__fontspec_tmp_int=\count345
+\l__fontspec_tmpa_int=\count346
+\l__fontspec_tmpb_int=\count347
+\l__fontspec_tmpc_int=\count348
+\l__fontspec_em_int=\count349
+\l__fontspec_emdef_int=\count350
+\l__fontspec_strong_int=\count351
+\l__fontspec_strongdef_int=\count352
+\l__fontspec_tmpa_dim=\dimen196
+\l__fontspec_tmpb_dim=\dimen197
+\l__fontspec_tmpc_dim=\dimen198
+ (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+LaTeX Info: Redefining \textsl on input line 506.
+LaTeX Info: Redefining \oldstylenums on input line 524.
+LaTeX Info: Redefining \liningnums on input line 532.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xcharter/XCharter.fontsp
+ec)
+Requested font "[XCharter-Roman.otf]/OT" at 10.94997pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Roman.otf
+Requested font "[XCharter-Roman.otf]/OT" at 10.95003pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Roman.otf
+
+Package fontspec Info: XCharter-Roman scale = 1.
+
+Requested font "[XCharter-Roman.otf]/OT:script=latn;language=dflt;" at 10.95003
+pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Roman.otf
+
+Package fontspec Info: XCharter-Roman scale = 1.
+
+
+Package fontspec Info: XCharter-Roman scale = 1.
+
+Requested font "[XCharter-Bold.otf]/OT:script=latn;language=dflt;" at 10.95003p
+t
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Bold.otf
+
+Package fontspec Info: XCharter-Bold scale = 1.
+
+
+Package fontspec Info: XCharter-Bold scale = 1.
+
+Requested font "[XCharter-Italic.otf]/OT:script=latn;language=dflt;" at 10.9500
+3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Italic.otf
+
+Package fontspec Info: XCharter-Italic scale = 1.
+
+
+Package fontspec Info: XCharter-Italic scale = 1.
+
+Requested font "[XCharter-Slanted.otf]/OT:script=latn;language=dflt;" at 10.950
+03pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Slanted.otf
+
+Package fontspec Info: XCharter-Slanted scale = 1.
+
+
+Package fontspec Info: XCharter-Slanted scale = 1.
+
+Requested font "[XCharter-BoldItalic.otf]/OT:script=latn;language=dflt;" at 10.
+95003pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-BoldItalic.otf
+
+Package fontspec Info: XCharter-BoldItalic scale = 1.
+
+
+Package fontspec Info: XCharter-BoldItalic scale = 1.
+
+Requested font "[XCharter-BoldSlanted.otf]/OT:script=latn;language=dflt;" at 10
+.95003pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-BoldSlanted.otf
+
+Package fontspec Info: XCharter-BoldSlanted scale = 1.
+
+
+Package fontspec Info: XCharter-BoldSlanted scale = 1.
+
+
+Package fontspec Info: Font family 'XCharter(0)' created for font 'XCharter'
+(fontspec)             with options [Ligatures = TeX,Extension =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},Ligatures=TeX
+,Extension
+(fontspec)             = .otf,UprightFont = XCharter-Roman,BoldFont =
+(fontspec)             XCharter-Bold,ItalicFont =
+(fontspec)             XCharter-Italic,BoldItalicFont =
+(fontspec)             XCharter-BoldItalic,SlantedFont =
+(fontspec)             XCharter-Slanted,BoldSlantedFont =
+(fontspec)             XCharter-BoldSlanted,SmallCapsFeatures =
+(fontspec)             {Letters=SmallCaps},Extension = .otf,Numbers =
+(fontspec)             {Monospaced,Lining},Scale = 1,UprightFont =
+(fontspec)             *-Roman,ItalicFont = *-Italic,SlantedFont =
+(fontspec)             *-Slanted,BoldFont = *-Bold,BoldItalicFont =
+(fontspec)             *-BoldItalic,BoldSlantedFont=
+(fontspec)             *-BoldSlanted,SmallCapsFeatures={Letters=SmallCaps},Char
+acterVariant={1:0}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Roman.otf]/OT:script=latn;language=df
+lt;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Roman.otf]/OT:script=latn;language=df
+lt;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Bold.otf]/OT:script=latn;language=dfl
+t;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Bold.otf]/OT:script=latn;language=dfl
+t;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Italic.otf]/OT:script=latn;language=d
+flt;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Italic.otf]/OT:script=latn;language=d
+flt;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Slanted.otf]/OT:script=latn;language=
+dflt;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Slanted.otf]/OT:script=latn;language=
+dflt;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-BoldItalic.otf]/OT:script=latn;langua
+ge=dflt;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-BoldItalic.otf]/OT:script=latn;langua
+ge=dflt;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-BoldSlanted.otf]/OT:script=latn;langu
+age=dflt;+tnum;+lnum;+cv01=0;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-BoldSlanted.otf]/OT:script=latn;langu
+age=dflt;+tnum;+lnum;+cv01=0;+smcp;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/XCharter(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 669.
+Requested font "[XCharter-Roman.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+
+cv01=0;mapping=tex-text;" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/xcharter/
+XCharter-Roman.otf
+
+Package fontspec Info: XCharter-Roman scale = 1.
+
+
+Package fontspec Info: XCharter-Roman scale = 1.
+
+
+Package fontspec Info: Font family 'XCharter-Roman(0)' created for font
+(fontspec)             'XCharter-Roman' with options [Ligatures =
+(fontspec)             TeX,Extension =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},BoldFont={},I
+talicFont={},SmallCapsFont={},Scale
+(fontspec)             = 1,SmallCapsFeatures={Letters=SmallCaps}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[XCharter-Roman.otf]/OT:script=latn;language=df
+lt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2024/03/06 v1.742
+
+`newtxmath' v1.742, 2024/03/06 Math macros based originally on txfonts (msharpe
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count353
+ (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count354
+\tx@IsAlNum=\count355
+\tx@tA=\toks40
+\tx@tB=\toks41
+\tx@su=\read3
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 393.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/XCharter(0)/m/n on input line 393.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/XCharter(0)/m/n on input line 393.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/XCharter(0)/m/n --> OT1/XCharter(0)/b/n on input li
+ne 394.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/m/n on input line 401.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 403.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 410.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/XCharter(0)/m/it on input line 410
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/XCharter(0)/m/it on input line 41
+0.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 411.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 411.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 411.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 413.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/XCharter(0)/b/n on input line 413.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/XCharter(0)/b/n on input line 413.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/XCharter(0)/m/it --> OT1/XCharter(0)/b/it on input 
+line 414.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 417.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 465.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/zchmi/m/it on input line 465.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/zchmi/m/it on input line 465.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/zchmi/m/it --> OML/zchmi/b/it on input line 466.
+\symlettersA=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 565.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 567.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 587.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 587.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 587.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 587.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 587.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 588.
+\symAMSm=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 613.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 634.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 647.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 6
+47.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 647.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 647
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 647.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 648.
+\symlargesymbolsTXA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 662.
+\tx@sbptoks=\toks42
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 885.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 886.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 887.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 888.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 893.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 894.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 896.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 898.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 902.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 903.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 974.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 975.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2048.
+LaTeX Info: Redefining \Bbbk on input line 2838.
+LaTeX Info: Redefining \not on input line 2986.
+LaTeX Info: Redefining \textsquare on input line 3016.
+LaTeX Info: Redefining \openbox on input line 3018.
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/zlmtt/zlmtt.sty
+Package: zlmtt 2022/08/07 v1.032. Alternate support package for Latin Modern Ty
+peWriter
+LaTeX Font Info:    Setting zlmtt sub-encoding to TS1/0 on input line 6.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count356
+\Gm@cntv=\count357
+\c@Gm@tempcnt=\count358
+\Gm@bindingoffset=\dimen199
+\Gm@wd@mp=\dimen256
+\Gm@odd@mp=\dimen257
+\Gm@even@mp=\dimen258
+\Gm@layoutwidth=\dimen259
+\Gm@layoutheight=\dimen260
+\Gm@layouthoffset=\dimen261
+\Gm@layoutvoffset=\dimen262
+\Gm@dimlist=\toks43
+)
+\correspondingauthor=\toks44
+\paperurl=\toks45
+\reportnumber=\toks46
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip142
+\@affilsep=\skip143
+\c@Maxaffil=\count359
+\c@authors=\count360
+\c@affil=\count361
+)
+Package caption Info: Option `figurename' requires the `newfloat' package on in
+put line 362.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+Package newfloat Info: Unsupported document class, or \@chapter 
+(newfloat)             was already redefined by another package.
+Package newfloat Info: \@chapter = macro:->\def \Hy@next {\Hy@MakeCurrentHrefAu
+to {\Hy@chapapp *}\Hy@raisedlink {\hyper@anchorstart {\@currentHref }\hyper@anc
+horend }}\ifnum \c@secnumdepth >\m@ne \@ifundefined {if@mainmatter}\iftrue {\cs
+name if@mainmatter\endcsname }\let \Hy@next \relax \fi \fi \Hy@next \Hy@org@cha
+pter .
+Package newfloat Info: \Hy@org@chapter = macro:[#1]#2->\NR@gettitle {#1}\NR@cha
+pter [{#1}]{#2}.
+Package newfloat Info: \algocf@original@chapter = undefined.
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+\MT@toks=\toks47
+\MT@tempbox=\box64
+\MT@count=\count362
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks48
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen263
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count363
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/microtype-xete
+x.def
+File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 238.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip144
+\bibsep=\skip145
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count364
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/svg/svg.sty
+Package: svg 2020/11/26 v2.02k (include SVG pictures)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile-hoo
+k.sty
+Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.st
+y
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\c@svg@param@lastpage=\count365
+\svg@box=\box65
+\c@svg@param@currpage=\count366
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/transparent/transparent.
+sty
+Package: transparent 2022-10-27 v1.5 Transparency with color stacks
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/transparent/transparent-
+nometadata.sty
+Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
+ stack (HO)
+
+
+Package transparent Warning: Loading aborted, because pdfTeX is not running in 
+PDF mode.
+
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.s
+ty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-
+common.tex
+\pgfutil@everybye=\toks49
+\pgfutil@tempdima=\dimen264
+\pgfutil@tempdimb=\dimen265
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-
+latex.def
+\pgfutil@abb=\box66
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.c
+ode.tex
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.
+code.tex
+\pgfkeys@pathtoks=\toks50
+\pgfkeys@temptoks=\toks51
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeysl
+ibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks52
+))
+\pgf@x=\dimen266
+\pgf@y=\dimen267
+\pgf@xa=\dimen268
+\pgf@ya=\dimen269
+\pgf@xb=\dimen270
+\pgf@yb=\dimen271
+\pgf@xc=\dimen272
+\pgf@yc=\dimen273
+\pgf@xd=\dimen274
+\pgf@yd=\dimen275
+\w@pgf@writea=\write3
+\r@pgf@reada=\read4
+\c@pgf@counta=\count367
+\c@pgf@countb=\count368
+\c@pgf@countc=\count369
+\c@pgf@countd=\count370
+\t@pgf@toka=\toks53
+\t@pgf@tokb=\toks54
+\t@pgf@tokc=\toks55
+\pgf@sys@id@count=\count371
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cf
+g
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count372
+)))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+softpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count373
+\pgfsyssoftpath@bigbuffer@items=\count374
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys
+protocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.s
+ty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.
+tex
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.c
+ode.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser
+.code.tex
+\pgfmath@dimen=\dimen276
+\pgfmath@count=\count375
+\pgfmath@box=\box67
+\pgfmath@toks=\toks56
+\pgfmath@stack@operand=\toks57
+\pgfmath@stack@operation=\toks58
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.basic.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.trigonometric.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.random.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.comparison.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.base.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.round.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.misc.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfuncti
+ons.integerarithmetics.code.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.c
+ode.tex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.
+code.tex
+\c@pgfmathroundto@lastzeros=\count376
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.t
+ex)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+points.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen277
+\pgf@picmaxx=\dimen278
+\pgf@picminy=\dimen279
+\pgf@picmaxy=\dimen280
+\pgf@pathminx=\dimen281
+\pgf@pathmaxx=\dimen282
+\pgf@pathminy=\dimen283
+\pgf@pathmaxy=\dimen284
+\pgf@xx=\dimen285
+\pgf@xy=\dimen286
+\pgf@yx=\dimen287
+\pgf@yy=\dimen288
+\pgf@zx=\dimen289
+\pgf@zy=\dimen290
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+pathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen291
+\pgf@path@lasty=\dimen292
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+pathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen293
+\pgf@shorten@start@additional=\dimen294
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+scopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count377
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+graphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen295
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+transformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen296
+\pgf@pt@y=\dimen297
+\pgf@pt@temp=\dimen298
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+quick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+objects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+pathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+arrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen299
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+shade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen300
+\pgf@sys@shading@range@num=\count378
+\pgf@shadingcount=\count379
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+image.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+external.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box71
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+layers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+transparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+patterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore
+rdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodules
+hapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box72
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulep
+lot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcom
+p-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen301
+\pgf@nodesepend=\dimen302
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcom
+p-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks59
+\verbatim@line=\toks60
+\verbatim@in@stream=\read5
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+)
+\tcb@titlebox=\box73
+\tcb@upperbox=\box74
+\tcb@lowerbox=\box75
+\tcb@phantombox=\box76
+\c@tcbbreakpart=\count380
+\c@tcblayer=\count381
+\c@tcolorbox@number=\count382
+\l__tcobox_tmpa_box=\box77
+\l__tcobox_tmpa_dim=\dimen303
+\tcb@temp=\box78
+\tcb@temp=\box79
+\tcb@temp=\box80
+\tcb@temp=\box81
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code
+.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
+\c@tcbrastercolumn=\count383
+\c@tcbrasterrow=\count384
+\c@tcbrasternum=\count385
+\c@tcbraster=\count386
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskins.code.
+tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.s
+ty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.st
+y
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.
+code.tex))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.
+tex))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.c
+ode.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen304
+\pgffor@skip=\dimen305
+\pgffor@stack=\toks61
+\pgffor@toks=\toks62
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz
+/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibra
+ryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count387
+\pgfplotmarksize=\dimen306
+)
+\tikz@lastx=\dimen307
+\tikz@lasty=\dimen308
+\tikz@lastxsaved=\dimen309
+\tikz@lastysaved=\dimen310
+\tikz@lastmovetox=\dimen311
+\tikz@lastmovetoy=\dimen312
+\tikzleveldistance=\dimen313
+\tikzsiblingdistance=\dimen314
+\tikz@figbox=\box82
+\tikz@figbox@bg=\box83
+\tikz@tempbox=\box84
+\tikz@tempbox@bg=\box85
+\tikztreelevel=\count388
+\tikznumberofchildren=\count389
+\tikznumberofcurrentchild=\count390
+\tikz@fig@count=\count391
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulem
+atrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count392
+\pgfmatrixcurrentcolumn=\count393
+\pgf@matrix@numberofcolumns=\count394
+)
+\tikz@expandcount=\count395
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill.image.
+sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill-common
+.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzlibraryfill
+.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box86
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw
+.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.c
+ode.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box87
+\tcb@totalupperbox=\box88
+\tcb@totallowerbox=\box89
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.
+tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbtheorems.co
+de.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbfitting.cod
+e.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
+\tcbfitdim=\dimen315
+\tcb@lowerfitdim=\dimen316
+\tcb@upperfitdim=\dimen317
+\tcb@cur@hbadness=\count396
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistingsutf
+8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistings.co
+de.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count397
+\lst@gtempboxa=\box90
+\lst@token=\toks63
+\lst@length=\count398
+\lst@currlwidth=\dimen318
+\lst@column=\count399
+\lst@pos=\count400
+\lst@lostspace=\dimen319
+\lst@width=\dimen320
+\lst@newlines=\count401
+\lst@lineno=\count402
+\lst@maxwidth=\dimen321
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+\c@lstnumber=\count403
+\lst@skipnumbers=\count404
+\lst@framebox=\box91
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/02/21 1.10 listings configuration
+))
+Package: listings 2024/02/21 1.10 (Carsten Heinz)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistingscor
+e.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbprocessing.
+code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
+)
+\c@tcblisting=\count405
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
+Library `listings` is loaded instead. on input line 29.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbexternal.co
+de.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.2.0'
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbmagazine.co
+de.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.2.0'
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbvignette.co
+de.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.2.0'
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibra
+ryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code
+.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3ke
+ys2e.sty
+Package: l3keys2e 2024-02-18 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count406
+\l__lipsum_a_int=\count407
+\l__lipsum_b_int=\count408
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks64
+\AP@partial=\box92
+\AP@footins=\box93
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count409
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count410
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen322
+\c@nlinenum=\count411
+\TeXr@lab=\toks65
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip146
+\multirow@cntb=\count412
+\multirow@dima=\skip147
+\bigstrutjot=\dimen323
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count413
+\mult@box=\box94
+\multicol@leftmargin=\dimen324
+\c@unbalance=\count414
+\c@collectmore=\count415
+\doublecol@number=\count416
+\multicoltolerance=\count417
+\multicolpretolerance=\count418
+\full@width=\dimen325
+\page@free=\dimen326
+\premulticols=\dimen327
+\postmulticols=\dimen328
+\multicolsep=\skip148
+\multicolbaselineskip=\skip149
+\partial@page=\box95
+\last@line=\box96
+\mc@boxedresult=\box97
+\maxbalancingoverflow=\dimen329
+\mult@rightbox=\box98
+\mult@grightbox=\box99
+\mult@firstbox=\box100
+\mult@gfirstbox=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\c@minrows=\count419
+\c@columnbadness=\count420
+\c@finalcolumnbadness=\count421
+\last@try=\dimen330
+\multicolovershoot=\dimen331
+\multicolundershoot=\dimen332
+\mult@nat@firstbox=\box138
+\colbreak@box=\box139
+\mc@col@check@num=\count422
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count423
+\float@exts=\toks66
+\float@box=\box140
+\@float@everytoks=\toks67
+\@floatcapt=\box141
+)
+(./listings-rust.sty
+Package: listings-rust 2018/01/23 Custom Package
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontawesome5/fontawesome
+5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontawesome5/fontawesome
+5-utex-helper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesom
+e5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on i
+nput line 69.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontawesome5/tufontaweso
+mefree.fd)
+Requested font "[FontAwesome5Free-Solid-900.otf]:script=latn;" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/fontaweso
+me5/FontAwesome5Free-Solid-900.otf
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
+ input line 70.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/fontawesome5/tufontaweso
+mebrands.fd)
+Requested font "[FontAwesome5Brands-Regular-400.otf]:script=latn;" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/fontaweso
+me5/FontAwesome5Brands-Regular-400.otf
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/XCharter(0)/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/zchmi/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Encoding `LMS' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 24.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  LMS/ntxsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Encoding `LMX' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 2
+5.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  LMX/ntxexx/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/XCharter(0)/b/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/zchmi/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Encoding `LMS' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Encoding `LMX' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 29.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/b/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/XCharter(0)/b/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/XCharter(0)/m/it --> OT1/lmr/m/it on input line 33.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  TU/lmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/XCharter(0)/b/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/b/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/XCharter(0)/b/it --> OT1/lmr/bx/it on input line 37
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  TU/lmtt/b/n --> OT1/lmtt/m/n on input line 38.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cellspace/cellspace.sty
+Package: cellspace 2022/01/04 v1.9.0 Spacing table cells (JN)
+\cellspacetoplimit=\dimen333
+\cellspacebottomlimit=\dimen334
+\cellspace@firstht=\dimen335
+\cellspace@lastdp=\dimen336
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `listings' support loaded on input line 3131.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+30.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip150
+\LTright=\skip151
+\LTpre=\skip152
+\LTpost=\skip153
+\LTchunksize=\count424
+\LTcapwidth=\dimen337
+\LT@head=\box142
+\LT@firsthead=\box143
+\LT@foot=\box144
+\LT@lastfoot=\box145
+\LT@gbox=\box146
+\LT@cols=\count425
+\LT@rows=\count426
+\c@LT@tables=\count427
+\c@LT@chunks=\count428
+\LT@p@ftn=\toks68
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nome
+tadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+))
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.st
+y
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box147
+)
+\tc@llx=\dimen338
+\tc@lly=\dimen339
+\tc@urx=\dimen340
+\tc@ury=\dimen341
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen342
+\adjbox@Height=\dimen343
+\adjbox@Depth=\dimen344
+\adjbox@Totalheight=\dimen345
+\adjbox@pwidth=\dimen346
+\adjbox@pheight=\dimen347
+\adjbox@pdepth=\dimen348
+\adjbox@ptotalheight=\dimen349
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count429
+LaTeX Info: Redefining \checkoddpage on input line 45.
+) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box148
+\sift@deathcycles=\count430
+\@vwid@loff=\dimen350
+\@vwid@roff=\dimen351
+)) (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup10
+\symboldletters=\mathgroup11
+\symboldsymbols=\mathgroup12
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+\symboldlettersA=\mathgroup13
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xfrac/xfrac.sty
+Package: xfrac 2024-02-13 Split-level fractions
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xte
+mplate.sty
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xte
+mplate-2023-10-10.sty
+Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen352
+\l__xtemplate_tmp_int=\count431
+\l__xtemplate_tmp_muskip=\muskip18
+\l__xtemplate_tmp_skip=\skip154
+))
+\l__xfrac_slash_box=\box149
+\l__xfrac_tmp_box=\box150
+\l__xfrac_denominator_bot_sep_dim=\dimen353
+\l__xfrac_numerator_bot_sep_dim=\dimen354
+\l__xfrac_numerator_top_sep_dim=\dimen355
+\l__xfrac_slash_left_sep_dim=\dimen356
+\l__xfrac_slash_right_sep_dim=\dimen357
+\l__xfrac_slash_left_muskip=\muskip19
+\l__xfrac_slash_right_muskip=\muskip20
+
+Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
+(xtemplate)             line 98.
+
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen358
+\WF@size=\dimen359
+\c@WF@wrappedlines=\count432
+\WF@box=\box151
+\WF@everypar=\toks69
+Package: wrapfig 2003/01/31  v 3.6
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
+Package: CJKutf8 2021/10/16 4.8.5
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+Package: CJK 2021/10/16 4.8.5
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cjk/texinput/mule/MULEen
+c.sty
+Package: MULEenc 2021/10/16 4.8.5
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/cjk/texinput/CJK.enc
+File: CJK.enc 2021/10/16 4.8.5
+)
+\CJK@indent=\box152
+)
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+))
+
+LaTeX Warning: Unused global option(s):
+    [numbering].
+
+(./main_external.aux)
+\openout1 = `main_external.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/zchmi/m/it on input line 116.
+LaTeX Font Info:    Trying to load font information for OML+zchmi on input line
+ 116.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/xcharter/omlzchmi.fd
+File: omlzchmi.fd 2019/11/21 Fontinst v1.933 font definitions for OML/zchmi.
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+16.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 116.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+116.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 116.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 116.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 116.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 116.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Info: Command `\dddot' is already robust on input line 116.
+LaTeX Info: Command `\ddddot' is already robust on input line 116.
+Package hyperref Info: Link coloring ON on input line 116.
+
+(./main_external.out) (./main_external.out)
+\@outlinefile=\write4
+\openout4 = `main_external.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(62.59596pt, 472.31595pt, 62.59596pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=472.31595pt
+* \textheight=674.33032pt
+* \oddsidemargin=-9.67403pt
+* \evensidemargin=-9.67403pt
+* \topmargin=-46.91173pt
+* \headheight=40.0pt
+* \headsep=20.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=15.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package newfloat Info: Trying Plan B...
+Package newfloat Info: `float' package detected.
+Package newfloat Info: `wrapfig' package detected.
+LaTeX Info: Redefining \microtypecontext on input line 116.
+Package microtype Info: Applying patch `item' on input line 116.
+Package microtype Info: Applying patch `toc' on input line 116.
+Package microtype Info: Applying patch `eqnum' on input line 116.
+Package microtype Info: Applying patch `footnote' on input line 116.
+Package microtype Info: Applying patch `verbatim' on input line 116.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+
+! Package microtype Error: The tracking feature only works with pdftex 1.40
+(microtype)                or newer. Switching it off.
+
+See the microtype package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \begin{document}
+                      
+Use pdftex instead.
+
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/mt-LatinModern
+Roman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+\c@lstlisting=\count433
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 21.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+17.
+ (e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "rm-lmr9" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Requested font "rm-lmr7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+Requested font "rm-lmr6" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+17.
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "lmmi9" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi9.tfm
+Requested font "lmmi7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+Requested font "lmmi6" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+117.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "lmsy9" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
+Requested font "lmsy7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+Requested font "lmsy6" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+117.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 117.
+Requested font "lmex10" scaled 1000
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.3> on input line 117.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.5> on input line 117.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 117
+.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+Requested font "msam10" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam10.tfm
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+Requested font "msam7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam7.tfm
+Requested font "msam5" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam5.tfm
+LaTeX Font Info:    Trying to load font information for U+msb on input line 117
+.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Requested font "msbm10" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm10.tfm
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Requested font "msbm7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm7.tfm
+Requested font "msbm5" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm5.tfm
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+117.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+Requested font "zchmia" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "zchmia" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "zchmia" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+117.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+Requested font "ntxsym" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsym" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsym" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+117.
+
+(e:/softwear/Texlive/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+Requested font "ntxsyc" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxsyc" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxsyc" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxexa" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "ntxexa" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "ntxexa" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "rm-lmbx9" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tf
+m
+Requested font "rm-lmbx7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tf
+m
+Requested font "rm-lmbx6" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tf
+m
+Requested font "lmmib10" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmmib7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+Requested font "lmmib5" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
+Requested font "lmbsy10" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "lmbsy7" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+Requested font "lmbsy5" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
+Requested font "zchbmia" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+Requested font "zchbmia" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+Requested font "zchbmia" at 5.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+
+Missing character: There is no ¹ ("B9) in font lmsy9!
+Requested font "[lmroman7-regular]:mapping=tex-text;" at 7.3pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n7-regular.otf
+Requested font "[lmroman9-regular]:mapping=tex-text;" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n9-regular.otf
+
+Underfull \hbox (badness 1655) in paragraph at lines 117--117
+[][][]\TU/lmr/m/n/9 See Contributions and Acknowledgments section for full auth
+or list. Please send correspondence to
+ []
+
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+(./src/sections/external/0-abstract.tex)
+Requested font "rm-lmr10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tf
+m
+Requested font "rm-lmr8" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
+Requested font "rm-lmr6" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
+Requested font "lmmi10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+Requested font "lmmi8" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
+Requested font "lmmi6" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
+Requested font "lmsy10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+Requested font "lmsy8" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
+Requested font "lmsy6" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 117.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 117.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6.1> on input line 117.
+Requested font "msam10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam10.tfm
+Requested font "msam10" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam10.tfm
+Requested font "msam7" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam7.tfm
+Requested font "msbm10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm10.tfm
+Requested font "msbm10" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm10.tfm
+Requested font "msbm7" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm7.tfm
+Requested font "zchmia" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "zchmia" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "zchmia" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "ntxsym" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsym" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsym" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsyc" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxsyc" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxsyc" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxexa" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "ntxexa" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "ntxexa" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "rm-lmbx10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.t
+fm
+Requested font "rm-lmbx8" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tf
+m
+Requested font "rm-lmbx6" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tf
+m
+Requested font "lmmib10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmmib10" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmmib7" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+Requested font "lmbsy10" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "lmbsy10" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "lmbsy7" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+Requested font "zchbmia" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+Requested font "zchbmia" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+Requested font "zchbmia" at 6.1pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+(./src/sections/external/1-intro.tex
+Requested font "[lmroman12-regular]:mapping=tex-text;" at 12.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n12-regular.otf
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 12.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 13.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+
+
+Package natbib Warning: Citation `team2025gemini' on page 1 undefined on input 
+line 5.
+
+
+Package natbib Warning: Citation `comanici2025gemini' on page 1 undefined on in
+put line 5.
+
+
+Package natbib Warning: Citation `zitkovich2023rt' on page 1 undefined on input
+ line 6.
+
+
+Package natbib Warning: Citation `intelligence2025pi05' on page 1 undefined on 
+input line 6.
+
+
+Package natbib Warning: Citation `bjorck2025gr00t' on page 1 undefined on input
+ line 6.
+
+
+Package natbib Warning: Citation `wen2025dexvla' on page 1 undefined on input l
+ine 6.
+
+File: src/assets/Google_DeepMind_Logo_rgb_3320x512px.png Graphic file (type bmp
+)
+<src/assets/Google_DeepMind_Logo_rgb_3320x512px.png>
+Requested font "[lmroman8-regular]:mapping=tex-text;" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n8-regular.otf
+Requested font "[lmroman8-italic]:mapping=tex-text;" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n8-italic.otf
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 8.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+[1
+
+]
+
+Package natbib Warning: Citation `li2023interactive' on page 2 undefined on inp
+ut line 10.
+
+
+Package natbib Warning: Citation `chen2024spatialvlm' on page 2 undefined on in
+put line 10.
+
+
+Package natbib Warning: Citation `chen2024automating' on page 2 undefined on in
+put line 10.
+
+
+Package natbib Warning: Citation `zhi2025closed' on page 2 undefined on input l
+ine 10.
+
+) (./src/sections/external/2-overview.tex
+File: src/assets/gr_1.5_overview_v6.pdf Graphic file (type pdf)
+<use src/assets/gr_1.5_overview_v6.pdf>
+Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n10-regular.otf
+Requested font "rm-lmr10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tf
+m
+Requested font "lmmi10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+Requested font "lmsy10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 7.
+Requested font "msam10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam10.tfm
+Requested font "msbm10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm10.tfm
+Requested font "zchmia" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "ntxsym" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsyc" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxexa" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "rm-lmbx10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.t
+fm
+Requested font "lmmib10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmbsy10" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "zchbmia" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[2]
+
+Package natbib Warning: Citation `lee2025molmoact' on page 3 undefined on input
+ line 25.
+
+
+Package natbib Warning: Citation `lin2025onetwovla' on page 3 undefined on inpu
+t line 25.
+
+
+Package natbib Warning: Citation `huang2025thinkact' on page 3 undefined on inp
+ut line 25.
+
+
+Package natbib Warning: Citation `Zawalski24-ecot' on page 3 undefined on input
+ line 25.
+
+
+Package natbib Warning: Citation `smith2025steer' on page 3 undefined on input 
+line 25.
+
+
+Package natbib Warning: Citation `belkhale2024rth' on page 3 undefined on input
+ line 25.
+
+
+Package natbib Warning: Citation `aloha2' on page 3 undefined on input line 33.
+
+
+
+Package natbib Warning: Citation `fr3' on page 3 undefined on input line 33.
+
+
+Package natbib Warning: Citation `apollo' on page 3 undefined on input line 33.
+
+
+[3]
+
+Package natbib Warning: Citation `TodorovET12' on page 4 undefined on input lin
+e 40.
+
+) (./src/sections/external/3-results-vla.tex
+Overfull \hbox (9.33408pt too wide) in paragraph at lines 1--1
+|[]\TU/lmr/b/n/13 Gemini Robotics 1.5 is a general multi-embodiment Vision-Lang
+uage-Action Model| 
+ []
+
+File: src/assets/actions/gr1.5_example_tasks_grid2_optimized.pdf Graphic file (
+type pdf)
+<use src/assets/actions/gr1.5_example_tasks_grid2_optimized.pdf>
+[4]
+
+Package natbib Warning: Citation `team2025gemini' on page 5 undefined on input 
+line 20.
+
+Requested font "[lmroman10-italic]:mapping=tex-text;" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n10-italic.otf
+File: src/assets/actions/aloha_baselines_progress.pdf Graphic file (type pdf)
+<use src/assets/actions/aloha_baselines_progress.pdf>
+File: src/assets/actions/omega_baselines_progress.pdf Graphic file (type pdf)
+<use src/assets/actions/omega_baselines_progress.pdf>
+File: src/assets/actions/atari_baselines_progress.pdf Graphic file (type pdf)
+<use src/assets/actions/atari_baselines_progress.pdf>
+File: src/assets/actions/aloha_positive_transfer_progress.pdf Graphic file (typ
+e pdf)
+<use src/assets/actions/aloha_positive_transfer_progress.pdf>
+File: src/assets/actions/omega_positive_transfer_progress.pdf Graphic file (typ
+e pdf)
+<use src/assets/actions/omega_positive_transfer_progress.pdf>
+File: src/assets/actions/atari_positive_transfer_progress.pdf Graphic file (typ
+e pdf)
+<use src/assets/actions/atari_positive_transfer_progress.pdf>
+
+Package natbib Warning: Citation `team2025gemini' on page 5 undefined on input 
+line 62.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy9!
+
+Package natbib Warning: Citation `team2025gemini' on page 5 undefined on input 
+line 72.
+
+[5] [6]
+File: src/assets/actions/gr1.5-x-emb-transfer.pdf Graphic file (type pdf)
+<use src/assets/actions/gr1.5-x-emb-transfer.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Package natbib Warning: Citation `10611477' on page 7 undefined on input line 8
+6.
+
+[7] [8]
+File: src/assets/actions/thinking_progress.pdf Graphic file (type pdf)
+<use src/assets/actions/thinking_progress.pdf>
+File: src/assets/actions/thinking4.jpg Graphic file (type bmp)
+<src/assets/actions/thinking4.jpg>
+) (./src/sections/external/3-results-er.tex [9]
+File: src/assets/ER/generality_vs_embodied_reasoning.pdf Graphic file (type pdf
+)
+<use src/assets/ER/generality_vs_embodied_reasoning.pdf>
+File: src/assets/ER/er_capability_all_v3.pdf Graphic file (type pdf)
+<use src/assets/ER/er_capability_all_v3.pdf>
+ [10]
+
+Package natbib Warning: Citation `fu2024blink' on page 11 undefined on input li
+ne 29.
+
+
+Package natbib Warning: Citation `tong2024cambrian1' on page 11 undefined on in
+put line 29.
+
+
+Package natbib Warning: Citation `team2025gemini' on page 11 undefined on input
+ line 29.
+
+
+Package natbib Warning: Citation `song2025robospatial' on page 11 undefined on 
+input line 29.
+
+
+Package natbib Warning: Citation `cheng2025pointarena' on page 11 undefined on 
+input line 29.
+
+
+Package natbib Warning: Citation `yuan2024robopoint' on page 11 undefined on in
+put line 29.
+
+
+Package natbib Warning: Citation `zhou2025roborefer' on page 11 undefined on in
+put line 29.
+
+
+Package natbib Warning: Citation `mmmu' on page 11 undefined on input line 29.
+
+
+Package natbib Warning: Citation `rein2024gpqa' on page 11 undefined on input l
+ine 29.
+
+
+Package natbib Warning: Citation `Gauthier2024aider' on page 11 undefined on in
+put line 29.
+
+File: src/assets/ER/pointing_capabilities_comparison.pdf Graphic file (type pdf
+)
+<use src/assets/ER/pointing_capabilities_comparison.pdf>
+File: src/assets/ER/pointing_collage.jpg Graphic file (type bmp)
+<src/assets/ER/pointing_collage.jpg>
+[11] [12]
+File: src/assets/ER/gr1.5_er_sd_collage_v7.pdf Graphic file (type pdf)
+<use src/assets/ER/gr1.5_er_sd_collage_v7.pdf>
+File: src/assets/ER/er_1p5_sd_evals_total.pdf Graphic file (type pdf)
+<use src/assets/ER/er_1p5_sd_evals_total.pdf>
+
+
+Package natbib Warning: Citation `du2023vision' on page 13 undefined on input l
+ine 73.
+
+
+Package natbib Warning: Citation `rocamonde2023vision' on page 13 undefined on 
+input line 73.
+
+
+Package natbib Warning: Citation `ma2024generative' on page 13 undefined on inp
+ut line 73.
+
+[13] [14]
+File: src/assets/ER/real_world_understanding_v2.jpg Graphic file (type bmp)
+<src/assets/ER/real_world_understanding_v2.jpg>
+File: src/assets/ER/real_world_understanding_performance.pdf Graphic file (type
+ pdf)
+<use src/assets/ER/real_world_understanding_performance.pdf>
+ [15]
+File: src/assets/ER/thought_samples_2.pdf Graphic file (type pdf)
+<use src/assets/ER/thought_samples_2.pdf>
+File: src/assets/ER/er1p5_thought_budget_scaling_external_benchmarks_per_catego
+ry_v2.png Graphic file (type bmp)
+<src/assets/ER/er1p5_thought_budget_scaling_external_benchmarks_per_category_v2
+.png>
+File: src/assets/ER/er1p5_token_length_scaling_external_benchmarks_per_category
+_v2.png Graphic file (type bmp)
+<src/assets/ER/er1p5_token_length_scaling_external_benchmarks_per_category_v2.p
+ng>
+File: src/assets/ER/er1pt5_vs_flash_june_final_v2.png Graphic file (type bmp)
+<src/assets/ER/er1pt5_vs_flash_june_final_v2.png>
+) (./src/sections/external/3-results-agentic.tex
+Requested font "[lmroman12-regular]:mapping=tex-text;" at 13.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n12-regular.otf
+ [16]
+
+Package natbib Warning: Citation `2022_palm_saycan' on page 17 undefined on inp
+ut line 4.
+
+
+Package natbib Warning: Citation `huang2022inner' on page 17 undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `shi2025hi' on page 17 undefined on input line
+ 4.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy9!
+File: src/assets/agent/progress_agent_v3.pdf Graphic file (type pdf)
+<use src/assets/agent/progress_agent_v3.pdf>
+File: src/assets/agent/long_horizon_figure_3.jpg Graphic file (type bmp)
+<src/assets/agent/long_horizon_figure_3.jpg>
+File: src/assets/agent/omega_agentic_progress_no_legend.pdf Graphic file (type 
+pdf)
+<use src/assets/agent/omega_agentic_progress_no_legend.pdf>
+File: src/assets/agent/Long-horizon-omega-star-3.jpeg Graphic file (type bmp)
+<src/assets/agent/Long-horizon-omega-star-3.jpeg>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[17] [18]
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy10!
+) (./src/sections/external/4-safety.tex
+
+Package natbib Warning: Citation `ISO_TS_15066_2016' on page 19 undefined on in
+put line 3.
+
+
+Package natbib Warning: Citation `ISO10218-1:2025' on page 19 undefined on inpu
+t line 3.
+
+
+Package natbib Warning: Citation `comanici2025gemini' on page 19 undefined on i
+nput line 5.
+
+[19]
+
+Package natbib Warning: Citation `sermanet2025generating' on page 20 undefined 
+on input line 7.
+
+
+Package natbib Warning: Citation `neiss' on page 20 undefined on input line 7.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy9!
+
+Package natbib Warning: Citation `safe-vlms' on page 20 undefined on input line
+ 7.
+
+Requested font "[lmroman6-regular]:mapping=tex-text;" at 6.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n6-regular.otf
+Requested font "rm-lmr7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+Requested font "lmmi7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+Requested font "lmsy7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6.5> on input line 15.
+Requested font "msam7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msam7.tfm
+Requested font "msbm7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbo
+ls/msbm7.tfm
+Requested font "zchmia" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchmi
+a.tfm
+Requested font "ntxsym" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsym.t
+fm
+Requested font "ntxsyc" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxsyc.t
+fm
+Requested font "ntxexa" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.t
+fm
+Requested font "rm-lmbx7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tf
+m
+Requested font "lmmib7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+Requested font "lmbsy7" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+Requested font "zchbmia" at 6.5pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/tfm/public/xcharter/zchbm
+ia.tfm
+Missing character: There is no ¹ ("B9) in font lmsy7!
+Requested font "[lmromandemi10-regular]:mapping=tex-text;" at 6.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-regular.otf
+
+Underfull \hbox (badness 4205) in paragraph at lines 17--18
+[]|\TU/lmr/m/n/6 3YOM HAD A PILL IN HIS
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 17--18
+\TU/lmr/m/n/6 MOUTH FROM GRANDMOTH-
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 20--21
+\TU/lmr/m/n/6 floor near his grandmother...The
+ []
+
+
+Underfull \hbox (badness 7133) in paragraph at lines 21--22
+[]|\TU/lmr/m/n/6 Immediately inform the grand-
+ []
+
+Requested font "[lmmonolt10-bold]:" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono
+lt10-bold.otf
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+File: src/assets/safety/constraints6.png Graphic file (type bmp)
+<src/assets/safety/constraints6.png>
+Requested font "[lmroman9-italic]:mapping=tex-text;" at 9.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+n9-italic.otf
+
+Underfull \hbox (badness 3895) in paragraph at lines 34--34
+[]\TU/lmr/b/n/9 (b) |\TU/lmtt/b/n/9 ASIMOV-2.0-Constraints\TU/lmr/m/n/9 : Do (m
+ultimodal)
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 34--34
+\TU/lmr/m/n/9 model responses (red pointing labels) adhere to
+ []
+
+File: src/assets/safety/safety-video-frames.png Graphic file (type bmp)
+<src/assets/safety/safety-video-frames.png>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Requested font "[lmmonolt10-bold]:" at 10.0pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono
+lt10-bold.otf
+File: src/assets/safety/safety_plot_new.pdf Graphic file (type pdf)
+<use src/assets/safety/safety_plot_new.pdf>
+
+Package natbib Warning: Citation `comanici2025gemini' on page 20 undefined on i
+nput line 55.
+
+File: src/assets/safety/roboart-example.png Graphic file (type bmp)
+<src/assets/safety/roboart-example.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./src/sections/external/5-discussion.tex [20]
+
+LaTeX Warning: Text page 21 contains only floats.
+
+[21]) [22] [23]
+No file main_external.bbl.
+(./src/sections/external/6-contributions-acknowledgements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--178
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+
+ []
+
+[25]) [26] (./src/sections/external/model-card.tex
+
+Package natbib Warning: Citation `mitchell2019model' on page 27 undefined on in
+put line 2.
+
+
+Package natbib Warning: Citation `dwibedi2024flexcap' on page 27 undefined on i
+nput line 34.
+
+
+Package natbib Warning: Citation `geminiteam2023gemini' on page 27 undefined on
+ input line 36.
+
+
+Package natbib Warning: Citation `jax2018github' on page 27 undefined on input 
+line 50.
+
+
+Package natbib Warning: Citation `2021pathwaysarchitecture' on page 27 undefine
+d on input line 50.
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 69--69
+[]|\TU/lmr/b/n/10.95 Ethical Considerations
+ []
+
+
+Package natbib Warning: Citation `geminiteam2023gemini' on page 27 undefined on
+ input line 70.
+
+[27]) [28] (./src/sections/external/appendix-pre-action.tex
+File: src/assets/actions/sim_to_real.pdf Graphic file (type pdf)
+<use src/assets/actions/sim_to_real.pdf>
+
+
+LaTeX Font Warning: Font shape `TU/lmr/b/it' in size <10.95> not available
+(Font)              Font shape `TU/lmr/b/sl' tried instead on input line 23.
+
+Requested font "[lmromandemi10-oblique]:mapping=tex-text;" at 10.95pt
+ -> e:/softwear/Texlive/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
+ndemi10-oblique.otf
+
+Package natbib Warning: Citation `team2025gemini' on page 29 undefined on input
+ line 24.
+
+
+Package natbib Warning: Citation `team2025gemini' on page 29 undefined on input
+ line 24.
+
+
+Package natbib Warning: Citation `team2025gemini' on page 29 undefined on input
+ line 24.
+
+
+Package natbib Warning: Citation `team2025gemini' on page 29 undefined on input
+ line 24.
+
+
+Package natbib Warning: Citation `team2025gemini' on page 29 undefined on input
+ line 29.
+
+File: src/assets/actions/gr1.5_appendix_new_act_gen.pdf Graphic file (type pdf)
+
+<use src/assets/actions/gr1.5_appendix_new_act_gen.pdf>
+[29]
+Missing character: There is no ¹ ("B9) in font lmsy7!
+File: src/assets/actions/gr1.5_appendix_agibot.pdf Graphic file (type pdf)
+<use src/assets/actions/gr1.5_appendix_agibot.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+
+Package natbib Warning: Citation `team2025gemini' on page 31 undefined on input
+ line 252.
+
+File: src/assets/actions/gr1.5_appendix_omega_in_dist_scenes.pdf Graphic file (
+type pdf)
+<use src/assets/actions/gr1.5_appendix_omega_in_dist_scenes.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Package natbib Warning: Citation `nistassemblyboards' on page 31 undefined on i
+nput line 259.
+
+[31] [32]
+File: src/assets/actions/gr1.5_omega_scenes_gen_appendix.pdf Graphic file (type
+ pdf)
+<use src/assets/actions/gr1.5_omega_scenes_gen_appendix.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33]
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34]
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35]
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[36]
+
+Package natbib Warning: Citation `team2025gemini' on page 37 undefined on input
+ line 717.
+
+File: src/assets/actions/gr1.5_atari_scenes_gen_appendix.pdf Graphic file (type
+ pdf)
+<use src/assets/actions/gr1.5_atari_scenes_gen_appendix.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+Underfull \hbox (badness 1337) in paragraph at lines 1033--1034
+[]\TU/lmr/m/n/6 0.67: if the robot picked up the green
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37] [38] [39]
+File: src/assets/actions/apollo_gen.pdf Graphic file (type pdf)
+<use src/assets/actions/apollo_gen.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[40
+
+]
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Package natbib Warning: Citation `team2025gemini' on page 41 undefined on input
+ line 1071.
+
+File: src/assets/actions/cross-emb-benchmark-visual.pdf Graphic file (type pdf)
+
+<use src/assets/actions/cross-emb-benchmark-visual.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[41]
+File: src/assets/actions/cross-emb-benchmark-visual-omega.pdf Graphic file (typ
+e pdf)
+<use src/assets/actions/cross-emb-benchmark-visual-omega.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+File: src/assets/actions/cross-emb-benchmark-visual-atari.pdf Graphic file (typ
+e pdf)
+<use src/assets/actions/cross-emb-benchmark-visual-atari.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+File: src/assets/actions/cross-emb-benchmark-visual-aloha2atari.pdf Graphic fil
+e (type pdf)
+<use src/assets/actions/cross-emb-benchmark-visual-aloha2atari.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42] [43] [44] [45]
+File: src/assets/actions/Medium-horizon-aloha.pdf Graphic file (type pdf)
+<use src/assets/actions/Medium-horizon-aloha.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: src/assets/actions/Medium-horizon-omega.pdf Graphic file (type pdf)
+<use src/assets/actions/Medium-horizon-omega.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+Underfull \hbox (badness 1142) in paragraph at lines 1708--1709
+[]\TU/lmr/m/n/6 1.00: if the robot placed the remaining
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 1724--1725
+[]\TU/lmr/m/n/6 0.85: if the robot reached for a fourth
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: src/assets/actions/Medium-horizon-atari.pdf Graphic file (type pdf)
+<use src/assets/actions/Medium-horizon-atari.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+Underfull \hbox (badness 1087) in paragraph at lines 1862--1863
+\TU/lmr/m/n/6 cone on the left orange cone and then
+ []
+
+
+LaTeX Warning: Float too large for page by 123.99168pt on input line 1996.
+
+[46
+
+] [47] [48] [49] [50] [51]
+File: src/assets/actions/aloha_baselines_sr.pdf Graphic file (type pdf)
+<use src/assets/actions/aloha_baselines_sr.pdf>
+File: src/assets/actions/omega_baselines_sr.pdf Graphic file (type pdf)
+<use src/assets/actions/omega_baselines_sr.pdf>
+File: src/assets/actions/atari_baselines_sr.pdf Graphic file (type pdf)
+<use src/assets/actions/atari_baselines_sr.pdf>
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[52
+
+]
+File: src/assets/actions/aloha_positive_transfer_sr.pdf Graphic file (type pdf)
+
+<use src/assets/actions/aloha_positive_transfer_sr.pdf>
+File: src/assets/actions/omega_positive_transfer_sr.pdf Graphic file (type pdf)
+
+<use src/assets/actions/omega_positive_transfer_sr.pdf>
+File: src/assets/actions/atari_positive_transfer_sr.pdf Graphic file (type pdf)
+
+<use src/assets/actions/atari_positive_transfer_sr.pdf>
+ [53
+
+]
+File: src/assets/actions/thinking_sr.pdf Graphic file (type pdf)
+<use src/assets/actions/thinking_sr.pdf>
+ [54
+
+]) (./src/sections/external/appendix-pre-er.tex
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Overfull \hbox (29.8742pt too wide) in alignment at lines 43--43
+[][][][][][][][] 
+ []
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Overfull \hbox (5.94846pt too wide) in paragraph at lines 50--63
+ [][] 
+ []
+
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+Overfull \hbox (41.11984pt too wide) in paragraph at lines 73--99
+ [][] 
+ []
+
+File: src/assets/ER/thought_samples_4.pdf Graphic file (type pdf)
+<use src/assets/ER/thought_samples_4.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55] [56] [57]
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--206
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--206
+
+ []
+
+File: src/assets/agent/long_horizon_eval_rollouts.pdf Graphic file (type pdf)
+<use src/assets/agent/long_horizon_eval_rollouts.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+Missing character: There is no ¹ ("B9) in font lmsy7!
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--283
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--283
+
+ []
+
+File: src/assets/agent/Omega_lh.pdf Graphic file (type pdf)
+<use src/assets/agent/Omega_lh.pdf>
+Missing character: There is no ¹ ("B9) in font lmsy10!
+[58
+
+] [59]
+File: src/assets/agent/sr_agentic_v3.pdf Graphic file (type pdf)
+<use src/assets/agent/sr_agentic_v3.pdf>
+File: src/assets/agent/omega_agentic_sr_no_legend.pdf Graphic file (type pdf)
+<use src/assets/agent/omega_agentic_sr_no_legend.pdf>
+ [60
+
+])
+
+Package natbib Warning: There were undefined citations.
+
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(./main_external.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+Package rerunfilecheck Info: File `main_external.out' has not changed.
+(rerunfilecheck)             Checksum: BD2C6B610CF5BBA5578671E6ACFE340C;11639.
+ ) 
+Here is how much of TeX's memory you used:
+ 48736 strings out of 474773
+ 1009305 string characters out of 5753725
+ 2008842 words of memory out of 5000000
+ 69841 multiletter control sequences out of 15000+600000
+ 638973 words of font info for 178 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 100i,18n,131p,7898b,764s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main_external.pdf (60 pages).

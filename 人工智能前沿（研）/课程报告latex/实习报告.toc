@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}引言}{1}{section.1}%
+\contentsline {section}{\numberline {2}相关工作}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}视觉语言模型在机器人控制中的应用}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}多实施体学习与技能迁移}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}具身推理与代理系统}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}安全与责任开发}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}模型架构与方法概述}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}整体框架}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}运动转移机制}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}具身思考范式}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}训练数据与评估方法}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Gemini Robotics 1.5 VLA模型性能分析}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}多机器人任务示例}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}短时序泛化能力}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}多实施体学习消融}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}具身思考对多步任务的影响}{6}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Gemini Robotics-ER 1.5具身推理能力}{6}{section.5}%
+\contentsline {section}{\numberline {6}代理系统性能}{7}{section.6}%
+\contentsline {section}{\numberline {7}安全与责任开发}{7}{section.7}%
+\contentsline {section}{\numberline {8}结论与展望}{8}{section.8}%

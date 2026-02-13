@@ -1,0 +1,151 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Liu et~al.(2015)Liu, Carvalho, Schildbach, and
+  Hedrick]{liu2015stochastic}
+LIU C, CARVALHO A, SCHILDBACH G, et~al.
+\newblock Stochastic predictive control for lane keeping assistance systems
+  using a linear time-varying model\allowbreak[J].
+\newblock 2015 American Control Conference (ACC), 2015: 3355-3360.
+
+\bibitem[Wang et~al.(2020)Wang and Wang]{wang2020ultra}
+WANG Z, WANG J.
+\newblock Ultra-local model predictive control: A model-free approach and its
+  application on automated vehicle trajectory tracking\allowbreak[J].
+\newblock Control Engineering Practice, 2020, 101: 104482.
+
+\bibitem[Wang et~al.(2021)Wang, Hu, Wang, Wang, Qin, and Bian]{bian2021model}
+WANG D, HU M, WANG Y, et~al.
+\newblock Model predictive control--based cooperative lane change strategy for
+  improving traffic flow\allowbreak[J].
+\newblock Advances in Mechanical Engineering, 2021, 13\allowbreak (1):
+  1687814021991243.
+
+\bibitem[Liu et~al.(2014)Liu, Lee, Hansen, Hedrick, and
+  Ding]{ding2014computationally}
+LIU C, LEE C, HANSEN A, et~al.
+\newblock A computationally efficient predictive controller for lane keeping of
+  semi-autonomous vehicles\allowbreak[J].
+\newblock Dynamic Systems and Control Conference, 2014, 46209: V003T37A009.
+
+\bibitem[Hu et~al.(2019)Hu, Wang, Qin, Huang, Wang, and Wang]{huang2019lane}
+HU C, WANG Z, QIN Y, et~al.
+\newblock Lane keeping control of autonomous vehicles with prescribed
+  performance considering the rollover prevention and input
+  saturation\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2019,
+  21\allowbreak (7): 3091-3103.
+
+\bibitem[Zhou et~al.(2022)Zhou, Shen, Wang, and Wang]{shen2022individualizable}
+ZHOU X, SHEN H, WANG Z, et~al.
+\newblock Individualizable vehicle lane keeping assistance system design: A
+  linear-programming-based model predictive control approach\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2022,
+  23\allowbreak (12): 24487-24496.
+
+\bibitem[Liu et~al.(2015)Liu, Carvalho, Schildbach, and
+  Hedrick]{schildbach2015stochastic}
+LIU C, CARVALHO A, SCHILDBACH G, et~al.
+\newblock Stochastic predictive control for lane keeping assistance systems
+  using a linear time-varying model\allowbreak[J].
+\newblock American Control Conference (ACC), 2015.
+
+\bibitem[Kim et~al.(2022)Kim, Quan, and Chung]{kim2022data}
+KIM J~S, QUAN Y~S, CHUNG C~C.
+\newblock Data-driven modeling and control for lane keeping system of automated
+  driving vehicles: Koopman operator approach\allowbreak[J].
+\newblock 2022 22nd International Conference on Control, Automation and Systems
+  (ICCAS), 2022: 1223-1228.
+
+\bibitem[Lefevre et~al.(2014)Lefevre, Gao, Vasquez, Tseng, Bajcsy, and
+  Borrelli]{lefevre2014lane}
+LEFEVRE S, GAO Y, VASQUEZ D, et~al.
+\newblock Lane keeping assistance with learning-based driver model and model
+  predictive control\allowbreak[J].
+\newblock 12th International Symposium on Advanced Vehicle Control (AVEC'14),
+  2014.
+
+\bibitem[Lim et~al.(2021)Lim, Kim, and Jo]{kim2021model}
+LIM H, KIM C, JO A.
+\newblock Model predictive control-based lateral control of autonomous
+  large-size bus on road with large curvature\allowbreak[J].
+\newblock SAE Technical Paper, 2021.
+
+\bibitem[Wang et~al.(2022)]{wang2022adaptive}
+WANG L, et~al.
+\newblock Adaptive model predictive control for lane keeping with parametric
+  uncertainty\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2022, 71\allowbreak (3):
+  2456-2467.
+
+\bibitem[Zhang et~al.(2018)]{zhang2018robust}
+ZHANG H, et~al.
+\newblock Robust model predictive control for lane keeping under vehicle
+  parameter uncertainties\allowbreak[J].
+\newblock IFAC-PapersOnLine, 2018, 51\allowbreak (31): 312-317.
+
+\bibitem[Li et~al.(2020)]{li2020hierarchical}
+LI M, et~al.
+\newblock Hierarchical model predictive control for autonomous vehicle lane
+  keeping and obstacle avoidance\allowbreak[J].
+\newblock Journal of Intelligent Transportation Systems, 2020, 24\allowbreak
+  (5): 456-470.
+
+\bibitem[Chen et~al.(2019)]{chen2019distributed}
+CHEN Y, et~al.
+\newblock Distributed model predictive control for cooperative lane change of
+  multiple connected vehicles\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Vehicles, 2019, 4\allowbreak (4):
+  545-556.
+
+\bibitem[Xu et~al.(2021)]{xu2021tube}
+XU S, et~al.
+\newblock Tube-based model predictive control for lane keeping with input
+  saturation\allowbreak[J].
+\newblock Control Engineering Practice, 2021, 115: 104899.
+
+\bibitem[Guo et~al.(2017)]{guo2017nonlinear}
+GUO H, et~al.
+\newblock Nonlinear model predictive lateral control for autonomous vehicles in
+  lane-keeping system\allowbreak[J].
+\newblock Journal of Dynamic Systems, Measurement, and Control, 2017,
+  139\allowbreak (9): 091009.
+
+\bibitem[Ren et~al.(2020)]{ren2020learning}
+REN Y, et~al.
+\newblock Learning-based model predictive control for vehicle lane keeping
+  under uncertainty\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2020, 29\allowbreak
+  (2): 678-691.
+
+\bibitem[Zhou et~al.(2018)]{zhou2018stochastic}
+ZHOU J, et~al.
+\newblock Stochastic model predictive control for lane change decision of
+  automated driving vehicles\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2018, 67\allowbreak (10):
+  9091-9102.
+
+\bibitem[Lee et~al.(2022)]{lee2022deep}
+LEE S, et~al.
+\newblock Deep reinforcement learning augmented model predictive control for
+  highway autonomous vehicle lane keeping\allowbreak[J].
+\newblock IEEE Access, 2022, 10: 45672-45683.
+
+\bibitem[Hu et~al.(2021)]{hu2021integrated}
+HU C, et~al.
+\newblock Integrated path planning and model predictive control for lane
+  keeping and rollover prevention\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2021, 70\allowbreak (7):
+  6623-6636.
+
+\end{thebibliography}

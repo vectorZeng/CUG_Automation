@@ -1,0 +1,346 @@
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{CUGReport}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setstretch{1.5} % 设置全局行距为1.5倍
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt, parsep=0pt}
+
+% 全文字体：中文宋体，英文和数字 Times New Roman
+\setCJKmainfont{SimSun}
+\setmainfont{Times New Roman}
+
+% 字号命令
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{18pt}\selectfont}
+
+% 封面
+{
+	\title{
+		\vspace{1cm}
+		\songti \xiaoerhao \textbf{基于进化策略强化学习的双足机器人行走控制} \par
+		\vspace{1cm}
+		\songti \sihao {\textbf{曾康慧}} \par
+		\vspace{13cm}
+	}
+}
+
+%%------------------------document环境开始------------------------%%
+\begin{document}
+	
+	%%-----------------------封面--------------------%%
+	\cover
+	\thispagestyle{empty}
+	
+	%%------------------摘要-------------%%
+	\newpage
+	\begin{abstract}
+强化学习（Reinforcement Learning, RL）作为一种通过智能体（Agent）与环境交互来学习最优序列决策策略的机器学习范式，近年来在机器人控制领域展现出巨大潜力。本文系统复现了基于进化策略（Evolution Strategies, ES）的双足机器人行走控制项目，并在此基础上进行整理与扩展。首先，文章回顾了强化学习及其在机器人控制，特别是双足机器人行走中的研究现状，分析了梯度型深度强化学习方法（如PPO、DDPG）与基于黑盒优化的进化策略方法之间的差异与互补性。随后，本文从马尔可夫决策过程建模、状态–动作空间设计、奖励函数构造、环境仿真平台搭建以及进化策略优化流程等方面，对该双足机器人行走控制问题进行了系统的形式化描述与方法论阐述。接着，文章详细介绍了基于MATLAB Reinforcement Learning Toolbox与Simulink的实现过程，包括智能体结构、ES 参数设置、并行评估机制以及训练管线。实验部分展示了训练过程中累计奖励、步态稳定性、步行速度与能耗等指标的演化过程。实验结果表明，基于进化策略的强化学习方法能够在不依赖精确系统模型与梯度信息的前提下，实现双足机器人稳定行走，在训练初期表现出较好的全局探索能力与收敛稳定性。最后，本文讨论了该方法在样本效率、计算成本、仿真到现实迁移（Sim-to-Real）等方面的局限性，并展望了将ES与梯度型RL方法结合、引入领域随机化及多目标优化的未来研究方向。作为强化学习博士课程的课程报告，本文旨在通过对该经典教学案例的系统复现与整理，加深对强化学习在复杂机电系统控制中应用的理解。
+\\
+		
+		\textbf{关键词：} 强化学习；进化策略；双足机器人；连续控制；智能体
+	\end{abstract}
+	
+	\thispagestyle{empty}
+	
+	%%--------------------------目录页------------------------%%
+	\newpage
+	\tableofcontents
+	\thispagestyle{empty}
+	
+	%%------------------------正文页从这里开始-------------------%%
+	\newpage
+	\setcounter{page}{1}
+	
+	\section{引言}
+	
+	强化学习（Reinforcement Learning, RL）是一类通过智能体（Agent）与环境（Environment）的交互，基于试错与延迟奖励信号来学习最优决策策略的机器学习方法\cite{sutton2018reinforcement}。与监督学习不同，RL 不依赖明确的输入–输出标签，而是通过奖励（Reward）信号对行为的好坏进行评估，因此特别适合解决序列决策与控制问题，如机器人运动控制、自动驾驶、游戏 AI 等\cite{levine2018learning,li2018deep}。
+	
+	在机器人领域，尤其是双足机器人行走控制中，系统动力学高度非线性、强耦合且存在不确定性，传统基于精确模型的控制方法（如线性反馈控制、经典 PID 控制等）难以在复杂环境下保持鲁棒性\cite{kajita2014introduction,grimes2019model}。深度强化学习（Deep Reinforcement Learning, DRL）通过引入深度神经网络作为函数逼近器，将 RL 扩展到高维状态和动作空间，使神经网络控制器能够直接从原始状态信息中学习复杂策略\cite{mnih2015human,lillicrap2015continuous,haarnoja2018soft}。
+	
+	然而，传统梯度型 DRL 算法（如 Deep Deterministic Policy Gradient, DDPG\cite{lillicrap2015continuous}，Proximal Policy Optimization, PPO\cite{schulman2017proximal} 等）往往需要稳定且可微的策略或价值函数参数化，同时对奖励信号噪声、多步引导误差及超参数敏感。相比之下，进化策略（Evolution Strategies, ES）作为一类基于种群的黑盒优化方法，从优化角度直接在参数空间进行搜索，不显式依赖梯度信息，在噪声环境与高度非线性系统中展现出较强的鲁棒性和并行可扩展性\cite{salimans2017evolution,hansen2001completely}。
+	
+	在双足机器人行走问题上，研究者已利用 RL 和进化算法取得一系列进展。例如，利用策略梯度方法实现类人机器人在未知地形上的动态行走\cite{heess2017emergence}，使用遗传算法优化步态生成参数\cite{hornby2000evolving}，以及在 Cassie 等复杂平台上实现盲行与鲁棒步态\cite{reher2020dynamic}。同时，围绕仿真到现实（Sim-to-Real Transfer）的研究也提出了诸如领域随机化（Domain Randomization）\cite{tobin2017domain}和动力学随机化\cite{peng2018sim}等重要方法。
+	
+	本文基于 MathWorks 官方教程“Train Biped Robot to Walk Using Evolutionary Strategy”\cite{mathworks_biped}及其教学视频\cite{mathworks_video}，系统复现并梳理了基于 ES 的双足机器人行走智能体训练过程。在此基础上，本文进一步从强化学习理论建模、算法原理与工程实现三个层面对该项目进行扩展分析。研究现状方面，本文重点评述 RL 在连续控制与双足机器人领域的代表性工作，比较梯度型 RL 与进化策略类方法的优缺点，并围绕本项目的定位进行总结。
+	
+	本文结构安排如下：第二节介绍强化学习与马尔可夫决策过程（Markov Decision Process, MDP）的理论基础；第三节详细描述双足机器人行走任务的建模与问题形式化；第四节阐述基于进化策略的智能体训练方法及其在 MATLAB/Simulink 环境中的实现流程；第五节呈现实验设置与结果分析，包括学习曲线、步态性能等；第六节给出讨论与未来工作展望；第七节为结论。
+	
+
+
+\section{强化学习理论基础}
+
+\subsection{马尔可夫决策过程建模}
+
+强化学习问题通常形式化为马尔可夫决策过程（Markov Decision Process, MDP），表示为五元组
+\begin{equation}
+	\mathcal{M} = (\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma),
+\end{equation}
+其中：
+\begin{itemize}
+	\item $\mathcal{S}$ 为状态空间，$s_t \in \mathcal{S}$ 表示时刻 $t$ 的环境状态（例如双足机器人的关节角度、角速度、质心位置等）；
+	\item $\mathcal{A}$ 为动作空间，$a_t \in \mathcal{A}$ 表示智能体在状态 $s_t$ 下选择的控制动作（例如各关节驱动力或目标参考轨迹参数）；
+	\item $\mathcal{P}(s_{t+1} \mid s_t, a_t)$ 为状态转移概率核，刻画系统动力学与环境随机性；
+	\item $\mathcal{R}(s_t, a_t) \in \mathbb{R}$ 为即时奖励函数，衡量当前状态–动作对的优劣；
+	\item $\gamma \in [0,1)$ 为折扣因子，用于平衡短期与长期收益。
+\end{itemize}
+
+在给定策略（Policy）$\pi$ 的情况下，智能体与环境的交互生成轨迹
+\begin{equation}
+	\tau = (s_0, a_0, r_0, s_1, a_1, r_1, \dots),
+\end{equation}
+其中 $a_t \sim \pi(\cdot \mid s_t)$，$s_{t+1} \sim \mathcal{P}(\cdot \mid s_t, a_t)$，$r_t = \mathcal{R}(s_t, a_t)$。强化学习的目标是寻找一条最优策略 $\pi^\ast$，最大化期望累积折扣回报：
+\begin{equation}
+	J(\pi) = \mathbb{E}_{\tau \sim \pi} \left[ \sum_{t=0}^{\infty} \gamma^t r_t \right].
+\end{equation}
+
+对给定策略 $\pi$，状态值函数与状态–动作值函数分别定义为：
+\begin{align}
+	V^\pi(s) &= \mathbb{E}_{\tau \sim \pi} \left[ \sum_{t=0}^{\infty} \gamma^t r_t \,\bigg|\, s_0 = s \right], \\
+	Q^\pi(s,a) &= \mathbb{E}_{\tau \sim \pi} \left[ \sum_{t=0}^{\infty} \gamma^t r_t \,\bigg|\, s_0 = s, a_0 = a \right].
+\end{align}
+$Q^\pi$ 满足 Bellman 方程：
+\begin{equation}
+	Q^\pi(s,a) = \mathbb{E}_{s' \sim \mathcal{P}(\cdot \mid s,a)} \left[ \mathcal{R}(s,a) + \gamma \mathbb{E}_{a' \sim \pi(\cdot \mid s')} Q^\pi(s',a') \right].
+\end{equation}
+
+在连续控制问题中，状态与动作往往是连续高维向量，传统基于表格的值函数方法（如原始 Q-Learning\cite{watkins1992q}）不再适用，需要引入函数逼近与策略梯度框架\cite{sutton2000policy,silver2014deterministic}。
+
+\subsection{策略梯度与深度强化学习}
+
+对于参数化策略 $\pi_\theta(a \mid s)$，策略梯度方法通过估计目标函数 $J(\theta)$ 对策略参数 $\theta$ 的梯度来进行优化。经典策略梯度定理给出：
+\begin{equation}
+	\nabla_\theta J(\theta) = \mathbb{E}_{s \sim d^{\pi_\theta}, a \sim \pi_\theta} \left[ \nabla_\theta \log \pi_\theta(a \mid s) \, Q^{\pi_\theta}(s,a) \right],
+\end{equation}
+其中 $d^{\pi_\theta}(s)$ 为在策略 $\pi_\theta$ 下的状态分布\cite{sutton2000policy}。在实际算法中，$Q^{\pi_\theta}(s,a)$ 可由采样回报或引入 Critic 网络进行近似，从而构成 Actor–Critic 结构\cite{konda2000actor,haarnoja2018soft}。
+
+随着深度学习的发展，深度强化学习通过深度神经网络近似策略与值函数，使得 RL 可以处理高维感知输入（如图像）与复杂控制任务。典型算法包括：
+\begin{itemize}
+	\item 深度 Q 网络（Deep Q-Network, DQN）\cite{mnih2015human}，在离散动作空间下学习近似最优 Q 函数；
+	\item 深度确定性策略梯度（Deep Deterministic Policy Gradient, DDPG）\cite{lillicrap2015continuous}，在连续动作空间下结合确定性策略和 Actor–Critic 框架；
+	\item 近端策略优化（Proximal Policy Optimization, PPO）\cite{schulman2017proximal}，引入策略更新约束，提高大步长更新的稳定性；
+\end{itemize}
+
+尽管深度强化学习在诸多领域取得成功，但其训练过程往往需要精心设计的奖励函数、严格的数值稳定性控制以及大量交互样本。在复杂机器人系统中，环境仿真成本较高，奖励信号噪声大，且高维参数空间可能导致梯度估计方差过大，收敛性能不稳定。
+
+\subsection{进化策略与黑盒优化视角}
+
+进化策略（Evolution Strategies, ES）最初起源于进化计算与群体智能领域\cite{beyer2002evolution}，近年来被重新诠释为一种黑盒优化的强化学习方法\cite{salimans2017evolution}。与基于梯度的 RL 不同，ES 从参数空间出发，将策略参数 $\theta$ 视为待优化的个体基因，通过在参数空间中添加噪声采样多个候选解，对其适应度（即策略回报）进行评估，从而近似估计目标函数 $J(\theta)$ 的梯度方向。
+
+具体而言，考虑参数化策略 $\pi_\theta$，定义目标函数
+\begin{equation}
+	J(\theta) = \mathbb{E}_{\epsilon \sim \mathcal{N}(0, I)} \left[ F(\theta + \sigma \epsilon) \right],
+\end{equation}
+其中 $F(\theta)$ 为在参数 $\theta$ 下智能体的期望回报，$\sigma$ 为噪声标准差。通过对参数扰动 $\theta_i = \theta + \sigma \epsilon_i$ 的采样，可以得到梯度估计：
+\begin{equation}
+	\nabla_\theta J(\theta) \approx \frac{1}{N \sigma} \sum_{i=1}^N F(\theta_i) \epsilon_i,
+\end{equation}
+从而采用类似随机梯度上升的方式更新参数：
+\begin{equation}
+	\theta \leftarrow \theta + \alpha \frac{1}{N \sigma} \sum_{i=1}^N F(\theta_i) \epsilon_i,
+\end{equation}
+其中 $\alpha$ 为学习率，$N$ 为种群大小\cite{salimans2017evolution}。
+
+上述框架的一个关键优点在于：策略评估只依赖于“黑盒”回报 $F(\theta_i)$，不需要对环境动力学或策略网络进行显式求导，因此非常适合动力学复杂、不可微或包含非光滑接触的机器人系统。此外，种群评估可以天然并行化，适合利用多核 CPU 或计算集群加速训练\cite{conti2018improving}。
+
+为了进一步提高搜索效率与鲁棒性，进化策略类方法通常引入协方差矩阵适应（Covariance Matrix Adaptation Evolution Strategy, CMA-ES）\cite{hansen2001completely}、自然进化策略（Natural Evolution Strategies, NES）\cite{wierstra2014natural}等变体，对采样分布的均值与协方差进行自适应调整，引导搜索集中于高适应度区域。
+
+	
+\section{双足机器人行走任务建模}
+	
+	本节基于MathWorks教程，对双足机器人行走任务进行形式化建模，包括机器人动力学模型、状态与动作空间、环境设置与终止条件等。
+	
+	\subsection{双足机器人 Simulink 模型}
+	
+	双足机器人模型使用Simscape Multibody构建，包含躯干和两条腿，每条腿具有踝关节、膝关节和髋关节三个自由度。在中性位置（0 rad），两条腿均直立且踝关节平直。脚部接触使用Spatial Contact Force块模拟。智能体通过施加关节扭矩控制每条腿的三个关节。
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{fig/biped-model.png}
+		\caption{双足机器人模型结构示意}
+		\label{fig:robot-model}
+	\end{figure}
+	
+	Simulink模型名为rlWalkingBipedRobot，环境块路径为rlWalkingBipedRobot/RL Agent。重置函数为walkerResetFcn，参数包括upper\_leg\_length/100、lower\_leg\_length/100和h/100。采样时间为Ts，最终模拟时间为Tf。
+	
+	模型集成多体动力学模块，描述刚体间的关节约束、重力作用，并通过接触模型模拟脚与地面的碰撞及摩擦力。模型使用变步长或固定步长的ODE求解器进行数值积分，生成机器人在给定关节扭矩下的状态演化轨迹。
+	
+	用于训练机器人的强化学习Simulink模型如图\ref{fig:rl-sim-model}所示，其中机器人模型采用Simscape多体建模，如图\ref{fig:robot-sim-model}所示。
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{fig/rl-sim-model.png}
+		\caption{强化学习Simulink模型}
+		\label{fig:rl-sim-model}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{fig/robot-sim-model.png}
+		\caption{双足机器人Simulink模型}
+		\label{fig:robot-sim-model}
+	\end{figure}
+	
+	\subsection{状态空间与动作空间}
+	
+  状态空间 $\mathcal{S}$ 为29维向量，包含描述机器人姿态、运动和先前动作的关键信息。具体组成如下：
+  \begin{itemize}
+    \item 躯干质心 $Y$（侧向）和 $Z$（垂直）位移（$Z$ 归一化）；
+    \item $X$（前进）、$Y$（侧向）、$Z$（垂直）位移速度；
+    \item 躯干偏航、俯仰、滚转角度；
+    \item 躯干偏航、俯仰、滚转角速度；
+    \item 左右腿踝、膝、髋关节的角度和速度（6 关节 $\times 2 = 12$ 维）；
+    \item 先前时间步的动作值（6 维）。
+  \end{itemize}
+	
+	状态向量可表示为：
+	\begin{equation}
+		s_t = \begin{bmatrix}
+			y, \hat{z}, v_x, v_y, v_z, \\
+			\theta_{\text{yaw}}, \theta_{\text{pitch}}, \theta_{\text{roll}}, \\
+			\dot{\theta}_{\text{yaw}}, \dot{\theta}_{\text{pitch}}, \dot{\theta}_{\text{roll}}, \\
+			q_{\text{ankle,L}}, \dot{q}_{\text{ankle,L}}, q_{\text{knee,L}}, \dot{q}_{\text{knee,L}}, q_{\text{hip,L}}, \dot{q}_{\text{hip,L}}, \\
+			q_{\text{ankle,R}}, \dot{q}_{\text{ankle,R}}, q_{\text{knee,R}}, \dot{q}_{\text{knee,R}}, q_{\text{hip,R}}, \dot{q}_{\text{hip,R}}, \\
+			u_{t-1,1}, \dots, u_{t-1,6}
+		\end{bmatrix}^\top,
+	\end{equation}
+	其中 $\hat{z}$ 为归一化垂直位移。
+	
+	动作空间 $\mathcal{A}$ 为6维连续向量，范围[-1, 1]，对应每条腿三个关节的归一化扭矩命令。实际扭矩范围为[-3, 3] N·m。该设计使行走控制问题成为高维连续控制的马尔可夫决策过程（MDP）。
+	
+	\subsection{仿真环境与终止条件}
+	
+	环境在Simulink中搭建，地面为平坦刚性平面，机器人初始姿态为近似静止的直立站姿。每个episode从初始化状态开始，在最大模拟时间Tf内运行，或在满足终止条件时提前结束。
+	
+	episode终止条件包括：
+	\begin{itemize}
+		\item 躯干质心Z < 0.1 m（机器人跌倒）；
+		\item |Y| > 1 m（侧向漂移过远）；
+		\item |滚转|、|俯仰|或|偏航| > 0.7854 rad（约45°，姿态过度倾斜）。
+	\end{itemize}
+	
+	终止时，环境返回最终奖励和终止标志，供强化学习智能体使用。
+	
+	\section{奖励函数设计与进化策略方法}
+	
+	\subsection{奖励函数设计}
+	
+	奖励函数平衡前进速度、能量消耗和稳定性。MathWorks教程中的奖励函数为：
+	\begin{equation}
+		r_t = v_x - \lambda_1 \| u_t \|^2 - \lambda_2 \delta_{\text{fall}} + \lambda_3 (1 - |\theta_{\text{torso}}|),
+	\end{equation}
+	其中 $v_x$ 鼓励前进，$\| u_t \|^2$ 惩罚能耗，$\delta_{\text{fall}}$ 惩罚跌倒，$\theta_{\text{torso}}$ 鼓励直立。权重 $\lambda_i$ 调整平衡。
+	
+	累积回报为 $\sum \gamma^t r_t$，$\gamma = 0.99$。
+	
+	\subsection{进化策略优化流程}
+	
+	ES优化步骤：
+	\begin{enumerate}
+		\item 初始化参数 $\theta$，设置 $\sigma$、$N$、$\alpha$。
+		\item 采样 $N$ 个候选 $\theta_i = \theta + \sigma \epsilon_i$。
+		\item 评估每个 $\theta_i$ 的回报 $F_i$。
+		\item 更新 $\theta \leftarrow \theta + \alpha \frac{1}{N \sigma} \sum F_i \epsilon_i$。
+		\item 重复至收敛。
+	\end{enumerate}
+	
+	在MATLAB中，使用rlEvolutionStrategyOptions配置超参数，并行评估加速训练。
+	
+	\section{基于 MATLAB 的实现与训练流程}
+	
+	\subsection{环境接口与智能体结构}
+	
+	使用rlSimulinkEnv封装Simulink模型，指定观察和动作端口。创建ES智能体，如rlEvolutionStrategyAgent。
+	
+	\subsection{训练流程}
+	
+	训练循环：
+	\begin{itemize}
+		\item 初始化智能体和超参数。
+		\item 每代采样种群，评估回报。
+		\item 更新参数，记录指标。
+		\item 停止于目标回报或最大代数。
+	\end{itemize}
+	
+	超参数：
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			参数 & 值 \\
+			\hline
+			种群大小 $N$ & 50-100 \\
+			噪声 $\sigma$ & 0.05-0.2 \\
+			学习率 $\alpha$ & 0.01-0.05 \\
+			折扣因子 $\gamma$ & 0.99 \\
+			\hline
+		\end{tabular}
+		\caption{超参数设置}
+	\end{table}
+	
+	使用多核加速训练。
+	
+	\section{实验结果与分析}
+	
+	\subsection{训练过程与学习曲线}
+	
+	如图\ref{fig:learning_curve}所示，平均回报从负值上升并稳定，表明学会稳定行走。
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig/learning-curve.png}
+		\caption{ES训练学习曲线（来源：MathWorks教程）}
+		\label{fig:learning_curve}
+	\end{figure}
+	
+	在训练初期，大部分个体策略会导致机器人在短时间内跌倒，因此回报较低甚至为强负值。随着 ES 不断更新参数分布，高适应度区域逐渐被探索到，机器人能够保持较长时间的直立与前进，Episode 时长与平均速度不断提升。
+	
+	\subsection{步态行为与稳定性观察}
+	
+	训练后，机器人形成周期步态，躯干稳定，切换平滑，如图\ref{fig:gait_pattern}。
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig/gait-pattern.png}
+		\caption{训练后步态轨迹示意}
+		\label{fig:gait_pattern}
+	\end{figure}
+	
+	\section{讨论与展望}
+	
+	从本项目的复现结果来看，基于进化策略的强化学习方法在双足机器人行走任务中具有显著优势：
+	\begin{itemize}
+		\item \textbf{建模友好性：} 不需要显式导出机器人动力学的解析梯度，也无需对环境进行复杂的微分近似处理；
+		\item \textbf{鲁棒性：} 对奖励噪声、仿真误差及参数初始化不敏感，在高维非凸参数空间中表现出一定的全局搜索能力；
+		\item \textbf{并行性：} 天然适合在多核 CPU 或计算集群上进行并行评估，能够在资源充足时显著缩短训练时间。
+	\end{itemize}
+	
+	与此同时，ES 也存在若干局限性：
+	\begin{itemize}
+		\item \textbf{样本效率：} 相比梯度型 RL 算法，ES 通常需要更多的环境交互样本来获得可比的策略性能\cite{salimans2017evolution}；
+		\item \textbf{计算成本：} 对每一代需评估较大的种群，当仿真开销较大时，整体计算成本较高；
+		\item \textbf{算法调参：} 噪声标准差、种群大小与学习率等超参数对收敛速度与最终性能影响显著，仍需一定经验与实验调整。
+	\end{itemize}
+	
+	
+	\section{结论}
+	
+	本文复现了使用进化策略训练双足机器人实现稳定行走的强化学习项目，并在此基础上进行了较为全面的理论与实验分析。文章首先从马尔可夫决策过程、值函数与策略梯度等方面回顾了强化学习的基本理论框架，强调了在连续控制与复杂动力学系统中引入深度神经网络与策略梯度方法的重要性。随后，本文对双足机器人行走任务进行了形式化建模，详细描述了状态与动作空间、仿真环境与终止条件，并重点分析了奖励函数设计在平衡前进速度、能量消耗与稳定性方面的关键作用。
+	
+	在方法论层面，本文介绍了进化策略作为黑盒优化方法在策略参数空间上的搜索机制，并结合 MATLAB Reinforcement Learning Toolbox 的实现接口，展示了 ES 在双足机器人行走任务中的具体应用流程。实验结果表明，尽管 ES 在样本效率与计算成本方面存在一定劣势，但其对噪声与复杂动力学的鲁棒性、并行可扩展性以及对环境可微性的低要求，使其成为在双足机器人等复杂控制任务中具有吸引力的替代方案。
+	
+	总体而言，本项目不仅加深了我对 RL 理论与算法的理解，也为后续在实际机器人平台上开展基于强化学习的智能控制研究奠定了基础。
+	
+	%%----------- 参考文献 -------------------%%
+	\newpage
+	\bibliographystyle{gbt7714-numerical}
+	\bibliography{reference}
+	
+\end{document}

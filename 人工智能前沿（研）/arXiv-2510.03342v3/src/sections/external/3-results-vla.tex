@@ -1,0 +1,117 @@
+\section{\grlatest{} is a general multi-embodiment Vision-Language-Action Model}
+\label{sec:results-actions}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=1.0\textwidth]{src/assets/actions/gr1.5_example_tasks_grid2_optimized.pdf}
+    \caption{\grshortlatest{} can control three different robots with the same checkpoint to accomplish a variety of tasks out-of-the-box.}
+    \label{fig:robot_rollout_examples}
+\end{figure*}
+
+\grshortlatest{} can control robots with dramatically different form factors to complete a large variety of tasks out-of-the-box, without the need for post-training to specialize the model to a particular embodiment or task. \cref{fig:robot_rollout_examples} shows example tasks on ALOHA, Bi-arm Franka and Apollo humanoid robots. 
+
+\smallskip \noindent In this section, we present a comprehensive evaluation of \grshortlatest{} and a comparison with our previous models, \grlegacy{} and \grod{}. Our experiments are designed to answer the following questions:
+\begin{enumerate}
+    \item How does \grshortlatest{} perform and generalize on short-horizon tasks?
+    \item Does \grshortlatest{} effectively learn from and transfer knowledge across different embodiments?
+    \item How does the thinking process contribute to multi-step tasks?
+\end{enumerate}
+
+\smallskip \noindent We develop a benchmark that follows the design philosophy that was used to evaluate \grlegacy{} \cite{team2025gemini}. We extend it to cover all our embodiments, adding more challenging and multi-step tasks, as well as tasks that test cross-embodiment transfer and thinking. The full benchmark includes 230 tasks in total. 
+
+\smallskip \noindent We generally report mean and standard error of the mean of \emph{progress score} (definitions in \cref{appendix:generalization-tasks} - \cref{appendix:medium-horizon-benchmark}), as it provides a continuous and finer-grained measure of model performance and, as such, is especially useful for complex multi-step tasks. For completeness, we also include the corresponding plots of success rate in the \cref{appendix:additional-exps}.
+
+\begin{figure}[!t]
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/aloha_baselines_progress.pdf}
+\label{fig:aloha-progress-generalization}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/omega_baselines_progress.pdf}
+\label{fig:omega-progress--generalization}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/atari_baselines_progress.pdf}
+\label{fig:atari-progress--generalization}
+\end{subfigure}
+\caption{ Breakdown of \grshortlatest{} generalization capabilities across our robots.  \grshortlatest{} consistently outperforms the baselines and handles all four types of variations more effectively. \label{fig:generalization}}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[b]{0.67\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/aloha_positive_transfer_progress.pdf}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.67\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/omega_positive_transfer_progress.pdf}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.67\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/atari_positive_transfer_progress.pdf}
+\end{subfigure}
+\caption{ Ablation on datasets and training recipes on ALOHA, Bi-arm Franka and Apollo Humanoid. \grshortlatest{} consistently outperforms our baselines: \grshortlatest{} trained on single or multi-robot data without the MT recipe. \label{fig:data-training-ablation}}
+\end{figure}
+
+\subsection{\grlatest{} can generalize to new environments and tasks}
+\label{sec:generalization}
+To understand \grshortlatest{}'s generalization performance on short-horizon tasks, we use the same methodology as in \cite{team2025gemini} and consider multiple axes of variation:
+
+\begin{itemize}
+    \item \smallskip \noindent {\bf Visual Generalization:} robustness to visual variations such as changes in background, lighting, distractor objects, or textures. 
+    \item \smallskip \noindent {\bf Instruction Generalization:} ability to understand the intent behind natural language instructions, including handling paraphrasing, typos, different languages, and varying levels of specificity.
+    \item \smallskip \noindent {\bf Action Generalization:} ability to adapt learned movements or synthesize novel ones, for example, in order to handle new initial conditions or object instances.
+    \item \smallskip \noindent {\bf Task Generalization:} ability to successfully execute a new task in a new environment. This is the most comprehensive form of generalization as it simultaneously requires robustness to visual changes, understanding of open-vocabulary instructions, and the ability to adapt learned motions to new tasks.
+\end{itemize}
+
+
+\smallskip \noindent We first analyze how \grshortlatest{} compares against \grlegacy{} and \grod{} (\grodshort{} for short).  As shown in the top plot of \cref{fig:generalization}, for the ALOHA robot, \grshortlatest{} consistently outperforms these two baselines across all four categories. In particular, \grshortlatest{} achieves substantial gains in instruction, action, and task generalization. For the Bi-arm Franka robot and the Apollo humanoid robot, we compare \grshortlatest{} against our \grodshort{} models\footnote{We do not show comparisons with the \grlegacy{} model from~\cite{team2025gemini}, because those models on the Bi-arm Franka and the Apollo humanoid were post-trained specialists, and they had little generalization beyond variations of the trained tasks.} (middle and bottom plots of \cref{fig:generalization}). On these two platforms, \grshortlatest{} significantly outperforms \grodshort{} across all categories. Note that this is not an apples-to-apples comparison because the \grodshort{} checkpoints were trained with less data due to their earlier release date. Additionally, \grodshort{} is not a multi-embodiment model: each embodiment requires a different checkpoint. Nevertheless, we include these results to illustrate the dramatic performance improvement across different versions of \grlegacy{}.
+
+\smallskip \noindent We perform an ablation study to pinpoint the source of this significant improvement in generalization. We establish two ablation baselines: training with data from a single embodiment versus training with data from all embodiments, both excluding our Motion Transfer (MT) mechanism. As illustrated in \cref{fig:data-training-ablation}, while including data from other embodiments generally boosts performance, our MT training recipe clearly amplifies the positive effect of this additional data. This study confirms both the ability of \grshortlatest{} to leverage multi-embodiment data, and the critical role of the MT mechanism in achieving greater positive transfer of skills among different robots.
+
+\subsection{Learning across different robot embodiments}
+\label{sec:positive_transfer}
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5-x-emb-transfer.pdf}
+    \caption{Cross embodiment benchmark. Left: Our model shows zero-shot skill transfer on tasks only seen by another robot embodiment. Right: Example tasks trained on the first embodiment and evaluated on the second.}
+    \label{fig:cross_data_source_transfer}
+\end{figure*}
+
+\grlatest{} is able to learn and transfer skills across different robot embodiments, leading to both better generalization and more data-efficient learning. Although prior work \cite{10611477} has shown benefits of training VLAs with diverse data from multiple types of robots, there have been few demonstrations of zero-shot transfer of skills from one robot embodiment to another. In our experiments, we find evidence that \grshortlatest{}'s multi-embodiment co-training and MT paradigm enables such transfer. As shown in  \cref{fig:cross_data_source_transfer}, the ALOHA robot is able to perform tasks for which training data was only collected on the Bi-arm Franka platform, and vice versa. The same applies to the humanoid, which can perform skills that are only available in the data from other robots (ALOHA in this example), despite being significantly more difficult to control and a  wider cross-embodiment gap.
+
+\smallskip \noindent To corroborate our observations, we measure cross-embodiment transfer quantitatively with a cross-embodiment benchmark, defined across the three robots included in our study. For each embodiment, we test our model and the baselines on tasks for which data had been collected only on another robot. More details of the benchmark are in Appendix \ref{appendix:cross-embodiment-benchmark}. 
+
+\smallskip \noindent Plots in \cref{fig:cross_data_source_transfer} show how any model trained on single-embodiment data (\grshortlegacy{}, \grodshort{} or \grshortlatest{} trained on a single embodiment) performs poorly on this benchmark, while with cross-embodiment data and MT training recipe we achieve significantly better performance. The efficacy of leveraging cross-embodiment data with Motion Transfer (MT) depends on the initial quantity of data available for a given robotic platform. For the ALOHA platform, which already possesses a large dataset, merely introducing data from other embodiments appears to be less effective; however, MT amplifies the positive transfer from this data by aligning the different embodiments and extracting commonalities, thereby aiding the learning process. Conversely, for Bi-arm Franka with a moderate amount of  data, adding cross-embodiment data is beneficial, and MT successfully facilitates this by aligning and extracting shared knowledge. For humanoid robots, where data is scarce, the addition of external embodiment data provides the greatest performance boost; yet, the effect of MT is less pronounced here, suggesting that the technique's alignment capabilities may be less effective when the embodiment gap is substantially larger, such as between the highly dissimilar humanoid and other robot forms.
+
+\smallskip \noindent In \cref{fig:cross_data_source_transfer} we report  success rate in addition to progress score in order to highlight that zero-shot transfer with \grlatest{} leads to successful task execution, not just partial progress towards completion of the task.
+
+\subsection{Thinking Helps Acting}
+\label{sec:thinking}
+\begin{figure}[ht]
+    \centering
+        \includegraphics[width=0.45\textwidth]{src/assets/actions/thinking_progress.pdf}
+      \caption{Task progress in the multi-step benchmark with and without enabling thinking during inference.}
+        \label{fig:medium-level-thinking}
+\end{figure}
+
+
+\begin{figure}[ht] % 'ht' is a placement specifier: here, top
+    \centering % Centers the entire figure
+        \includegraphics[width=\textwidth]{src/assets/actions/thinking4.jpg}
+      \caption{From left to right, top to bottom: an example rollout of the Thinking VLA: the Apollo humanoid packing objects into a white bag. The thinking trace are overlaid on each snapshot. The Thinking VLA is able to think about its actions at different levels, allowing it to accomplish tasks requiring semantic reasoning and multiple steps of execution.}
+      % Top row shows roll out and thinking traces for "Pack all fruits into the picnic basket" and bottom row for "Pack tennis ball and bottle into the white bag"
+      \label{fig:thinking-traces-visualization}
+\end{figure}
+
+\smallskip \noindent In this section, we focus on the Thinking VLA model (\grshortlatest{} with thinking mode ON during inference). A detailed analysis of the higher-level reasoning enabled by \grshortlatestER{} is deferred to Section \ref{sec:results-agentic}. 
+The advantage of interleaving robot actions with explicit thinking steps is particularly evident in the context of longer multi-step tasks, such as "sorting clothes by colors" (see Appendix \ref{appendix:medium-horizon-benchmark} for our multi-step benchmark). 
+
+\smallskip \noindent \cref{fig:medium-level-thinking}  demonstrates that enabling the thinking mode yields a sizable improvement in the progress score for these tasks. This performance gain stems from the model's ability to decompose the difficult cross-modal translation, which involves mapping high-level, multi-step language instructions to low-level robot actions, into two simpler stages. First, the model generates a language-based thinking trace by converting the complex task into a sequence of specific, short-horizon steps (e.g., transforming the goal of ``sorting clothes'' into a thought like, ``move gripper to the left so that it is closer to the clothes''). Second, the model maps these low-level language commands directly to robot actions. This two-step decomposition proves more robust than a single, end-to-end translation because the first step leverages the powerful visual-linguistic capabilities of the VLM backbone, while the second involves learning a simpler action mapping.
+
+\smallskip \noindent Beyond quantitative performance gains, our experiments provide qualitative evidence of several additional benefits of the Thinking VLA. Firstly, it significantly improves interpretability. By visualizing the robot's internal thinking traces, we can inspect its planned actions and predict its next steps. This transparency enhances both human-robot trust and the safety of robot operations. Secondly, the Thinking VLA exhibits a degree of situational awareness regarding task completion. For instance, as shown in \cref{fig:thinking-traces-visualization}, the robot automatically switches its objective from ``pick up the yellow tennis ball'' to ``put the yellow tennis ball in the white bag'' once the ball has been successfully grasped. This demonstrates that the model possesses an implicit awareness of the success of the prior subtask, removing the need for an explicit success detector. Thirdly, the Thinking VLA enables sophisticated recovery behaviors. For example, in \cref{fig:thinking-traces-visualization}, when the water bottle slips from the right hand and lands near the left hand, the next thinking trace immediately becomes ``pick up the water bottle with the left hand'', effectively initiating a self-correcting recovery behavior.

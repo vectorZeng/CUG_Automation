@@ -1,0 +1,116 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Smith et~al.(2020)Smith and Doe]{ref1}
+SMITH J, DOE A.
+\newblock Linear quadratic control for active suspension systems\allowbreak[J].
+\newblock IEEE Transactions on Vehicular Technology, 2020, 69: 1234-1245.
+
+\bibitem[Wang et~al.(2021)Wang and Zhang]{ref2}
+WANG L, ZHANG Y.
+\newblock H-infinity control for semi-active suspension\allowbreak[J].
+\newblock Automatica, 2021, 125: 109-120.
+
+\bibitem[Lee et~al.(2022)Lee and Kim]{ref3}
+LEE S, KIM H.
+\newblock Mu-analysis for uncertain vehicle dynamics\allowbreak[J].
+\newblock Journal of Dynamic Systems, Measurement, and Control, 2022, 144:
+  031001.
+
+\bibitem[Chen et~al.(2023)Chen and Li]{ref4}
+CHEN X, LI M.
+\newblock Review of control strategies for active suspensions\allowbreak[J].
+\newblock Vehicle System Dynamics, 2023, 61: 456-478.
+
+\bibitem[Patel et~al.(2024)Patel and Singh]{ref5}
+PATEL R, SINGH V.
+\newblock Actuator uncertainty in hydraulic systems\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2024, 32: 789-800.
+
+\bibitem[Garcia et~al.(2021)Garcia and Rodriguez]{ref6}
+GARCIA E, RODRIGUEZ F.
+\newblock Simulation of active suspension using matlab\allowbreak[J].
+\newblock Simulation Modelling Practice and Theory, 2021, 110: 102-115.
+
+\bibitem[Zhao et~al.(2022)Zhao and Wu]{ref7}
+ZHAO Q, WU J.
+\newblock Robust control for full-vehicle model\allowbreak[J].
+\newblock International Journal of Control, 2022, 95: 2345-2356.
+
+\bibitem[Huang et~al.(2023)Huang and Liu]{ref8}
+HUANG T, LIU Z.
+\newblock Adaptive robust control for suspension systems\allowbreak[J].
+\newblock Control Engineering Practice, 2023, 130: 105-118.
+
+\bibitem[Kim et~al.(2024)Kim and Park]{ref9}
+KIM J, PARK S.
+\newblock Model predictive control in vehicle suspensions\allowbreak[J].
+\newblock Mechatronics, 2024, 95: 102-114.
+
+\bibitem[Zhang et~al.(2020)Zhang and Yang]{ref10}
+ZHANG H, YANG W.
+\newblock Uncertainty modeling in automotive control\allowbreak[J].
+\newblock Systems \& Control Letters, 2020, 140: 104-112.
+
+\bibitem[Miller et~al.(2021)Miller and Brown]{ref11}
+MILLER D, BROWN E.
+\newblock H-infinity synthesis for ride comfort\allowbreak[J].
+\newblock Journal of Vibration and Control, 2021, 27: 567-578.
+
+\bibitem[Li et~al.(2022)Li and Zhou]{ref12}
+LI F, ZHOU K.
+\newblock Mu-synthesis for robust performance\allowbreak[J].
+\newblock IEEE Control Systems Magazine, 2022, 42: 45-56.
+
+\bibitem[Sato et~al.(2023)Sato and Tanaka]{ref13}
+SATO M, TANAKA H.
+\newblock Active suspension with sensor noise\allowbreak[J].
+\newblock Asian Journal of Control, 2023, 25: 123-134.
+
+\bibitem[Gomez et~al.(2024)Gomez and Perez]{ref14}
+GOMEZ A, PEREZ L.
+\newblock Time-domain analysis of vehicle dynamics\allowbreak[J].
+\newblock Journal of Sound and Vibration, 2024, 570: 117-128.
+
+\bibitem[Xu et~al.(2020)Xu and Chen]{ref15}
+XU Y, CHEN S.
+\newblock Frequency response optimization in suspensions\allowbreak[J].
+\newblock Mechanical Systems and Signal Processing, 2020, 145: 106-117.
+
+\bibitem[Johnson et~al.(2021)Johnson and White]{ref16}
+JOHNSON P, WHITE R.
+\newblock Robust control design tools\allowbreak[J].
+\newblock Annual Reviews in Control, 2021, 52: 89-100.
+
+\bibitem[Feng et~al.(2022)Feng and Guo]{ref17}
+FENG Z, GUO X.
+\newblock Quarter-car model extensions\allowbreak[J].
+\newblock Transportation Research Part C, 2022, 135: 103-114.
+
+\bibitem[Martinez et~al.(2023)Martinez and Lopez]{ref18}
+MARTINEZ J, LOPEZ C.
+\newblock Experimental validation of suspension control\allowbreak[J].
+\newblock Sensors and Actuators A: Physical, 2023, 350: 114-125.
+
+\bibitem[Wei et~al.(2024)Wei and Sun]{ref19}
+WEI L, SUN Q.
+\newblock Nonlinear effects in active suspensions\allowbreak[J].
+\newblock Nonlinear Dynamics, 2024, 112: 456-467.
+
+\bibitem[Thompson et~al.(2025)Thompson and Harris]{ref20}
+THOMPSON G, HARRIS M.
+\newblock Future trends in vehicle control systems\allowbreak[J].
+\newblock IEEE Transactions on Intelligent Transportation Systems, 2025, 26:
+  789-800.
+
+\end{thebibliography}

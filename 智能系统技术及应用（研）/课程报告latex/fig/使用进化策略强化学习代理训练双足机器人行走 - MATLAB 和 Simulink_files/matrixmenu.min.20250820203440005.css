@@ -1,0 +1,295 @@
+/** css variables to expose */
+mw-matrix {
+  --mw-matrix-waffle-icon-color: var(--mw-color-gray700, #616161);
+  --mw-matrix-waffle-icon-color-hover: var(--mw-color-gray800, #333);
+  --mw-matrix-waffle-icon-color-focus: var(--mw-color-gray800, #333);
+  --mw-matrix-link-color: var(--mw-ws-global-link-color, var(--mw-color-blue550, #1171be));
+  --mw-matrix-link-color-hover: var(--mw-ws-global-link-hover-color, var(--mw-color-blue500, #268cdd));
+}
+
+/* from boostrap 3 stylesheet */
+mw-matrix *,
+mw-matrix *::before,
+mw-matrix *::after {
+  box-sizing: border-box;
+}
+
+mw-matrix * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+mw-matrix button,
+mw-matrix input,
+mw-matrix select,
+mw-matrix textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+mw-matrix button,
+mw-matrix html input[type=button],
+mw-matrix input[type=reset],
+mw-matrix input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+mw-matrix button,
+mw-matrix select {
+  text-transform: none;
+}
+
+mw-matrix optgroup {
+  color: inherit;
+  font: inherit;
+  margin: 0
+}
+
+mw-matrix article,
+mw-matrix aside,
+mw-matrix details,
+mw-matrix figcaption,
+mw-matrix figure,
+mw-matrix footer,
+mw-matrix header,
+mw-matrix hgroup,
+mw-matrix main,
+mw-matrix menu,
+mw-matrix nav,
+mw-matrix section,
+mw-matrix summary {
+  display: block
+}
+
+mw-matrix .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+mw-matrix ol,
+mw-matrix ul {
+  margin-top: 0;
+  margin-bottom: 10px
+}
+
+mw-matrix img {
+  vertical-align: middle;
+}
+
+/* from site7 stylesheet */
+mw-matrix button[class*="icon-"],
+mw-matrix span[class*="icon-"]:not(.glyphicon) {
+  border:1px solid transparent;
+  display:inline-block;
+  font-family:'mathworks';
+  font-style:normal;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  font-variant:normal;
+  font-weight:normal;
+  text-transform:none;
+  speak:none
+}
+
+mw-matrix ul.list-unstyled {
+  margin-left: 0;
+}
+
+mw-matrix ul li {
+  padding: 0 0 0 20px;
+  margin: 0 0 7px;
+  background: 0;
+  list-style-type: none;
+}
+
+mw-matrix ul.list-unstyled li {
+  padding-left: 0;
+}
+
+mw-matrix a {
+  color: var(--mw-matrix-link-color);
+  text-decoration: none;
+}
+
+mw-matrix a:visited {
+  color: var(--mw-matrix-link-color);
+  text-decoration: none;
+}
+
+mw-matrix a.svg_link {
+  display: inline-block;
+  position: relative;
+  transition: opacity .3s ease;
+}
+
+mw-matrix a.svg_link:after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/** mw-matrix custom styles */
+mw-matrix {
+  position: relative;
+}
+
+mw-matrix button { 
+  width:24px; 
+  height:24px; 
+  padding:0;
+  border: none;
+  background:none transparent; 
+  display:inline-block;
+  transition:color .3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+mw-matrix button > .icon-matrix { fill: var(--mw-matrix-waffle-icon-color); font-size:24px; line-height:1.00 !important;}
+mw-matrix button:hover > .icon-matrix { fill: var(--mw-matrix-waffle-icon-color-hover); }
+mw-matrix button:focus > .icon-matrix { fill: var(--mw-matrix-waffle-icon-color-focus); }
+
+mw-matrix .icon-matrix:before {
+  display: none;
+}
+
+mw-matrix mw-matrix-mobile-button .icon-matrix:before {
+  display: inline-block;
+}
+
+/**
+ * ----------------------------------------
+ * Matrix Animations
+ * ----------------------------------------
+ */
+
+.mw_matrix_collapse:not(.mw_matrix_show) {
+  display: none;
+}
+
+/* MATRIX MENU TABLET AND MOBILE */
+#header_mobile mw-matrix .matrix_container,
+#header_mobile .matrix_container_mobile { 
+  margin:1px auto 0; 
+  border:none; 
+  box-shadow:none; 
+  background:#fff; 
+  float:none; 
+  overflow:hidden; 
+  position:relative;
+  z-index:3;
+  display:block !important; 
+  height:auto !important;
+}
+#header_mobile .headernav_matrix > button,
+#header_mobile .matrix_affordance_container_mobile mw-matrix button { 
+  width:auto; 
+  min-width:37px; 
+  height:auto; 
+  min-height:37px; 
+  margin:3.5px -1.5px 0 0; 
+  float:right; 
+}
+#header_mobile .headernav_matrix mw-matrix button > .icon-matrix,
+#header_mobile .matrix_affordance_container_mobile mw-matrix button > .icon-matrix { color:#0076a8; }
+
+/* DESKTOP MATRIX MENU */
+mw-matrix .matrix_container,
+.matrix_container_mobile { 
+  width:319px; 
+  padding:0 10px 10px; 
+  margin-top:2px; 
+  border:1px solid #999; 
+  background:#fff; 
+  box-shadow:0 1px 3px 0 rgba(0,0,0,0.25); 
+  float:right; 
+  overflow:hidden; 
+  position:absolute; 
+  right:0; 
+  z-index:1037; 
+}
+
+mw-matrix .matrix_container ul.matrix_links_primary,
+.matrix_container_mobile ul.matrix_links_primary,
+.matrix_container.mw_matrix_bs_5 ul.matrix_links_primary { 
+  border-bottom:1px solid #ccc; 
+}
+mw-matrix .matrix_container ul[class*="matrix_links_"],
+.matrix_container_mobile ul[class*="matrix_links_"],
+.matrix_container.mw_matrix_bs_5 ul[class*="matrix_links_"] { 
+  width:100%; 
+  padding:10px 0 0; 
+  margin-bottom:0; 
+  float:left; 
+} 
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li,
+.matrix_container_mobile ul[class*="matrix_links_"] > li,
+.matrix_container.mw_matrix_bs_5 ul[class*="matrix_links_"] > li { 
+  width:33.33%; 
+  height:72px;
+  padding:0 5px;
+  margin:0 0 10px; 
+  float:left;
+  font-size:12px; 
+  line-height:1.25; 
+  text-align:center; 
+  white-space:nowrap; 
+} 
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li > a,
+.matrix_container_mobile ul[class*="matrix_links_"] > li > a,
+.matrix_container.mw_matrix_bs_5 ul[class*="matrix_links_"] > li > a { 
+  width:100%; 
+  padding:7px 0 0 0; 
+  border:none;
+  color: var(--mw-matrix-link-color);
+  background:transparent; 
+  display:block; 
+  text-decoration:none !important; 
+}
+
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li > a > img,
+.matrix_container_mobile ul[class*="matrix_links_"] > li > a > img,
+.matrix_container.mw_matrix_bs_5 ul[class*="matrix_links_"] > li > a > img { 
+  height:38px; 
+  padding:2px; 
+  width:auto; 
+  margin:0 auto 7px; 
+  border:1px solid transparent; 
+  border-radius:5px; 
+  display:block; 
+  transition:background-color .3s ease, border-color 0.3s ease; 
+}
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li > a > .matrix_link_title,
+.matrix_container_mobile ul[class*="matrix_links_"] > li > a > .matrix_link_title,
+.matrix_container.mw_matrix_bs_5 ul[class*="matrix_links_"] > li > a > .matrix_link_title { 
+  max-width:89px; 
+  display:block; 
+  line-height:1.15; 
+  white-space:normal; 
+}
+
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li > a:hover > img,
+mw-matrix .matrix_container ul[class*="matrix_links_"] > li.matrix_active > a > img,
+.matrix_container_mobile ul[class*="matrix_links_"] > li > a:hover > img,
+.matrix_container_mobile ul[class*="matrix_links_"] > li.matrix_active > a > img { 
+  border-color:#999;  
+  background-color:#f5f5f5; 
+}
+mw-matrix .matrix_container_zh { 
+  font-family:"Microsoft YaHei","Segoe UI",Arial,Helvetica; 
+}
+mw-matrix .matrix_container_ja { 
+  font-family:Meiryo,Verdana,Arial,Helvetica,"MS P ゴシック"; 
+}
+mw-matrix .matrix_container_kr { 
+  font-family:Malgun Gothic, Apple Gothic, Arial, sans-serif; 
+}

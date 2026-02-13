@@ -1,0 +1,115 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Li et~al.(2025)Li, Chen, Lu, Mu, Yang, Zhang, Song, Yao, Tian, and
+  Wu]{LI2025eid}
+LI W, CHEN S, LU C, et~al.
+\newblock Equivalent-input-disturbance based rotating control of drill-string
+  in compound directional drilling process subject to coal seam
+  variation\allowbreak[J].
+\newblock ISA Transactions, 2025, 159: 352-363.
+
+\bibitem[Li et~al.(2024)Li, Zhu, and Dong]{li2024}
+LI B, ZHU X, DONG L.
+\newblock Axial transfer characteristics of a drillstring in conjunction with
+  bit penetration behavior in horizontal wells\allowbreak[J].
+\newblock Geoenergy Science and Engineering, 2024, 240: 212989.
+
+\bibitem[Yang et~al.(2024)Yang, Wu, Lu, Li, Chen, and Du]{YANG2024rop}
+YANG X, WU M, LU C, et~al.
+\newblock Prediction of rate of penetration based on drilling conditions
+  identification for drilling process\allowbreak[J].
+\newblock Neurocomputing, 2024, 579: 127439.
+
+\bibitem[Szurgacz et~al.(2023)Szurgacz, Srnicek, Tutak, Brodny, and
+  Zhironkin]{szurgacz2023application}
+SZURGACZ D, SRNICEK J, TUTAK M, et~al.
+\newblock Application of cluster analysis for classification of vibration
+  signals from drilling stand aggregates\allowbreak[J].
+\newblock Applied Sciences, 2023, 13\allowbreak (10): 6337.
+
+\bibitem[Yang et~al.(2025)Yang, Wu, Lu, Huang, and Wu]{yang2025improving}
+YANG X, WU M, LU C, et~al.
+\newblock Improving rate-of-penetration and reducing state fluctuation of
+  drill-string system based on multiobjective optimization\allowbreak[J].
+\newblock IEEE Transactions on Industrial Informatics, 2025, 21\allowbreak (3):
+  2304-2313.
+
+\bibitem[Alsaihati et~al.(2025)Alsaihati, Ismail, and
+  Elkatatny]{alsaihati2025fuzzy}
+ALSAIHATI A, ISMAIL M, ELKATATNY S.
+\newblock Optimization of drilling parameters while drilling surface holes
+  using machine learning and differential evolution\allowbreak[J].
+\newblock SPE Journal, 2025, 30\allowbreak (02): 591-604.
+
+\bibitem[Komadja et~al.(2025)Komadja, Westman, Rana, and Vitalis]{komadja2025}
+KOMADJA G~C, WESTMAN E, RANA A, et~al.
+\newblock Predicting rock mass strength from drilling data using synergistic
+  unsupervised and supervised machine learning approaches\allowbreak[J].
+\newblock Earth Science Informatics, 2025, 18\allowbreak (2): 543-558.
+
+\bibitem[Davoodi et~al.(2023)Davoodi, Mehrad, Wood, Rukavishnikov, and
+  Bajolvand]{davoodi2023predicting}
+DAVOODI S, MEHRAD M, WOOD D~A, et~al.
+\newblock Predicting uniaxial compressive strength from drilling variables
+  aided by hybrid machine learning\allowbreak[J].
+\newblock International Journal of Rock Mechanics and Mining Sciences, 2023,
+  170: 105546.
+
+\bibitem[Ma et~al.(2024)Ma, Li, Zhang, and Wang]{ma2024fuzzy}
+MA Y, LI Q, ZHANG H, et~al.
+\newblock Fuzzy inference system for drilling parameter optimization in coal
+  mines\allowbreak[J].
+\newblock Journal of Intelligent \& Fuzzy Systems, 2024, 46\allowbreak (4):
+  789-802.
+
+\bibitem[Aarsnes et~al.(2019)Aarsnes and Wouw]{aarsnes2019axial}
+AARSNES U~J~F, WOUW N.
+\newblock Axial and torsional self-excited vibrations of a distributed
+  drill-string\allowbreak[J].
+\newblock Journal of Sound and Vibration, 2019, 444: 127-151.
+
+\bibitem[Lu et~al.(2025)Lu, Tian, Wu, Yao, and Song]{LU2025auto}
+LU C, TIAN S, WU M, et~al.
+\newblock Generalized incremental dissipative control of drill-string system
+  based on equivalent input-disturbance approach with stubborn state
+  observer\allowbreak[J].
+\newblock Automatica, 2025, 181: 112501.
+
+\bibitem[Wu et~al.(2024)Wu, Chen, Ma, Lu, and Chen]{Wu2024Control}
+WU M, CHEN S, MA S, et~al.
+\newblock Parameter-estimation-based gain-scheduling control of weight on bit
+  in drilling process with uncertain penetration resistance
+  coefficient\allowbreak[J].
+\newblock IEEE Transactions on Cybernetics, 2024, 54\allowbreak (11):
+  6984-6996.
+
+\bibitem[Hansen et~al.(2024)Hansen and Aarset]{Hansen2024Unsupervised}
+HANSEN T, AARSET A.
+\newblock Unsupervised machine learning for data-driven rock mass
+  classification\allowbreak[J].
+\newblock Rock Mechanics and Rock Engineering, 2024, 58: 11261-11291.
+
+\bibitem[Li et~al.(2025)Li, Zhang, and Liu]{li2025adaptability}
+LI Y, ZHANG Q, LIU J.
+\newblock Adaptability of identification algorithms while mwd application in
+  coal mining\allowbreak[J].
+\newblock IEEE Transactions on Geoscience and Remote Sensing, 2025, 63: 1-12.
+
+\bibitem[Zhao et~al.(2018)Zhao, Zhao, Xu, and Wu]{zhao2018}
+ZHAO J, ZHAO J, XU C, et~al.
+\newblock Research and application of composite directional drilling technology
+  in underground coal mines\allowbreak[J].
+\newblock Coal Geology \& Exploration, 2018, 46\allowbreak (4): 202-206.
+
+\end{thebibliography}

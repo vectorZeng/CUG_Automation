@@ -1,0 +1,146 @@
+\documentclass[11pt, letterpaper, logo, onecolumn, copyright, numbering]{googledeepmind}
+
+\usepackage[authoryear, sort&compress, round]{natbib}
+\usepackage[inkscapeformat=png]{svg}
+
+\usepackage[most, breakable, skins]{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{afterpage}
+\usepackage{booktabs}
+\usepackage{subcaption}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{float}
+\usepackage{listings, listings-rust}
+\usepackage{fontawesome5}
+\usepackage{amssymb,graphicx}
+\usepackage{hyperref}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+\usepackage[capitalize]{cleveref}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{adjustbox}
+\usepackage{bm}
+\usepackage{xfrac}
+\usepackage{wrapfig}
+\usepackage{CJKutf8}
+
+
+% for progress score table
+\usepackage[utf8]{inputenc}
+\usepackage{longtable} % For tables that span multiple pages
+\usepackage{booktabs}  % For professional table lines (\toprule, \midrule, etc.)
+
+%%
+
+
+\lstset{
+basicstyle=\footnotesize\ttfamily,
+columns=flexible,
+frame=single,
+xleftmargin=1em,
+breaklines=true,
+breakindent=0em
+}
+
+\makeatletter
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\itshape\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering}m{#1}}
+
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\makeatletter
+\renewcommand\subparagraph{%
+ \@startsection {subparagraph}{5}{\z@ }{3.25ex \@plus 1ex
+ \@minus .2ex}{-1em}{\normalfont \normalsize \bfseries }}%
+\makeatother
+
+\newcommand{\grlatestversion}{1.5}
+\newcommand{\grlegacyversion}{1.0}
+\newcommand{\geminiroboticscommon}{Gemini Robotics}
+\newcommand{\grlatest}{\geminiroboticscommon\ \grlatestversion}
+\newcommand{\grlatestVLA}{\geminiroboticscommon\ \grlatestversion}
+\newcommand{\grlegacy}{\geminiroboticscommon}
+\newcommand{\grshort}{GR}
+\newcommand{\grshortlatest}{\grshort\ \grlatestversion}
+\newcommand{\grshortlatestVLA}{\grshort\ \grlatestversion}
+\newcommand{\grshortlegacy}{\grlegacy}
+\newcommand{\grshortlatestER}{\grshort-ER \grlatestversion}
+\newcommand{\grshortlegacyER}{\grshort-ER}
+\newcommand{\grlatestER}{\geminiroboticscommon-ER \grlatestversion}
+\newcommand{\grlegacyER}{\geminiroboticscommon-ER}
+\newcommand{\grod}{Gemini Robotics On-Device}
+\newcommand{\grodshort}{GRoD}
+
+\newcommand{\geminirobotics}{\geminiroboticscommon}
+\newcommand{\geminiroboticsAction}{\geminiroboticscommon}
+\newcommand{\geminiroboticsER}{\geminiroboticscommon-ER}
+
+\bibliographystyle{plainnat}
+
+\let\cite\citep
+
+\title{\geminirobotics{} {\grlatestversion{}}: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer}
+
+\reportnumber{}
+
+
+\renewcommand{\today}{}
+
+\author[*,1]{Gemini Robotics Team, Google DeepMind\footnote{See Contributions and Acknowledgments section for full author list. Please send correspondence to \href{mailto:gemini-robotics-report@google.com}{\mbox{gemini-robotics-report@google.com}}.}}
+
+\begin{abstract}
+\input{src/sections/external/0-abstract}
+\end{abstract}
+
+\begin{document}
+\maketitle
+
+
+
+\input{src/sections/external/1-intro}
+
+\input{src/sections/external/2-overview}
+
+\input{src/sections/external/3-results-vla}
+\input{src/sections/external/3-results-er}
+\input{src/sections/external/3-results-agentic}
+\input{src/sections/external/4-safety}
+\input{src/sections/external/5-discussion}
+\newpage
+\bibliography{references}
+
+\newpage
+\input{src/sections/external/6-contributions-acknowledgements}
+
+\newpage
+\section*{Appendix}
+\appendix
+\label{sec:appendix}
+
+\input{src/sections/external/model-card}
+\newpage
+\input{src/sections/external/appendix-pre-action}
+\input{src/sections/external/appendix-pre-er}
+
+\end{document}

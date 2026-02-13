@@ -1,0 +1,17 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "main_external.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "references.bib"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2023",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

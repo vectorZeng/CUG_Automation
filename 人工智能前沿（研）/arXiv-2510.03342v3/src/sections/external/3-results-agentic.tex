@@ -1,0 +1,57 @@
+\section{\grlatest{}: A Physical Agent}
+\label{sec:results-agentic}
+
+In this section, we combine \grshortlatestER{}, our embodied reasoning model, with \grshortlatest{}, our VLA model, into a full agentic system, and demonstrate how the synergy between these two models enables the execution of complex, long-horizon tasks~\citep{2022_palm_saycan,huang2022inner,shi2025hi} in out-of-distribution environments. 
+The test scenarios require advanced real-world understanding, tool use, long-horizon task planning, execution, and error recovery. To understand the contribution of different components of the agentic system, we conduct the following ablation study:
+\begin{itemize}
+    \item \textbf{\grshortlatest{} (with Thinking On):} The Thinking VLA model that thinks before acting (\cref{sec:thinking}). 
+    \item \textbf{Agentic (Gemini 2.5 Flash + \grshortlatest{}):} The baseline agentic system, utilizing the Gemini 2.5 Flash model as  orchestrator, and our VLA model for execution.
+    \item \textbf{Agentic (\grshortlatestER{} + \grshortlatest{}):} Our agentic system, utilizing our ER model as orchestrator, and our VLA model for execution.
+\end{itemize}
+
+\smallskip \noindent We choose 8 tasks across the ALOHA and Bi-arm Franka\footnote{While we are using the pre-training checkpoint for ALOHA, we performed additional post-training on the bi-arm Franka platform to improve its success rate for long-horizon tasks.} platforms to test different aspects of an agent, including tool use, memory, planning, and dexterous manipulation skills. For example, in ``Sort Trash'', ``Nut Allergy'', and ``Mushroom Risotto'' the agent needs to perform web search to understand how the objects fit the requirements of the prompt. In ``Desk Organization'' and ``Swap'', the agent is asked to memorize the state of the scene and objects, and then recover the original states. ``Pack Suitcase'' and ``Top shelf to the table'' test the \grshortlatest{} Agent's 3-D reasoning and dexterity, manipulating soft items on shelving or hangers. The ``Blocks in Drawer'' task has 9 distinct steps, testing the agent's planning capability. Details of the benchmark and the progress score definition can be found in Appendix~\ref{appendix:long-horizon}. For completeness, we also report success rate results in \ref{appendix:additional-exps-agentic}.
+
+
+\begin{figure*}
+\begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=0.8\linewidth]{src/assets/agent/progress_agent_v3.pdf}
+        \includegraphics[width=0.8\linewidth]{src/assets/agent/long_horizon_figure_3.jpg}
+\end{subfigure}
+\begin{subfigure}{\textwidth}
+    \centering
+\vspace{0.2in}   
+\includegraphics[width=0.8\linewidth]{src/assets/agent/omega_agentic_progress_no_legend.pdf}
+        \includegraphics[width=0.7\linewidth]{src/assets/agent/Long-horizon-omega-star-3.jpeg}
+\end{subfigure}
+    \caption{Long-horizon evaluations for the \grshortlatest{} Agent and the baselines on ALOHA (top) and Bi-arm Franka (bottom), consisting of tasks that require advanced real-world understanding, tool use, long-horizon task planning, execution, and error recovery to successfully complete the complex long-horizon tasks.}
+    \label{fig:agentic_comparison}
+\end{figure*}
+
+\smallskip \noindent As shown in Figure \ref{fig:agentic_comparison}, the agent composed of the \grshortlatest{} family of models consistently and significantly outperforms the other two baselines. The Thinking VLA achieves moderate performance with a progress score up to 44 percent. In contrast, our \grshortlatest{} agent frequently achieves scores near 80\%. Although the Thinking VLA can perform a degree of task decomposition, its world understanding and task planning are limited compared to the Embodied Reasoning model. This is consistent with the fact that the Thinking VLA is a smaller model that is primarily optimized for action output.
+
+\smallskip \noindent We compare our \grshortlatest{} Agent with the baseline agent that uses the off-the-shelf Gemini 2.5 Flash model for orchestration. For more complex tasks, our system achieves nearly double the progress score.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Subtask failure modes & Agent &  Agent  \\ 
+  & (Gemini 2.5 Flash as orchestrator) & (\grshortlatestER{} as orchestrator) \\
+ \hline
+Planning  & 25.5\% & 9\% \\
+Success detection & 6\% & 4\% \\
+Action & 13\% & 9\% \\
+ \hline
+Total failure rates &44.5\% & 22\% \\
+ \hline
+\end{tabular}
+\caption{
+Failure modes for long-horizon evaluations: A planning failure is when the orchestrator makes a wrong plan or issues a wrong instruction to the VLA. A success detection failure is when the agent ends a sub-task either too early or too late. An action failure is when the VLA does not successfully complete the sub-task. }
+\label{table:agent-failure-modes}
+\end{center}
+\end{table}
+
+\smallskip \noindent We analyze failures of the agentic system and identify three categories: orchestrator errors (wrong plan or instruction to the VLA), success detector errors (ending the sub-task too early or too late), and VLA failures (inability to complete the sub-task). As detailed in Table \ref{table:agent-failure-modes}, our agentic system with \grshortlatestER{} as orchestrator outperforms the baseline with Gemini 2.5 Flash as orchestrator in all categories, with the most significant boost in task-planning performance. This difference underscores that \grshortlatestER{} provides stronger embodied reasoning capabilities than Gemini 2.5 Flash. 
+
+\smallskip \noindent These results demonstrate a clear hierarchy in capability. While improvements in the VLA model significantly enhance execution robustness, they are insufficient for complex, long-horizon tasks. Furthermore, simply pairing an off-the-shelf VLM like Gemini 2.5 Flash with an advanced VLA model fails to achieve reliable end-to-end success, underscoring the importance of general real-world understanding and embodied reasoning. Our agentic architecture, which leverages the \grshortlatestER{} model for high-level planning and orchestration, significantly improves reliability. This result highlights an important design philosophy for physical agents: combining general, robust low-level control with intelligent high-level embodied reasoning is the critical path towards deploying capable AI agents in the physical world.

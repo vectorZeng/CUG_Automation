@@ -1,0 +1,42 @@
+\section{Method Overview}
+\label{sec:overview}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/gr_1.5_overview_v6.pdf}
+    \caption{The Gemini Robotics 1.5 family of models consists of Gemini Robotics 1.5, a VLA, and Gemini Robotics 1.5-ER, a VLM with state-of-the-art embodied reasoning capabilities. They can be combined together to form a powerful agentic framework.}
+    \label{fig:gr1.5_overview}
+\end{figure*}
+
+
+\subsection{Model \& Architecture}
+
+\textbf{\grlatest{} model family}. Both \grlatest{} and \grlatestER{} inherit Gemini's multimodal world knowledge. \grlatestER{} (\grshortlatestER{} for short), our VLM, fully retains Gemini's capabilities including advanced reasoning, tool use, and more. It has additionally been optimized for complex embodied reasoning problems such as task planning, reasoning for spatial expertise, and task progress estimation. \grshortlatestER{} significantly extends and improves upon GR-ER's embodied reasoning capabilities.
+\grlatest{} (\grshortlatest{} for short), our VLA model, translates mid- and short-horizon instructions into robot actions. It understands open-vocabulary natural language instructions, can perform reasoning steps before emitting an action, and it can natively control multiple robots with different embodiments. As such, \grshortlatest{} significantly extends the previous Gemini Robotics' capabilities.
+
+\smallskip \noindent \textbf{Agentic System Architecture.} The full agentic system consists of an orchestrator and an action model that are implemented by the VLM and the VLA, respectively:
+\begin{itemize}
+    \item \textbf{Orchestrator}:
+    The orchestrator processes user input and environmental feedback and controls the overall task flow. It breaks complex tasks into simpler steps that can be executed by the VLA, and it performs success detection to decide when to switch to the next step. To accomplish a user-specified task, it can leverage digital tools to access external information or perform additional reasoning steps. We use \grshortlatestER{} as the orchestrator.
+    \item \textbf{Action model}: The action model translates instructions issued by the orchestrator into low-level robot actions. It is made available to the orchestrator as a specialized tool and receives instructions via open-vocabulary natural language. The action model is implemented by the \grshortlatest{} model.
+    
+\end{itemize}
+
+\smallskip \noindent \textbf{Embodied thinking}. A core innovation of \grlatest{} is Embodied Thinking: the ability to reason—or ``think''—before taking action~\citep{lee2025molmoact,lin2025onetwovla, huang2025thinkact, Zawalski24-ecot}, which operates across both the VLM and the VLA models. The \grshortlatestER{} model combines Gemini's thinking and tool-use with an enhanced physical world understanding, enabling it to function within the agentic system for high-level planning. This includes breaking complex tasks into coarse-grained plans, adaptively updating those plans based on execution, or calling external tools like web search. We also introduce an analogous thinking capability to the VLA, creating the Thinking VLA, or \grshortlatest{} (Thinking on) in our plots and results. Our Thinking VLA explicitly reasons about the instruction and its perception, generates thinking traces in natural language~\citep{smith2025steer,belkhale2024rth}, and appends them to the context window before emitting an action. This process simplifies complex instructions into sequences of primitive skills, increases the transparency in human-robot interactions, and offers a new paradigm for scaling VLA capabilities.
+
+\smallskip \noindent To understand how embodied thinking and the agentic system architecture may interact, let us consider a user instruction  such as ``Pack the suitcase for a trip to London''. The orchestrator (\grshortlatestER{}) accesses a travel itinerary and a recent weather forecast with user permission to decide which clothes are appropriate to pack. It then produces a high-level plan consisting of instructions such as ``pack the rain jacket into the luggage''  that it communicates to the action model. The action model then decomposes each such instruction into shorter segments that correspond to a few seconds of robot movement each (e.g., ``pick up the rain jacket from the wardrobe''). These are executed directly, or they are further translated into an inner monologue of primitive motions such as ``move the gripper to the left'' or ``close the gripper'', thus leveraging an explicit understanding of the geometry of the scene to solve the task. Overall, our models' ability to perform embodied thinking dramatically improves their ability to handle multi-step tasks by allowing the models to compose skills in a structured, deliberate manner, ultimately leading to more robust and reliable robot performance.
+
+\smallskip \noindent \textbf{Motion Transfer}. In \grlatest{}, we also introduce a new model architecture and training recipe for the VLA. These enable the model to learn from different robots and data sources, to form a unified understanding of motions and the effects of physical interactions, enabling skills to transfer across very different robot embodiments. We refer to the new training recipe as Motion Transfer (MT) in our results.
+
+\subsection{Robot Data}
+
+The dataset used for training  the \grlatest{} contains both multi-embodiment robot data collected on ALOHA~\cite{aloha2}, Bi-arm Franka \cite{fr3} and Apollo humanoid ~\cite{apollo}, as well as publicly available text, image and video datasets on the Internet. The robot data consists of thousands of diverse tasks across these platforms covering a broad range of manipulation skills across a multitude of scenes. 
+
+\subsection{Evaluation}
+For all comparisons reported in this report, we perform A/B/n testing on real robots. This means that we test all models involved in a particular comparison in an interleaved manner on the same robot work cell, thereby reducing variance in the evaluations that might otherwise arise from variations across robots and environmental conditions. 
+
+\smallskip \noindent The development of \grshortlatest{} requires comparisons of a large number of architecture variations, algorithm hyperparameters and other settings across multiple embodiments and tasks. To improve research iteration speed, we have developed methods for evaluation without real robots in the loop.
+
+\smallskip \noindent We use the open-source MuJoCo simulator \cite{TodorovET12} to generate evaluation scenes for the robot embodiments in this report. By carefully aligning the visual and physical parameters of simulated and real scenes, we are able to achieve a strong rank consistency between evaluations in simulation and on the real robot (see \cref{fig:sim_to_real_correlation} in the \cref{sec:sim-to-real-appendix}).
+
+\smallskip \noindent This has allowed us to massively scale up the breadth of our evaluations to new objects, scenes, and environments, and to rapidly iterate on architectural and algorithmic improvements. Over 90\% of the evaluation episodes during the development of \grlatest{} were conducted in simulation. Although real-world evaluation is still required to determine model quality, evaluation in simulation dramatically reduces the volume of tests on real hardware.

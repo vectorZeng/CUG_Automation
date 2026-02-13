@@ -1,0 +1,104 @@
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{CUGReport}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setstretch{1.5} % 设置全局行距为1.5倍
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt, parsep=0pt}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+% 全文字体：中文宋体，英文和数字 Times New Roman
+\setCJKmainfont{SimSun}
+\setmainfont{Times New Roman}
+
+% 字号命令
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{18pt}\selectfont}
+
+% 封面
+{
+	\title{
+		\vspace{1cm}
+		\songti \xiaoerhao \textbf{Optimal Control with Lyapunov Stability Guarantees for Space Applications论文研读} \par
+		\vspace{1cm}
+		\songti \sihao {\textbf{曾康慧}} \par
+		\vspace{13cm}
+	}
+}
+
+%%------------------------document环境开始------------------------%%
+\begin{document}
+	
+	%%-----------------------封面--------------------%%
+	\cover
+	\thispagestyle{empty}
+	
+	%%------------------摘要-------------%%
+	\newpage
+
+
+%%--------------------------目录页------------------------%%
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+%%------------------------正文页从这里开始-------------------%%
+\newpage
+\setcounter{page}{1}
+\section{研究背景和意义}
+
+在当今太空探索任务中，控制系统常常面临复杂的非线性动力学、长时域稳定性和各种不确定性等严峻挑战。传统控制方法，如比例积分微分（Proportional-Integral-Derivative, PID）控制器或线性二次调节器（Linear Quadratic Regulator, LQR），在处理这些复杂场景时往往难以同时保证全局最优性能和系统的长期稳定性，尤其是在姿态控制、接近对接以及软着陆等关键应用领域。无限时域最优控制问题（Infinite Horizon Optimal Control Problem, IH-OCP）作为一种先进的框架，旨在通过最小化长期累积成本，同时确保系统从任意初始状态渐近收敛到目标状态（如原点），从而提供更可靠的解决方案。
+
+本论文的研究意义尤为突出，它为太空应用领域引入了一种巧妙结合最优控制和Lyapunov稳定性保证的创新控制框架。这种方法不仅能够显著提升任务的成功率，例如通过优化控制输入来减少燃料消耗、提高姿态调整的精度，还能有效应对太空环境中常见的扰动因素，如重力梯度、太阳辐射压或大气阻力。在当前全球太空竞赛日益加剧的背景下，例如火星探测任务、卫星编队飞行以及商业太空旅行的发展，这种框架有助于推动航天工程从传统的经验性设计向基于严谨理论的自治系统转型，最终提升整体任务的安全性和效率。
+
+\section{研究问题的最新进展}
+
+近年来，无限时域最优控制在航天工程领域的最新进展主要体现在多种方法的探索和融合上。其中，射击法（shooting method）已被广泛应用于姿态控制和轨迹优化问题，但其主要缺点在于对初始猜值的敏感性，导致收敛不稳定；序列二次规划（Sequential Quadratic Programming, SQP）和内点法则擅长处理带约束的最优控制，但往往缺乏实时反馈机制和全局稳定性保证；此外，强化学习（Reinforcement Learning, RL）作为一种新兴的自适应方法，已被引入以处理不确定性，但其高度依赖大量训练数据，且结果一致性较差。Lyapunov方法与最优控制的深度融合，特别是通过控制Lyapunov函数（Control Lyapunov Function, CLF）来确保全局渐近稳定（Global Asymptotic Stability, GAS），已成为该领域的研究热点，例如在非线性系统中证明系统的鲁棒性。
+
+在最新工作中，如作者团队的先前论文，已开始探索将IH-OCP转化为有限时域问题，并利用Bellman方程来严格证明系统的稳定性。然而，在实际太空应用中，将这些理论与具体场景（如非线性动力学的局部线性化）相结合的集成研究仍相对较少。本文在此基础上进行了扩展，针对航天领域的典型问题提出了一种实用算法，这不仅代表了从纯理论分析向工程应用的显著进展，还为未来处理更复杂动态系统的研究铺平了道路。
+
+\section{采用的方法和创新要点}
+
+论文的核心方法是将IH-OCP巧妙分解为两个互补阶段：首先是有限时域非线性最优控制问题（Optimal Control Problem, OCP），采用迭代线性二次调节器（Iterative Linear Quadratic Regulator, iLQR）进行求解，以处理系统的完整非线性动力学；其次是终端集内的无限时域线性调节阶段，使用LQR来确保稳定收敛。方法的关键在于引入自由终时$T$，通过联合优化控制输入序列和转移时间，确保终端状态进入线性化假设有效的区域$\Omega_M$，并引入正则化终端成本来逼近无限时域的真实成本，从而避免直接求解不可处理的无限问题。创新要点主要体现在：
+\begin{itemize}
+	\item 使用备用构造最优控制问题（Alternate Construction Optimal Control Problem, AC-OCP）来证明成本函数收敛到IH-OCP的真实值，并严格满足Bellman方程，从而自然构造出CLF以保证系统的GAS。这种证明不仅理论严谨，还为实际应用提供了稳定性保障。
+	\item 在非线性阶段保留系统的完整动力学，仅在终端区域进行线性化处理，这大大减少了由于过早线性化引入的误差，提高了控制精度。
+	\item 对于线性化假设可能失效的场景（如软着陆问题中的质量变化和约束），引入假设4（前向不变集）和软约束机制（如指数罚函数），显著增强了方法的鲁棒性和适用性。
+\end{itemize}
+
+这些创新使得该方法特别适合非线性强度高、约束条件多的航天问题，例如在姿态控制中有效处理大角度机动，确保系统在复杂环境中稳定运行。
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\linewidth]{fig/infinite_horizon_intuition}
+	\caption{解决无限时域最优控制问题的策略示意图}
+	\label{fig:infinitehorizonintuition}
+\end{figure}
+
+\section{与之前研究工作相比的主要优势}
+
+与射击法相比，本方法显著降低了初始猜值的敏感性，并通过内置反馈控制机制更好地应对实时扰动，提高鲁棒性。相对于SQP，本文采用的iLQR充分利用递归计算结构，在长时域问题中计算效率更高，避免SQP的块状计算开销。RL方法虽然在自适应方面表现出色，但训练成本高昂且缺乏明确的稳定性证明；相比之下，本文通过CLF提供严格的GAS保证，更适合安全关键的航天任务。
+
+该方法的优势在太空应用模拟中体现得淋漓尽致：例如，在姿态控制案例中，通过延长转移时间可以将总成本从$6.45 \times 10^5$降低至$5.20 \times 10^5$，同时控制输入变得更加平滑，避免了突变。接近对接和软着陆的数值结果进一步验证了方法的通用性，优于传统的开放环优化工具（如Interior Point Optimizer, IPOPT），因为它融入了实时反馈和Lyapunov-based稳定性，确保在不确定环境下任务的可靠执行。
+
+\section{论文存在的不足和可以完善的地方}
+
+尽管该论文在创新性和实用性上表现出色，但仍存在一些不足之处：首先是依赖线性可控性假设（假设3），在非完整系统（如非全驱动的着陆器）中可能失效，虽然通过假设4进行了部分缓解，但需要在更多复杂场景下进行验证，以确认其泛化能力。其次，模拟实验主要基于MATLAB的欧拉积分方法，缺乏对随机扰动的蒙特卡洛模拟或实时硬件在环测试，这可能导致在真实太空环境中的表现评估不足，影响方法的工程可靠性。第三，在软着陆问题中，罚函数参数（如$m=100, n=1$）的选取较为经验性，缺少系统的敏感性分析，可能在不同初始条件下导致次优解或不稳定性。
+
+针对这些不足，完善建议包括：扩展方法到随机扰动场景，例如引入随机CLF来处理噪声；整合模型预测控制（Model Predictive Control, MPC）以增强在线重规划能力，实现更动态的控制调整；增加实验验证环节，如在模拟微重力环境中进行硬件测试，以桥接模拟与现实；此外，开发算法参数的自动化优化机制，例如自适应选择转移时间$T$，从而进一步提高方法的实用性和用户友好度。
+
+
+	
+	
+	
+
+	
+\end{document}

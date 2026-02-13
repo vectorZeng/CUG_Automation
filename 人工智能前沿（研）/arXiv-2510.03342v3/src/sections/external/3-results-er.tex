@@ -1,0 +1,132 @@
+\section{{\grlatestER{}} is a generalist embodied reasoning model}
+\label{sec:results-er}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.7\textwidth]{src/assets/ER/generality_vs_embodied_reasoning.pdf}
+    \caption{The \grlatestER{} model is our most advanced model for embodied reasoning while retaining strong performance as a general-purpose multimodal foundation model. We measure Embodied Reasoning performance on a mix of academic benchmarks covering text-based image understanding as well as spatial signal prediction, and measure Generality performance on MMMU, GPQA, and Aider Polyglot.}
+    \label{fig:gr1.5_er_generality}
+\end{figure*}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/ER/er_capability_all_v3.pdf}
+    \caption{The \grlatestER{} model has a diverse set of capabilities that can be applied on images and videos that are useful for robotics.}
+    \label{fig:gr1.5_er_capability_all}
+\end{figure*}
+
+Robots require advanced and grounded knowledge of the physical world, ranging from precise spatial and temporal reasoning to a deep grasp of intuitive physics, causality, and affordances. We refer to this type of real-world understanding as \textit{embodied reasoning} (ER). We introduce \grlatestER{} (\grshortlatestER{}), our most advanced multimodal thinking model for state-of-the-art embodied reasoning based on Gemini. When combined with a general VLA, such as \grshortlatest{} showcased in \cref{sec:results-actions}, \grshortlatestER{} provides high-level intelligence to form the backbone of a general agentic robot system, which we describe in \cref{sec:results-agentic}.
+
+\smallskip \noindent In this section, we will focus on embodied reasoning capabilities and highlight several key properties of \grshortlatestER{}:
+\begin{enumerate}
+    \item Strong embodied reasoning performance while retaining the generality of a frontier model; 
+    \item Excels in key robotic capabilities, such as complex pointing, progress understanding, and real-world use cases;
+    \item Able to scale embodied reasoning performance via inference time compute.
+\end{enumerate}
+
+\subsection{Generality}
+\label{sec:results-er-generality}
+Notably, \grlatestER{} is a \textit{generalist} embodied reasoning model: it exhibits the broad capabilities of a frontier model across many domains while also showcasing exceptional performance as a spatial expert for real-world understanding. This is visualized in \cref{fig:gr1.5_er_generality} which shows this trade-off for several contemporary frontier models. To assess models quantitatively in terms of both their broad capabilities as well as their more specialized embodied reasoning performance, we evaluate them on two sets of benchmarks.  Firstly, we measure the models' performance across a collection of 15 widely-used academic benchmarks designed to measure embodied reasoning capabilities such as text-based image understanding (e.g.,\  BLINK~\cite{fu2024blink}, CV-Bench~\cite{tong2024cambrian1}, and ERQA~\cite{team2025gemini}) and spatial reasoning (e.g.\ RoboSpatial~\cite{song2025robospatial}, PointArena~\cite{cheng2025pointarena}, Where2Place~\cite{yuan2024robopoint}, and RefSpatial~\cite{zhou2025roborefer}). The embodied reasoning score is a weighted average of 50\% spatial reasoning benchmarks and 50\% question answering benchmarks (both image and video). Secondly, we measure the generalist performance on an equally weighted mix of academic benchmarks that assess a broader range of capabilities including image understanding, science, and coding via the MMMU~\cite{mmmu}, GPQA~\cite{rein2024gpqa}, and Aider Polyglot~\cite{Gauthier2024aider} benchmarks. The full evaluation details and results are discussed in Appendix \ref{appendix-pre-er}. \cref{fig:gr1.5_er_generality} shows that \grlatestER{} expands the Pareto frontier of generality and embodied reasoning, achieving state-of-the-art embodied reasoning performance with comparable generality to other models in its model class.
+
+\begin{figure*}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{src/assets/ER/pointing_capabilities_comparison.pdf}
+    \caption{Performance on a mix of 5 academic benchmarks for 2D pointing and point-based reasoning; accuracy is defined as the percentage of point predictions within the ground truth mask (pointing) or correct final count (point-to-count). The categories describe different types of point prediction and are used to aggregate evaluation results from Point-Bench, RefSpatial, RoboSpatial, Where2Place, and PixMo Count. Results for GPT-5 and GPT-5-mini obtained via API calls in September 2025.}
+    \label{fig:gr1.5_er_pointing_benchmark}
+\end{figure*}
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{src/assets/ER/pointing_collage.jpg}
+    \caption{Complex pointing examples from \grshortlatestER{}. The model can follow complex pointing prompts that require reasoning about physical, spatial, and semantic constraints: It can localize precise parts of objects, such as the rim of a bowl and sockets of a power strip (Row 2, Columns 1 and 3) and predict points that respect physical, spatial, and semantic constraints, e.g., corresponding to objects that are lighter than $10$ pounds (Row 1, Column 3), and matching similar items (Row 2, Column 2). \grshortlatestER{} can also sequence points into trajectories that respect physics (Row 1, Column 2) and avoid collisions (Row 1, Column 1).}
+    \label{fig:gr1.5_er_pointing_collage}
+\end{figure*}
+
+\subsection{Frontier capabilities for Embodied Reasoning}
+
+\grshortlatestER{} showcases advanced performance across a number of embodied reasoning capabilities which are highly relevant for understanding the physical world, particularly in robotic applications. We visualize some of these in \cref{fig:gr1.5_er_capability_all} and analyze a few of these areas in detail.
+
+\smallskip \noindent \textbf{Complex Pointing:}
+%
+A point is a flexible and lightweight representation that grounds a model's semantic understanding onto visual inputs. Using very few tokens, a point can precisely locate an abstract concept, such as where to click or the most appropriate object part to grasp. By extending this ability to predict a set of points, a model can generate more complex outputs like motion trajectories and paths, providing precise action guidance for robots.
+Points can also serve as intermediate reasoning tools for other downstream tasks, such as counting. We define the generalization of this capability, which combines pointing with reasoning, as \textbf{complex pointing}.
+
+\smallskip \noindent \grshortlatestER{} achieves new state-of-the-art results on academic benchmarks for complex pointing, as shown in \cref{fig:gr1.5_er_pointing_benchmark}. The evaluation spans several key capabilities: \textbf{Average Pointing} aggregates performance across all benchmarks; \textbf{Spatial Pointing} focuses on pointing queries requiring spatial reasoning (e.g., ``point to the space left of the cup"); \textbf{Steerable Pointing} tests the ability to modify points following user instructions (e.g., ``move the point slightly up"); and \textbf{Point-to-Count} measures counting accuracy when points are used as an intermediate reasoning step. Refer to \ref{appendix-pointing} for a more detailed breakdown. \grshortlatestER{} significantly outperforms \grshortlegacyER{}, Gemini 2.5, and GPT-5. It particularly excels at complex pointing tasks that require reasoning about physical, spatial, and semantic constraints including safety. We provide several examples in \cref{fig:gr1.5_er_pointing_collage}.
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/ER/gr1.5_er_sd_collage_v7.pdf}
+    \caption{Multiple forms of progress understanding in \grshortlatestER{}. Understanding progress in scenes with robot interaction requires spatial, temporal, and semantic reasoning abilities potentially across multiple viewpoints and conditioned on language descriptions. Top: Predicting the percentage of task completion. Bottom left: Multi-view success detection: no single camera has sufficient information to detect success for the task ``put the orange pack of biscuits from the basket in the shelf next to the blue bowl.'' Bottom right: unshuffling video frames is another form of progress understanding where temporal understanding is essential.}
+    \label{fig:gr1.5_er_sd_collage}
+\end{figure*}
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=1.0\textwidth]{src/assets/ER/er_1p5_sd_evals_total.pdf}
+    \caption{
+    Performance on various formulations of success detection (SD). Real-time SD considers model inference latency when computing prediction accuracy, while offline success detection assumes unlimited inference time for each prediction. Multiview SD uses multiple camera views while Singleview SD uses just a single viewpoint.
+    }
+    \label{fig:gr1.5_er_sd_results}
+\end{figure*}
+
+\noindent \textbf{Progress Understanding and Success Detection}:
+%
+Understanding temporal progress in real-world situations with physical interaction is critical for various robotics applications, including policy evaluation, training, data filtering, and robot orchestration in long-horizon tasks. However, accurate progress understanding requires advanced mastery of temporal and spatial reasoning, semantic understanding of the world, and multi-view understanding. As visualized in \cref{fig:gr1.5_er_sd_collage}, \grshortlatestER{} is capable of progress estimation in a wide set of scenarios with diverse and complex scenes and tasks on a mix of embodiments, including predicting percentage towards task completion, success detection~\citep{du2023vision,rocamonde2023vision}, and video frame unshuffling~\citep{ma2024generative}.
+
+\smallskip \noindent To quantitatively analyze the progress understanding capabilities of \grshortlatestER{}, we evaluate various formulations of success detection, where a model must predict a binary success / failure signal given input images and a task instruction in text. In particular, we create a success detection evaluation benchmark which focuses on two important categories: real-time or offline inference and multiview or singleview image inputs.
+
+\smallskip \noindent For the real-time evaluations, we sample recorded real-world robot rollouts from Section \ref{sec:results-agentic}, and run the model at 5Hz and simulate inference latency. To calculate accuracy, the prediction for any given frame is considered to be the label from the most recent preceding frame for which a response is available. We find that models often require long inference time making real-time usage challenging, since stale success predictions quickly become irrelevant during dynamic robot interactions. For the offline evaluations, we leverage various types of videos of real-world interaction, which cover a mix of embodiments, camera viewpoints, and input formats. In the offline setting, we allow models unlimited inference time for success detection. As seen in \cref{fig:gr1.5_er_sd_results}, \grshortlatestER{} showcases strong performance for both real-time and offline success detection, in both the multiview and singleview image input settings.
+
+\noindent \textbf{Real-World Robotic Use Cases:}
+%
+To assess \grshortlatestER{}’s performance beyond academic benchmarks, we aim to study how well \grshortlatestER{} performs in realistic scenarios which are representative of real-world use cases (\cref{fig:gr1.5_er_ttp_benchmark_visual_overall}(a)). For a quantitative evaluation, we create a benchmark consisting of examples provided by early testers of \grlegacy{} who had deployed ~\grshortlegacyER{} in their application domains.
+The benchmark focuses on spatial understanding for in-the-wild data distributions with tasks like object detection and pointing. As shown in \cref{fig:gr1.5_er_ttp_benchmark_visual_overall}(b), \grshortlatestER{} outperforms \grlegacyER{} as well as contemporary state-of-the-art multimodal models.
+
+\begin{figure*}[!t]
+    \centering
+    \begin{subfigure}[t]{0.66\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{src/assets/ER/real_world_understanding_v2.jpg}
+    \end{subfigure}%
+    \hfill % Add some space between the two subfigures
+    \begin{subfigure}[t]{0.33\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{src/assets/ER/real_world_understanding_performance.pdf}
+    \end{subfigure}
+    \caption{(a) Example real-world use case in an inspection task. Using \grlatestER{}, we can parse an image of an inventory shelf (left) into a table and present the result in an HTML page. (b) Performance on data distributions sourced from real-world use cases from early testers of Gemini Robotics-ER. Scores are measured as IOU for bounding box predictions and accuracy of predicted points within ground truth segmentation masks for pointing. Results for GPT-5 and GPT-5-mini obtained via API calls in September 2025.} 
+    \label{fig:gr1.5_er_ttp_benchmark_visual_overall}
+\end{figure*}
+
+
+\subsection{Thinking}
+
+A hallmark of contemporary frontier models is that their performance can improve via additional reasoning steps at inference time (known as thinking). Just as language-based domains like math and code have benefited from thinking, we demonstrate the benefits of thinking for open-world embodied reasoning for \grshortlatestER{}.
+
+
+\smallskip \noindent \cref{fig:gr1.5_er_sample_thoughts} presents example thinking traces of \grshortlatestER{}. The traces demonstrate that \grshortlatestER{} identifies key features in the image before focusing on fine details (gauge reading), proceeds logically and methodically (matching socks), can point while thinking (matching socks), and performs relevant mathematical operations correctly (gauge reading).
+We show additional thinking trace visualizations in Appendix~\ref{appendix-er-examples}.
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/ER/thought_samples_2.pdf}
+    \caption{Sample thinking traces from \grshortlatestER{} performing embodied reasoning tasks.}
+    \label{fig:gr1.5_er_sample_thoughts}
+\end{figure*}
+
+
+\smallskip \noindent \cref{fig:gr1.5_er_thinking_scaling} (Left) shows the effect of thinking for embodied reasoning tasks on the 15 academic benchmarks introduced in Section \ref{sec:results-er-generality}. For each task category, \grshortlatestER{}'s performance improves as the thinking token budget grows. The optimal amount of thinking varies depending on the task and the amount of reasoning required. 
+Image and video QA tasks benefit more from longer thinking traces compared to pointing tasks.
+%Pointing needs the least reasoning of all the categories, and performance peaks at a thinking budget of 2048 tokens. In contrast, for image and video QA the model benefits from additional reasoning steps: A single image can contain many subtleties, and video QA involves reasoning across time. For these tasks performance peaks at a budget of 3072 tokens.
+%
+ \smallskip \noindent \cref{fig:gr1.5_er_thinking_scaling} (Center) shows that \grshortlatestER{} %appropriately 
+can automatically modulate the number of thinking tokens depending on the amount of reasoning that is appropriate for the task. %Given the same thinking budget, \grlatestER{} uses fewer tokens for pointing tasks and more for video QA. 
+\grshortlatestER{} also scales better with inference-time compute than Gemini 2.5 Flash, as seen in \cref{fig:gr1.5_er_thinking_scaling} (Right). 
+Frontier models are strong thinkers, however this does not necessarily translate into effective embodied reasoning, as can be seen by the relatively flat scaling curve for Gemini 2.5 Flash. \grshortlatestER{}’s strong performance scaling with thinking shows promise for tapping into the inference-time compute scaling gains for embodied reasoning capabilities.
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=0.32\textwidth]{src/assets/ER/er1p5_thought_budget_scaling_external_benchmarks_per_category_v2.png}
+    \includegraphics[width=0.32\textwidth]{src/assets/ER/er1p5_token_length_scaling_external_benchmarks_per_category_v2.png}
+    \includegraphics[width=0.32\textwidth]{src/assets/ER/er1pt5_vs_flash_june_final_v2.png}
+    \caption{(Left) \grshortlatestER{} uses inference-time compute to improve performance. (Center) \grshortlatestER{} appropriately modulates how many thinking tokens it uses depending on the amount of reasoning needed by the task. Given the same thinking budget, \grshortlatestER{} uses fewest tokens for pointing tasks, and most for video QA. (Right) \grshortlatestER{} scales better with inference-time compute on embodied reasoning tasks compared to Gemini 2.5 Flash. All data points are the average of 3 evaluation runs over the same benchmark sets.}
+    \label{fig:gr1.5_er_thinking_scaling}
+\end{figure*}

@@ -1,0 +1,313 @@
+\section{\grlatestER{} is a generalist embodied reasoning model}
+\label{appendix-pre-er}
+
+\subsection{Evaluation Details: Generality}
+To assess an overall approximation of model embodied reasoning performance, we evaluate \grlatestER{} and other multimodal models on a mix of 15 academic benchmarks.
+The aggregated results are reported in \cref{fig:gr1.5_er_generality}, and the individual benchmark performance results are shown in Table \ref{table:er-external} and Table \ref{table:er-generality}.
+For text-based VQA evaluation benchmarks, we used Gemini 2.5 Flash to grade response accuracy for both multiple-choice and freeform question formats.
+
+The Gemini 2.5 and GPT-5 models were accessed in between September 1, 2025 and September 20, 2025, using default thinking budgets and without tool use.
+
+\begin{table}[ht]
+\centering
+\begin{tabularx}{\textwidth}{lccccccc}
+\toprule
+\textbf{Model} & \makecell[c]{GR-ER \\1.5} & \makecell[c]{GR-ER \\1.5} & \makecell[c]{GR-ER} & \makecell[c]{Gemini 2.5 \\ Pro} & \makecell[c]{Gemini 2.5 \\ Flash} & GPT-5 & GPT-5-mini \\
+\midrule
+\textbf{Thinking} & Yes & No & No & Yes & Yes & Yes & Yes \\
+\midrule
+Point-Bench & 71.6 & 73.3 & \textbf{75.7} & 62.7 & 61.7 & 43.6 & 39.5 \\
+RefSpatial & 48.5 & 41.8 & \textbf{49.3} & 33.6 & 41.2 & 23.5 & 23.0 \\
+RoboSpatial-Pointing & \textbf{31.1} & 25.3 & 30.3 & 8.3 & 7.9 & 19.0 & 12.5 \\
+Where2Place & \textbf{59.0} & 48.0 & 41.0 & 37.0 & 48.0 & 37.0 & 33.5 \\
+\midrule
+Spatial average & \textbf{52.6} & 47.1 & 49.1 & 35.4 & 39.7 & 30.8 & 27.1 \\
+\midrule
+BLINK & 57.8 & 65.2 & 60.1 & 69.2 & 46.1 & \textbf{71.3} & 66.4 \\
+CV-Bench & 84.3 & 83.6 & 83.2 & \textbf{85.9} & 85.5 & \textbf{86.1} & \textbf{85.9} \\
+ERQA & 54.8 & 47.0 & 45.3 & 56.0 & 47.5 & \textbf{59.0} & 57.3 \\
+EmbSpatial & 78.4 & 73.4 & 56.4 & 78.0 & 76.2 & \textbf{81.5} & 78.8 \\
+MindCube & 54.7 & 47.7 & 47.4 & \textbf{59.2} & 55.4 & 58.0 & 55.6 \\
+RoboSpatial-VQA & \textbf{79.3} & 57.7 & 66.2 & 71.3 & 73.4 & 69.3 & 70.7 \\
+SAT & 76.7 & 62.0 & 64.7 & 74.7 & 73.3 & \textbf{86.7} & 81.3 \\
+Cosmos-Reason1 & 72.2 & 68.3 & 62.0 & 73.8 & 72.1 & \textbf{79.4} & 76.3 \\
+Min Video Pairs & 72.5 & 67.1 & 59.5 & 72.8 & 69.2 & \textbf{77.0} & 73.0 \\
+OpenEQA & 55.0 & 50.5 & 38.3 & 55.7 & 45.3 & \textbf{64.4} & 59.2 \\
+VSI-Bench & 45.8 & 39.9 & 34.1 & 51.1 & 45.3 & \textbf{52.9} & 46.2 \\
+\midrule
+QA average & 66.5 & 60.2 & 56.1 & 68.0 & 62.7 & \textbf{71.4} & 68.2 \\
+\midrule
+ER Score & \textbf{59.6} & 53.7 & 52.6 & 51.7 & 51.2 & 51.1 & 47.7 \\
+Overall Average & \textbf{62.8} & 56.7 & 54.2 & 59.3 & 56.5 & 60.6 & 57.3 \\
+\bottomrule
+\end{tabularx}
+\caption{Model performance on a mix of 15 academic embodied reasoning benchmarks. GPT-5 and GPT-5-mini results obtained via API in September 2025.}
+\label{table:er-external}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lccccccc}
+\toprule
+ \textbf{Model} & GR-ER 1.5 & GR-ER 1.5 & GR-ER & \makecell[c]{Pro 2.5} & \makecell[c]{Flash 2.5} & GPT-5 & GPT-5-mini \\
+\midrule
+\textbf{Thinking} & Yes & No & No & Yes & Yes & Yes & Yes \\
+\midrule
+MMMU & 80.7 & 79.3 & 67.0 & 82.0 & 79.7 & 82.0 & 78.0 \\
+GPQA & 83.3 & 81.3 & 59.6 & 86.4 & 82.8 & 88.4 & 78.3 \\
+Aider Polyglot & 57.3 & 44.4 & 16.0 & 82.2 & 56.7 & 81.3 & 66.7\\
+\midrule
+Average & 73.8 & 68.3 & 47.5 & 83.5 & 73.1 & 83.9 & 74.3 \\
+\bottomrule
+\end{tabular}
+\caption{Model performance on MMMU, GPQA and Aider Polyglot benchmarks. Results for GPT-5 and GPT-5-mini obtained via API with default thinking settings and no tool use in September 2025.}
+\label{table:er-generality}
+\end{table}
+
+\subsection{Evaluation Details: Pointing} \label{appendix-pointing}
+Table~\ref{table:pointing-breakdown} shows detailed breakdown of the evaluation for complex pointing.
+\begin{table}[ht]
+\centering
+\caption{Model performance on complex pointing benchmarks, broken down by subtask.}
+\label{table:pointing-breakdown}
+\begin{tabular}{l ccccccc}
+\toprule
+\textbf{Model} & \makecell[c]{GR-ER \\1.5} & \makecell[c]{GR-ER \\1.5} & \makecell[c]{GR-ER} & \makecell[c]{Gemini 2.5 \\ Pro} & \makecell[c]{Gemini 2.5 \\ Flash} & \makecell[c]{GPT-5} & \makecell[c]{GPT-5-mini} \\
+\midrule
+\textbf{Thinking} & Yes & No & No & Yes & Yes & Yes & Yes \\
+\midrule
+\multicolumn{8}{l}{\textit{Standard Pointing}} \\
+  Point-Bench-Affordance & 70.9 & 76.5 & \textbf{87.9} & 65.3 & 67.8 & 58.1 & 50.0 \\
+  Point-Bench-Counting & 86.8 & 86.8 & \textbf{88.4} & 77.5 & 73.1 & 53.7 & 56.8 \\
+  Point-Bench-Reasoning & 61.7 & \textbf{69.0} & 64.8 & 55.4 & 49.4 & 33.0 & 28.3 \\
+\midrule
+\multicolumn{8}{l}{\textit{Steerable Pointing}} \\
+  Point-Bench-Steerable & \textbf{67.8} & 61.8 & 65.8 & 53.4 & 61.3 & 38.0 & 32.0 \\
+\midrule
+\multicolumn{8}{l}{\textit{Spatial Pointing}} \\
+  Point-Bench-Spatial & 71.0 & \textbf{72.6} & 71.9 & 62.7 & 57.2 & 35.4 & 30.3 \\
+  RefSpatial & 48.5 & 41.8 & \textbf{49.2} & 33.6 & 41.1 & 23.5 & 23.0 \\
+  RoboSpatial & \textbf{31.1} & 25.3 & 30.3 & 8.3 & 7.9 & 19.0 & 12.5 \\
+  Where2Place & \textbf{59.0} & 48.0 & 41.0 & 37.0 & 48.0 & 37.0 & 33.5 \\
+\midrule
+\multicolumn{8}{l}{\textit{Point-to-Count}} \\
+  PixMo Count & \textbf{80.0} & 65.0 & 60.0 & 76.0 & 64.0 & 73.0 & 77.0 \\
+\midrule
+  Average & \textbf{52.6} & 47.1 & 49.1 & 35.4 & 39.7 & 30.8 & 27.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Additional Examples} \label{appendix-er-examples}
+
+\cref{fig:gr1.5_er_sample_thoughts_4} illustrates sampled thoughts from \grshortlatestER{} on embodied reasoning tasks.
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/ER/thought_samples_4.pdf}
+    \caption{Sample thoughts from \grshortlatestER{} performing embodied reasoning tasks.}
+    \label{fig:gr1.5_er_sample_thoughts_4}
+\end{figure*}
+
+\clearpage
+
+\newpage
+
+\section{\grlatest{}: A Physical Agent}
+
+
+
+
+
+
+\subsection{Long-horizon benchmarks}
+\label{appendix:long-horizon}
+Our long-horizon benchmarks evaluate the combination of the \grshortlatestER{} model with the VLA as an autonomous agent. 
+\cref{fig:aloha-long-horizon-rollout} shows visuals of the 4 tasks in the ALOHA long-horizon benchmark. The progress is scored as the sum of points scored along each subtask (Table \ref{tab:aloha_long_horizon}). \cref{fig:omega-long-horizon-rollout} shows visuals of the 4 tasks on the Bi-arm Franka long-horizon benchmark. The
+progress is scored as the sum of points scored along each subtask (Table \ref{tab:franka_long_horizon}).
+
+\begin{table}[h!]
+\begin{tiny}
+\centering
+\caption{Progress Scores: ALOHA Robot (Long-horizon Benchmark).}
+\label{tab:aloha_long_horizon}
+\vspace{1pt} % Added 1pt of space after the caption
+% Changed to 4 columns, adjusting width (e.g., to 3.7cm from 5cm)
+\begin{tabular}{| p{3.7cm} | p{3.7cm} | p{3.7cm} | p{3.7cm} |}
+\toprule
+
+% --- SECTION 1 ---
+% Changed multicolumn span from 3 to 4
+\multicolumn{4}{c}{\vspace{1pt}\textbf{Benchmark: ALOHA Robot - Long-horizon.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+% Added the 4th item to this row
+\vspace{1pt}\textbf{Trash Sorting: ``Put the compostables into the green bin, the recyclables into the blue bin, and the waste into the black bin''}.\vspace{1pt} &
+\vspace{1pt}\textbf{Desk Organization: ``What is the state of the objects in the table? Return them to their original locations''}.\vspace{1pt} &
+\vspace{1pt}\textbf{Packing Suitcase: ``Put the hat and socks into the suitcase then pack the colorful shirt that's on the hanger''}.\vspace{1pt} &
+\vspace{1pt}\textbf{Blocks in drawer: ``Open each drawer, and put one block in each drawer''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 0.2 is added per item in the correct bin:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item red grapes in the green bin;
+    \item lettuce leaf in the green bin;
+    \item aluminum can in the blue bin;
+    \item plastic cup in the blue bin;
+    \item energy bar wrapper in the black bin.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=1pt]
+\item[] 0.2 is added per item in the correct state:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item red pen in the pen holder;
+    \item blue pen in the pen holder;
+    \item green marker in the cork tray;
+    \item glasses case closed;
+    \item laptop closed.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 0.25 is added per:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item white beanie in the suitcase;
+    \item blue socks in the suitcase;
+    \item shirt taken off the hanger;
+    \item shirt in the suitcase.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 4 (Moved from Row 2)
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 0.11 is added per:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item left drawer was opened;
+    \item any block in left drawer;
+    \item left drawer closed;
+    \item middle drawer was opened;
+    \item any block in middle drawer;
+    \item middle drawer closed;
+    \item right drawer was opened;
+    \item any block in right drawer;
+    \item right drawer closed.
+\end{itemize}
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/agent/long_horizon_eval_rollouts.pdf}
+    \caption{ALOHA long-horizon benchmark. 
+    \label{fig:aloha-long-horizon-rollout}}
+\end{figure}
+
+\begin{table}[t!]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Long-horizon Benchmark).}
+\label{tab:franka_long_horizon}
+\vspace{1pt} % Added 1pt of space after the caption
+% Changed to 4 columns, adjusting width (e.g., to 3.7cm from 5cm)
+\begin{tabular}{| p{3.7cm} | p{3.7cm} | p{3.7cm} | p{3.7cm} |}
+\toprule
+
+% --- SECTION 1 ---
+% Changed multicolumn span from 3 to 4
+\multicolumn{4}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Long-horizon.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+% Added the 4th item to this row
+\vspace{1pt}\textbf{Swap: "Swap the sardines and the yellow bottle"}.\vspace{1pt} &
+\vspace{1pt}\textbf{Top shelf to the table: "Put all the objects from the top right shelf onto the table"}.\vspace{1pt} &
+\vspace{1pt}\textbf{Mushroom risotto: "Pack all ingredients for a mushroom risotto into the basket"}.\vspace{1pt} &
+\vspace{1pt}\textbf{Vegetarian with nut allergy: "I am vegetarian and allergic to nuts. Can you put all the food I can't eat into the basket"}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] $0.33$ is added per each subtask:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item lemon juice is in the correct location;
+    \item can of sardines is in the correct location;
+    \item no unrelated task done.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] $0.25$ per each subtask:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item rice is on the table;
+    \item corn is on the table;
+    \item lemon juice is on table;
+    \item no unrelated task done.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] $0.25$ per each subtask:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item mushrooms are in the basket;
+    \item rice is in the basket;
+    \item stock cubes are in the basket;
+    \item no unrelated task done.
+\end{itemize}
+\end{itemize}
+&
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] $0.33$ per each subtask:
+\item[] \begin{itemize}[leftmargin=10pt,topsep=0pt]
+    \item the can of sardines is into the basket;
+    \item the granola is into the basket;
+    \item no unrelated task done.
+\end{itemize}
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/agent/Omega_lh.pdf}
+    \caption{Bi-arm Franka long-horizon benchmark. 
+    \label{fig:omega-long-horizon-rollout}}
+\end{figure}
+
+\clearpage
+
+\subsection{Success rate}
+\label{appendix:additional-exps-agentic}
+\cref{fig:agentic_sr} shows the \textit{success rate} for the results in Section \ref{sec:results-agentic}.
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}{0.7\linewidth}
+
+    \includegraphics[width=\linewidth]{src/assets/agent/sr_agentic_v3.pdf}
+\end{subfigure}
+\centering
+\begin{subfigure}{0.7\linewidth}
+
+    \includegraphics[width=\linewidth]{src/assets/agent/omega_agentic_sr_no_legend.pdf}
+\end{subfigure}
+    \caption{Long-horizon evaluations for the \grshortlatest{} Agent on ALOHA (top) and Bi-arm Franka (bottom), consisting of tasks that require advanced real-world understanding, tool use, long-horizon task planning, execution and error recovery to successfully complete the complex long-horizon tasks.}
+    \label{fig:agentic_sr}
+\end{figure}
+
+\clearpage

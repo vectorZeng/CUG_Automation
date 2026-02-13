@@ -1,0 +1,2057 @@
+\section{\grlatest{} is a general multi-embodiment Vision-Language-Action Model}
+\label{appendix-pre-action}
+
+In this section, we provide additional material to supplement the results for \grshortlatest{}. 
+
+\subsection{Rank consistency between
+evaluations in simulation and on real robots}
+\label{sec:sim-to-real-appendix}
+
+We leverage physics-based simulators to massively scale up the evaluations of our \grshortlatest{} models for new objects, scenes, and environments. \cref{fig:sim_to_real_correlation} demonstrates the rank consistency between our MuJoCo simulator-based evaluation and real-robot evaluations across multiple scenes and tasks, which enables us to rapidly iterate on architectural and algorithmic improvements while reducing the need to conduct slow real-robot evaluations.
+
+\begin{figure}[!h]
+\centering
+    \includegraphics[width=0.5\textwidth]{src/assets/actions/sim_to_real.pdf}
+\caption{Each colored pair represents an A/B test both in simulation and real. Across a range of tasks, we find that success rates are rank consistent between simulation and real. This consistency allows for rapid iteration of model architecture, training objectives, and experiment design.}
+\label{fig:sim_to_real_correlation}
+\end{figure}
+
+% \newpage
+
+\subsection{Generalization benchmark}
+\label{appendix:generalization-tasks}
+\subsubsection{ALOHA robot}
+Our generalization benchmark expands the benchmark defined in~\cite{team2025gemini} (68 generalization tasks) with a new set of action generalization tasks (5 tasks) and a new category to measure generalization to entirely new tasks (12 tasks). See~\cite{team2025gemini} for details about previous Visual, Instruction and Action generalization tasks. To measure performance in-distribution we use the dexterity benchmark defined in Section 3.2 of ~\cite{team2025gemini} (20 tasks).  Progress score definition for in-distribution, visual, semantic and action generalization can also be found in \cite{team2025gemini}.  
+
+\paragraph{New action generalization progress score definition}
+\label{appendix:new-action-gen-aloha}
+
+The action generalization benchmark defined in prior work~\cite{team2025gemini} largely focused on measuring the model's ability to handle new object locations and shape variants. We expand the benchmark further to include tasks that require the policy to compose multiple learned motions in novel ways to solve new tasks. For example, having seen data of the robot pushing objects for a short distance at different locations, the 'drink-pushing' task (Figure \ref{fig:action-gen-tasks}) measures how well the policy can combine them together to push a novel object all the way from bottom of the table to the top edge. Table \ref{tab:aloha_action_gen} lists the definition of progress scores for each task.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5_appendix_new_act_gen.pdf}
+    \caption{Examples of the expanded action generalization benchmark.
+    \label{fig:action-gen-tasks}}
+\end{figure}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: New action generalization tasks progress score.} 
+\label{tab:aloha_action_gen}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm}  | p{5cm}  | p{5cm}  |} 
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{ New action generalization tasks.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Place the cube inside the bag''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Pick up the grape with the left arm and pick up the bread with the right arm''.}.\vspace{1pt} & 
+\vspace{1pt}\textbf{``Put the Knopper snack in the tupperware''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0:  if the successfully placed the cube inside the bag;
+\item[] 0.3: if the robot picked up the cube but failed to put it in the bag; 
+\item[] 0.0: if the robot failed to pick the cube.
+\end{itemize}
+& 
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if both objects are picked up by the correct arm; 
+\item[] 0.3: if one of the arms picked up the correct object, another arm picked up the wrong object; 
+\item[] 0.0: if both arms picked up wrong object.
+\end{itemize}
+& 
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot successfully put the Knopper snack in the tupperware;
+\item[] 0.4: if the robot picked up the right snack but failed to put in tupperware after 5 attempted; 
+\item[] 0.0: if the robot pick up the wrong object.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Push the drink to the front of the table''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Take the straw out of the tupperware''.}\vspace{1pt} & 
+% This cell is empty
+\\
+\hline
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot successfully pushed the drink to the top part of the table;
+\item[] 0.5: if the robot didn't fully push the drink to the top part of the table, or pushed something else first; 
+\item[] 0.0: if the robot didn't approach the correct object at all.
+\end{itemize}
+& 
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot successfully picked up the straw and move it outside of the range of the tupperware;
+\item[] 0.3: if the robot picked the straw but failed to move it out, or poured the tupperware; 
+\item[] 0.0: if the robot didn't approach the straw or tupperware.
+\end{itemize}
+& 
+% Content Col 6 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\paragraph{Task generalization progress score definition}
+\label{appendix:task-gen-aloha}
+We consider 12 different tasks across multiple scenes. The tasks have \textit{unseen instructions, unseen objects and initial conditions} compare to the training data. See Figure \ref{fig:task-gen-tasks} for details and  Table \ref{tab:aloha_task_gen} collects for the definition of progress for each task for the new category of task generalization.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5_appendix_agibot.pdf}
+    \caption{Examples of task execution for the Task generalization analysis of ~\ref{sec:generalization}. 
+    \label{fig:task-gen-tasks}}
+\end{figure}
+
+
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Task generalization tasks.} 
+\label{tab:aloha_task_gen}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm}  | p{5cm}  | p{5cm}  |} 
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Task generalization tasks progress score.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Pick up a bottle and put it in the bottom shelf of the wardrobe''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Pick up a bottle from the box and put it on the table''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Pick up the blue hat and hang it on the hook''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot placed the bottle in the wardrobe;
+\item[] 0.75: if the robot moved the bottle towards the wardrobe;
+\item[] 0.5: if the robot grasped a bottle; 
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot placed a bottle on the table; 
+\item[] 0.25: if the robot reached for a bottle but did not grasp it; 
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot successfully hung the hat on the hook; 
+\item[] 0.75: if the robot tried to hang the hat on the hook;
+\item[] 0.5: if the robot grasped the hat; 
+\item[] 0.0: if anything else happened.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Pick up a bottle and place it in the leftmost compartment of the folder rack''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Pick up the plum blossom and insert it vertically and carefully into the glass vase''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Pick up the rubber stamp and stamp the white paper with it''.}\vspace{1pt} \\
+\hline
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot placed the bottle in the leftmost compartment of the folder rack;
+\item[] 0.75: if the robot placed the bottle in any compartment of the folder rack;
+\item[] 0.5: if the robot moved the bottle towards the folder rack;
+\item[] 0.25: if the robot grasped a bottle; 
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot inserted the plum blossom into the vase;
+\item[] 0.75: if the robot moved the plum blossom towards the vase;
+\item[] 0.50: if the robot grasped the plum blossom;
+\item[] 0.25: if the robot moved towards the plum blossom;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot stamped the document;
+\item[] 0.75: if the robot moved the rubber stamp over the document;
+\item[] 0.25: if the robot grasped the rubber stamp;
+\item[] 0.0: if anything else happened. 
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Take the hat off the hook and place it on the table''}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Wipe the left shoe with the cloth''}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Wipe the table with the cloth''}\vspace{1pt} \\
+\hline
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0:  if the robot placed the hat on the table;
+\item[] 0.75:  if the robot removed the hat from the hook;
+\item[] 0.5:  if the robot grasped the hat;
+\item[] 0.0:  if anything else happened. 
+\end{itemize}
+& 
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot wiped the left shoe;
+\item[] 0.5: if the robot moved the cloth towards the left shoe;
+\item[] 0.25: if the robot grasped the cloth;
+\item[] 0.0: if anything else happened. 
+\end{itemize}
+& 
+% Content Col 9
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot moved towards the cloth back and forth on some portion of the table;
+\item[] 0.5: if the robot grasped the cloth;
+\item[] 0.25: if the robot reached the cloth;
+\item[] 0.0: if anything else happened. 
+\end{itemize}
+\\
+\hline
+
+% --- Row 4 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Wipe the top of the toaster with the cloth''}\vspace{1pt} & & \\
+\hline
+% Content Col 10
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot wiped the top of the toaster;
+\item[] 0.75: if the robot moved towards the cloth towards the top of the toaster;
+\item[] 0.25:  if the robot grasped the cloth;
+\item[] 0.0:  if anything else happened. 
+\end{itemize}
+& & \\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+\newpage
+\subsubsection{Bi-arm Franka robot}
+
+We defined a new generalization benchmark for our Bi-arm Franka robot. This benchmark includes a total of 44 tasks, 20 of those in distribution and 24 including variants of them across different axes: instruction, visual and action generalization, following the same approach we used to define the ALOHA robot benchmark in ~\cite{team2025gemini}. For the task generalization category we used the same 12 tasks and progress score described in \ref{appendix:task-gen-aloha} for ALOHA. It is worth noting that the the Bi-arm Franka benchmark also includes highly dexterous tasks such as NIST  Board 2 assembly tasks and insertion of cables in a workstation and sockets.
+
+The Bi-arm Franka robot benchmark is defined across three different scenes (Figure \ref{fig:omega-scenes}):
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5_appendix_omega_in_dist_scenes.pdf}
+    \caption{Scenes used to define the generalization benchmark for Bi-Arm Franka robot. Left: A workbench inspired scene that allows for manipulation of tools and skills ranging from hanging, unhanging, picking and placing. Center: a scene with a computer and assorted cables and peripherals, allowing for cable handling, insertions and removals. Left: Layout of the National Institute of Science and Technology (NIST) Task Board 2 ~\cite{nistassemblyboards}. 
+    \label{fig:omega-scenes}}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Workbench:} this scene spans both table-top manipulation tasks and interaction with the vertical back panel, which allows for manipulation of tools and skills ranging from hanging, unhanging, picking and placing.
+\item \textbf{Computer scene:} this scene requires interacting with real-world computer, cables and peripherals that involves dexterous and precise tasks such as cable handling, insertions and removals.
+\item \textbf{NIST Assembly Board 2:} based on the Task Assembly Board 2 as defined by NIST, this scene presents complex and precise assembly and removal of the three belts present.
+\end{itemize}
+
+
+Figure \ref{fig:example_of_gen_omega} shows examples of task variations to measure instruction, visual and semantic generalization on the Bi-arm Franka robot.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5_omega_scenes_gen_appendix.pdf}
+    \caption{Example variations of scenes used for measuring performance across generalization axes on the Bi-arm Franka platform.}
+    \label{fig:example_of_gen_omega}
+\end{figure}
+
+\paragraph{Task progress score for in-distribution, visual and action generalization tasks}
+We now define the task progress score for each task in the generalization benchmark for Bi-arm Franka robot.
+
+\noindent \textbf{Workbench scene}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Workbench scene).} 
+\label{tab:franka_workbench}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm}  | p{5cm}  | p{5cm}  |} 
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Workbench scene.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Hang the tape''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Unhang the tape''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Unhang the level''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot hung the tape successfully;
+\item[] 0.7: if the robot grasped the tape and tried to hang it but failed;
+\item[] 0.3: if the robot grasped the tape but didn't move towards the hook;
+\item[] 0.1: if the robot reached for the tape but failed to grasp it;
+\item[] 0.0: if the robot didn't reach for the tape.
+\end{itemize}
+& 
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the tape got unhooked and ends up anywhere on the table;
+\item[] 0.7: if the robot grasped the tape but failed to unhook it;
+\item[] 0.3: if the robot reached for the tape on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the level got unhooked and ends up anywhere on the table;
+\item[] 0.8: if the robot unhooked the level only from one hook;
+\item[] 0.7: if the robot grasped the level but failed to unhook it;
+\item[] 0.3: if the robot reached for the level on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Remove the red pen''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Place the rightmost wrench on the table''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Remove a gear from the rightmost container''.}\vspace{1pt} \\
+\hline
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the red pen ended up anywhere on the table;
+\item[] 0.7: if the robot grasped the red pen but failed to take it off;
+\item[] 0.3: if the robot reached for the red pen on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the rightmost wrench (with respect to the robot) got unhooked and ended up anywhere on the table;
+\item[] 0.7: if the robot grasped the rightmost wrench (with respect to the robot) but failed to unhook it;
+\item[] 0.3: if the robot reached for the rightmost wrench (with respect to the robot) on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if at least a gear from the rightmost container (with respect to the robot) ended up anywhere on the table;
+\item[] 0.7: if the robot grasped a gear from the rightmost container (with respect to the robot) but failed to remove it from the container;
+\item[] 0.3: if the robot reached for a gear from the rightmost container (with respect to the robot) but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Place the brush on the table''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Put a gear in the rightmost container''.}\vspace{1pt} & 
+% This cell is empty
+\\
+\hline
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the brush got unhooked and ended up anywhere on the table;
+\item[] 0.7: if the robot grasped the brush but failed to unhook it;
+\item[] 0.3: if the robot reached for the brush on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if a gear had been moved to the rightmost container (with respect to the robot);
+\item[] 0.7: if the robot grasped a gear and attempted to put it in the rightmost container (with respect to the robot) but failed to do to so;
+\item[] 0.3: if the robot reached for a gear from the table but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+& 
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\newpage
+\noindent\textbf{Computer scene}
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Computer scene).} 
+\label{tab:franka_computer}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm}  | p{5cm}  | p{5cm}  |} 
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Computer scene.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Connect the power plug to the computer''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Insert the white power plug into the socket''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Insert the orange LAN cable in the computer''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot fully inserted the power plug into the right place in the computer;
+\item[] 0.8: if the robot partially inserted the power plug into the right place in the computer;
+\item[] 0.5: if the robot grasped the power plug and tried to insert it in the right place in the computer but failed;
+\item[] 0.3: if the robot managed to grasp the power plug but didn't try to insert it into the computer.
+\item[] 0.1: if the robot reached for the power plug but failed to grasp it.
+\item[] 0.0: if the robot didn't reach for the power plug.
+\end{itemize}
+& 
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot grasped the plug and successfully inserted it in the socket;
+\item[] 0.9: if the robot grasped the plug and partially inserted it in the socket;
+\item[] 0.6: if the robot grasped the plug, tried to insert it in the socket but failed;
+\item[] 0.3: if the robot grasped the plug but didn't try to insert it in the socket;
+\item[] 0.1: if the robot reached for the plug but didn't grasp it;
+\item[] 0.0: if the robot didn't reach for the plug.
+\end{itemize}
+& 
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot grasped the orange internet cable and successfully inserted it in the right socket of the computer;
+\item[] 0.9: if the robot grasped the orange internet cable and partially  inserted it in the socket of the computer;
+\item[] 0.6: if the robot grasped the orange internet cable, tried to insert it in the right socket of the computer but failed;
+\item[] 0.3: if the robot grasped the orange internet cable but didn't try to insert it in the right socket of the computer;
+\item[] 0.1: if the robot reached for the orange internet cable but didn't grasp it;
+\item[] 0.0: if the robot didn't reach for the orange internet cable.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Hang the headphones on the wall''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Put the headphones on the desk''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Remove the orange LAN cable from the computer''.}\vspace{1pt} \\
+\hline
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot hung the headphones;
+\item[] 0.7: if the robot grasped the headphones and tried to hang them but failed;
+\item[] 0.3: if the robot grasped the headphones but didn't move towards the hall;
+\item[] 0.1: if the robot reached for the headphones but failed to grasp it;
+\item[] 0.0: if the robot didn't reach for the headphones.
+\end{itemize}
+& 
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot put the headphones on the desk;
+\item[] 0.8: if the robot managed to remove the headphones from the hook;
+\item[] 0.1: if the robot reached the headphones but failed to grasp them;
+\item[] 0.0: if the robot didn't reach for the headphones.
+\end{itemize}
+& 
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot managed to remove the orange internet cable from the computer;
+\item[] 0.6: if the robot grasped the orange internet cable, tried to remove it from the computer but it failed;
+\item[] 0.3: if the robot grasped the orange internet cable but didn't try to remove it from the computer;
+\item[] 0.1: if the robot reached for the orange internet cable but didn't grasp it;
+\item[] 0.0: if the robot didn't reach for the orange internet cable.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Remove the power plug cable from the computer''}\vspace{1pt} & 
+& 
+% This cell is empty
+\\
+\hline
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot managed to remove the power plug cable from the computer;
+\item[] 0.6: if the robot grasped the power plug cable, tried to remove it from the computer but it failed;
+\item[] 0.3: if the robot grasped the power plug cable but didn't try to remove it from the computer;
+\item[] 0.1: if the robot reached for the power plug cable but didn't grasp it;
+\item[] 0.0: if the robot didn't reach for the power plug.
+\end{itemize}
+& 
+% Content Col 8 (Empty)
+& 
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\newpage
+\noindent\textbf{NIST Assembly Task Board 2}
+
+We use only in-distribution variations of the NIST Assembly tasks.
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (NIST Assembly Task Board 2).} 
+\label{tab:franka_nist}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm}  | p{5cm}  | p{5cm}  |} 
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - NIST Assembly Task Board 2.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Put the timing belt on the timing pulleys''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Remove the timing belt from the timing pulleys''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Place the orange round belt on the slide tensioners''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: If the robot assembled the timing belt on the timing pulleys and let it go;
+\item[] 0.9: if the robot inserted on both wheels correctly;
+\item[] 0.7: if the robot pushed the blue tensioner, with the belt loosely on the second wheel;
+\item[] 0.5: if the robot inserted on one wheel;
+\item[] 0.3: if the robot handed the belt over to grasp the timing belt with both arms;
+\item[] 0.1: if the robot grasped and lifted the timing belt;
+\item[] 0.0: if the robot couldn't even pick up the timing belt.
+\end{itemize}
+& 
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot let go of the timing belt;
+\item[] 0.9: if the robot put the timing belt on the ground;
+\item[] 0.8: if the robot fully unhooked the timing belt from the two pulleys and the tensioner;
+\item[] 0.6: if the robot unhooked the timing belt from a pulley and the tensioner;
+\item[] 0.3: if the robot unhooked the timing belt from one of the pulleys;
+\item[] 0.1: if the robot grasped the timing belt;
+\item[] 0.0: if the robot did not do anything.
+\end{itemize}
+& 
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot let go of the orange belt;
+\item[] 0.9: if the robot inserted it on both wheels correctly;
+\item[] 0.5: if the robot handed the belt over to grasp the orange belt with both arms;
+\item[] 0.1: if the robot grasped and lifted the orange belt with the left arm;
+\item[] 0.0: if the robot couldn't even pick up the orange belt.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Remove the orange round belt from the slide tensioners''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Put the chain belt on the sprocket idlers''.}\vspace{1pt} & 
+\vspace{1pt}\textbf{``Remove the chain from the sprockets''.}\vspace{1pt} \\
+\hline
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot let go of the orange belt;
+\item[] 0.9: if the robot put the orange belt on the table top;
+\item[] 0.5: if the robot unhooked the orange belt from both tensioners;
+\item[] 0.1: if the robot grasped and unhooked the orange belt from one of the tensioners;
+\item[] 0.0: if the robot couldn't even pick up the orange belt.
+\end{itemize}
+& 
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot let go of the chain;
+\item[] 0.9: if the robot inserted it on both sprockets and aligned it with the tensioner;
+\item[] 0.7: if the robot inserted it on two sprockets;
+\item[] 0.5: if the robot inserted it on one sprocket;
+\item[] 0.3: if the robot handed the chain over to grasp it with both arms;
+\item[] 0.1: if the robot grasped and lifted the metal chain;
+\item[] 0.0: if the robot couldn't even pick up the metal chain.
+\end{itemize}
+& 
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the robot let go of the chain;
+\item[] 0.9: if the robot put the chain on the ground;
+\item[] 0.8: if the robot fully unhooked the chain from both sprockets and the chain tensioner;
+\item[] 0.6: if the robot unhooked the chain from two sprockets or one sprocket and the chain tensioner;
+\item[] 0.3: if the robot unhooked the chain from one sprocket and/or the chain tensioner;
+\item[] 0.1: if the robot grasped the chain;
+\item[] 0.0: if the robot did not do anything.
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\paragraph{Task progress score for semantic generalization tasks}
+
+\textbf{Workbench scene}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Semantic Gen. - Workbench).}
+\label{tab:franka_semantic_gen_workbench}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Semantic Generalization (Workbench).}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``quitar la cinta''. }\vspace{1pt} &
+\vspace{1pt}\textbf{``unhang the long red tool''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Put the object used for cleaning on the table''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the tape got unhooked and ended up anywhere on the table;
+\item[] 0.7: if the robot grasped the tape but failed to unhook it;
+\item[] 0.3: if the robot reached for the tape on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the level got unhooked and ended up anywhere on the table;
+\item[] 0.8: if the robot unhooked the level only from one hook;
+\item[] 0.7: if the robot grasped the level but failed to unhook it;
+\item[] 0.3: if the robot reached for the level on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: if the brush got unhooked and ended up anywhere on the table;
+\item[] 0.7: if the robot grasped the brush but failed to unhook it;
+\item[] 0.3: if the robot reached for the brush on the back-panel but failed to grasp it;
+\item[] 0.0: if anything else happened.
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\newpage
+\noindent\textbf{Computer scene}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Semantic Gen. - Computer Scene).}
+\label{tab:franka_semantic_gen_computer}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+% Added vspace before and after the text
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Semantic Generalization (Computer Scene).}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 ---
+% Added vspace before and after each \textbf
+\vspace{1pt}\textbf{``Desconecta el cable de red naranja de la computadora''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``conecta el enchufe a la computadora''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Hong the eadphones to te wal''.}\vspace{1pt} \\
+\hline
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: the robot managed to remove the power plug cable from the computer;
+\item[] 0.6: the robot grasped the power plug cable, tried to remove it from the computer but it failed;
+\item[] 0.3: the robot grasped the power plug cable but didn't try to remove it from the computer;
+\item[] 0.1: the robot reached for the power plug cable but didn't grasp it;
+\item[] 0.0: the robot didn't reach for the power plug.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: The robot fully inserted the power plug into the right place in the computer;
+\item[] 0.8: The robot partially inserted the power plug into the right place in the computer;
+\item[] 0.5: The robot grasped the power plug and tried to insert it in the right place in the computer but failed;
+\item[] 0.3: The robot managed to grasp the power plug but didn't try to insert it into the computer.
+\item[] 0.1: The robot reached for the power plug but failed to grasp it.
+\item[] 0.0: The robot didn't reach for the power plug.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.0: The robot hung the headphones;
+\item[] 0.7: The robot grasped the headphones and tried to hang them but failed;
+\item[] 0.3: The robot grasped the headphones but didn't move towards the hall;
+\item[] 0.1: The robot reached for the headphones but failed to grasp it;
+\item[] 0.0: The robot didn't reach for the headphones.
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+\newpage
+\subsubsection{Apollo humanoid robot}
+We defined a new generalization benchmark for our Apollo humanoid robot. This benchmark includes a total of 24 tasks,  of those in distribution and  including variants of them across different axes: instruction, visual and action generalization, following the same approach we used to define the ALOHA robot benchmark in ~\cite{team2025gemini}. For the task generalization category we used the same tasks described in \ref{appendix:task-gen-aloha} for ALOHA.
+
+Figure \ref{fig:example_of_gen_atari} shows examples of task variations to measure instruction, visual and semantic generalization on the Apollo humanoid robot.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/gr1.5_atari_scenes_gen_appendix.pdf}
+    \caption{Example variations of scenes used for measuring performance across generalization axes on the Apollo humanoid platform. }
+    \label{fig:example_of_gen_atari}
+\end{figure}
+
+
+
+\paragraph{Task progress score for in-distribution, visual, semantic and action generalization tasks}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Apollo humanoid (In-distribution and Visual Gen.).}
+\label{tab:apollo_visual_gen}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Apollo humanoid - In-distribution and Visual Generalization.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the gummy bear bag and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the rubik’s cube and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the egg from the bottom right slot of the yellow egg box with your right hand and place the egg in the tray''.}\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the egg with its right hand and placed it in the tray;
+\item[] 0.67:~if the robot picked up the egg with its right hand;
+\item[] 0.33:~if the robot touched the egg with its right hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the egg from the bottom right slot of the yellow egg box with your left hand and place the egg in the tray''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the bottom green lettuce from the table with your right hand''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the right orange traffic cone from the table with your right hand''.}\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the egg with its left hand and placed it in the tray;
+\item[] 0.67:~if the robot picked up the egg with its left hand;
+\item[] 0.33:~if the robot touched the egg with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the bottom green lettuce with its right hand;
+\item[] 0.75:~if the robot touched the bottom green lettuce with its right hand;
+\item[] 0.50:~if the robot picked up lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.25:~if the robot touched lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the right orange traffic cone with its right hand;
+\item[] 0.75:~if the robot touched the right orange traffic cone with its right hand;
+\item[] 0.50:~if the robot picked up a traffic cone, but not the right orange traffic cone;
+\item[] 0.25:~if the robot touched a traffic cone, but not the right orange traffic cone;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the blue vehicle toy with your right hand and place it in the white bowl''}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the light pink color soft toy with your left hand and place it in the brown bowl''}\vspace{1pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the blue vehicle toy with its right hand and placed it in the white bowl;
+\item[] 0.67:~if the robot picked up the blue vehicle toy with its right hand;
+\item[] 0.33:~if the robot touched the blue vehicle toy with its right hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the light pink color soft toy with its left hand and placed it in the brown bowl;
+\item[] 0.67:~if the robot picked up the light pink color soft toy with its left hand;
+\item[] 0.33:~if the robot touched the light pink color soft toy with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Apollo humanoid (Semantic Generalization).}
+\label{tab:apollo_semantic_gen}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Apollo humanoid - Semantic Generalization.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Recoge la pelota antiestrés y colócala en la bolsa blanca''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pikc up the stress ball and palce it in the wite bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Tome el huevo de la ranura inferior derecha de la caja de huevos amarilla con la mano izquierda y coloque el huevo en la bandeja''.}\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the egg with its left hand and placed it in the tray;
+\item[] 0.50:~if the robot picked up the egg with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the eg form the bottom right splot of the yellwo egg box with your left hand and place the egg in the try''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Recoge con tu mano derecha la lechuga verde que está al final de la mesa cerca de ti''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pikc up the bottm green lettuuce from the tble with yor rght haand''.}\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the egg with its left hand and placed it in the tray;
+\item[] 0.50:~if the robot picked up the egg with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the bottom green lettuce with its right hand;
+\item[] 0.75:~if the robot touched the bottom green lettuce with its right hand;
+\item[] 0.50:~if the robot picked up lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.25:~if the robot touched lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the bottom green lettuce with its right hand;
+\item[] 0.75:~if the robot touched the bottom green lettuce with its right hand;
+\item[] 0.50:~if the robot picked up lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.25:~if the robot touched lettuce with its right hand, but not the bottom green lettuce;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Recoge el vehículo de juguete azul y colócalo en el recipiente blanco''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pic up the blu vehical toy and place it in teh wite bowl''.}\vspace{1pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the blue vehicle toy and placed it in the white bowl;
+\item[] 0.50:~if the robot picked up the blue vehicle toy;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the blue vehicle toy and placed it in the white bowl;
+\item[] 0.50:~if the robot picked up the blue vehicle toy;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Apollo humanoid (Action Generalization).}
+\label{tab:apollo_action_gen}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Apollo humanoid - Action Generalization.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the black flashlight and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the black and brown snack bag and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the orange mentos container and place it in the white bag''.}\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the orange and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the purple die and place it in the white bag''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the blue cereal box with your right hand''.}\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked the correct object and placed it in the bag;
+\item[] 0.50:~if the robot picked the wrong object but correctly placed it in the bag;
+\item[] 0.50:~if the robot picked the correct object but didn't place it in the bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the blue cereal box with its right hand;
+\item[] 0.67:~if the robot picked up the blue cereal box with its left hand;
+\item[] 0.33:~if the robot touched the blue cereal box with its right hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the leftmost green pringles can from the top shelf of the black rack with your left hand''.}\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the red cereal box with your left hand''.}\vspace{1pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the green pringles can with its left hand;
+\item[] 0.67:~if the robot picked up the green pringles can with its right hand;
+\item[] 0.33:~if the robot touched the green pringles can with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the red cereal box with its left hand;
+\item[] 0.67:~if the robot picked up the red cereal box with its right hand;
+\item[] 0.33:~if the robot touched the red cereal box with its left hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+\clearpage
+\newpage
+\paragraph{Qualitative Results}
+
+Controlling a humanoid is much more challenging than the Aloha or the bi-arm Franka robots, due to higher degree-of-freedom whole-body control, multi-finger dexterity, and limited visibility of the workspace that requires active perception. \cref{fig:humanoid_gen_images} shows qualitative examples which demonstrate remarkable degrees of generalization of \grlatest{} on the humanoid platform.  We observe that our model can control Apollo to grasp novel objects and place them into receptacles that were not seen in the training data. Depending on the objects to manipulate, different grasping strategies emerge automatically. Furthermore, we also observe successful object manipulation on surfaces with different heights that were not seen during training as well.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/apollo_gen.pdf}
+    \caption{Qualitative examples of generalization on the humanoid robot: \grlatest{} learns multiple grasp strategies, can manipulate objects at different heights, and grasp novel objects and place them into receptacles that were never seen during training.
+    \label{fig:humanoid_gen_images}}
+\end{figure}
+
+\newpage
+\subsection{Cross-embodiment benchmark}
+\label{appendix:cross-embodiment-benchmark}
+
+In order to measure Motion Transfer across our three robots we define benchmarks for testing tasks on a Robot A for which data was only collected on Robot B and vice-versa. We focus on the following scenarios.
+
+\subsubsection{Bi-arm Franka \texorpdfstring{$\to$}{->} ALOHA benchmark}
+The ALOHA robot data is diverse and enables the execution of a multitude of tasks as demonstrated in our prior work \cite{team2025gemini}. However, the vast majority of this data focuses on table top tasks with limited interaction on the vertical axis. Meanwhile for Bi-arm Franka robot we have collected data involving interacting with a vertically mounted back-panel that goes beyond the typical motion range for ALOHA. As such, tasks in this scenario (e.g. hanging/unhanging tools) provide an ideal benchmark for motion transfer as a model trained with solely ALOHA data cannot solve them. Following this strategy, we design a set of 10 tasks in this benchmark. Figure {\ref{fig:omega2aloha-images}} provides a visual overview of the tasks and Table \ref{tab:franka_to_aloha_benchmark} provides the progress score definition for each task.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/cross-emb-benchmark-visual.pdf}
+    \caption{Example of execution of cross-embodiment tasks for Bi-arm Franka \texorpdfstring{$\to$}{->} ALOHA benchmark. 
+    \label{fig:omega2aloha-images}}
+\end{figure}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka \texorpdfstring{$\to$}{->} ALOHA Benchmark.}
+\label{tab:franka_to_aloha_benchmark}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka \texorpdfstring{$\to$}{->} ALOHA.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Hang the orange belt on the small metal hook on the wall''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Hang the timing belt on the small metal hook on the wall''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Hang the tape to the wall''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot hung the orange belt on the hook;
+\item[] 0.90:~if the robot tried to hang the orange belt on the hook;
+\item[] 0.80:~if the robot moved towards the hook after grasping the orange belt;
+\item[] 0.20:~if the robot grasped the orange belt;
+\item[] 0.10:~if the robot reached the orange belt;
+\item[] 0.00:~if the robot didn't reach for the orange belt.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot hung the timing belt on the hook;
+\item[] 0.90:~if the robot tried to hang the timing belt on the hook;
+\item[] 0.80:~if the robot moved towards the hook after grasping the timing belt;
+\item[] 0.20:~if the robot grasped the timing belt;
+\item[] 0.10:~if the robot reached the timing belt;
+\item[] 0.00:~if the robot didn't reach for the timing belt.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot hung the tape;
+\item[] 0.90:~if the robot tried to hang the tape on the hook;
+\item[] 0.80:~if the robot moved towards the hook after grasping the tape;
+\item[] 0.20:~if the robot grasped the tape;
+\item[] 0.10:~if the robot reached the tape;
+\item[] 0.00:~if the robot didn't reach for the tape.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Unhang the brush and put it on the table''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up a marker and put it on the table''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Unhang the tape and put it on the table''}.\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot unhooked the brush and it ends up anywhere on the table;
+\item[] 0.70:~if the robot grasped the brush but fails to unhook it;
+\item[] 0.30:~if the robot attempted to grasp the brush on the backpanel but couldn't succeed in doing so;
+\item[] 0.00:~if the robot has no success.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot managed to pick up a marker and put it on the desk;
+\item[] 0.90:~if the robot managed to pick up a marker;
+\item[] 0.50:~if the robot tried to pick up a marker;
+\item[] 0.10:~if the robot reached to a marker but didn't try to pick it up;
+\item[] 0.05:~if the robot reached toward the markers but didn't get close enough;
+\item[] 0.00:~if the robot didn't reach toward the markers.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot unhooked the tape and it ends up anywhere on the table;
+\item[] 0.70:~if the robot grasped the tape but fails to unhook it;
+\item[] 0.30:~if the robot attempted to grasp the tape on the backpanel but couldn't succeed in doing so;
+\item[] 0.00:~if the robot has no success.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Unplug the usb cable''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Unplug the power cable''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Hang the headphones on the small metal hook on the wall''}.\vspace{1pt} \\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot unplugs the cable;
+\item[] 0.70:~if the robot tried to unplug the cable;
+\item[] 0.40:~if the robot grasped the cable;
+\item[] 0.20:~if the robot reached toward the cable but didn't get close enough;
+\item[] 0.00:~if the robot didn't reach toward the cable.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot unplugs the cable;
+\item[] 0.70:~if the robot tried to unplug the cable;
+\item[] 0.40:~if the robot grasped the cable;
+\item[] 0.20:~if the robot reached toward the cable but didn't get close enough;
+\item[] 0.00:~if the robot didn't reach toward the cable.
+\end{itemize}
+&
+% Content Col 9
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot managed to hang the headphones on the hook;
+\item[] 0.70:~if the robot tried to hang the headphones on the hook;
+\item[] 0.50:~if the robot moved the headphones toward the hook but didn't get close enough;
+\item[] 0.30:~if the robot lifted the headphones;
+\item[] 0.20:~if the robot grasped the headphones but didn't lift them;
+\item[] 0.10:~if the robot reached toward the headphones but didn't get close enough;
+\item[] 0.00:~if the robot didn't reach toward the headphones.
+\end{itemize}
+\\
+\hline
+
+% --- Row 4 (Headers) ---
+\vspace{1pt}\textbf{``Put the mouse in one of the blue bins''}.\vspace{1pt} &
+% This cell is empty
+&
+% This cell is empty
+\\
+\hline
+% --- Row 4 (Content) ---
+% Content Col 10
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot managed to put the mouse in the bin;
+\item[] 0.70:~if the robot tried to put the mouse in a bin;
+\item[] 0.50:~if the robot moved the mouse towards a bin but didn't get close enough;
+\item[] 0.30:~if the robot lifted the mouse;
+\item[] 0.10:~if the robot grasped the mouse but didn't lift it;
+\item[] 0.05:~if the robot reached toward the mouse but didn't get close enough;
+\item[] 0.00:~if the robot didn't reach toward the mouse.
+\end{itemize}
+&
+% Content Col 11 (Empty)
+&
+% Content Col 12 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\subsubsection{ALOHA benchmark \texorpdfstring{$\to$}{->} Bi-arm Franka and Apollo humanoid robot \texorpdfstring{$\to$}{->} Bi-arm Franka}
+We identified in the ALOHA data tasks that require specific motions such as open drawers or closing a pear-shaped organizer (task that requires precise control) which are not available in the Bi-arm Franka data. In addition we  added some easier packing tasks to see whether motion transfer could not only transfer new skills but also improves  performance on easier tasks. We followed a similar procedure to define the tasks to measure motion transfer from the Humanoid robot to the Bi-arm Franka. Figure \ref{fig:aloha2omega-images} and \ref{fig:atari2omega-images} provides a visual overview of the tasks (11 in total) and Table \ref{tab:cross_emb_to_franka} provides the progress score definition for each task.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/cross-emb-benchmark-visual-omega.pdf}
+    \caption{Example of execution of cross-embodiment tasks for ALOHA \texorpdfstring{$\to$}{->} Bi-arm Franka benchmark. 
+    \label{fig:aloha2omega-images}}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{src/assets/actions/cross-emb-benchmark-visual-atari.pdf}
+    \caption{Cross-embodiment tasks for Apollo humanoid $\to$ Bi-arm Franka benchmark. 
+    \label{fig:atari2omega-images}}
+\end{figure}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: ALOHA/Humanoid \texorpdfstring{$\to$}{->} Bi-arm Franka.}
+\label{tab:cross_emb_to_franka}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: ALOHA/Humanoid \texorpdfstring{$\to$}{->} Bi-arm Franka.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Close the pear organizer''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put the grapes in the largest compartment of the bento box''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Pour the toy from the blue bowl into the red plate''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the pear top onto the bottom so it covers the compartment;
+\item[] 0.50:~if the robot held the pear top above the center compartment of the base;
+\item[] 0.20:~if the robot grasped the pear top;
+\item[] 0.05:~if the robot reached toward the pear top;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the grapes in the largest compartment;
+\item[] 0.50:~if the robot put the grapes anywhere on the bento box;
+\item[] 0.20:~if the robot grasped the grapes;
+\item[] 0.10:~if the robot reached for the grapes;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot poured at least one toy onto the plate;
+\item[] 0.70:~if the robot tried to pour the toys onto the plate;
+\item[] 0.30:~if the robot held the bowl above the plate;
+\item[] 0.20:~if the robot grasped the bowl;
+\item[] 0.05:~if the robot reached for the bowl;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Open the top drawer by pulling the knob''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put the yellow lego in the bag''}.\vspace{1pt} & 
+\vspace{1pt}\textbf{``Open the middle drawer by pulling the red knob''}.\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot opened the top drawer by pulling the knob;
+\item[] 0.90:~if the robot opened the top drawer;
+\item[] 0.80:~if the robot opened any drawer;
+\item[] 0.50:~if the robot grasped any knob;
+\item[] 0.10:~if the robot reached for any knob;
+\item[] 0.05:~if the robot reached toward the drawer;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the yellow block in the bag;
+\item[] 0.70:~if the robot put any block in the bag;
+\item[] 0.50:~if the robot held the yellow block above the bag;
+\item[] 0.20:~if the robot grasped the yellow block;
+\item[] 0.10:~if the robot reached for the yellow block;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot opened the correct drawer;
+\item[] 0.60:~if the robot opened any drawer;
+\item[] 0.30:~if the robot grasped any knob;
+\item[] 0.10:~if the robot reached for any knob;
+\item[] 0.05:~if the robot reached toward the drawer;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the stress ball and place it in the white bag''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the white socks and place it in the white bag''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the rubiks cube and place it in the white bag''}.\vspace{1pt} \\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the object in the white bag;
+\item[] 0.50:~if the robot grasped the object and brings it over the white bag;
+\item[] 0.25:~if the robot grasped the object;
+\item[] 0.00:~if the robot did not grasp the object.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the object in the white bag;
+\item[] 0.50:~if the robot grasped the object and brings it over the white bag;
+\item[] 0.25:~if the robot grasped the object;
+\item[] 0.00:~if the robot did not grasp the object.
+\end{itemize}
+&
+% Content Col 9
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the object in the white bag;
+\item[] 0.50:~if the robot grasped the object and brings it over the white bag;
+\item[] 0.25:~if the robot grasped the object;
+\item[] 0.00:~if the robot did not grasp the object.
+\end{itemize}
+\\
+\hline
+
+% --- Row 4 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the black beanie and place it in the white bag''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Pick up the gummy bear bag and place it in the white bag''}.\vspace{1pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 4 (Content) ---
+% Content Col 10
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the object in the white bag;
+\item[] 0.50:~if the robot grasped the object and brings it over the white bag;
+\item[] 0.25:~if the robot grasped the object;
+\item[] 0.00:~if the robot did not grasp the object.
+\end{itemize}
+&
+% Content Col 11
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the object in the white bag;
+\item[] 0.50:~if the robot grasped the object and brings it over the white bag;
+\item[] 0.25:~if the robot grasped the object;
+\item[] 0.00:~if the robot did not grasp the object.
+\end{itemize}
+&
+% Content Col 12 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\subsubsection{ALOHA benchmark \texorpdfstring{$\to$}{->} Humanoid robot}
+We followed a similar approach for the Humanoid robot: we looked into skills in the ALOHA dataset that are not covered by the action data for the Humanoid. One example to highlight this is the task "open the wardrobe", which is a motor skill completely outside the covergae of the Humanoid dataset. Fig \ref{fig:atari-cross-images} shows visuals of the 7 tasks in this benchmark and Table \ref{tab:aloha_to_humanoid_benchmark} reports the definition of the progress score for each task.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/cross-emb-benchmark-visual-aloha2atari.pdf}
+    \caption{Cross-embodiment tasks for ALOHA \texorpdfstring{$\to$}{->} Humanoid benchmark. 
+    \label{fig:atari-cross-images}}
+\end{figure}
+
+% \end{itemize}
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: ALOHA \texorpdfstring{$\to$}{->} Humanoid Benchmark.}
+\label{tab:aloha_to_humanoid_benchmark}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: ALOHA \texorpdfstring{$\to$}{->} Humanoid robot.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Pick up the green shirt with its right hand and put it into the brown wicker basket''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Push the door to the right with its left hand''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Push the red knob to close the drawer with its left hand''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the green shirt with its right hand and put it into the brown wicker basket;
+\item[] 0.50:~if the robot picked up the green shirt with its right hand;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot pushed the door to the right with its left hand (door should be at least halfway through);
+\item[] 0.50:~if the robot's left hand touched the door;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot closes the drawer at least halfway through;
+\item[] 0.50:~if the robot's hand touched the red knob;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Stack the orange tray on the drawer''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put blue block in the left drawer''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put green block in the middle drawer''}.\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the orange tray and stacked it on the drawer;
+\item[] 0.50:~if the robot picked up the orange tray;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the blue block and put it in the left drawer;
+\item[] 0.50:~if the robot picked up the blue block;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot picked up the green block and put it in the middle drawer;
+\item[] 0.50:~if the robot picked up the green block;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Wipe the pear with towel''}.\vspace{1pt} & 
+% This cell is empty
+&
+% This cell is empty
+\\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot wiped the pear with the towel;
+\item[] 0.50:~if the robot grabbed the towel;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 8 (Empty)
+&
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\clearpage
+\subsection{Multi-step benchmark}
+\label{appendix:medium-horizon-benchmark}
+
+The multi-step benchmarks combine individual tasks into compound instructions (i.e., A then B then C) or abstract, goal-oriented instructions. For the compound instructions, we typically require a particular order for the individual tasks in order to achieve a full score of 1.0. For example, for the Apollo humanoid, several of our multi-step tasks combine individual gift packing tasks into compound instructions such as "put the stress ball in the white bag, then put the gummy bear bag in the white bag, then put the white socks in the white bag" and require this exact order for a perfect score. We also include abstract, goal-oriented instructions such as ``pack all the gifts'' or ``sort the snacks into their matching containers by color'', though these are less common across the benchmarks. The next paragraphs show the tasks and their progress score system for each embodiment.
+
+\subsubsection{ALOHA robot}
+Figure \ref{fig:medium-horizon-aloha} shows visuals of the tasks and Table \ref{tab:aloha_medium_horizon} defines the progress score for each task.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/Medium-horizon-aloha.pdf}
+    \caption{Tasks in the multi-step benchmark for the ALOHA. 
+    \label{fig:medium-horizon-aloha}}
+\end{figure}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: ALOHA Robot (Multi-step benchmark).}
+\label{tab:aloha_medium_horizon}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: ALOHA Robot - Multi-step.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Unzip the lunchbag and then place the banana in the lunchbag''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Place the red pepper, green apple, and yellow cube in plates with matching colors''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Place the red pepper in the red plate, then put green apple in the green plate, then put yellow cube in the yellow plate''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot fully unzipped the lunch bag and placed the banana in the lunchbag;
+\item[] 0.50:~if the robot fully unzipped the lunch bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed all three objects correctly in the matching plates;
+\item[] 0.70:~if the robot placed two objects on the correct matching plates, but failed for third object;
+\item[] 0.40:~if if the robot picked one object and successfully placed it on the correct plate, but failed to do that for second object;
+\item[] 0.20:~if the robot picked one object but failed to put it on the right plate;
+\item[] 0.00:~if the robot didn't approach any of the objects or approached plates directly.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed all three objects correctly in the matching plates;
+\item[] 0.70:~if the robot placed two objects on the correct matching plates, but failed for third object;
+\item[] 0.40:~if the robot picked one object and successfully placed it on the correct plate, but failed to do that for second object;
+\item[] 0.20:~if the robot picked one object but failed to put it on the right plate;
+\item[] 0.00:~if the robot didn't approach any of the objects or approached plates directly.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Open the middle drawer, then left, then right''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Open the right drawer, then left, then middle''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Open the lid of the trash bin, then pick up the ball and place it inside the trash bin, then close the lid of the trash bin''}.\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot opened all three drawers in correct order;
+\item[] 0.60:~if the robot opened the middle then left drawer but failed to open the right drawer;
+\item[] 0.30:~if the robot opened the middle drawer but failed to open the left drawer next;
+\item[] 0.00:~if the robot failed to open the middle drawer first.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot opened all three drawers in correct order;
+\item[] 0.60:~if the robot opened the right then left drawer but failed to open the middle drawer;
+\item[] 0.30:~if the robot opened the right drawer but failed to open the left drawer next;
+\item[] 0.00:~if the robot failed to open the right drawer first.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully opened the lid, put the ball in the bin, then closes the lid;
+\item[] 0.75:~if the robot failed to close the lid after putting the ball in the trash bin;
+\item[] 0.50:~if the robot opened the trash bin lid, picked up the ball, but failed to put the ball in the trash bin;
+\item[] 0.25:~if the robot opened the trash bin lid but failed to pick up the ball next;
+\item[] 0.00:~if the robot didn't open the trash bin lid.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Take the green plate out of the white bag, and put the stress ball in the white bag, and push the bag to the top of the table''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put all the yellow fruits on the yellow plate, green fruit on the green plate, red fruit on the red plate''}.\vspace{1pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot completes the entire task successfully;
+\item[] 0.70:~if the robot took the green plate out of the bag, put the stress ball in the bag, but failed to push the bag to the top of the table;
+\item[] 0.30:~if the robot took the green plate out of the bag but failed to put the stress ball into the bag;
+\item[] 0.00:~if the robot failed to take the green plate out of the bag.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put all fruits in the correct plate;
+\item[] 0.80:~if the robot put 4 fruits in the correct plate;
+\item[] 0.60:~if the robot put 3 fruits in the correct plate;
+\item[] 0.20:~if the robot put 2 fruits in the correct plate;
+\item[] 0.20:~if the robot put 1 fruit in the correct plate;
+\item[] 0.00:~if the robot put none of the fruits in the correct plate.
+\end{itemize}
+&
+% Content Col 9 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\subsubsection{Bi-arm Franka robot}
+Figure \ref{fig:medium-horizon-aloha} shows visuals of the tasks and Table \ref{tab:franka_medium_horizon} defines the progress score for each task.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/Medium-horizon-omega.pdf}
+    \caption{Tasks in the multi-step benchmark for the Bi-arm Franka.
+    \label{fig:medium-horizon-omegs}}
+\end{figure}
+
+\begin{table}[h]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Bi-arm Franka (Multi-step benchmark).}
+\label{tab:franka_medium_horizon}
+\vspace{1pt} % Added 1pt of space after the caption
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\vspace{1pt}\textbf{Benchmark: Bi-arm Franka - Multi-step.}\vspace{1pt}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{1pt}\textbf{``Insert the power cable in the computer, insert the orange lan cable and unhang the headphones''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Insert the power cable and unhang the headphones from the wall''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Remove the power cable from the computer, hang the headphones and unplug the black power cable from the socket''}.\vspace{1pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully completed the third task;
+\item[] 0.75:~if the robot successfully completed the remaining task;
+\item[] 0.60:~if the robot successfully completed the second task;
+\item[] 0.45:~if the robot grasped and attempted one of the remaining two tasks;
+\item[] 0.30:~if the robot successfully inserted the power cable or the lan cable or unhung the headphones;
+\item[] 0.15:~if the robot grasped and attempted to insert the power cable or the lan cable or unhang the headphones;
+\item[] 0.00:~if the robot didn't attempt to insert the power cable or insert the lan cable or unhang the headphones.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully completed both tasks;
+\item[] 0.75:~if the robot attempted to complete the remaining task;
+\item[] 0.50:~if the robot successfully inserted the cable or unhung the headphones;
+\item[] 0.25:~if the robot attempted to insert the cable or unhang the headphones;
+\item[] 0.00:~if the robot didn't do anything.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully completed the remaining task;
+\item[] 0.75:~if the robot grasped and attempted the remaining task;
+\item[] 0.60:~if the robot is successful in completing one of the remaining two tasks;
+\item[] 0.45:~if the robot grasped and attempted one of the remaining two tasks;
+\item[] 0.30:~if the robot is successful in removing the power cable, unplugging the plug from the socket or hanging the headphones;
+\item[] 0.15:~if the robot grasped and attempted to either remove the power cable, unplug the plug from the socket or to hang the headphones;
+\item[] 0.00:~if the robot didn't attempt to remove the power cable, unplug the plug from the socket or to hang the headphones.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{1pt}\textbf{``Remove the orange lan cable and then the power cable from the computer''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Place all the markers on the table''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Place all the wrenches on the table''}.\vspace{1pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully removed both cables;
+\item[] 0.75:~if the robot grasped and attempted to remove the remaining cable;
+\item[] 0.50:~if the robot successfully removed either the lan cable or the power cable from the computer;
+\item[] 0.25:~if the robot grasped and attempted to remove either the lan cable or the power cable from the computer;
+\item[] 0.00:~if the robot didn't attempt to remove either cable.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the remaining marker on the table;
+\item[] 0.80:~if the robot grasped the remaining marker;
+\item[] 0.70:~if the robot reached for the remaining marker of any colour;
+\item[] 0.67:~if the robot placed the second marker on the table;
+\item[] 0.50:~if the robot grasped the second marker of any colour;
+\item[] 0.40:~if the robot reached for the second marker of any colour;
+\item[] 0.33:~if the robot placed the first marker on the table;
+\item[] 0.20:~if the robot grasped the first marker of any colour;
+\item[] 0.10:~if the robot reached for a first marker of any colour;
+\item[] 0.00:~if the robot placed no markers on the table.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully unhung and placed the fourth wrench on the table;
+\item[] 0.90:~if the robot grasped the fourth wrench;
+\item[] 0.85:~if the robot reached for a fourth wrench;
+\item[] 0.75:~if the robot successfully unhung and placed the third wrench on the table;
+\item[] 0.65:~if the robot grasped the third wrench;
+\item[] 0.60:~if the robot reached for a third wrench;
+\item[] 0.50:~if the robot successfully unhung and placed the second wrench on the table;
+\item[] 0.40:~if the robot grasped the second wrench;
+\item[] 0.35:~if the robot reached for a second wrench;
+\item[] 0.25:~if the robot successfully unhung and placed the first wrench on the table;
+\item[] 0.15:~if the robot grasped the first wrench;
+\item[] 0.10:~if the robot reached for a first wrench;
+\item[] 0.00:~if the robot placed no wrenches on the table.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{1pt}\textbf{``Place all the gears from the table into any container''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Put the tape and then the scissors onto the table''}.\vspace{1pt} &
+\vspace{1pt}\textbf{``Place the spirit level and the brush on the table''}.\vspace{1pt} \\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the remaining gear in any container;
+\item[] 0.80:~if the robot grasped the remaining third gear on the table;
+\item[] 0.70:~if the robot reached for the remaining third gear on the table;
+\item[] 0.66:~if the robot placed the second gear in any container;
+\item[] 0.50:~if the robot grasped the second gear;
+\item[] 0.40:~if the robot reached for a second gear on the table;
+\item[] 0.33:~if the robot placed the first gear in any container;
+\item[] 0.20:~if the robot grasped the first gear;
+\item[] 0.10:~if the robot reached for a first gear on the table;
+\item[] 0.00:~if the robot didn't place or attempt to put back any gears back in the container.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the scissors on the table;
+\item[] 0.75:~if the robot grasped the scissors;
+\item[] 0.60:~if the robot reached for the scissors;
+\item[] 0.50:~if the robot successfully placed the tape on the table;
+\item[] 0.25:~if the robot grasped the tape;
+\item[] 0.10:~if the robot reached for the tape;
+\item[] 0.00:~if the robot didn't place any item on the table.
+\end{itemize}
+&
+% Content Col 9
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot placed the remaining item on the table;
+\item[] 0.75:~if the robot grasped the remaining item;
+\item[] 0.60:~if the robot reached for the remaining item;
+\item[] 0.50:~if the robot successfully placed the spirit level or the brush on the table;
+\item[] 0.25:~if the robot grasped the spirit level or the brush;
+\item[] 0.10:~if the robot reached for either the spirit level or the brush;
+\item[] 0.00:~if the robot didn't place any item on the table.
+\end{itemize}
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\subsubsection{Humanoid robot}
+Figure \ref{fig:atari-images-medium} shows visuals of the tasks and Table \ref{tab:humanoid_medium_horizon} defines the progress score for each task.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/assets/actions/Medium-horizon-atari.pdf}
+    \caption{Tasks in the multi-step benchmark for the Apollo humanoid. 
+    \label{fig:atari-images-medium}}
+\end{figure}
+
+\begin{table}[htbp]
+\begin{tiny}
+\centering
+\caption{Progress Scores: Humanoid Robot (Multi-step benchmark).}
+\label{tab:humanoid_medium_horizon}
+\begin{tabular}{| p{5cm} | p{5cm} | p{5cm} |}
+\toprule
+
+% --- SECTION 1 ---
+\multicolumn{3}{c}{\textbf{Benchmark: Humanoid Robot - Multi-step.}} \\
+\hline
+
+% --- Row 1 (Headers) ---
+\vspace{0.5pt}\textbf{``First put the gummy bear bag in the white bag and then put the stress ball in the white bag''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``First put the rubik's cube in the white bag and then put the white socks in the white bag''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Put the stress ball in the white bag, then put the gummy bear bag in the white bag, then put the white socks in the white bag''}.\vspace{0.5pt} \\
+\hline
+% --- Row 1 (Content) ---
+% Content Col 1
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully put gummy bear bag into the white bag and then put stress ball into the white bag and only those 2 items;
+\item[] 0.90:~if the robot put the gummy bear bag in the white bag and then put the stress ball in the white bag;
+\item[] 0.75:~if the robot put the gummy bear bag in the white bag and then picked up the stress ball;
+\item[] 0.60:~if the robot put the gummy bear bag in the white bag;
+\item[] 0.45:~if the robot picked up the gummy bear bag and did not place it in the white bag;
+\item[] 0.30:~if the robot put the stress ball and the gummy bear bag in the white bag but in the wrong order;
+\item[] 0.20:~if the robot put the stress ball in the white bag;
+\item[] 0.10:~if the robot put something in the white bag but it\'s not the stress ball or the gummy bear bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 2
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully put the rubik\'s cube in the white bag and then put the white socks into the white bag and only those 2 items;
+\item[] 0.90:~if the robot put the rubik\'s cube in the white bag and then put the white socks in the white bag -- order matters;
+\item[] 0.75:~if the robot put the rubik\'s cube in the white bag and then picked up the white socks -- order matters;
+\item[] 0.60:~if the robot put the rubik\'s cube in the white bag;
+\item[] 0.45:~if the robot picked up the rubik\'s cube and did not place it in the white bag;
+\item[] 0.30:~if the robot put the white socks in the bag and then put the rubik\'s cube in the white bag;
+\item[] 0.20:~if the robot put the white socks in the white bag;
+\item[] 0.10:~if the robot put something in the white bag but it\'s *not* the rubik\'s cube or white socks;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 3
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the stress ball in the white bag and then put the gummy bears in the white bag and then put the white socks in the white bag;
+\item[] 0.90:~if the robot put the stress ball in the white bag and then put the gummy bears in the white bag and then put the white socks in the white bag;
+\item[] 0.75:~if the robot put the stress ball in the white bag and then put the gummy bears in the white bag and then picked up the white socks;
+\item[] 0.60:~if the robot put the stress ball in the white bag and then put the gummy bears in the white bag;
+\item[] 0.45:~if the robot put the stress ball in the white bag and then picked up the gummy bears;
+\item[] 0.30:~if the robot put the stress ball in the white bag;
+\item[] 0.15:~if the robot picked up the stress ball;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 2 (Headers) ---
+\vspace{0.5pt}\textbf{``Stack the right orange cone on top of the left orange cone and then put the green lettuce in the brown bowl''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Put the dark colored clothes in the black box and then put the white clothes in the white box''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Put the white shirt in the white box and then put the red shirt in the black box''}.\vspace{0.5pt} \\
+\hline
+% --- Row 2 (Content) ---
+% Content Col 4
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot stacked the right orange cone on the left orange cone and then put the green lettuce in the brown bowl;
+\item[] 0.75:~if the robot stacked the right orange cone on the left orange cone and then touched the green lettuce;
+\item[] 0.50:~if the robot stacked the right orange cone on the left orange cone;
+\item[] 0.25:~if the robot touched the right orange cone;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 5
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put 3 colored shirts in the black box, *then* put the white shirt in the white box;
+\item[] 0.75:~if the robot put 3 colored shirts in the black box;
+\item[] 0.50:~if the robot put 2 colored shirts in the black box;
+\item[] 0.25:~if the robot put 1 colored shirt in the black box;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 6
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the white shirt in the white box, then put the red shirt in the black box;
+\item[] 0.75:~if the robot put the white shirt in the white box, then touched the red shirt;
+\item[] 0.50:~if the robot put the white shirt in the white box;
+\item[] 0.25:~if the robot touched the white shirt;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 3 (Headers) ---
+\vspace{0.5pt}\textbf{``Place all the green lettuces on the table into the brown bowl and then picked up the orange cone''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Put the leftmost light blue chips bag in the blue bin and then put the bottom green chips in the green bin''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Put the white clothes in the black box and then put the dark colored clothes in the white box''}.\vspace{0.5pt} \\
+\hline
+% --- Row 3 (Content) ---
+% Content Col 7
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put 3 lettuces in the brown bowl, then picked up the orange cone;
+\item[] 0.75:~if the robot put 3 lettuce in the brown bowl;
+\item[] 0.50:~if the robot put 2 lettuce in the brown bowl;
+\item[] 0.25:~if the robot put 1 lettuce in the brown bowl;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 8
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the leftmost blue chips bag in the blue bin and then put the bottom green chips in the green bin;
+\item[] 0.75:~if the robot put the leftmost blue chips bag in the blue bin and then touched the bottom green chips;
+\item[] 0.50:~if the robot put the leftmost blue chips bag in the blue bin;
+\item[] 0.25:~if the robot put any blue snack in the blue bin;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 9
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put the white shirt in the black box, then put 3 colored shirts in the white box;
+\item[] 0.75:~if the robot put the white shirt in the black box, then put 2 colored shirts in the white box;
+\item[] 0.50:~if the robot put the white shirt in the black box, then put 1 colored shirt in the white box;
+\item[] 0.25:~if the robot put the white shirt in the black box;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 4 (Headers) ---
+\vspace{0.5pt}\textbf{``First put all the blue snacks in the blue bin and then put all the green snacks in the green bin''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Sort the snacks into their matching containers by color''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``Pack all the gifts''}.\vspace{0.5pt} \\
+\hline
+% --- Row 4 (Content) ---
+% Content Col 10
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put 3 blue snacks in the blue bin, then put 2 green snacks in the green bin;
+\item[] 0.80:~if the robot put 3 blue snacks in the blue bin, then put 1 green snack in the green bin;
+\item[] 0.60:~if the robot put 3 blue snacks in the blue bin;
+\item[] 0.40:~if the robot put 2 blue snacks in the blue bin;
+\item[] 0.20:~if the robot put 1 blue snack in the blue bin;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 11
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot put 5 snacks into their matching color bins;
+\item[] 0.80:~if the robot put 4 snacks into their matching color bins;
+\item[] 0.60:~if the robot put 3 snacks into their matching color bins;
+\item[] 0.40:~if the robot put 2 snacks into their matching color bins;
+\item[] 0.20:~if the robot put 1 snack into its matching color bin;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 12
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot packed all 5 gifts into the white bag;
+\item[] 0.80:~if the robot packed 4 gifts into the white bag;
+\item[] 0.60:~if the robot packed 3 gifts into the white bag;
+\item[] 0.40:~if the robot packed 2 gifts into the white bag;
+\item[] 0.20:~if the robot packed 1 gift into the white bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+\\
+\hline
+
+% --- Row 5 (Headers) ---
+\vspace{0.5pt}\textbf{``Place the stress ball and the gummy bears in the white bag''}.\vspace{0.5pt} &
+\vspace{0.5pt}\textbf{``First put the stress ball in the white bag and then put the gummy bear bag in the white bag''}.\vspace{0.5pt} &
+% This cell is empty
+\\
+\hline
+% --- Row 5 (Content) ---
+% Content Col 13
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully put stress ball and gummy bear bag into the white bag and only those 2 items;
+\item[] 0.80:~if the robot successfully put stress ball and gummy bear bag into the white bag but also put other items in the bag;
+\item[] 0.60:~if the robot put either the stress ball or the gummy bear bag in the white bag, but not both, and successfully picked up the other item but did not put it in the white bag;
+\item[] 0.40:~if the robot put either the stress ball or the gummy bear bag in the white bag, but not both;
+\item[] 0.20:~if the robot put something in the white bag but it\'s *not* the stress ball or the gummy bear bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 14
+\begin{itemize}[leftmargin=1pt,topsep=0pt]
+\item[] 1.00:~if the robot successfully put stress ball into the white bag, then put gummy bear bag into the white bag and only those 2 items -- order matters;
+\item[] 0.90:~if the robot put the stress ball in the white bag and then put the gummy bear bag in the white bag;
+\item[] 0.75:~if the robot put the stress ball in the white bag and then picked up the gummy bear bag;
+\item[] 0.60:~if the robot put the stress ball in the white bag;
+\item[] 0.45:~if the robot picked up the stress ball and did not place it in the white bag;
+\item[] 0.30:~if the robot put the gummy bear bag and the stress ball in the white bag but in the wrong order;
+\item[] 0.20:~if the robot put the gummy bear bag in the white bag;
+\item[] 0.10:~if the robot put something in the white bag but it\'s not the stress ball or the gummy bear bag;
+\item[] 0.00:~if the robot did anything else.
+\end{itemize}
+&
+% Content Col 15 (Empty)
+\\
+\bottomrule
+\end{tabular}
+\end{tiny}
+\end{table}
+
+\clearpage
+
+\newpage
+
+\subsection{Success rate}
+\label{appendix:additional-exps}
+In this section we report the \textit{success rate} for all our results in \cref{sec:results-actions}.
+
+\subsubsection{Success rate for generalization performance}
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/aloha_baselines_sr.pdf}
+\label{fig:aloha-sr-generalization}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/omega_baselines_sr.pdf}
+\label{fig:omega-sr-generalization}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/atari_baselines_sr.pdf}
+\label{fig:atari-sr-generalization}
+\end{subfigure}
+\caption{ Breakdown of \grshortlatest{} generalization capabilities across our robots.  \grshortlatest{} consistently outperforms the baselines and handles all four types of variations more effectively.}
+\end{figure}
+
+
+\clearpage
+\subsubsection{Success rate for data and model ablation}
+
+\begin{figure}[!h]
+\centering
+\begin{subfigure}[b]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/aloha_positive_transfer_sr.pdf}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/omega_positive_transfer_sr.pdf}
+\end{subfigure}
+\centering
+\begin{subfigure}[b]{0.8\textwidth}
+    \includegraphics[width=\textwidth]{src/assets/actions/atari_positive_transfer_sr.pdf}
+\end{subfigure}
+\caption{ Ablation on datasets and training recipes on our robots: \grshortlatest{} consistently outperforms our baselines: \grshortlatest{} trained on single or multi-robot data without the MT recipe. \label{fig:data-training-ablation-success}}
+\end{figure}
+
+\clearpage
+\subsubsection{Success rate for thinking ablation}
+\label{sec:thinking-appendix}
+\begin{figure}[ht] % 'ht' is a placement specifier: here, top
+    \centering % Centers the entire figure
+        \includegraphics[width=0.45\textwidth]{src/assets/actions/thinking_sr.pdf}
+      \caption{Ablation of thinking: success rate in the multi-step benchmark with and without enabling thinking during inference.}
+        \label{fig:medium-level-thinking-sr}
+\end{figure}
+
+\newpage

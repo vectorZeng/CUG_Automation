@@ -1,0 +1,85 @@
+\section{Model Card}\label{sec:model-card}
+We present the model card ~\cite{mitchell2019model} for \grlatestER{}  and \grlatest{} models in Table \ref{tab:model-card}.
+
+\begin{longtable}{p{0.24\textwidth}p{0.70\textwidth}}
+
+\midrule[\heavyrulewidth]
+\multicolumn{2}{c}{\textbf{Model summary}} \\
+\midrule[\heavyrulewidth]
+
+\textbf{Model architecture} & { \grlatestER{} is a Vision-Language-Model that enhances Gemini’s world understanding.
+
+\grlatest{}  is a Vision-Language-Action model enabling general-purpose robot manipulation on different tasks, scenes, and across multiple robots.} \\
+
+\midrule[0,5pt]
+
+\textbf{Input(s)} & {The models take text (e.g., a question or prompt or numerical coordinates) and images (e.g., robot camera images) as input.} \\
+
+\midrule[0,5pt]
+
+\textbf{Output(s)} & {\grlatestER{} generates text (e.g., numerical coordinates) in response to the input.  \grlatest{} generates continuous numerical values that represent robot actions, and additionally text when thinking mode is enabled.} \\
+
+\midrule[\heavyrulewidth]
+\multicolumn{2}{c}{\textbf{Model Data}} \\
+\midrule[\heavyrulewidth]
+
+\textbf{Training Data} & {\grlatestER{} and \grlatest{} were trained on datasets comprised of images, text, and robot sensor and action data.} \\
+
+\midrule[0,5pt]
+
+\textbf{Data Pre-processing} & 
+{The multi-stage safety and quality filtering process employs data cleaning and filtering methods in line with our policies. These methods include: 
+\begin{itemize}
+    \item Sensitive Data Filtering: Automated techniques were used to filter out certain personal information and other sensitive data from text and images.
+    \item Synthetic captions: Each image in the dataset was paired with both original captions and synthetic captions. Synthetic captions were generated using Gemini and FlexCap~\cite{dwibedi2024flexcap} models and allow the model to learn details about the image.
+\end{itemize}
+Further details on data pre-processing can be found in~\cite{geminiteam2023gemini}.
+} \\
+
+\midrule[\heavyrulewidth]
+\multicolumn{2}{c}{\textbf{Implementation Frameworks}} \\
+\midrule[\heavyrulewidth]
+
+\textbf{Hardware} & 
+{TPU v4,  v5p and v6e.}
+\iffalse The \geminirobotics{} models were trained using the latest generation of Tensor Processing Unit (TPU) hardware (TPUv4 and TPUv5). TPUs are specifically designed to handle the massive computations involved in training LLMs and can speed up training considerably compared to CPUs. TPUs often come with large amounts of high-bandwidth memory, allowing for the handling of large models and batch sizes during training, which can lead to better model quality. TPU Pods (large clusters of TPUs) also provide a scalable solution. Training can be distributed across multiple TPU devices for faster and more efficient processing. The efficiencies gained through the use of TPUs are aligned with Google's commitments to operate sustainably~\cite{google_sustainability}.\fi \\
+
+\midrule[0,5pt]
+
+\textbf{Software} & 
+{JAX~\cite{jax2018github}, ML Pathways~\cite{2021pathwaysarchitecture}.
+
+\iffalse Training was done using JAX~\cite{jax2018github} and ML Pathways~\cite{2021pathwaysarchitecture}.  JAX allows researchers to take advantage of the latest generation of hardware, including TPUs, for faster and more efficient training of large models.  ML Pathways is Google's latest effort to build artificially intelligent systems capable of generalizing across multiple tasks. This is specially suitable for foundation models, including large vision-language models like these ones.  Together, JAX and ML Pathways are used as described in~\cite{geminiteam2023gemini}; ``the `single controller' programming model of JAX and Pathways allows a single Python process to orchestrate the entire training run, dramatically simplifying the development workflow.''\fi
+} \\
+
+\midrule[\heavyrulewidth]
+\multicolumn{2}{c}{\textbf{Evaluation}} \\
+\midrule[\heavyrulewidth]
+
+\textbf{Approach} & {See Section \ref{sec:results-er} for \grlatestER{} evaluation procedures, Sections \ref{sec:results-actions} for \grlatest{} evaluation procedures, and Section \ref{sec:safety} for \geminirobotics{} Safety evaluation procedures. } \\
+
+\midrule[0,5pt]
+
+\textbf{Results} & {See Section \ref{sec:results-er} for \grlatestER{} evaluation results, Sections \ref{sec:results-actions} for \grlatest{} evaluation results, and Section \ref{sec:safety} for \geminirobotics{} Safety evaluation results.} \\
+
+\midrule[\heavyrulewidth]
+\multicolumn{2}{c}{\textbf{Model Usage \& Limitations}} \\
+\midrule[0,5pt]
+
+\textbf{Ethical Considerations \& Risks} & 
+{Previous impact assessment and risk analysis work as discussed in~\cite{geminiteam2023gemini} and references therein remain relevant to \geminirobotics.  
+\iffalse
+Broadly, risks fall into three categories:
+\begin{itemize}
+    \item Unintentional model failure includes system mistakes which could result in accidental physical injury or other physical harm. This could occur if a robotics system is deployed in an environment which is out-of-distribution and it misunderstands or misreasons about its environment. This can also occur if the training data is not sufficiently representative, leading to underperformance for specific groups~\cite{hao2019}.
+    \item Malicious adversarial users could attack or “jailbreak” the system to facilitate harmful tasks. This could include a user instructing the robot to perform unsafe actions~\cite{robey2024jailbreaking}.
+    \item Similar to other AI systems, some risk may arise from interactions with humans. For example, without a human-centered interface design, users could be susceptible to anthropomorphism, putting undue user trust or over-relying on the system~\cite{manzini2024}. Deployment in contexts such as hospitals and schools will require thoughtful data stewardship to preserve individuals privacy, while offering the benefits of robotics in these contexts.
+\end{itemize}
+\fi
+See Section \ref{sec:safety} for information on responsible development and safety mitigations.} \\
+
+\midrule[\heavyrulewidth]
+\captionsetup{position=below}
+\caption{\grlatest{} model card.}
+\label{tab:model-card}
+\end{longtable}

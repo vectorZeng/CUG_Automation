@@ -1,0 +1,87 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Jansen et~al.(1995)Jansen and van~den Steen]{Jansen1995}
+JANSEN J, VAN~DEN STEEN L.
+\newblock Active damping of self-excited torsional vibrations in oil well
+  drillstrings\allowbreak[J].
+\newblock Journal of Sound and Vibration, 1995, 179\allowbreak (4): 647-668.
+
+\bibitem[Tucker et~al.(2003)Tucker and Wang]{Tucker2003}
+TUCKER R, WANG C.
+\newblock Key issues in modeling and control of drillstring
+  vibrations\allowbreak[J].
+\newblock Shock and Vibration, 2003, 10\allowbreak (4): 217-239.
+
+\bibitem[Kyllingstad et~al.(2009)Kyllingstad and Nessj{\o}en]{Kyllingstad2019}
+KYLLINGSTAD {\AA}, NESSJ{\O}EN P.
+\newblock A new stick-slip prevention system\allowbreak[J].
+\newblock SPE Drilling \& Completion, 2009, 24\allowbreak (01): 20-25.
+
+\bibitem[Patil et~al.(2018)Patil and Teodoriu]{Patil2018}
+PATIL P, TEODORIU C.
+\newblock Modeling and simulation of the torsional vibrations of a drill
+  string\allowbreak[J].
+\newblock Journal of Petroleum Science and Engineering, 2018, 163: 62-69.
+
+\bibitem[Liu et~al.(2024)Liu and Samuel]{Liu2024}
+LIU K, SAMUEL R.
+\newblock Intelligent control of drilling vibrations: A review\allowbreak[J].
+\newblock SPE Drilling \& Completion, 2024, 39\allowbreak (01): 10-28.
+
+\bibitem[王建国\ 等(2021)王建国 and 刘伟]{Wang2021}
+王建国, 刘伟.
+\newblock
+  基于改进遗传算法的钻柱粘滑振动PID控制参数优化\allowbreak[J].
+\newblock 机械科学与技术, 2021, 40\allowbreak (5): 789-795.
+
+\bibitem[Li et~al.(2021)Li and Liu]{Li2021}
+LI H, LIU Y.
+\newblock Adaptive sliding mode control for drill-string stick-slip vibration
+  suppression with unknown disturbance\allowbreak[J].
+\newblock Journal of Process Control, 2021, 98: 1-10.
+
+\bibitem[Saldivar et~al.(2016)Saldivar, Mondi{\'e}, Loiseau, and
+  Vano]{Saldivar2016}
+SALDIVAR B, MONDI{\'E} S, LOISEAU J, et~al.
+\newblock Stick-slip suppression in drillstrings using a
+  linear-quadratic-gaussian control approach\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2016, 24\allowbreak
+  (6): 2209-2216.
+
+\bibitem[张强\ 等(2022)张强 and 李明]{Zhang2022}
+张强, 李明.
+\newblock 钻柱系统粘滑振动的自抗扰控制研究\allowbreak[J].
+\newblock 石油机械, 2022, 50\allowbreak (3): 15-22.
+
+\bibitem[Navarro-L{\'o}pez et~al.(2020)Navarro-L{\'o}pez and
+  Su{\'a}rez-Cort{\'e}s]{Navarro2020}
+NAVARRO-L{\'O}PEZ E~M, SU{\'A}REZ-CORT{\'E}S R.
+\newblock Mitigation of stick-slip vibrations in drill-strings based on a
+  robust observer-based controller\allowbreak[J].
+\newblock Control Engineering Practice, 2020, 100: 104446.
+
+\bibitem[Cheng et~al.(2018)Cheng, Wu, and Chen]{Cheng2018}
+CHENG J, WU M, CHEN L.
+\newblock Observer-based tracking control for suppressing stick-slip vibration
+  of drillstring system\allowbreak[C]//\allowbreak
+2018 37th Chinese Control Conference (CCC).
+\newblock IEEE, 2018: 10254-10258.
+
+\bibitem[Qiu et~al.(2020)Qiu and et~al.]{Qiu2020}
+QIU Y, ET~AL.
+\newblock Deep learning based stick-slip vibration prediction in
+  drilling\allowbreak[J].
+\newblock Journal of Petroleum Science and Engineering, 2020, 195: 107530.
+
+\end{thebibliography}

@@ -1,0 +1,194 @@
+\begin{thebibliography}{27}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Sutton et~al.(2018)Sutton and Barto]{sutton2018reinforcement}
+SUTTON R~S, BARTO A~G.
+\newblock Reinforcement learning: An introduction\allowbreak[M].
+\newblock 2nd ed.
+\newblock Cambridge, MA: MIT Press, 2018.
+
+\bibitem[Levine et~al.(2018)Levine, Pastor, Krizhevsky, and
+  Quillen]{levine2018learning}
+LEVINE S, PASTOR P, KRIZHEVSKY A, et~al.
+\newblock Learning dexterous manipulation skills for real-world
+  robots\allowbreak[J].
+\newblock International Journal of Robotics Research, 2018, 37\allowbreak (1):
+  3-20.
+
+\bibitem[Li(2018)]{li2018deep}
+LI Y.
+\newblock Deep reinforcement learning: An overview\allowbreak[A].
+\newblock 2018.
+
+\bibitem[Kajita et~al.(2014)Kajita, Hirukawa, Harada, and
+  Yokoi]{kajita2014introduction}
+KAJITA S, HIRUKAWA H, HARADA K, et~al.
+\newblock Introduction to humanoid robotics\allowbreak[M].
+\newblock Berlin: Springer, 2014.
+
+\bibitem[Grimes et~al.(2019)]{grimes2019model}
+GRIMES D, et~al.
+\newblock Model-based and model-free reinforcement learning for robotic
+  manipulation: A survey\allowbreak[J].
+\newblock Robotics and Autonomous Systems, 2019, 122: 103289.
+
+\bibitem[Mnih et~al.(2015)Mnih, Kavukcuoglu, Silver, et~al.]{mnih2015human}
+MNIH V, KAVUKCUOGLU K, SILVER D, et~al.
+\newblock Human-level control through deep reinforcement
+  learning\allowbreak[J].
+\newblock Nature, 2015, 518\allowbreak (7540): 529-533.
+
+\bibitem[Lillicrap et~al.(2015)]{lillicrap2015continuous}
+LILLICRAP T~P, et~al.
+\newblock Continuous control with deep reinforcement learning\allowbreak[A].
+\newblock 2015.
+
+\bibitem[Haarnoja et~al.(2018)Haarnoja, Zhou, Abbeel, and
+  Levine]{haarnoja2018soft}
+HAARNOJA T, ZHOU A, ABBEEL P, et~al.
+\newblock Soft actor-critic: Off-policy maximum entropy deep reinforcement
+  learning with a stochastic actor\allowbreak[J].
+\newblock Proceedings of the 35th International Conference on Machine Learning,
+  2018.
+
+\bibitem[Schulman et~al.(2017)Schulman, Wolski, Dhariwal,
+  et~al.]{schulman2017proximal}
+SCHULMAN J, WOLSKI F, DHARIWAL P, et~al.
+\newblock Proximal policy optimization algorithms\allowbreak[C]//\allowbreak
+Proceedings of the 34th International Conference on Machine Learning.
+\newblock 2017.
+
+\bibitem[Salimans et~al.(2017)Salimans, Ho, Chen, Sidor, and
+  Sutskever]{salimans2017evolution}
+SALIMANS T, HO J, CHEN X, et~al.
+\newblock Evolution strategies as a scalable alternative to reinforcement
+  learning\allowbreak[A].
+\newblock 2017.
+
+\bibitem[Hansen et~al.(2001)Hansen and Ostermeier]{hansen2001completely}
+HANSEN N, OSTERMEIER A.
+\newblock Completely derandomized self-adaptation in evolution
+  strategies\allowbreak[C]//\allowbreak
+Evolutionary Computation: Vol.~9.
+\newblock 2001: 159-195.
+
+\bibitem[Heess et~al.(2017)]{heess2017emergence}
+HEESS N, et~al.
+\newblock Emergence of locomotion behaviours in rich
+  environments\allowbreak[A].
+\newblock 2017.
+
+\bibitem[Hornby et~al.(2000)Hornby, Takamura, Yokono, Hanagata, and
+  Fujita]{hornby2000evolving}
+HORNBY G~S, TAKAMURA S, YOKONO J, et~al.
+\newblock Evolving biped locomotion using both genetic algorithms and genetic
+  programming\allowbreak[C]//\allowbreak
+Proceedings of the 2000 IEEE International Conference on Robotics and
+  Automation.
+\newblock 2000: 2030-2037.
+
+\bibitem[Reher et~al.(2020)Reher, Rotella, et~al.]{reher2020dynamic}
+REHER J, ROTELLA N, et~al.
+\newblock Dynamic locomotion for passive-ankle biped robots and humanoids using
+  whole-body locomotion control\allowbreak[J].
+\newblock The International Journal of Robotics Research, 2020, 39\allowbreak
+  (9): 1085-1120.
+
+\bibitem[Tobin et~al.(2017)Tobin, Fong, Ray, Schneider, Zaremba, and
+  Abbeel]{tobin2017domain}
+TOBIN J, FONG R, RAY A, et~al.
+\newblock Domain randomization for transferring deep neural networks from
+  simulation to the real world\allowbreak[C]//\allowbreak
+2017 IEEE/RSJ International Conference on Intelligent Robots and Systems.
+\newblock 2017: 23-30.
+
+\bibitem[Peng et~al.(2018)Peng, Andrychowicz, Zaremba, and Abbeel]{peng2018sim}
+PENG X~B, ANDRYCHOWICZ M, ZAREMBA W, et~al.
+\newblock Sim-to-real transfer of robotic control with dynamics
+  randomization\allowbreak[J].
+\newblock 2018 IEEE International Conference on Robotics and Automation, 2018:
+  3803-3810.
+
+\bibitem[mat(2023)]{mathworks_biped}
+Train biped robot to walk using evolutionary strategy\allowbreak[EB/OL].
+\newblock 2023.
+\newblock
+  \url{https://ww2.mathworks.cn/help/reinforcement-learning/ug/train-biped-robot-to-walk-using-evolutionary-strategy.html}.
+
+\bibitem[mat(2020)]{mathworks_video}
+Reinforcement learning, part 4: The walking robot problem\allowbreak[EB/OL].
+\newblock 2020.
+\newblock
+  \url{https://ww2.mathworks.cn/videos/reinforcement-learning-part-4-the-walking-robot-problem-1557482052319.html}.
+
+\bibitem[Watkins(1992)]{watkins1992q}
+WATKINS C~J~C~H.
+\newblock Q-learning\allowbreak[D].
+\newblock University of Cambridge, 1992.
+
+\bibitem[Sutton et~al.(2000)Sutton, McAllester, Singh, and
+  Mansour]{sutton2000policy}
+SUTTON R~S, MCALLESTER D, SINGH S, et~al.
+\newblock Policy gradient methods for reinforcement learning with function
+  approximation\allowbreak[C]//\allowbreak
+Proceedings of the 13th International Conference on Neural Information
+  Processing Systems.
+\newblock 2000: 1057-1063.
+
+\bibitem[Silver et~al.(2014)Silver, Lever, Heess,
+  et~al.]{silver2014deterministic}
+SILVER D, LEVER G, HEESS N, et~al.
+\newblock Deterministic policy gradient algorithms\allowbreak[C]//\allowbreak
+Proceedings of the 31st International Conference on Machine Learning.
+\newblock 2014: 387-395.
+
+\bibitem[Konda et~al.(2000)Konda and Tsitsiklis]{konda2000actor}
+KONDA V~R, TSITSIKLIS J~N.
+\newblock Actor-critic algorithms\allowbreak[J].
+\newblock Advances in Neural Information Processing Systems, 2000, 12:
+  1008-1014.
+
+\bibitem[Beyer et~al.(2002)Beyer and Schwefel]{beyer2002evolution}
+BEYER H~G, SCHWEFEL H~P.
+\newblock Evolution strategies: A comprehensive introduction\allowbreak[J].
+\newblock Natural Computing, 2002, 1\allowbreak (1): 3-52.
+
+\bibitem[Conti et~al.(2018)Conti, Madhavan, Petroski~Such, Lehman, Stanley, and
+  Clune]{conti2018improving}
+CONTI E, MADHAVAN V, PETROSKI~SUCH F, et~al.
+\newblock Improving exploration in evolution strategies for deep reinforcement
+  learning via a population of novelty-seeking
+  agents\allowbreak[C]//\allowbreak
+Advances in Neural Information Processing Systems: Vol.~31.
+\newblock 2018.
+
+\bibitem[Wierstra et~al.(2014)Wierstra, Schaul, Peters, and
+  Schmidhuber]{wierstra2014natural}
+WIERSTRA D, SCHAUL T, PETERS J, et~al.
+\newblock Natural evolution strategies\allowbreak[J].
+\newblock Journal of Machine Learning Research, 2014, 15\allowbreak (1):
+  949-980.
+
+\bibitem[Kolter et~al.(2010)Kolter and Ng]{kolter2010learning}
+KOLTER J~Z, NG A~Y.
+\newblock Learning to walk via memory-based control\allowbreak[C]//\allowbreak
+Robotics: Science and Systems.
+\newblock 2010.
+
+\bibitem[Li et~al.(2019)]{li2019reinforcement}
+LI B, et~al.
+\newblock Reinforcement learning-based bipedal locomotion: A
+  survey\allowbreak[J].
+\newblock Robotics and Autonomous Systems, 2019, 119: 1-12.
+
+\end{thebibliography}

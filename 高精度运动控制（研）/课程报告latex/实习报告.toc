@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Background}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}State of the Art}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Modeling of the Robotic Arm System}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Robotic Arm Structure}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Forward Kinematics}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Inverse Kinematics}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Uncertainty Modeling}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Control Method}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Principle of the 2-DOF PID Controller}{7}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Simulation Implementation}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Simulation Setup}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Controller Parameters}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Result Analysis}{12}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}%

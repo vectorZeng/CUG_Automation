@@ -1,0 +1,354 @@
+%!TeX program = xelatex
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{CUGReport}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\setstretch{1.5} % 设置全局行距为1.5倍
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt, parsep=0pt}
+
+% 全文字体：中文宋体，英文和数字 Times New Roman
+\setCJKmainfont{SimSun}
+\setmainfont{Times New Roman}
+
+% 字号命令
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{18pt}\selectfont}
+
+% 封面
+{
+  \title{
+    \vspace{1cm}
+    \songti \xiaoerhao \textbf{考虑煤岩强度和钻进工况的\\煤矿井下钻进操作参数决策方案} \par
+    \vspace{1cm}
+    \songti \sihao {\textbf{曾康慧}} \par
+    \vspace{13cm}
+  }
+}
+
+%%------------------------document环境开始------------------------%%
+\begin{document}
+
+  %%-----------------------封面--------------------%%
+  \cover
+  \thispagestyle{empty}
+
+  %%------------------摘要-------------%%
+  \newpage
+  \begin{abstract}
+    针对煤矿井下钻进过程中，钻进操作参数与煤岩强度和钻进工况不匹配导致钻进效率低、设备磨损加剧以及安全风险升高的问题，本文提出了一种考虑煤岩强度和钻进工况的钻进操作参数决策方案。首先，基于钻柱扭转–轴向耦合动力学模型，构建比能指标以在线表征煤岩强度，实现煤岩强度感知。其次，通过提取比能、扭矩和主泵压力的波动特征，引入高斯混合模型对钻进工况进行聚类，将工况划分为稳定、过渡和恶劣三类，从而实现钻进工况感知。在此基础上，利用基于核密度估计得到的数据驱动隶属度函数，构建 Mamdani 模糊推理系统，以感知到的煤岩强度和钻进工况作为输入，对给进速度和转速进行联合决策。为避免频繁调节带来的冲击，本文引入条件触发机制，仅在钻进工况发生变化时更新决策参数，从而兼顾响应性和稳定性。最后，基于华东某矿井井下实际钻进数据对所提方案进行了工程验证，结果表明，相较于传统经验法，所提方案在保证安全与设备寿命的前提下，提高了钻进效率并减小了操作参数波动。
+    
+    \vspace{1cm}
+    \textbf{关键词：} 煤矿井下钻进；钻进操作参数；煤岩强度感知；钻进工况识别；模糊推理；高斯混合模型
+  \end{abstract}
+  \thispagestyle{empty}
+
+  %%--------------------------目录页------------------------%%
+  \newpage
+  \tableofcontents
+  \thispagestyle{empty}
+
+  %%------------------------正文页从这里开始-------------------%%
+  \newpage
+  \setcounter{page}{1}
+
+  \section{引言}
+
+煤矿井下钻进是瓦斯抽采和地质勘探的关键环节，钻进效率和安全性一直是现场关注的核心问题\cite{LI2025eid}。钻进效率不仅取决于可控的钻进操作参数（如给进速度和转速），还受到煤岩强度和钻进工况等不可控因素的显著影响\cite{li2024}。钻速通常被用作衡量钻进效率的重要指标。因此，根据煤岩强度和钻进工况的实时变化合理调整给进速度和转速，对于提升钻速和整体钻进效率具有重要意义。
+
+现有钻进操作参数决策方法主要包括基于经验的规则法、智能优化方法和模糊推理方法等\cite{YANG2024rop,szurgacz2023application}。规则法多依赖操作工经验和固定阈值，主观性强且难以适应复杂多变的井下环境；智能优化方法可以通过搜索策略获得较优参数组合，但往往需要较高的计算资源，且对煤岩强度和钻进工况的实时感知能力不足，从而限制了其实时应用性能\cite{yang2025improving,alsaihati2025fuzzy}。相比之下，模糊推理方法能够以较低的计算开销，将工程经验以语言规则的形式嵌入控制与决策中，因而在复杂工业过程决策中具有一定优势\cite{komadja2025,davoodi2023predicting,ma2024fuzzy}。
+
+在模糊推理框架下，决策质量高度依赖于煤岩强度和钻进工况的感知精度。一方面，煤岩强度决定了合理的机械加载水平，近年来基于钻柱动力学模型的比能感知方法被证明能够有效表征地层强度\cite{aarsnes2019axial,LU2025auto,Wu2024Control}；另一方面，钻进工况（如稳定、过渡或恶劣）反映了系统振动、载荷波动等动态特性，已有研究利用聚类等无监督学习方法对钻进工况进行识别\cite{Hansen2024Unsupervised,li2025adaptability,zhao2018}。为此，本文从物理建模与数据驱动相结合的角度出发，引入比能（Specific Energy, SE）作为煤岩强度感知指标，并利用高斯混合模型（Gaussian Mixture Model, GMM）对钻进工况进行聚类识别，通过模糊推理对给进速度和转速进行综合决策。
+
+综合上述分析，本文围绕“钻进参数与煤岩强度及钻进工况匹配”这一核心问题，构建了一套适用于煤矿井下钻进的操作参数决策方案，主要贡献如下：
+\begin{itemize}
+  \item 基于钻柱扭转–轴向耦合动力学模型，构建比能指标作为煤岩强度感知量，实现了对井下煤岩强度的在线量化表征\cite{aarsnes2019axial,LU2025auto,Wu2024Control}。
+  \item 通过提取比能、扭矩和主泵压力的波动特征，引入 GMM 对钻进工况进行聚类识别，将工况划分为稳定、过渡和恶劣三类，并给出相应的工况指数\cite{Hansen2024Unsupervised,li2025adaptability,zhao2018}。
+  \item 基于核密度估计构建数据驱动隶属度函数，设计了 Mamdani 型模糊推理系统，并结合条件触发机制，对给进速度和转速进行决策更新，实现了在保证安全性的前提下提升钻进效率和参数平稳性\cite{ma2024fuzzy,komadja2025,davoodi2023predicting}。
+\end{itemize}
+
+  \section{过程描述与总体方案设计}
+  \label{sec:process_scheme}
+
+  本节首先介绍煤矿井下钻进系统的基本结构和关键变量，然后分析钻进参数与煤岩强度和钻进工况不匹配带来的问题，最后给出考虑煤岩强度和钻进工况的操作参数决策总体方案。
+
+  \subsection{过程描述}
+  \label{subsec:process_description}
+
+  煤矿井下钻进通常采用全液压掘进钻机，其主要由给进系统、回转系统和循环系统等部分组成。给进系统负责沿井筒轴向推动钻柱和钻头前进；回转系统提供扭矩使钻柱及钻头旋转破岩；循环系统通过泥浆或水等工作介质实现岩屑携带和钻头冷却。图\ref{fig:drilling_process_cn} 给出了煤矿井下钻进过程的示意图。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{fig/illustration.pdf}
+    \caption{煤矿井下钻进过程示意图}
+    \label{fig:drilling_process_cn}
+  \end{figure}
+
+  钻进过程中的关键变量可分为操作变量和状态变量。给进速度 $v_d$ 和转速 $\omega_d$ 为需要决策的操作参数；给进压力 $F$、扭矩 $T$、实际给进速度 $v$、实际转速 $\omega$、主泵压力 $P$ 等则反映了钻进载荷与运行状态。比能则用来表征煤岩强度，将上述可测量变量与地层物理性质联系起来。
+
+  \subsection{现有问题分析}
+
+  在实际井下作业中，钻进操作参数多由操作工基于经验或简化规则进行设定，缺乏对煤岩强度和钻进工况的定量感知。随着钻进深度增加，钻头会依次穿过煤层、夹矸、泥岩和砂岩等不同地层，地层硬度和稳定性发生显著变化。如果给进速度和转速未随之调整，容易出现以下问题：在软煤层中参数偏保守导致钻速偏低；在硬岩层中参数过大引发设备过载和强烈振动；在工况恶劣阶段频繁调节又可能加剧系统冲击，影响设备寿命与安全。
+
+  因此，亟需构建一套能够同时感知煤岩强度和钻进工况，并据此对给进速度和转速进行联合决策的方案，以实现“感知–决策–执行”的闭环控制。
+
+  \subsection{决策方案总体框架}
+
+  图\ref{fig:scheme_overview_cn} 给出了所提钻进操作参数决策方案的总体框架。方案主要包括环境感知模块和参数决策模块两部分。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{fig/framework-zh.pdf}
+    \caption{钻进操作参数决策方案总体框架}
+    \label{fig:scheme_overview_cn}
+  \end{figure}
+
+  首先，环境感知模块基于预处理后的钻进数据计算比能，并提取比能、扭矩与主泵压力的波动特征；比能用于表征煤岩强度，三维波动特征则作为 GMM 的输入以识别钻进工况。随后，参数决策模块以感知到的煤岩强度指标和工况指数作为输入，利用基于核密度估计构建的隶属度函数和 Mamdani 模糊推理规则，对给进速度和转速进行联合决策，并通过条件触发机制，在工况发生变化时更新控制量。最终，决策结果传递给钻机控制系统执行，形成闭环调节。
+
+  \section{煤岩强度与钻进工况感知模型}
+  \label{sec:perception_models}
+
+  本节给出煤岩强度感知模型和钻进工况感知模型的具体形式。前者基于钻柱动力学模型构建比能指标，后者基于 GMM 对钻进工况进行聚类识别。
+
+  \subsection{基于比能的煤岩强度感知}
+  \label{subsec:se_perception}
+
+  为定量表征钻进过程中的煤岩强度，本文采用比能作为核心指标。比能反映单位体积岩石破碎所需的能量，可综合考虑轴向载荷与扭转载荷的共同作用。图\ref{fig:drill_string_model_cn} 为钻柱扭转–轴向耦合动力学模型示意图。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.55\linewidth]{fig/dynamic-model.pdf}
+    \caption{钻柱扭转–轴向动力学模型示意图}
+    \label{fig:drill_string_model_cn}
+  \end{figure}
+
+  在简化假设下，钻柱的轴向和扭转运动可表示为
+  \begin{equation}
+    M\dot{v} = F - F_r,\quad
+    J\dot{\omega} = T - T_r,
+  \end{equation}
+  其中，$M$ 和 $J$ 分别为等效质量和转动惯量，$F_r$ 和 $T_r$ 为钻头–岩石相互作用产生的反力与反扭矩。轴向反力可写为
+  \begin{equation}
+    F_r = 2 \varepsilon r \left(\frac{\pi \zeta v}{\omega} + \ell \right),
+  \end{equation}
+  其中，$r$ 为钻头半径，$\zeta$ 为阻尼因子，$\ell$ 为正则化常数，$\varepsilon$ 为比能。
+
+  在稳态近似条件下，比能可近似为
+  \begin{equation}
+    \varepsilon = \frac{F}{\frac{\pi \zeta v}{\omega} + \ell},
+    \label{eq:se_cn}
+  \end{equation}
+  即随着地层变硬，比能增大。通过在线计算比能，可以在不额外增加传感器的前提下，实时感知煤岩强度变化。
+
+  \subsection{基于 GMM 的钻进工况感知}
+  \label{subsec:gmm_perception}
+
+  钻进工况不仅与煤岩强度相关，还与系统振动、载荷波动等动态特性密切相关。为了从测量数据中提取工况信息，本文选取比能标准差 $\sigma_{\varepsilon}$、扭矩 $T$ 和主泵压力 $P$ 三个量构成三维特征向量：
+  \begin{equation}
+    \mathbf{x} = [\sigma_{\varepsilon},\,T,\,P]^{\mathrm{T}}.
+  \end{equation}
+  其中，$\sigma_{\varepsilon}$ 反映了一段时间内比能的波动强度，能够表征钻进过程的稳定性；扭矩 $T$ 描述了钻进过程中钻柱承受的转动力矩；主泵压力 $P$ 与钻井液循环阻力和井底清屑状况密切相关。三者联合起来，可以较全面地反映钻进载荷和流体工况。
+
+  为消除量纲和量级差异对聚类结果的影响，对特征向量进行 $z$-score 标准化处理：
+  \begin{equation}
+    \mathbf{x}_{\text{norm}} = \frac{\mathbf{x} - \mu_{\mathbf{x}}}{\sigma_{\mathbf{x}}},
+  \end{equation}
+  其中，$\mu_{\mathbf{x}}$ 和 $\sigma_{\mathbf{x}}$ 分别为历史数据中各特征的均值和标准差。标准化后的特征满足零均值和单位方差，有利于后续基于高斯分布的建模。
+
+  在此基础上，引入高斯混合模型对标准化特征进行聚类建模。假设数据可由 $K=3$ 个高斯分布线性叠加得到：
+  \begin{equation}
+    p(\mathbf{x}_{\text{norm}}) = \sum_{k=1}^{3} \pi_k \mathcal{N}(\mathbf{x}_{\text{norm}}|\mu_k,\Sigma_k),
+  \end{equation}
+  其中，$\pi_k$ 为第 $k$ 个高斯分量的权重，满足 $\sum_{k=1}^{3}\pi_k=1$；$\mu_k$ 和 $\Sigma_k$ 分别为该分量的均值向量和协方差矩阵。与 K-means 这类硬划分方法相比，GMM 采用概率形式描述样本来自各分量的可能性，因此能够更好地刻画工况之间的渐变过渡特性\cite{Hansen2024Unsupervised,li2025adaptability,zhao2018}。
+
+  模型参数通过期望–最大化（EM）算法迭代求解。E 步计算在当前参数下每个样本属于各高斯分量的后验概率，M 步根据后验概率更新各分量的权重、均值和协方差矩阵。为避免协方差矩阵病态，训练过程中对协方差加入适当正则化项，并设置多次随机初始化以降低收敛至局部最优的可能性。
+
+  训练完成后，对于给定的特征样本 $\mathbf{x}_{\text{norm}}$，可得到其属于三类工况的后验概率向量：
+  \begin{equation}
+    [\pi_1,\pi_2,\pi_3],
+  \end{equation}
+  并据此定义工况索引：
+  \begin{equation}
+    C_{\text{gmm}} = \arg\max_k \pi_k,
+  \end{equation}
+  其中，$k=1,2,3$ 分别对应稳定、过渡和恶劣工况。根据聚类中心及其在比能和载荷特征空间中的位置，可以将比能较低且波动较小的一簇解释为软煤层下的稳定工况，将比能和载荷水平中等的一簇解释为泥岩等中等硬度地层的过渡工况，将比能与载荷波动均较大的簇解释为硬砂岩等恶劣工况。
+
+  需要强调的是，GMM 输出的是软划分概率而非硬阈值判断，因此在工况过渡阶段，样本对不同类别会同时具有一定隶属度，这一特性非常适合与后续模糊推理模块进行衔接，为平滑调整操作参数提供了基础。
+  
+ 
+   \section{钻进操作参数决策模型}
+  \label{sec:decision_models}
+
+  本节给出给进速度和转速的模糊决策模型。首先介绍隶属度函数和工况指数的构造方法，然后分别给出给进速度和转速的模糊规则与条件触发策略，最后从工程角度对决策逻辑进行简要讨论。
+
+  \subsection{隶属度函数与工况指数}
+
+  为实现数据驱动的模糊推理，本文利用核密度估计方法，对比能 $\varepsilon$、给进速度 $v$、转速 $\omega$ 以及由 $[\pi_1,\pi_2,\pi_3]$ 构造的工况指数 $c$ 进行统计建模。核密度估计通过在样本点附近叠加核函数，得到各变量的近似概率密度函数，能够反映现场数据的真实分布情况\cite{ma2024fuzzy}。
+
+  对于连续变量 $x\in\{\varepsilon,v,\omega\}$，其经验分布可以表示为
+  \begin{equation}
+    \hat{f}(x) = \frac{1}{Nh}\sum_{i=1}^{N}K\left(\frac{x-x_i}{h}\right),
+  \end{equation}
+  其中，$x_i$ 为历史数据样本，$K(\cdot)$ 为核函数（如高斯核），$h$ 为带宽参数，$N$ 为样本数。通过观察 $\hat{f}(x)$ 的峰值位置和分布区间，可将变量划分为“低”“中”“高”等若干模糊子集，并据此构造对应的隶属度函数。
+
+  对煤岩强度指标比能 $\varepsilon$，本文将其分为低（软）、中（中等）、高（硬）三个等级；对给进速度 $v$ 和转速 $\omega$，同样划分为低、中、高三个等级。每个等级的隶属度函数可以采用三角形或梯形形式，其支撑集和重叠区间由核密度估计结果确定，从而保证模糊集覆盖实际操作区间且重叠适中。
+
+  钻进工况指数则由 GMM 输出的后验概率构造。设样本属于稳定、过渡和恶劣工况的概率分别为 $\pi_1,\pi_2,\pi_3$，则定义工况指数为
+  \begin{equation}
+    c = \pi_1 + 2\pi_2 + 3\pi_3,
+  \end{equation}
+  其取值范围约为 $[1,3]$。当样本更接近稳定工况时，$c$ 趋向于 1；当更接近恶劣工况时，$c$ 趋向于 3。根据 $c$ 的经验分布，构造三个三角形隶属度函数，分别对应“稳定”“过渡”“恶劣”工况，例如：
+  \begin{itemize}
+    \item 稳定工况：支撑集约为 $[1,1,2]$，在 $c=1$ 处隶属度为 1；
+    \item 过渡工况：支撑集约为 $[1,2,3]$，在 $c=2$ 处隶属度为 1；
+    \item 恶劣工况：支撑集约为 $[2,3,3]$，在 $c=3$ 处隶属度为 1。
+  \end{itemize}
+  这种构造方式将 GMM 的概率输出映射为模糊变量，既保留了工况识别的柔性，又便于后续基于规则的推理实现。
+
+  \subsection{给进速度决策模型}
+  \label{subsec:feed_decision}
+
+  给进速度是直接影响钻速和机械载荷的重要操作量。过小的给进速度会导致钻速偏低，降低生产效率；过大的给进速度则可能引起钻头跳动、卡钻及设备过载等问题。为平衡效率与安全性，本文以比能 $\varepsilon$ 和工况指数 $c$ 为输入，以期望给进速度 $v_d$ 为输出，构建 Mamdani 型模糊推理系统。
+
+  在输入空间中，比能 $\varepsilon$ 被划分为“低”“中”“高”三个语言变量，对应软、中、硬地层；工况指数 $c$ 同样划分为“稳定”“过渡”“恶劣”三种工况。输出空间中，给进速度 $v_d$ 被划分为“低”“中”“高”三个等级。依据工程经验和安全性要求，可以构造如下具有代表性的模糊规则：
+  \begin{itemize}
+    \item 若 $\varepsilon$ 为低且工况稳定，则 $v$ 为高；
+    \item 若 $\varepsilon$ 为低且工况过渡，则 $v$ 为中到高；
+    \item 若 $\varepsilon$ 为中且工况稳定，则 $v$ 为中；
+    \item 若 $\varepsilon$ 为中且工况过渡，则 $v$ 为中略偏低；
+    \item 若 $\varepsilon$ 为高且工况稳定，则 $v$ 为中偏低；
+    \item 若 $\varepsilon$ 为高且工况恶劣，则 $v$ 为低。
+  \end{itemize}
+  实际实现中，还可以针对特殊工况（如煤矸石夹层或短时高压波动）增加若干保护性规则，以增强系统鲁棒性。
+
+  模糊推理采用“最小–最大”合成方式，输出模糊集再通过重心法进行解模糊，得到连续的给进速度决策值。考虑到现场执行机构调节存在惯性和滞后，如果在每个采样时刻都根据最新输入更新 $v_d$，可能导致指令频繁跳变。为此，本文引入条件触发策略：
+  \begin{equation}
+    v_d[i] =
+    \begin{cases}
+      \text{FIS}(\varepsilon[i],c[i]), & C_{\text{gmm}}[i] \neq C_{\text{gmm}}[i-1],\\
+      v_d[i-1], & \text{否则},
+    \end{cases}
+  \end{equation}
+  即仅在 GMM 判定的工况类别发生变化时重新计算给进速度，否则保持上一时刻的决策值不变。这一机制能够有效避免在稳定工况下因微小波动频繁调整给进速度，从而降低对执行机构的冲击。
+
+  \subsection{转速决策模型}
+  \label{subsec:rot_decision}
+
+  转速 $\omega_d$ 是影响钻头切削状态和扭矩水平的另一关键操作量。较高的转速通常有利于提高机械钻速，但在硬岩或恶劣工况下过高转速可能引发强烈扭转振动和过载。本文采用与给进速度类似的模糊推理框架，对转速进行决策。
+
+  输入变量仍为比能 $\varepsilon$ 和工况指数 $c$，其语言划分与上一小节一致。输出变量为期望转速 $\omega_d$，同样划分为“低”“中”“高”三个等级。典型规则可设计为：
+  \begin{itemize}
+    \item 若 $\varepsilon$ 为低且工况稳定，则 $\omega$ 为高，以充分发挥软煤层下的速度优势；
+    \item 若 $\varepsilon$ 为中且工况稳定，则 $\omega$ 为中，兼顾钻速与扭矩水平；
+    \item 若 $\varepsilon$ 为中且工况过渡，则 $\omega$ 为中略偏低，以减小振动风险；
+    \item 若 $\varepsilon$ 为高且工况过渡，则 $\omega$ 为低到中；
+    \item 若 $\varepsilon$ 为高且工况恶劣，则 $\omega$ 为低，以优先保护设备。
+  \end{itemize}
+
+  推理与解模糊过程与给进速度相同，最终得到连续的转速决策值。为保持给进速度和转速调整的一致性，转速同样采用条件触发机制：
+  \begin{equation}
+    \omega_d[i] =
+    \begin{cases}
+      \text{FIS}(\varepsilon[i],c[i]), & C_{\text{gmm}}[i] \neq C_{\text{gmm}}[i-1],\\
+      \omega_d[i-1], & \text{否则},
+    \end{cases}
+  \end{equation}
+  即只有当钻进工况从稳定向过渡或恶劣、或从恶劣恢复到较好状态时，才联动更新转速设定值，从而使得给进速度与转速在关键工况切换点协同变化，在工况基本不变时保持平稳。
+
+  \subsection{工程实现与讨论}
+
+  从工程实现角度看，所构建的决策模型可以作为上位机优化模块或就地控制器中的附加功能嵌入现有钻机控制系统。环境感知模块从数据采集系统读取实时信号，经过预处理和特征提取后输出比能和工况指数；模糊决策模块根据当前输入和上一时刻工况标签，计算并更新给进速度和转速的期望值，再通过通信接口下发给执行机构。
+
+  由于模糊推理以少量规则为基础，单次计算开销较小，结合条件触发机制后，整体算法对计算资源和通信带宽的要求较低，适合在煤矿井下的现场控制器中实时运行。同时，规则库和隶属度函数具有良好的可解释性和可调性，工程技术人员可以根据不同矿井的岩性特征和设备能力，对规则参数进行针对性调整，以获得更符合本矿需求的控制策略。
+  \section{算例与结果分析}
+  \label{sec:experiments_cn}
+
+  本节基于华东某煤矿井下实际钻进数据，对所提感知与决策方案进行验证。首先介绍数据来源与预处理方法，然后给出煤岩强度与钻进工况感知结果，最后对操作参数决策效果进行分析。
+
+  \subsection{数据来源与预处理}
+
+  实验数据来自安徽某煤矿井下瓦斯抽采与地质勘探钻孔，采集量包括给进压力、扭矩、给进速度、转速、主泵压力、钻机运行状态以及地层标记等。对原始数据进行阈值剔除以去除明显无效点，并采用一阶移动平均对信号进行平滑处理，以降低传感器噪声对特征提取的影响。
+
+  通过现场岩屑分析，将钻进地层划分为砂岩、泥岩、煤矸石和煤层四类，硬度由高到低依次为砂岩、泥岩、煤矸石和煤层。图\ref{fig:rock_debris_cn} 给出了典型煤岩钻屑情况。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{fig/coal-seam.png}
+    \caption{钻进现场典型煤岩钻屑}
+    \label{fig:rock_debris_cn}
+  \end{figure}
+
+  \subsection{煤岩强度与钻进工况感知结果}
+
+  基于钻柱动力学模型计算比能，并与 GMM 聚类结果结合，可获得煤岩强度和钻进工况随时间的变化。图\ref{fig:gmm_3d_cn} 为三维特征空间中的 GMM 聚类结果，可以看到数据在比能波动、扭矩和主泵压力三个维度上呈现出明显分簇。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{fig/gmm_3d.pdf}
+    \caption{三维特征空间中的 GMM 聚类结果}
+    \label{fig:gmm_3d_cn}
+  \end{figure}
+
+  图\ref{fig:specific_energy_gmm_cn} 展示了比能和 GMM 工况索引随时间的变化。可以看出，在钻进穿越硬岩地层时，比能显著升高，工况索引由稳定向过渡和恶劣转变，与地层标记具有良好对应关系。同时，工况索引呈阶梯状变化，说明所提方法避免了过度敏感的频繁切换，有利于后续参数决策的稳定性。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{fig/specific_energy_and_gmm_index.pdf}
+    \caption{比能与钻进工况感知结果}
+    \label{fig:specific_energy_gmm_cn}
+  \end{figure}
+
+  \subsection{操作参数决策结果与对比}
+
+  在感知结果基础上，通过核密度估计构建比能、给进速度和转速的隶属度函数，并结合 Mamdani 模糊推理和条件触发机制，得到给进速度和转速的决策曲线。图\ref{fig:kde_membership_cn} 为核密度估计及相应隶属度函数示意。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\linewidth]{fig/kde_membership_functions.pdf}
+    \caption{比能、给进速度和转速的核密度估计与隶属度函数}
+    \label{fig:kde_membership_cn}
+  \end{figure}
+
+  图\ref{fig:feed_speed_comparison_cn} 比较了基于所提方案得到的决策给进速度与实际给进速度。
+    \begin{figure}[htbp]
+  	\centering
+  	\includegraphics[width=0.6\linewidth]{fig/feed_speed_comparison.pdf}
+  	\caption{给进速度决策结果与实际值对比}
+  	\label{fig:feed_speed_comparison_cn}
+  \end{figure}
+  
+  从结果可以看出，在地层较为稳定的阶段，决策给进速度整体略高于实际值且波动更小，有助于提升钻速和操作平稳性；在工况恶劣阶段，决策速度更加保守且波动减小，有利于保护设备。
+
+
+
+  图\ref{fig:rotation_speed_comparison_cn} 为转速决策结果与实际转速对比。可以看出，决策转速随煤岩强度和工况变化进行适度调整，同时保持在较窄带宽内，相比实际转速具有更好的平稳性。
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{fig/rotary_speed_comparison.pdf}
+    \caption{转速决策结果与实际值对比}
+    \label{fig:rotation_speed_comparison_cn}
+  \end{figure}
+
+  进一步对稳定、过渡和恶劣三类工况下的参数统计结果进行对比，发现所提方案在稳定和过渡工况下显著提高了给进速度平均值并减小了波动，而在恶劣工况下保持与实际水平相近的平均值但降低了标准差，从而在保证安全与设备寿命的前提下，实现了效率提升与波动抑制的综合目标。
+
+  \section{总结与展望}
+  \label{sec:conclusion_cn}
+
+  本文针对煤矿井下钻进过程中操作参数与煤岩强度和钻进工况不匹配的问题，提出了一种集成煤岩强度感知与钻进工况识别的钻进操作参数决策方案。通过基于钻柱动力学模型构建比能指标，实现了对煤岩强度的在线量化；通过对比能波动、扭矩和主泵压力进行 GMM 聚类，实现了对钻进工况的稳定、过渡和恶劣三类识别。在此基础上，利用核密度估计构建数据驱动隶属度函数，并结合 Mamdani 模糊推理和条件触发机制，对给进速度和转速进行了联合决策。
+
+  基于安徽某矿井的实际钻进数据，算例结果表明：与传统经验法相比，所提方案能够在地层条件有利时提高给进速度和转速并减小波动，在工况恶劣时保持保守稳定的参数设置，从而在提升钻进效率的同时兼顾设备寿命与作业安全。未来工作将考虑引入多源数据融合（如振动信号、声发射信号等），并在更多矿井场景下开展现场试验，以进一步验证和推广所提方案。
+
+  %%----------- 参考文献 -------------------%%
+  \newpage
+  \bibliographystyle{gbt7714-numerical}
+  \bibliography{reference.bib}
+
+\end{document}
