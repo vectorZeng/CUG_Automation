@@ -1,0 +1,17 @@
+\contentsline {section}{面向复杂工业场景的无人机自主巡检关键技术研究}{1}{section*.2}%
+\contentsline {section}{\numberline {1}引言}{1}{section.1}%
+\contentsline {section}{\numberline {2}复杂工业场景无人机环境感知与信息融合}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}复杂工业场景及巡检任务分类}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}工业巡检环境感知}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}多模态信息融合}{8}{subsection.2.3}%
+\contentsline {section}{\numberline {3}工业设备缺陷与异常检测}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}基于视觉与多模态信息的工业缺陷检测}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}小样本、无监督异常检测}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {4}无人机自主巡检规划与多无人机协同}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}自主巡检任务规划与动态路径重规划}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}多无人机任务分配与协同决策}{19}{subsection.4.2}%
+\contentsline {section}{\numberline {5}总结与展望}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1}现有研究存在的主要问题}{21}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}下一步研究方向}{22}{subsection.5.2}%
+\contentsline {section}{参考文献}{24}{section*.3}%
+\contentsfinish 

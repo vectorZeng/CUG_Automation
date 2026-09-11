@@ -1,0 +1,1184 @@
+\begin{thebibliography}{162}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+
+\bibitem[Nguyen \textit{et~al.}(2018)Nguyen, Jenssen, and
+  Roverso]{Nguyen2018PowerLine}
+Nguyen~V~N, Jenssen~R, Roverso~D.
+\newblock Automatic autonomous vision-based power line inspection: A review of
+  current status and the potential role of deep learning \allowbreak[J].
+\newblock \textit{International Journal of Electrical Power \& Energy Systems},
+  2018, 99: 107-120.
+
+\bibitem[Ahmed \textit{et~al.}(2020)Ahmed, La, and
+  Gucunski]{Ahmed2020BridgeNDE}
+Ahmed~H, La~H~M, Gucunski~N.
+\newblock Review of non-destructive civil infrastructure evaluation for
+  bridges: State-of-the-art robotic platforms, sensors and algorithms
+  \allowbreak[J].
+\newblock \textit{Sensors}, 2020, 20 (14): 3954.
+
+\bibitem[Zhang \textit{et~al.}(2022)Zhang, Zou, Wang, del Rey~Castillo,
+  Dimyadi, and Chen]{Zhang2022UBI}
+Zhang~C, Zou~Y, Wang~F, \textit{et~al.}
+\newblock Towards fully automated unmanned aerial vehicle-enabled bridge
+  inspection: Where are we at? \allowbreak[J].
+\newblock \textit{Construction and Building Materials}, 2022, 347: 128543.
+
+\bibitem[Panigati \textit{et~al.}(2025{\natexlab{a}})Panigati, Zini, Striccoli,
+  Giordano, Tonelli, Limongelli, and Zonta]{Panigati2025Bridge}
+Panigati~T, Zini~M, Striccoli~D, \textit{et~al.}
+\newblock Drone-based bridge inspections: Current practices and future
+  directions \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2025, 173: 106101.
+
+\bibitem[Yahya \textit{et~al.}(2022)Yahya, Sebari, Hajji, Aniba, and
+  El~Bouchini-Idrissi]{Yahya2022PVReview}
+Yahya~Z, Sebari~I, Hajji~H, \textit{et~al.}
+\newblock Applied imagery pattern recognition for photovoltaic modules'
+  inspection: A review on methods, challenges and future development
+  \allowbreak[J].
+\newblock \textit{Sustainable Energy Technologies and Assessments}, 2022, 52:
+  102071.
+
+\bibitem[Shakhatreh \textit{et~al.}(2019)Shakhatreh, Sawalmeh, Al-Fuqaha, Dou,
+  Almaita, Khalil, Othman, Khreishah, and Guizani]{Shakhatreh2019UAV}
+Shakhatreh~H, Sawalmeh~A~H, Al-Fuqaha~A, \textit{et~al.}
+\newblock Unmanned aerial vehicles (uavs): A survey on civil applications and
+  key research challenges \allowbreak[J].
+\newblock \textit{IEEE Access}, 2019, 7: 48572-48634.
+
+\bibitem[Nooralishahi \textit{et~al.}(2021)Nooralishahi, Ibarra-Castanedo,
+  Deane, L{\'o}pez, Pant, Genest, Avdelidis, and
+  Maldague]{nooralishahi2021drones}
+Nooralishahi~P, Ibarra-Castanedo~C, Deane~S, \textit{et~al.}
+\newblock Drone-based non-destructive inspection of industrial sites: A review
+  and case studies \allowbreak[J].
+\newblock \textit{Drones}, 2021, 5 (4): 106.
+
+\bibitem[Safie \textit{et~al.}(2025)Safie and Khairil]{safie2025trip}
+Safie~S, Khairil~R.
+\newblock Regulatory, technical, and safety considerations for uav-based
+  inspection in chemical process plants: A systematic review of current
+  practice and future directions \allowbreak[J].
+\newblock \textit{Transportation Research Interdisciplinary Perspectives},
+  2025, 30: 101343.
+
+\bibitem[Nooralishahi \textit{et~al.}(2022)Nooralishahi, Lopez, and
+  Maldague]{nooralishahi2022access}
+Nooralishahi~P, Lopez~F, Maldague~X~P~V.
+\newblock Drone-enabled multimodal platform for inspection of industrial
+  components \allowbreak[J].
+\newblock \textit{IEEE Access}, 2022, 10: 41429-41443.
+
+\bibitem[Colomina \textit{et~al.}(2014)Colomina and Molina]{Colomina2014UAV}
+Colomina~I, Molina~P.
+\newblock Unmanned aerial systems for photogrammetry and remote sensing: A
+  review \allowbreak[J].
+\newblock \textit{ISPRS Journal of Photogrammetry and Remote Sensing}, 2014,
+  92: 79-97.
+
+\bibitem[Nex \textit{et~al.}(2014)Nex and Remondino]{Nex2014UAV}
+Nex~F, Remondino~F.
+\newblock Uav for 3d mapping applications: A review \allowbreak[J].
+\newblock \textit{Applied Geomatics}, 2014, 6: 1-15.
+
+\bibitem[Jeong \textit{et~al.}(2020)Jeong, Seo, and
+  Wacker]{Jeong2020BridgeReview}
+Jeong~E, Seo~J, Wacker~J.
+\newblock Literature review and technical survey on bridge inspection using
+  unmanned aerial vehicles \allowbreak[J].
+\newblock \textit{Journal of Performance of Constructed Facilities}, 2020, 34
+  (6): 04020102.
+
+\bibitem[Lin \textit{et~al.}(2021)Lin, Ibrahim, Sarwade, and
+  Golparvar-Fard]{Lin2021BridgeAerialRobots}
+Lin~J~J, Ibrahim~A, Sarwade~S, \textit{et~al.}
+\newblock Bridge inspection with aerial robots: Automating the entire pipeline
+  of visual data capture, 3d mapping, defect detection, analysis, and reporting
+  \allowbreak[J].
+\newblock \textit{Journal of Computing in Civil Engineering}, 2021, 35 (2):
+  04020071.
+
+\bibitem[Ahmed \textit{et~al.}(2024)Ahmed, Mohanta, and
+  Keshari]{Ahmed2024Transmission}
+Ahmed~F, Mohanta~J~C, Keshari~A.
+\newblock Power transmission line inspections: Methods, challenges, current
+  status and usage of unmanned aerial systems \allowbreak[J].
+\newblock \textit{Journal of Intelligent and Robotic Systems}, 2024, 110: 54.
+
+\bibitem[Segovia~Ram{\'\i}rez
+  \textit{et~al.}(2022{\natexlab{a}})Segovia~Ram{\'\i}rez, Parra~Chaparro, and
+  Garc{\'\i}a~M{\'a}rquez]{Ramirez2022PVRTK}
+Segovia~Ram{\'\i}rez~I, Parra~Chaparro~J~R, Garc{\'\i}a~M{\'a}rquez~F~P.
+\newblock Unmanned aerial vehicle integrated real time kinematic in infrared
+  inspection of photovoltaic panels \allowbreak[J].
+\newblock \textit{Measurement}, 2022, 188: 110536.
+
+\bibitem[Alqudsi \textit{et~al.}(2026)Alqudsi, Alameri, Abdallah, and
+  Ahmed]{Alqudsi2026GNSSDenied}
+Alqudsi~Y, Alameri~A, Abdallah~A~M, \textit{et~al.}
+\newblock State-of-the-art and future directions in autonomous navigation for
+  uavs in gnss-denied environments: A comprehensive review of techniques,
+  architectures, and applications \allowbreak[J].
+\newblock \textit{Information Fusion}, 2026, 104: 104714.
+
+\bibitem[Özaslan \textit{et~al.}(2017)Özaslan, Loianno, Keller, Taylor,
+  Kumar, Wozencraft, and Hood]{Ozaslan2017Penstocks}
+Özaslan~T, Loianno~G, Keller~J, \textit{et~al.}
+\newblock Autonomous navigation and mapping for inspection of penstocks and
+  tunnels with mavs \allowbreak[C].
+\newblock IEEE Robotics and Automation Letters: volume~2.
+\newblock 2017: 1740-1747.
+
+\bibitem[Chang \textit{et~al.}(2023)Chang, Cheng, Manzoor, and
+  Murray]{Chang2023GNSSDenied}
+Chang~Y, Cheng~Y, Manzoor~U, \textit{et~al.}
+\newblock A review of uav autonomous navigation in gps-denied environments
+  \allowbreak[J].
+\newblock \textit{Robotics and Autonomous Systems}, 2023, 170: 104533.
+
+\bibitem[赵春晖\ 等(2024{\natexlab{a}})赵春晖, 刘安萌, 吕洋, and
+  潘泉]{Zhao2024ResilientUAV}
+赵春晖, 刘安萌, 吕洋, 等.
+\newblock 无人机韧性自主定位技术综述\allowbreak[J].
+\newblock 航空学报, 2024, 45 (8): 28839.
+
+\bibitem[Jarraya \textit{et~al.}(2025)Jarraya, Al-Batati, Kadri, Abdelkader,
+  Ammar, Boulila, and Koubaa]{jarraya2025gnssdenied}
+Jarraya~I, Al-Batati~A, Kadri~M~B, \textit{et~al.}
+\newblock Gnss-denied unmanned aerial vehicle navigation: analyzing
+  computational complexity, sensor fusion, and localization methodologies
+  \allowbreak[J].
+\newblock \textit{Satellite Navigation}, 2025, 6 (1): 9.
+
+\bibitem[Boiteau \textit{et~al.}(2024)Boiteau, Vanegas, and
+  Gonzalez]{boiteau2024uavlowvisibility}
+Boiteau~S, Vanegas~F, Gonzalez~F.
+\newblock Framework for autonomous uav navigation and target detection in
+  global-navigation-satellite-system-denied and visually degraded environments
+  \allowbreak[J].
+\newblock \textit{Remote Sensing}, 2024, 16 (3): 471.
+
+\bibitem[Liu \textit{et~al.}(2022)Liu, Hajj, and Bao]{Liu2022WindRobots}
+Liu~Y, Hajj~M~R, Bao~Y.
+\newblock Review of robot-based damage assessment for offshore wind turbines
+  \allowbreak[J].
+\newblock \textit{Renewable and Sustainable Energy Reviews}, 2022, 158: 112187.
+
+\bibitem[Sun \textit{et~al.}(2022)Sun, Wang, and Chu]{Sun2022WindMonitoring}
+Sun~S, Wang~T, Chu~F.
+\newblock In-situ condition monitoring of wind turbine blades: A critical and
+  systematic review of techniques, challenges, and futures \allowbreak[J].
+\newblock \textit{Renewable and Sustainable Energy Reviews}, 2022, 160: 112326.
+
+\bibitem[李庚松\ 等(2025)李庚松, 刘艺, 郑奇斌, 杨国利, 刘坤,
+  王强, and 刁兴春]{Li2025UAVFusion}
+李庚松, 刘艺, 郑奇斌, 等.
+\newblock 无人机多传感器数据融合研究综述\allowbreak[J].
+\newblock 软件学报, 2025, 36 (4): 1881-1905.
+
+\bibitem[赵春晖\ 等(2024{\natexlab{b}})赵春晖, 刘安萌, 吕洋, and
+  潘泉]{zhao2024uavresilient}
+赵春晖, 刘安萌, 吕洋, 等.
+\newblock 无人机韧性自主定位技术综述\allowbreak[J].
+\newblock 航空学报, 2024, 45 (8): 28839.
+
+\bibitem[Zhao \textit{et~al.}(2025)Zhao, Zhou, Zhang, Zhang, Wang, Wang, and
+  Scherer]{zhao2025resilient}
+Zhao~S, Zhou~S, Zhang~Y, \textit{et~al.}
+\newblock Resilient odometry via hierarchical adaptation \allowbreak[J].
+\newblock \textit{Science Robotics}, 2025, 10 (109): eadv1818.
+
+\bibitem[Falorca \textit{et~al.}(2020)Falorca and Lanzinha]{Falorca2020Facade}
+Falorca~J~F, Lanzinha~J~C~G.
+\newblock Facade inspections with drones--theoretical analysis and exploratory
+  tests \allowbreak[J].
+\newblock \textit{International Journal of Building Pathology and Adaptation},
+  2020, 38 (2): 235-258.
+
+\bibitem[Oliveira \textit{et~al.}(2023)Oliveira, Bracht, Aghaei, and
+  R{\"u}ther]{oliveira2023pvairt}
+Oliveira~A~K~V~d, Bracht~M~K, Aghaei~M, \textit{et~al.}
+\newblock Automatic fault detection of utility-scale photovoltaic solar
+  generators applying aerial infrared thermography and orthomosaicking
+  \allowbreak[J].
+\newblock \textit{Solar Energy}, 2023, 252: 272-283.
+
+\bibitem[Zefri \textit{et~al.}(2023)Zefri, Sebari, Hajji, Aniba, and
+  Aghaei]{zefri2023pvlwir}
+Zefri~Y, Sebari~I, Hajji~H, \textit{et~al.}
+\newblock A layer-2 solution for inspecting large-scale photovoltaic arrays
+  through aerial {LWIR} multiview photogrammetry and deep learning: A hybrid
+  data-centric and model-centric approach \allowbreak[J].
+\newblock \textit{Expert Systems with Applications}, 2023, 223: 119950.
+
+\bibitem[Segovia~Ram{\'\i}rez
+  \textit{et~al.}(2022{\natexlab{b}})Segovia~Ram{\'\i}rez, Pliego~Marug{\~a}n,
+  and Garc{\'\i}a~M{\'a}rquez]{Vergara2022PVAerial}
+Segovia~Ram{\'\i}rez~I, Pliego~Marug{\~a}n~A, Garc{\'\i}a~M{\'a}rquez~F~P.
+\newblock A novel approach to optimize the positioning and measurement
+  parameters in photovoltaic aerial inspections \allowbreak[J].
+\newblock \textit{Renewable Energy}, 2022, 187: 371-389.
+
+\bibitem[Yu \textit{et~al.}(2021)Yu, Yang, Yang, Loeliger, and Fei]{yu2021rcar}
+Yu~L, Yang~E, Yang~B, \textit{et~al.}
+\newblock Stereo vision-based autonomous navigation for oil and gas pressure
+  vessel inspection using a low-cost uav \allowbreak[C].
+\newblock 2021 IEEE International Conference on Real-time Computing and
+  Robotics (RCAR).
+\newblock 2021: 1052-1057.
+
+\bibitem[Alsayed \textit{et~al.}(2021)Alsayed, Yunusa-Kaltungo, Quinn, Arvin,
+  and Nabawy]{alsayed2021rs}
+Alsayed~A, Yunusa-Kaltungo~A, Quinn~M~K, \textit{et~al.}
+\newblock Drone-assisted confined space inspection and stockpile volume
+  estimation \allowbreak[J].
+\newblock \textit{Remote Sensing}, 2021, 13 (17): 3356.
+
+\bibitem[Özaslan \textit{et~al.}(2018)Özaslan, Loianno, Keller, Taylor, and
+  Kumar]{Ozaslan2018Cylinders}
+Özaslan~T, Loianno~G, Keller~J, \textit{et~al.}
+\newblock Spatio-temporally smooth local mapping and state estimation inside
+  generalized cylinders with micro aerial vehicles \allowbreak[J].
+\newblock \textit{IEEE Robotics and Automation Letters}, 2018, 3 (4):
+  4209-4216.
+
+\bibitem[Hall \textit{et~al.}(1997)Hall and Llinas]{Hall1997Fusion}
+Hall~D~L, Llinas~J.
+\newblock An introduction to multisensor data fusion \allowbreak[J].
+\newblock \textit{Proceedings of the IEEE}, 1997, 85 (1): 6-23.
+
+\bibitem[Khaleghi \textit{et~al.}(2013)Khaleghi, Khamis, Karray, and
+  Razavi]{Khaleghi2013Fusion}
+Khaleghi~B, Khamis~A, Karray~F~O, \textit{et~al.}
+\newblock Multisensor data fusion: A review of the state-of-the-art
+  \allowbreak[J].
+\newblock \textit{Information Fusion}, 2013, 14 (1): 28-44.
+
+\bibitem[Scaramuzza \textit{et~al.}(2011)Scaramuzza and
+  Fraundorfer]{Scaramuzza2011VO}
+Scaramuzza~D, Fraundorfer~F.
+\newblock Visual odometry: Part i--the first 30 years and fundamentals
+  \allowbreak[J].
+\newblock \textit{IEEE Robotics \& Automation Magazine}, 2011, 18 (4): 80-92.
+
+\bibitem[Cadena \textit{et~al.}(2016)Cadena, Carlone, Carrillo, Latif,
+  Scaramuzza, Neira, Reid, and Leonard]{Cadena2016SLAM}
+Cadena~C, Carlone~L, Carrillo~H, \textit{et~al.}
+\newblock Past, present, and future of simultaneous localization and mapping:
+  Toward the robust-perception age \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2016, 32 (6): 1309-1332.
+
+\bibitem[Mur-Artal \textit{et~al.}(2015)Mur-Artal, Montiel, and
+  Tardos]{MurArtal2015ORBSLAM}
+Mur-Artal~R, Montiel~J~M~M, Tardos~J~D.
+\newblock Orb-slam: A versatile and accurate monocular slam system
+  \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2015, 31 (5): 1147-1163.
+
+\bibitem[Mur-Artal \textit{et~al.}(2017)Mur-Artal and
+  Tardos]{MurArtal2017ORBSLAM2}
+Mur-Artal~R, Tardos~J~D.
+\newblock Orb-slam2: An open-source slam system for monocular, stereo, and
+  rgb-d cameras \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2017, 33 (5): 1255-1262.
+
+\bibitem[Campos \textit{et~al.}(2021)Campos, Elvira, Rodriguez, Montiel, and
+  Tardos]{Campos2021ORBSLAM3}
+Campos~C, Elvira~R, Rodriguez~J~J~G, \textit{et~al.}
+\newblock Orb-slam3: An accurate open-source library for visual,
+  visual-inertial, and multimap slam \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2021, 37 (6): 1874-1890.
+
+\bibitem[Qin \textit{et~al.}(2018)Qin, Li, and Shen]{Qin2018VINS}
+Qin~T, Li~P, Shen~S.
+\newblock Vins-mono: A robust and versatile monocular visual-inertial state
+  estimator \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2018, 34 (4): 1004-1020.
+
+\bibitem[Zhang \textit{et~al.}(2014)Zhang and Singh]{Zhang2014LOAM}
+Zhang~J, Singh~S.
+\newblock Loam: Lidar odometry and mapping in real-time \allowbreak[C].
+\newblock Robotics: Science and Systems.
+\newblock 2014.
+
+\bibitem[Xu \textit{et~al.}(2022)Xu, Cai, He, Lin, and Zhang]{Xu2022FASTLIO2}
+Xu~W, Cai~Y, He~D, \textit{et~al.}
+\newblock Fast-lio2: Fast direct lidar-inertial odometry \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2022, 38 (4): 2053-2073.
+
+\bibitem[Shan \textit{et~al.}(2020)Shan, Englot, Meyers, Wang, Ratti, and
+  Rus]{shan2020liosam}
+Shan~T, Englot~B, Meyers~D, \textit{et~al.}
+\newblock {LIO-SAM}: Tightly-coupled lidar inertial odometry via smoothing and
+  mapping \allowbreak[C].
+\newblock 2020 IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS).
+\newblock 2020: 5135-5142.
+
+\bibitem[Wu \textit{et~al.}(2025)Wu, Chen, Yang, Zou, Liang, Xu, and
+  He]{wu2025dalislam}
+Wu~W, Chen~C, Yang~B, \textit{et~al.}
+\newblock {DALI-SLAM}: Degeneracy-aware lidar-inertial slam with novel
+  distortion correction and accurate multi-constraint pose graph optimization
+  \allowbreak[J].
+\newblock \textit{ISPRS Journal of Photogrammetry and Remote Sensing}, 2025,
+  221: 92-108.
+
+\bibitem[Kim \textit{et~al.}(2024)Kim, Azhari, Park, and
+  Shim]{kim2024adaptiveuavlio}
+Kim~B, Azhari~M~B, Park~J, \textit{et~al.}
+\newblock An autonomous uav system based on adaptive lidar inertial odometry
+  for practical exploration in complex environments \allowbreak[J].
+\newblock \textit{Journal of Field Robotics}, 2024, 41 (3): 669-698.
+
+\bibitem[Bai \textit{et~al.}(2022)Bai, Xiao, Chen, Wang, Zhang, and
+  Gao]{Bai2022FasterLIO}
+Bai~C, Xiao~T, Chen~Y, \textit{et~al.}
+\newblock Faster-lio: Lightweight tightly coupled lidar-inertial odometry using
+  parallel sparse incremental voxels \allowbreak[J].
+\newblock \textit{IEEE Robotics and Automation Letters}, 2022, 7 (2):
+  4861-4868.
+
+\bibitem[Shan \textit{et~al.}(2021)Shan, Englot, Ratti, and
+  Rus]{Shan2021LVISAM}
+Shan~T, Englot~B, Ratti~C, \textit{et~al.}
+\newblock Lvi-sam: Tightly-coupled lidar-visual-inertial odometry via smoothing
+  and mapping \allowbreak[C].
+\newblock 2021 IEEE International Conference on Robotics and Automation.
+\newblock 2021: 5692-5698.
+
+\bibitem[Fan \textit{et~al.}(2025)Fan, Zhang, Wang, Shen, and
+  Deng]{Fan2025FusionSLAM}
+Fan~Z, Zhang~L, Wang~X, \textit{et~al.}
+\newblock Lidar, imu, and camera fusion for simultaneous localization and
+  mapping: a systematic review \allowbreak[J].
+\newblock \textit{Artificial Intelligence Review}, 2025, 58: 174.
+
+\bibitem[Lin \textit{et~al.}(2022)Lin and Zhang]{lin2022r3live}
+Lin~J, Zhang~F.
+\newblock {R3LIVE}: A robust, real-time, rgb-colored, lidar-inertial-visual
+  tightly-coupled state estimation and mapping package \allowbreak[C].
+\newblock 2022 International Conference on Robotics and Automation (ICRA).
+\newblock 2022: 10672-10678.
+
+\bibitem[Zheng \textit{et~al.}(2025)Zheng, Xu, Zou, Hua, Yuan, He, Zhou, Liu,
+  Lin, Zhu, Ren, Wang, Meng, and Zhang]{zheng2025fastlivo2}
+Zheng~C, Xu~W, Zou~Z, \textit{et~al.}
+\newblock {FAST-LIVO2}: Fast, direct lidar-inertial-visual odometry
+  \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2025, 41: 326-346.
+
+\bibitem[Pfreundschuh \textit{et~al.}(2024)Pfreundschuh, Oleynikova, Cadena,
+  Siegwart, and Andersson]{pfreundschuh2024coinlio}
+Pfreundschuh~P, Oleynikova~H, Cadena~C, \textit{et~al.}
+\newblock {COIN-LIO}: Complementary intensity-augmented lidar inertial odometry
+  \allowbreak[C].
+\newblock 2024 IEEE International Conference on Robotics and Automation (ICRA).
+\newblock 2024: 1730-1737.
+
+\bibitem[Zhang \textit{et~al.}(2024)Zhang, Du, Bao, Yuan, and
+  Ma]{zhang2024lviofusion}
+Zhang~H, Du~L, Bao~S, \textit{et~al.}
+\newblock {LVIO-Fusion}: Tightly-coupled lidar-visual-inertial odometry and
+  mapping in degenerate environments \allowbreak[J].
+\newblock \textit{IEEE Robotics and Automation Letters}, 2024, 9 (4):
+  3783-3790.
+
+\bibitem[Wang \textit{et~al.}(2024{\natexlab{a}})Wang, Tian, Chen, Xu, and
+  Ding]{wang2024dynamicsurvey}
+Wang~Y, Tian~Y, Chen~J, \textit{et~al.}
+\newblock A survey of visual slam in dynamic environment: The evolution from
+  geometric to semantic approaches \allowbreak[J].
+\newblock \textit{IEEE Transactions on Instrumentation and Measurement}, 2024,
+  73: 2523221.
+
+\bibitem[Bolourian \textit{et~al.}(2020)Bolourian and
+  Hammad]{bolourian2020lidarbridge}
+Bolourian~N, Hammad~A.
+\newblock Lidar-equipped uav path planning considering potential locations of
+  defects for bridge inspection \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2020, 117: 103250.
+
+\bibitem[Xu \textit{et~al.}(2023)Xu, Chen, Zhan, Xiu, Suzuki, and
+  Shimada]{xu2023tunnelinspection}
+Xu~Z, Chen~B, Zhan~X, \textit{et~al.}
+\newblock A vision-based autonomous uav inspection framework for unknown tunnel
+  construction sites with dynamic obstacles \allowbreak[J].
+\newblock \textit{IEEE Robotics and Automation Letters}, 2023, 8 (8):
+  4983-4990.
+
+\bibitem[Li \textit{et~al.}(2024{\natexlab{a}})Li, Gao, Woo, Xu, Liu, and
+  Zeng]{li2024multispectraldefect}
+Li~J, Gao~B, Woo~W~L, \textit{et~al.}
+\newblock A novel multispectral fusion defect detection framework with
+  coarse-to-fine multispectral registration \allowbreak[J].
+\newblock \textit{IEEE Transactions on Instrumentation and Measurement}, 2024,
+  73: 5005313.
+
+\bibitem[Tao \textit{et~al.}(2019)Tao, Zhang, Liu, and Nee]{Tao2019DigitalTwin}
+Tao~F, Zhang~H, Liu~A, \textit{et~al.}
+\newblock Digital twin in industry: State-of-the-art \allowbreak[J].
+\newblock \textit{IEEE Transactions on Industrial Informatics}, 2019, 15 (4):
+  2405-2415.
+
+\bibitem[Hua \textit{et~al.}(2025)Hua and Chen]{hua2025aerialsmall}
+Hua~W, Chen~Q.
+\newblock A survey of small object detection based on deep learning in aerial
+  images \allowbreak[J].
+\newblock \textit{Artificial Intelligence Review}, 2025, 58 (6): 162.
+
+\bibitem[张锦航\ 等(2025)张锦航, 高敏, 方丹, 李超旺, 王毅, and
+  徐奎奎]{zhang2025lowaltitudeuav}
+张锦航, 高敏, 方丹, 等.
+\newblock
+  深度学习下的低空航拍图像小目标检测研究综述\allowbreak[J].
+\newblock 航空兵器, 2025, 32 (6): 23-39.
+
+\bibitem[Zhu \textit{et~al.}(2022)Zhu, Wen, Du, Bian, Fan, Hu, and
+  Ling]{zhu2021visdrone}
+Zhu~P, Wen~L, Du~D, \textit{et~al.}
+\newblock Detection and tracking meet drones challenge \allowbreak[J].
+\newblock \textit{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 2022, 44 (11): 7380-7399.
+
+\bibitem[Diers \textit{et~al.}(2023)Diers and Pigorsch]{Diers2023IJCVIQC}
+Diers~J, Pigorsch~C.
+\newblock A survey of methods for automated quality control based on images
+  \allowbreak[J].
+\newblock \textit{International Journal of Computer Vision}, 2023, 131:
+  2553-2581.
+
+\bibitem[Liu \textit{et~al.}(2024)Liu, Xie, Wang, Li, Wang, Zheng, and
+  Jin]{Liu2024IADSurvey}
+Liu~J, Xie~G, Wang~J, \textit{et~al.}
+\newblock Deep industrial image anomaly detection: A survey \allowbreak[J].
+\newblock \textit{Machine Intelligence Research}, 2024, 21: 104-135.
+
+\bibitem[Li \textit{et~al.}(2025{\natexlab{a}})Li, Yan, Wang, Ge,
+  et~al.]{Li2025IADSurvey}
+Li~Z, Yan~Y, Wang~X, \textit{et~al.}
+\newblock A survey of deep learning for industrial visual anomaly detection
+  \allowbreak[J].
+\newblock \textit{Artificial Intelligence Review}, 2025, 58 (279).
+
+\bibitem[陶显\ 等(2021)陶显, 侯伟, and 徐德]{Taox2021Survey}
+陶显, 侯伟, 徐德.
+\newblock 基于深度学习的表面缺陷检测方法综述\allowbreak[J].
+\newblock 自动化学报, 2021, 47 (5): 1017-1034.
+
+\bibitem[Shukla \textit{et~al.}(2025)Shukla, Shukla, S.~K., and
+  Shukla]{shukla2025iadsurvey}
+Shukla~V, Shukla~A, S.~K.~S~P, \textit{et~al.}
+\newblock A systematic survey: role of deep learning-based image anomaly
+  detection in industrial inspection contexts \allowbreak[J].
+\newblock \textit{Frontiers in Robotics and AI}, 2025, 12: 1554196.
+
+\bibitem[Li \textit{et~al.}(2025{\natexlab{b}})Li, Yan, Wang, Ge, and
+  Meng]{li2025iadreview}
+Li~Z, Yan~Y, Wang~X, \textit{et~al.}
+\newblock A survey of deep learning for industrial visual anomaly detection
+  \allowbreak[J].
+\newblock \textit{Artificial Intelligence Review}, 2025, 58 (6): 279.
+
+\bibitem[authors(2024{\natexlab{a}})]{Li2024SurfaceDefectReview}
+authors.
+\newblock A systematic review of deep learning approaches for surface defect
+  detection in industrial applications \allowbreak[J].
+\newblock \textit{Engineering Applications of Artificial Intelligence}, 2024,
+  130: 107717.
+
+\bibitem[Ren \textit{et~al.}(2017)Ren, He, Girshick, and
+  Sun]{Ren2017FasterRCNN}
+Ren~S, He~K, Girshick~R, \textit{et~al.}
+\newblock Faster r-cnn: Towards real-time object detection with region proposal
+  networks \allowbreak[J].
+\newblock \textit{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 2017, 39 (6): 1137-1149.
+
+\bibitem[Redmon \textit{et~al.}(2016)Redmon, Divvala, Girshick, and
+  Farhadi]{Redmon2016YOLO}
+Redmon~J, Divvala~S, Girshick~R, \textit{et~al.}
+\newblock You only look once: Unified, real-time object detection
+  \allowbreak[C].
+\newblock Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2016: 779-788.
+
+\bibitem[Redmon \textit{et~al.}(2018)Redmon and Farhadi]{Redmon2018YOLOv3}
+Redmon~J, Farhadi~A.
+\newblock Yolov3: An incremental improvement \allowbreak[J].
+\newblock \textit{arXiv preprint arXiv:1804.02767}, 2018.
+
+\bibitem[Bochkovskiy \textit{et~al.}(2020)Bochkovskiy, Wang, and
+  Liao]{Bochkovskiy2020YOLOv4}
+Bochkovskiy~A, Wang~C~Y, Liao~H~Y~M.
+\newblock Yolov4: Optimal speed and accuracy of object detection
+  \allowbreak[J].
+\newblock \textit{arXiv preprint arXiv:2004.10934}, 2020.
+
+\bibitem[Tan \textit{et~al.}(2024)Tan, Yang, Qiu, Jiang, He, Liu, and
+  Wu]{tan2024sccmdet}
+Tan~Q, Yang~X, Qiu~C, \textit{et~al.}
+\newblock {SCCMDet}: Adaptive sparse convolutional networks based on class maps
+  for real-time onboard detection in unmanned aerial vehicle remote sensing
+  images \allowbreak[J].
+\newblock \textit{Remote Sensing}, 2024, 16 (6): 1031.
+
+\bibitem[Yi \textit{et~al.}(2025)Yi, Mao, Zhang, Chen, Liu, Zeng, Xie, and
+  Wang]{yi2025uavtransmission}
+Yi~J, Mao~J, Zhang~H, \textit{et~al.}
+\newblock Balancing accuracy and efficiency with a multiscale uncertainty-aware
+  knowledge-based network for transmission line inspection \allowbreak[J].
+\newblock \textit{IEEE Transactions on Industrial Informatics}, 2025, 21 (4):
+  2829-2838.
+
+\bibitem[Liu \textit{et~al.}(2016)Liu, Anguelov, Erhan, Szegedy, Reed, Fu, and
+  Berg]{Liu2016SSD}
+Liu~W, Anguelov~D, Erhan~D, \textit{et~al.}
+\newblock Ssd: Single shot multibox detector \allowbreak[C].
+\newblock European Conference on Computer Vision.
+\newblock 2016: 21-37.
+
+\bibitem[Lin \textit{et~al.}(2020)Lin, Goyal, Girshick, He, and
+  Doll{\'a}r]{Lin2020Focal}
+Lin~T~Y, Goyal~P, Girshick~R, \textit{et~al.}
+\newblock Focal loss for dense object detection \allowbreak[J].
+\newblock \textit{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 2020, 42 (2): 318-327.
+
+\bibitem[Carion \textit{et~al.}(2020)Carion, Massa, Synnaeve, Usunier,
+  Kirillov, and Zagoruyko]{Carion2020DETR}
+Carion~N, Massa~F, Synnaeve~G, \textit{et~al.}
+\newblock End-to-end object detection with transformers \allowbreak[C].
+\newblock European Conference on Computer Vision.
+\newblock 2020: 213-229.
+
+\bibitem[Zhu \textit{et~al.}(2021)Zhu, Su, Lu, Li, Wang, and
+  Dai]{Zhu2021DeformableDETR}
+Zhu~X, Su~W, Lu~L, \textit{et~al.}
+\newblock Deformable detr: Deformable transformers for end-to-end object
+  detection \allowbreak[C].
+\newblock International Conference on Learning Representations.
+\newblock 2021.
+
+\bibitem[Dosovitskiy \textit{et~al.}(2021)Dosovitskiy
+  et~al.]{Dosovitskiy2021ViT}
+Dosovitskiy~A, \textit{et~al.}
+\newblock An image is worth 16x16 words: Transformers for image recognition at
+  scale \allowbreak[C].
+\newblock International Conference on Learning Representations.
+\newblock 2021.
+
+\bibitem[Liu \textit{et~al.}(2021)Liu, Lin, Cao, Hu, Wei, Zhang, Lin, and
+  Guo]{Liu2021Swin}
+Liu~Z, Lin~Y, Cao~Y, \textit{et~al.}
+\newblock Swin transformer: Hierarchical vision transformer using shifted
+  windows \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF International Conference on Computer
+  Vision.
+\newblock 2021: 10012-10022.
+
+\bibitem[Howard \textit{et~al.}(2017)Howard, Zhu, Chen, Kalenichenko, Wang,
+  Weyand, Andreetto, and Adam]{Howard2017MobileNet}
+Howard~A~G, Zhu~M, Chen~B, \textit{et~al.}
+\newblock Mobilenets: Efficient convolutional neural networks for mobile vision
+  applications \allowbreak[J].
+\newblock \textit{arXiv preprint arXiv:1704.04861}, 2017.
+
+\bibitem[Tan \textit{et~al.}(2019)Tan and Le]{Tan2019EfficientNet}
+Tan~M, Le~Q.
+\newblock Efficientnet: Rethinking model scaling for convolutional neural
+  networks \allowbreak[C].
+\newblock International Conference on Machine Learning.
+\newblock 2019: 6105-6114.
+
+\bibitem[Yeum \textit{et~al.}(2015)Yeum and Dyke]{Yeum2015Vision}
+Yeum~C~M, Dyke~S~J.
+\newblock Vision-based automated crack detection for bridge inspection
+  \allowbreak[J].
+\newblock \textit{Computer-Aided Civil and Infrastructure Engineering}, 2015,
+  30 (10): 759-770.
+
+\bibitem[Xiao \textit{et~al.}(2024)Xiao, Fan, Liu, Li, and
+  Nie]{xiao2024bridgeroicrack}
+Xiao~J~L, Fan~J~S, Liu~Y~F, \textit{et~al.}
+\newblock Region of interest ({ROI}) extraction and crack detection for
+  {UAV}-based bridge inspection using point cloud segmentation and 3d-to-2d
+  projection \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2024, 158: 105226.
+
+\bibitem[Cha \textit{et~al.}(2017)Cha, Choi, and
+  B{\"u}y{\"u}k{\"o}zt{\"u}rk]{Cha2017Deep}
+Cha~Y~J, Choi~W, B{\"u}y{\"u}k{\"o}zt{\"u}rk~O.
+\newblock Deep learning-based crack damage detection using convolutional neural
+  networks \allowbreak[J].
+\newblock \textit{Computer-Aided Civil and Infrastructure Engineering}, 2017,
+  32 (5): 361-378.
+
+\bibitem[Wang \textit{et~al.}(2024{\natexlab{b}})Wang, Sun, Xiong, Han, and
+  Wu]{wang2024steelcorrosion}
+Wang~J, Sun~H, Xiong~W, \textit{et~al.}
+\newblock Recognition of steel bridge corrosion considering the effect of
+  training dataset quality \allowbreak[J].
+\newblock \textit{Case Studies in Construction Materials}, 2024, 21: e03722.
+
+\bibitem[Liu \textit{et~al.}(2020)Liu, Nie, Fan, and Liu]{Liu2020BridgeCrack}
+Liu~Y~F, Nie~X, Fan~J~S, \textit{et~al.}
+\newblock Image-based crack assessment of bridge piers using unmanned aerial
+  vehicles and three-dimensional scene reconstruction \allowbreak[J].
+\newblock \textit{Computer-Aided Civil and Infrastructure Engineering}, 2020,
+  35 (5): 511-529.
+
+\bibitem[Maboudi \textit{et~al.}(2025)Maboudi, Backhaus, Mai, Ghassoun, Khedar,
+  Lowke, Riedel, Bestmann, and Gerke]{maboudi2025bridgedeformation}
+Maboudi~M, Backhaus~J, Mai~I, \textit{et~al.}
+\newblock Very high resolution bridge deformation monitoring using {UAV}-based
+  photogrammetry \allowbreak[J].
+\newblock \textit{Journal of Civil Structural Health Monitoring}, 2025, 15 (8):
+  3489-3508.
+
+\bibitem[Tao \textit{et~al.}(2020)Tao, Zhang, Wang, Liu, Zhang, and
+  Xu]{Tao2020Insulator}
+Tao~X, Zhang~D, Wang~Z, \textit{et~al.}
+\newblock Detection of power line insulator defects using aerial images
+  analyzed with convolutional neural networks \allowbreak[J].
+\newblock \textit{IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  2020, 50 (4): 1486-1498.
+
+\bibitem[Hang \textit{et~al.}(2024)Hang, Zhu, Gao, Wang, and
+  Liu]{hang2024wtbcrack}
+Hang~X, Zhu~X, Gao~X, \textit{et~al.}
+\newblock Study on crack monitoring method of wind turbine blade based on {AI}
+  model: Integration of classification, detection, segmentation and fault level
+  evaluation \allowbreak[J].
+\newblock \textit{Renewable Energy}, 2024, 224: 120152.
+
+\bibitem[authors(2024{\natexlab{b}})]{Li2024Imbalance}
+authors.
+\newblock Surface defect detection methods for industrial products with
+  imbalanced samples: A review of progress in the 2020s \allowbreak[J].
+\newblock \textit{Engineering Applications of Artificial Intelligence}, 2024,
+  130: 107697.
+
+\bibitem[Jadin \textit{et~al.}(2012)Jadin and Taib]{Jadin2012Infrared}
+Jadin~M~S, Taib~S.
+\newblock Recent progress in diagnosing the reliability of electrical equipment
+  by using infrared thermography \allowbreak[J].
+\newblock \textit{Infrared Physics \& Technology}, 2012, 55 (4): 236-245.
+
+\bibitem[Usamentiaga \textit{et~al.}(2014)Usamentiaga, Venegas, Guerediaga,
+  Vega, Molleda, and Bulnes]{Usamentiaga2014Infrared}
+Usamentiaga~R, Venegas~P, Guerediaga~J, \textit{et~al.}
+\newblock Infrared thermography for temperature measurement and non-destructive
+  testing \allowbreak[J].
+\newblock \textit{Sensors}, 2014, 14 (7): 12305-12348.
+
+\bibitem[Santos \textit{et~al.}(2024)Santos, Cunha, Dias, Moreira, and
+  Almeida]{santos2024uvthermopl}
+Santos~T, Cunha~T, Dias~A, \textit{et~al.}
+\newblock Uav visual and thermographic power line detection using deep learning
+  \allowbreak[J].
+\newblock \textit{Sensors}, 2024, 24 (17): 5678.
+
+\bibitem[刘传洋\ 等(2025)刘传洋 and 吴一全]{liu2025infraredcsee}
+刘传洋, 吴一全.
+\newblock
+  基于红外图像的电力设备识别及发热故障诊断方法研究进展\allowbreak[J].
+\newblock 中国电机工程学报, 2025, 45 (6): 2171-2196.
+
+\bibitem[Ertunc \textit{et~al.}(2024)Ertunc and Oguz]{ertunc2024thermalfault}
+Ertunc~K, Oguz~Y.
+\newblock Detection of potential faults in the electricity distribution network
+  using unmanned aerial vehicles and thermal cameras through deep learning
+  methods \allowbreak[J].
+\newblock \textit{Electric Power Components and Systems}, 2024, 52 (9):
+  1671-1691.
+
+\bibitem[Lin \textit{et~al.}(2025)Lin, Chang, Tong, Yu, Liotta, Huang, Song,
+  Zeng, Wu, Wang, and Zhang]{Li2025RGB3D}
+Lin~Y, Chang~Y, Tong~X, \textit{et~al.}
+\newblock A survey on rgb, 3d, and multimodal approaches for unsupervised
+  industrial image anomaly detection \allowbreak[J].
+\newblock \textit{Information Fusion}, 2025, 121: 1-24.
+
+\bibitem[Pang \textit{et~al.}(2021)Pang, Shen, Cao, and van~den
+  Hengel]{Pang2021DeepAD}
+Pang~G, Shen~C, Cao~L, \textit{et~al.}
+\newblock Deep learning for anomaly detection: A review \allowbreak[J].
+\newblock \textit{ACM Computing Surveys}, 2021, 54 (2): 1-38.
+
+\bibitem[Kingma \textit{et~al.}(2014)Kingma and Welling]{Kingma2014VAE}
+Kingma~D~P, Welling~M.
+\newblock Auto-encoding variational bayes \allowbreak[C].
+\newblock International Conference on Learning Representations.
+\newblock 2014.
+
+\bibitem[Goodfellow \textit{et~al.}(2014)Goodfellow, Pouget-Abadie, Mirza, Xu,
+  Warde-Farley, Ozair, Courville, and Bengio]{Goodfellow2014GAN}
+Goodfellow~I, Pouget-Abadie~J, Mirza~M, \textit{et~al.}
+\newblock Generative adversarial nets \allowbreak[C].
+\newblock Advances in Neural Information Processing Systems: volume~27.
+\newblock 2014: 2672-2680.
+
+\bibitem[Ruff \textit{et~al.}(2018)Ruff, Vandermeulen, G{\"o}rnitz, Deecke,
+  Siddiqui, Binder, M{\"u}ller, and Kloft]{Ruff2018DeepSVDD}
+Ruff~L, Vandermeulen~R, G{\"o}rnitz~N, \textit{et~al.}
+\newblock Deep one-class classification \allowbreak[C].
+\newblock International Conference on Machine Learning.
+\newblock 2018: 4393-4402.
+
+\bibitem[Reiss \textit{et~al.}(2021)Reiss, Cohen, Bergman, and
+  Hoshen]{Reiss2021PANDA}
+Reiss~T, Cohen~N, Bergman~L, \textit{et~al.}
+\newblock Panda: Adapting pretrained features for anomaly detection and
+  segmentation \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2021: 2806-2814.
+
+\bibitem[Bergmann \textit{et~al.}(2021{\natexlab{a}})Bergmann, Fauser,
+  Sattlegger, and Steger]{Bergmann2019MVTec}
+Bergmann~P, Fauser~M, Sattlegger~D, \textit{et~al.}
+\newblock The mvtec anomaly detection dataset: A comprehensive real-world
+  dataset for unsupervised anomaly detection \allowbreak[J].
+\newblock \textit{International Journal of Computer Vision}, 2021, 129 (4):
+  1038-1059.
+
+\bibitem[Wang \textit{et~al.}(2024{\natexlab{c}})Wang, Zhu, Gao, Gan, Zhang,
+  Gu, Qian, Chen, and Ma]{Wang2024RealIAD}
+Wang~C, Zhu~W, Gao~B~B, \textit{et~al.}
+\newblock Real-iad: A real-world multi-view dataset for benchmarking versatile
+  industrial anomaly detection \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR).
+\newblock 2024{\natexlab{c}}: 22883-22892.
+
+\bibitem[Roth \textit{et~al.}(2022)Roth, Pemula, Zepeda, Sch{\"o}lkopf, Brox,
+  and Gehler]{Roth2022PatchCore}
+Roth~K, Pemula~L, Zepeda~J, \textit{et~al.}
+\newblock Towards total recall in industrial anomaly detection \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2022: 14318-14328.
+
+\bibitem[Defard \textit{et~al.}(2021)Defard, Setkov, Loesch, and
+  Audigier]{Defard2021PaDiM}
+Defard~T, Setkov~A, Loesch~A, \textit{et~al.}
+\newblock Padim: A patch distribution modeling framework for anomaly detection
+  and localization \allowbreak[C].
+\newblock International Conference on Pattern Recognition.
+\newblock 2021: 4750-4756.
+
+\bibitem[Deng \textit{et~al.}(2022)Deng and Li]{Deng2022RD}
+Deng~H, Li~X.
+\newblock Anomaly detection via reverse distillation from one-class embedding
+  \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2022: 9737-9746.
+
+\bibitem[Yu \textit{et~al.}(2022)Yu, Zheng, Wang, Li, Wu, Zhao, and
+  Wu]{Yu2022FastFlow}
+Yu~J, Zheng~Y, Wang~X, \textit{et~al.}
+\newblock Fastflow: Unsupervised anomaly detection and localization via 2d
+  normalizing flows \allowbreak[C].
+\newblock International Conference on Learning Representations.
+\newblock 2022.
+
+\bibitem[Batzner \textit{et~al.}(2024)Batzner, Heckler, and
+  K{\"o}nig]{Batzner2024EfficientAD}
+Batzner~K, Heckler~L, K{\"o}nig~R.
+\newblock Efficientad: Accurate visual anomaly detection at millisecond-level
+  latencies \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Winter Conference on Applications of
+  Computer Vision.
+\newblock 2024: 128-138.
+
+\bibitem[Liu \textit{et~al.}(2023)Liu, Zhou, Xu, and Wang]{liu2023simplenet}
+Liu~Z, Zhou~Y, Xu~Y, \textit{et~al.}
+\newblock Simplenet: A simple network for image anomaly detection and
+  localization \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR).
+\newblock 2023: 20402-20411.
+
+\bibitem[Coscia \textit{et~al.}(2025)Coscia, Genovese, Piuri, and
+  Scotti]{coscia2025onen}
+Coscia~P, Genovese~A, Piuri~V, \textit{et~al.}
+\newblock Onen: Guided attention for natively-explainable anomaly detection
+  \allowbreak[J].
+\newblock \textit{Image and Vision Computing}, 2025, 163: 105741.
+
+\bibitem[Li \textit{et~al.}(2021)Li, Sohn, Yoon, and Pfister]{Li2021CutPaste}
+Li~C~L, Sohn~K, Yoon~J, \textit{et~al.}
+\newblock Cutpaste: Self-supervised learning for anomaly detection and
+  localization \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2021: 9664-9674.
+
+\bibitem[Zhu \textit{et~al.}(2024)Zhu and Pang]{zhu2024inctrl}
+Zhu~J, Pang~G.
+\newblock Toward generalist anomaly detection via in-context residual learning
+  with few-shot sample prompts \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR).
+\newblock 2024: 17826-17836.
+
+\bibitem[Zavrtanik \textit{et~al.}(2021)Zavrtanik, Kristan, and Sko{\v
+  c}aj]{Zavrtanik2021DRAEM}
+Zavrtanik~V, Kristan~M, Sko{\v c}aj~D.
+\newblock Draem: A discriminatively trained reconstruction embedding for
+  surface anomaly detection \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF International Conference on Computer
+  Vision.
+\newblock 2021: 8330-8339.
+
+\bibitem[Li \textit{et~al.}(2024{\natexlab{b}})Li, Huang, Xue, and
+  Zhou]{li2024musc}
+Li~X, Huang~Z, Xue~F, \textit{et~al.}
+\newblock Musc: Zero-shot industrial anomaly classification and segmentation
+  with mutual scoring of the unlabeled images \allowbreak[C].
+\newblock International Conference on Learning Representations (ICLR).
+\newblock 2024{\natexlab{b}}.
+
+\bibitem[Radford \textit{et~al.}(2021)Radford, Kim, Hallacy, Ramesh, Goh,
+  Agarwal, Sastry, Askell, Mishkin, Clark, et~al.]{Radford2021CLIP}
+Radford~A, Kim~J~W, Hallacy~C, \textit{et~al.}
+\newblock Learning transferable visual models from natural language supervision
+  \allowbreak[C].
+\newblock International Conference on Machine Learning.
+\newblock 2021: 8748-8763.
+
+\bibitem[Zhou \textit{et~al.}(2024)Zhou, Pang, Tian, He, and
+  Chen]{zhou2024anomalyclip}
+Zhou~Q, Pang~G, Tian~Y, \textit{et~al.}
+\newblock {AnomalyCLIP}: Object-agnostic prompt learning for zero-shot anomaly
+  detection \allowbreak[C].
+\newblock International Conference on Learning Representations (ICLR).
+\newblock 2024.
+
+\bibitem[Jeong \textit{et~al.}(2023{\natexlab{a}})Jeong, Zou, Kim, Zhang,
+  Ravichandran, and Dabeer]{Jeong2023WinCLIP}
+Jeong~J, Zou~Y, Kim~T, \textit{et~al.}
+\newblock Winclip: Zero-/few-shot anomaly classification and segmentation
+  \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition.
+\newblock 2023{\natexlab{a}}: 19606-19616.
+
+\bibitem[Ma \textit{et~al.}(2025)Ma, Zhang, Yao, Tang, Wu, Li, Yan, Jiang, and
+  Zhou]{ma2025aaclip}
+Ma~W, Zhang~X, Yao~Q, \textit{et~al.}
+\newblock {AA-CLIP}: Enhancing zero-shot anomaly detection via anomaly-aware
+  clip \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR).
+\newblock 2025: 4744-4754.
+
+\bibitem[Bergmann \textit{et~al.}(2021{\natexlab{b}})Bergmann, Jin, Sattlegger,
+  and Steger]{Bergmann2021MVTec3D}
+Bergmann~P, Jin~X, Sattlegger~C, \textit{et~al.}
+\newblock The mvtec 3d-ad dataset for unsupervised 3d anomaly detection and
+  localization \allowbreak[J].
+\newblock \textit{arXiv preprint arXiv:2112.09045}, 2021.
+
+\bibitem[Li \textit{et~al.}(2025{\natexlab{c}})Li, Zheng, Xu, Gan, Lu, Li, Ni,
+  Tian, Huang, Gao, and Wu]{li2025mulsenad}
+Li~W, Zheng~B, Xu~X, \textit{et~al.}
+\newblock Multi-sensor object anomaly detection: Unifying appearance, geometry,
+  and internal properties \allowbreak[C].
+\newblock Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR).
+\newblock 2025{\natexlab{c}}: 9984-9993.
+
+\bibitem[Carvalho \textit{et~al.}(2024)Carvalho, Lafou, Durupt, Leblanc,
+  et~al.]{Carvalho2024AutoVI}
+Carvalho~P, Lafou~M, Durupt~A, \textit{et~al.}
+\newblock Detecting visual anomalies in an industrial environment: Unsupervised
+  methods put to the test on the autovi dataset \allowbreak[J].
+\newblock \textit{Computers in Industry}, 2024, 163: 104151.
+
+\bibitem[Mao \textit{et~al.}(2025)Mao, Chen, Liu, Dong, and
+  Song]{Mao2025IADSurvey}
+Mao~Y, Chen~Z, Liu~Y, \textit{et~al.}
+\newblock A survey on industrial image anomaly detection: methods, benchmarks
+  and rethinks \allowbreak[J].
+\newblock \textit{Measurement}, 2025, 256: 118377.
+
+\bibitem[Zhang \textit{et~al.}(2026)Zhang, Zou, Chen, Qi, Yu, Qi, Yao, Li, Xie,
+  and Tan]{zhang2026continualad}
+Zhang~Z, Zou~G, Chen~C, \textit{et~al.}
+\newblock A task-aware parameter decoupling framework for continual anomaly
+  detection \allowbreak[J].
+\newblock \textit{IEEE Transactions on Industrial Informatics}, 2026, 22 (2):
+  1118-1128.
+
+\bibitem[LaValle(2006)]{LaValle2006}
+LaValle~S~M.
+\newblock Planning algorithms \allowbreak[M].
+\newblock Cambridge University Press, 2006.
+
+\bibitem[Karaman \textit{et~al.}(2011)Karaman and Frazzoli]{Karaman2011}
+Karaman~S, Frazzoli~E.
+\newblock Sampling-based algorithms for optimal motion planning \allowbreak[J].
+\newblock \textit{The International Journal of Robotics Research}, 2011, 30
+  (7): 846-894.
+
+\bibitem[Kingston \textit{et~al.}(2018)Kingston, Moll, and
+  Kavraki]{Kingston2018}
+Kingston~Z, Moll~M, Kavraki~L~E.
+\newblock Sampling-based methods for motion planning with constraints
+  \allowbreak[J].
+\newblock \textit{Annual Review of Control, Robotics, and Autonomous Systems},
+  2018, 1: 159-185.
+
+\bibitem[毛建旭\ 等(2023)毛建旭, 贺振宇, 王耀南, 张辉, 钟杭,
+  易俊飞, 陶梓铭, and 陈诺天]{mao2023powerinspection}
+毛建旭, 贺振宇, 王耀南, 等.
+\newblock 电力巡检机器人路径规划技术及应用综述\allowbreak[J].
+\newblock 控制与决策, 2023, 38 (11): 3009-3024.
+
+\bibitem[Zhao \textit{et~al.}(2024)Zhao, Lu, and
+  Alipour]{zhao2024structuralinspection}
+Zhao~Y, Lu~B, Alipour~M.
+\newblock Optimized structural inspection path planning for automated unmanned
+  aerial systems \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2024, 168: 105764.
+
+\bibitem[Wang \textit{et~al.}(2025)Wang, Wan, Qiu, and Li]{wang2025uavsurface}
+Wang~Y, Wan~S, Qiu~R, \textit{et~al.}
+\newblock A path planning algorithm for uav 3d surface inspection based on
+  normal vector filtering and integrated viewpoint evaluation \allowbreak[J].
+\newblock \textit{Journal of Field Robotics}, 2025, 42 (6): 2561-2579.
+
+\bibitem[Galceran \textit{et~al.}(2013)Galceran and Carreras]{Galceran2013}
+Galceran~E, Carreras~M.
+\newblock A survey on coverage path planning for robotics \allowbreak[J].
+\newblock \textit{Robotics and Autonomous Systems}, 2013, 61 (12): 1258-1276.
+
+\bibitem[Cabreira \textit{et~al.}(2019)Cabreira, Brisolara, and
+  Ferreira]{Cabreira2019}
+Cabreira~T~M, Brisolara~L~B, Ferreira~P~R.
+\newblock Survey on coverage path planning with unmanned aerial vehicles
+  \allowbreak[J].
+\newblock \textit{Drones}, 2019, 3 (1): 4.
+
+\bibitem[Zeng \textit{et~al.}(2020)Zeng, Wen, Zhao, et~al.]{Zeng2020}
+Zeng~R, Wen~Y, Zhao~W, \textit{et~al.}
+\newblock View planning in robot active vision: A survey of systems,
+  algorithms, and applications \allowbreak[J].
+\newblock \textit{Computational Visual Media}, 2020, 6: 225-245.
+
+\bibitem[Jung \textit{et~al.}(2024)Jung, Merkle, and
+  Reiterer]{jung2024bridgepose}
+Jung~J~T, Merkle~D, Reiterer~A.
+\newblock Automated camera pose generation for high-resolution 3d
+  reconstruction of bridges by unmanned aerial vehicles \allowbreak[J].
+\newblock \textit{Remote Sensing}, 2024, 16 (8): 1393.
+
+\bibitem[Gazani \textit{et~al.}(2024)Gazani, Tucsok, Mantegh, and
+  Najjaran]{gazani2023bagofviews}
+Gazani~S~H, Tucsok~M, Mantegh~I, \textit{et~al.}
+\newblock Bag of views: An appearance-based approach to next-best-view planning
+  for 3d reconstruction \allowbreak[J].
+\newblock \textit{IEEE Robotics and Automation Letters}, 2024, 9 (1): 295-302.
+
+\bibitem[Gerkey \textit{et~al.}(2004)Gerkey and Matari{\'c}]{Gerkey2004}
+Gerkey~B~P, Matari{\'c}~M~J.
+\newblock A formal analysis and taxonomy of task allocation in multi-robot
+  systems \allowbreak[J].
+\newblock \textit{The International Journal of Robotics Research}, 2004, 23
+  (9): 939-954.
+
+\bibitem[Chakraa \textit{et~al.}(2023)Chakraa, Gu{\'e}rin, Leclercq, and
+  Lefebvre]{Chakraa2023}
+Chakraa~H, Gu{\'e}rin~F, Leclercq~E, \textit{et~al.}
+\newblock Optimization techniques for multi-robot task allocation problems:
+  Review on the state-of-the-art \allowbreak[J].
+\newblock \textit{Robotics and Autonomous Systems}, 2023, 168: 104492.
+
+\bibitem[Skaltsis \textit{et~al.}(2023)Skaltsis, Shin, and
+  Tsourdos]{Skaltsis2023}
+Skaltsis~G~M, Shin~H~S, Tsourdos~A.
+\newblock A review of task allocation methods for uavs \allowbreak[J].
+\newblock \textit{Journal of Intelligent and Robotic Systems}, 2023, 109: 76.
+
+\bibitem[Ivi{\'c} \textit{et~al.}(2023)Ivi{\'c}, Crnkovi{\'c}, Grb{\v c}i{\'c},
+  and Matlekovi{\'c}]{ivic2023multiuavinspection}
+Ivi{\'c}~S, Crnkovi{\'c}~B, Grb{\v c}i{\'c}~L, \textit{et~al.}
+\newblock Multi-uav trajectory planning for 3d visual inspection of complex
+  structures \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2023, 147: 104709.
+
+\bibitem[Gil-Castilla \textit{et~al.}(2024)Gil-Castilla, Caballero, Maza, and
+  Ollero]{gilcastilla2024hetero}
+Gil-Castilla~M, Caballero~A, Maza~I, \textit{et~al.}
+\newblock Integration of customized commercial uavs with open-source tools in a
+  heterogeneous multi-uav system for power-lines inspection \allowbreak[C].
+\newblock 2024 International Conference on Unmanned Aircraft Systems (ICUAS).
+\newblock 2024.
+
+\bibitem[Jeong \textit{et~al.}(2023{\natexlab{b}})Jeong, Oh, Jang, Hwang, Kim,
+  and Choi]{jeong2023makespan}
+Jeong~B~M, Oh~Y~S, Jang~D~S, \textit{et~al.}
+\newblock Makespan-minimizing heterogeneous task allocation under temporal
+  constraints \allowbreak[J].
+\newblock \textit{Aerospace}, 2023, 10 (12): 1032.
+
+\bibitem[O'Brien \textit{et~al.}(2023)O'Brien, Williams, Chen, Pitt, Arkin, and
+  Kottege]{obrien2023dynamictask}
+O'Brien~M, Williams~J, Chen~S, \textit{et~al.}
+\newblock Dynamic task allocation approaches for coordinated exploration of
+  subterranean environments \allowbreak[J].
+\newblock \textit{Autonomous Robots}, 2023, 47 (8): 1559-1577.
+
+\bibitem[Choset(2001)]{Choset2001}
+Choset~H.
+\newblock Coverage for robotics: A survey of recent results \allowbreak[J].
+\newblock \textit{Annals of Mathematics and Artificial Intelligence}, 2001, 31:
+  113-126.
+
+\bibitem[Panigati \textit{et~al.}(2025{\natexlab{b}})Panigati, Zini, Striccoli,
+  Giordano, Tonelli, Limongelli, and Zonta]{Panigati2025}
+Panigati~T, Zini~M, Striccoli~D, \textit{et~al.}
+\newblock Drone-based bridge inspections: Current practices and future
+  directions \allowbreak[J].
+\newblock \textit{Automation in Construction}, 2025, 173: 106101.
+
+\bibitem[Ortega \textit{et~al.}(2020)Ortega, Reyes~Mu{\~n}oz, McGee, Choudhuri,
+  and Flores-Abad]{ortega2020aiaa}
+Ortega~A, Reyes~Mu{\~n}oz~J, McGee~M, \textit{et~al.}
+\newblock Drone inspection flight path generation from 3d cad models: Power
+  plant boiler case study \allowbreak[C].
+\newblock AIAA Scitech 2020 Forum.
+\newblock 2020.
+
+\bibitem[Bircher \textit{et~al.}(2016)Bircher, Kamel, Alexis, Oleynikova, and
+  Siegwart]{Bircher2016}
+Bircher~A, Kamel~A, Alexis~K, \textit{et~al.}
+\newblock Receding horizon next-best-view planner for 3d exploration
+  \allowbreak[C].
+\newblock 2016 IEEE International Conference on Robotics and Automation.
+\newblock 2016: 1461-1468.
+
+\bibitem[R{\"u}ckin \textit{et~al.}(2022)R{\"u}ckin, Jin, and
+  Popovi{\'c}]{ruckin2022adaptiveipp}
+R{\"u}ckin~J, Jin~L, Popovi{\'c}~M.
+\newblock Adaptive informative path planning using deep reinforcement learning
+  for uav-based active sensing \allowbreak[C].
+\newblock 2022 IEEE International Conference on Robotics and Automation (ICRA).
+\newblock 2022: 4473-4479.
+
+\bibitem[Papaioannou \textit{et~al.}(2022)Papaioannou, Kolios, Theocharides,
+  Panayiotou, and Polycarpou]{Papaioannou2022}
+Papaioannou~S, Kolios~P, Theocharides~T, \textit{et~al.}
+\newblock Uav-based receding horizon control for 3d inspection planning
+  \allowbreak[C].
+\newblock 2022 International Conference on Unmanned Aircraft Systems.
+\newblock 2022: 1202-1209.
+
+\bibitem[Petit \textit{et~al.}(2024)Petit and Lussier~Desbiens]{petit2024moar}
+Petit~L, Lussier~Desbiens~A.
+\newblock Moar planner: Multi-objective and adaptive risk-aware path planning
+  for infrastructure inspection with a uav \allowbreak[C].
+\newblock 2024 IEEE International Conference on Robotics and Automation (ICRA).
+\newblock 2024: 8422-8428.
+
+\bibitem[Kober \textit{et~al.}(2013)Kober, Bagnell, and Peters]{Kober2013}
+Kober~J, Bagnell~J~A, Peters~J.
+\newblock Reinforcement learning in robotics: A survey \allowbreak[J].
+\newblock \textit{The International Journal of Robotics Research}, 2013, 32
+  (11): 1238-1274.
+
+\bibitem[Westheider \textit{et~al.}(2023)Westheider, R{\"u}ckin, and
+  Popovi{\'c}]{westheider2023multiipp}
+Westheider~J, R{\"u}ckin~J, Popovi{\'c}~M.
+\newblock Multi-uav adaptive path planning using deep reinforcement learning
+  \allowbreak[C].
+\newblock 2023 IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS).
+\newblock 2023.
+
+\bibitem[Choi \textit{et~al.}(2009)Choi, Brunet, and How]{Choi2009}
+Choi~H~L, Brunet~L, How~J~P.
+\newblock Consensus-based decentralized auctions for robust task allocation
+  \allowbreak[J].
+\newblock \textit{IEEE Transactions on Robotics}, 2009, 25 (4): 912-926.
+
+\bibitem[Alqefari \textit{et~al.}(2025)Alqefari and Menai]{Alqefari2025}
+Alqefari~S, Menai~M~E~B.
+\newblock Multi-uav task assignment in dynamic environments: Current trends and
+  future directions \allowbreak[J].
+\newblock \textit{Drones}, 2025, 9 (1): 75.
+
+\bibitem[Fei \textit{et~al.}(2022)Fei, Bao, Zhu, Liu, Men, and
+  Xiao]{fei2022limitedcomm}
+Fei~B, Bao~W, Zhu~X, \textit{et~al.}
+\newblock Autonomous cooperative search model for multi-uav with limited
+  communication network \allowbreak[J].
+\newblock \textit{IEEE Internet of Things Journal}, 2022, 9 (19): 19346-19361.
+
+\bibitem[Song \textit{et~al.}(2023)Song, Zhao, and
+  Liu]{Song2023MultiUAVMission}
+Song~J, Zhao~K, Liu~Y.
+\newblock Survey on mission planning of multiple unmanned aerial vehicles
+  \allowbreak[J].
+\newblock \textit{Aerospace}, 2023, 10 (3): 208.
+
+\bibitem[Dong \textit{et~al.}(2025)Dong, Liu, and Mai]{Dong2025}
+Dong~N, Liu~S, Mai~X.
+\newblock Communication-efficient heterogeneous multi-uav task allocation based
+  on clustering \allowbreak[J].
+\newblock \textit{Computer Communications}, 2025, 229: 107986.
+
+\bibitem[Jacobsen \textit{et~al.}(2023)Jacobsen, Matlekovic, Shi, Malle, Ayoub,
+  Hageman, Hansen, Nyboe, and Ebeid]{jacobsen2023swarm}
+Jacobsen~R~H, Matlekovic~L, Shi~L, \textit{et~al.}
+\newblock Design of an autonomous cooperative drone swarm for inspections of
+  safety critical infrastructure \allowbreak[J].
+\newblock \textit{Applied Sciences}, 2023, 13 (3): 1256.
+
+\bibitem[Li \textit{et~al.}(2024{\natexlab{c}})Li, Yan, and Han]{Li2024Wind}
+Li~K, Yan~X, Han~Y.
+\newblock Multi-mechanism swarm optimization for multi-uav task assignment and
+  path planning in transmission line inspection under multi-wind field
+  \allowbreak[J].
+\newblock \textit{Applied Soft Computing}, 2024, 150: 111033.
+
+\bibitem[Silano \textit{et~al.}(2024)Silano, Caballero, Liuzza, Iannelli,
+  Bogdan, and Saska]{Silano2024}
+Silano~G, Caballero~A, Liuzza~D, \textit{et~al.}
+\newblock A signal temporal logic approach for task-based coordination of
+  multi-aerial systems: A wind turbine inspection case study \allowbreak[J].
+\newblock \textit{Robotics and Autonomous Systems}, 2024, 180: 104905.
+
+\bibitem[Kim \textit{et~al.}(2020)Kim, Kim, and Choi]{Kim2020}
+Kim~K~S, Kim~H~Y, Choi~H~L.
+\newblock A bid-based grouping method for communication-efficient decentralized
+  multi-uav task allocation \allowbreak[J].
+\newblock \textit{International Journal of Aeronautical and Space Sciences},
+  2020, 21 (1): 290-302.
+
+\bibitem[Pan \textit{et~al.}(2024)Pan, Li, Qin, Chen, and
+  Gardoni]{pan2024uhcrp}
+Pan~Y, Li~L, Qin~J, \textit{et~al.}
+\newblock Unmanned aerial vehicle--human collaboration route planning for
+  intelligent infrastructure inspection \allowbreak[J].
+\newblock \textit{Computer-Aided Civil and Infrastructure Engineering}, 2024,
+  39 (14): 2074-2104.
+
+\bibitem[Kulkarni \textit{et~al.}(2022)Kulkarni, Dharmadhikari, Tranzatto,
+  Zimmermann, Reijgwart, De~Petris, Nguyen, Khedekar, Papachristos, Ott,
+  Siegwart, Hutter, and Alexis]{kulkarni2022teamed}
+Kulkarni~M, Dharmadhikari~M, Tranzatto~M, \textit{et~al.}
+\newblock Autonomous teamed exploration of subterranean environments using
+  legged and aerial robots \allowbreak[C].
+\newblock 2022 International Conference on Robotics and Automation (ICRA).
+\newblock 2022: 3306-3313.
+
+\end{thebibliography}

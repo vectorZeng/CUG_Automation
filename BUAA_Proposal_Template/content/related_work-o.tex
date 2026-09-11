@@ -1,0 +1,116 @@
+\section{引言}
+
+电力、石化、冶金、交通、新能源等工业领域的重大基础设施长期服役于野外或高危环境，其设备与结构不可避免地出现老化、损伤与故障，定期的巡检与维护是保障安全生产的重要手段。传统人工巡检方式存在劳动强度大、作业风险高、效率低、主观性强等固有缺陷，尤其在输电线路、高耸塔架、炼化装置、桥梁索塔等场景下，人工作业难以抵达或代价高昂。无人机（Unmanned Aerial Vehicle, UAV）凭借其机动灵活、视角可控、成本低廉、可搭载多种载荷等优势，正在深刻改变工业巡检的作业模式\cite{shakhatreh2019survey,floreano2015science,kumar2012opportunities,cai2014survey,kendoul2012survey}。Shakhatreh等\cite{shakhatreh2019survey}系统梳理了无人机在民用领域的应用与关键挑战；Kanellakis等\cite{kanellakis2017survey}从计算机视觉角度总结了无人机感知技术的发展态势；Colomina等\cite{colomina2014unmanned}与Nex等\cite{nex2014uav}则从摄影测量与遥感角度论述了无人机系统的测绘能力与局限。在国内，谭民和王硕\cite{tanm2013robot}对机器人技术的整体进展进行了总结，缪希仁等\cite{miao2020uav}针对输电线路智能巡检的技术需求与解决途径进行了综述，蔡自兴等\cite{caizx2016artificial}则从人工智能方法体系的角度为无人系统的智能化提供了理论框架。
+
+在具体行业应用方面，无人机巡检已在电力、土木、能源等场景形成了较为丰富的研究积累。在电力巡检领域，Nguyen等\cite{nguyen2018automatic}回顾了基于视觉的电力线路自动巡检研究现状并指出了深度学习的潜在作用，Deng等\cite{deng2014unmanned}讨论了电力线路巡检中无人机平台与通信的协同方式，周文青和刘刚\cite{zhouwq2024review}针对基于深度学习和无人机图像的架空线路缺陷巡检进行了系统总结；在基础设施检测领域，Morgenthal和Hallermann\cite{morgenthal2014quality}评估了基于无人机的结构目视检测质量，Ham等\cite{ham2016visual}综述了搭载相机的无人机在土木工程基础设施监测中的相关工作，Rakha和Gorodetsky总结了无人机系统在建成环境中的自动化建筑检测应用，Dorafshan和Maguire\cite{dorafshan2018bridge}对比了人工检测与无人机自动化检测的性能差异，Spencer等\cite{spencer2019advances}进一步展望了基于计算机视觉的土木基础设施检测与监测的发展方向；在工业设施内部，Nikolic等\cite{nikolic2013uav}设计了面向工业设施检测的无人机系统并开展了实际验证。此外，红外热成像作为一种重要的非接触检测手段，在电气设备诊断\cite{jadin2012recent}与无损检测\cite{usamentiaga2014infrared}中已有成熟应用，其与无人机平台的结合进一步拓展了巡检的感知维度。
+
+然而，复杂工业场景下的无人机自主巡检仍面临一系列关键问题：其一，工业场景结构复杂、遮挡严重，全球导航卫星系统（Global Navigation Satellite System, GNSS）信号易受影响，电磁干扰与光照变化显著，对无人机的环境感知与自主定位能力构成严峻挑战\cite{scaramuzza2014vision,stoecker2017review}；其二，工业设备缺陷形态多样、样本稀缺，缺陷尺度跨度大且与背景对比度低，对异常检测算法的精度与泛化能力提出了很高要求\cite{taox2021survey,nguyen2018automatic}；其三，巡检任务点多面广、约束复杂，单架无人机受续航限制难以完成大范围作业，需要研究任务规划、自主导航与多机协同决策技术\cite{zeng2016wireless,mozaffari2019tutorial,zhang2019energy}。围绕上述问题，本文从多源感知与信息融合、异常检测与智能认知、自主决策与多无人机协同三个层面，对国内外研究现状进行梳理与分析，并在最后总结现有研究存在的问题、展望未来发展趋势。需要说明的是，无人机系统的规模化应用还受到空域管理法规的约束\cite{stoecker2017review}，其巡检数据与数字孪生、工业互联网的融合也正在成为智能制造体系的重要组成部分\cite{tao2019digital}。
+
+\section{复杂工业场景下的无人机多源感知与信息融合}
+
+\subsection{工业场景巡检需求与感知任务}
+
+复杂工业场景（如输电走廊、变电站、炼化厂区、风场、光伏电站、桥梁与隧道等）的巡检任务具有鲜明的领域特点：巡检对象空间分布广、结构形态复杂，巡检内容既包括设备外观缺陷（裂纹、锈蚀、破损、异物）的辨识，也包括运行状态参量（温度、局放、气体泄漏、位移形变）的测量\cite{nguyen2018automatic,miao2020uav,zhouwq2024review}。以输电线路为例，巡检内容涵盖杆塔、绝缘子、金具、导线、避雷器及通道环境等多个层次\cite{deng2014unmanned,miao2020uav}；以桥梁为例，需要获取梁体、桥墩、索缆等部位的裂缝、剥落、渗水等表观病害信息\cite{morgenthal2014quality,ham2016visual,dorafshan2018bridge,liu2020image}。Ejaz和Choudhury\cite{ejaz2024drone}对无人机影像在基础设施管理中的计算机视觉应用进行了系统性综述，指出裂缝与表观病害的自动识别是研究的重点方向。这些任务决定了无人机巡检系统必须具备近距离精细观测能力、多视角成像能力和三维重建能力\cite{colomina2014unmanned,nex2014uav,spencer2019advances}。
+
+从感知任务的角度看，无人机自主巡检的感知需求可归纳为三类：一是面向自身安全的环境感知，即对障碍物、地形、气象条件的实时感知，为导航避障提供输入\cite{kanellakis2017survey,lvyang2019sense}；二是面向巡检对象的目标感知，即对设备部件与病害区域的检测、识别与定位\cite{yeum2015vision,cha2017deep}；三是面向场景认知的几何与语义建图，即构建巡检场景的三维模型与语义地图，支撑任务规划与数字化运维\cite{nex2014uav,ham2016visual,tao2019digital}。在室内或地下工业设施（如水电压力管道、矿井巷道）中，由于缺乏GNSS信号，感知系统还必须完全依靠机载传感器完成自定位与环境建图\cite{ozaslan2017autonomous,petrlik2020robust,nil2012review}。
+
+在巡检平台方面，商用工业级无人机的成熟显著降低了自主巡检系统的研发与部署门槛。以大疆创新（Da-Jiang Innovations, DJI）为代表的厂商推出的Matrice 300/350 RTK（RTK为实时动态差分定位技术，Real-Time Kinematic）、Matrice 30、Mavic 3行业版等系列机型，以及大疆机场（DJI Dock）无人值守机库，已成为电力与基础设施巡检的主力装备，也被国内外研究者广泛用作实验载体：Vieira e Silva等基于DJI Matrice 210无人机搭载Zenmuse Z30相机，采集并发布了首个大规模电力资产巡检公开数据集InsPLAD\cite{vieira2023insplad}，包含10607幅真实输电线路图像、17类部件与6类缺陷标注，已成为该领域的重要评测基准；Chatzargyros等\cite{chatzargyros2024uav}采用DJI Matrice M30T与Matrice 300无人机，结合5G传输与机器学习方法，在希腊Lesvos岛实现了输电网的自动化巡检；Li等\cite{li2022bridge}基于大疆Matrice 210 RTK无人机搭载Faster R-CNN完成了桥梁裂缝的自动识别与验证；Jiang等\cite{jiang2022vision}提出视觉引导的无人机系统，结合轻量卷积神经网络实现了桥梁裂缝、剥落与锈蚀等多类损伤的快速检测与定位。这些工作表明，“商用平台+定制算法”的模式已成为工业巡检研究的重要范式，为算法的快速验证与工程落地提供了便利。
+
+\subsection{无人机多模态感知与信息融合技术}
+
+无人机机载感知手段主要包括可见光相机、红外热像仪、激光雷达、深度相机、毫米波雷达、惯性测量单元（Inertial Measurement Unit, IMU）及GNSS接收机等。可见光相机成本低、信息丰富，是缺陷识别的主要数据源\cite{kanellakis2017survey,spencer2019advances}；红外热像仪能够反映设备的温度异常，广泛用于电气接头过热、光伏热斑等故障检测\cite{jadin2012recent,usamentiaga2014infrared}；激光雷达可获取高精度三维点云，不受光照影响，适用于结构测量与避障\cite{wujq2021review,zhang2014loam}；IMU与GNSS则为载体运动状态提供基础观测量。单一传感器难以兼顾复杂环境下的精度、鲁棒性与全天候能力，多传感器信息融合因此成为提升感知性能的基本途径\cite{panq2003basic,wangj2004survey,hey2000multi}。潘泉等\cite{panq2003basic}系统总结了信息融合理论的基本方法与发展脉络；曾雅俊等\cite{zengyj2023review}围绕分布式多传感器多目标跟踪，梳理了目标跟踪、传感器配准、航迹关联与数据融合等关键技术；在导航层面，赵春晖等\cite{zhaoch2019review}总结了景象匹配视觉导航技术，倪磊等\cite{nil2012review}讨论了仅依靠机载传感器的室内无人机自主导航方法。
+
+同步定位与建图（Simultaneous Localization and Mapping, SLAM）是实现无人机自主感知的核心技术框架\cite{durrant2006simultaneous,cadena2016past,wujq2021review,gaox2017visual}。Gupta和Fernando\cite{gupta2022slam}系统综述了无人机SLAM与多传感器数据融合的最新进展与挑战。在视觉SLAM方面，特征提取与匹配是前端的基础，尺度不变特征变换（Scale-Invariant Feature Transform, SIFT）\cite{lowe2004distinctive}、加速稳健特征（Speeded-Up Robust Features, SURF）和ORB（Oriented FAST and Rotated BRIEF）\cite{rublee2011orb}等特征算子，以及随机采样一致性（Random Sample Consensus, RANSAC）\cite{fischler1981random}鲁棒估计、多视图几何理论\cite{hartley2003multiple}为其奠定了基础。权美香等\cite{quanmx2016overview}对视觉SLAM方法与标志性成果进行了综述。代表性系统方面，Mur-Artal等提出的ORB-SLAM\cite{mur2015orb}及其后续ORB-SLAM2\cite{mur2017orb}、ORB-SLAM3\cite{campos2021orb}构建了从单目到多传感器、从单地图到多地图的完整特征法SLAM体系；Engel等提出的LSD-SLAM代表了直接法的大尺度单目SLAM；Forster等提出的SVO以半直接法实现了高帧率视觉里程计，非常适合机载资源受限平台；Labbé和Michaud提出的RTAB-Map则支持视觉与激光的大尺度长期在线建图。Placed等\cite{placed2023active}对主动SLAM的研究前沿与开放问题进行了系统综述。在激光SLAM方面，Zhang和Singh提出的LOAM\cite{zhang2014loam}开创了实时激光里程计与建图的经典框架，LeGO-LOAM针对地面可变地形进行了轻量化优化，FAST-LIO2\cite{xu2022fast}采用迭代卡尔曼滤波实现了快速直接的激光惯性里程计，Loam Livox面向小视场固态激光雷达提供了高精度解决方案。在视觉惯性融合方面，Qin等提出的VINS-Mono\cite{qin2018vins}是鲁棒的单目视觉惯性状态估计器，被广泛应用于无人机自主飞行。近年来，深度学习与SLAM的结合在前端跟踪、后端优化与语义建图等方面展现出新的活力\cite{huangzx2023survey}。
+
+
+值得强调的是，状态估计框架由“特征法+松耦合”向“直接法+紧耦合”的演进，显著提升了机载感知在算力受限条件下的实时性与精度。以FAST-LIO2\cite{xu2022fast}为例：其前向传播利用IMU测量进行状态预测，反向传播对点云进行运动补偿，残差直接基于原始点构建而无需人工特征提取，并借助增量k-d树（ikd-Tree）动态维护地图，使里程计输出频率可达百赫兹级。Bai等\cite{bai2022fasterlio}进一步提出Faster-LIO，以并行稀疏增量体素替代ikd-Tree，在保持精度的同时进一步降低计算开销。这种紧耦合直接法设计特别适合工业巡检无人机的机载计算平台，已成为激光感知的主流方案之一，配合无人机机载传感器即可实现大范围工业设施的三维实时测绘\cite{xu2022fast}。
+
+
+从融合层次上看，多模态信息融合可分为数据级、特征级与决策级三类\cite{panq2003basic,hey2000multi}：数据级融合信息保留最完整，但对时间同步与外参标定要求苛刻；特征级融合在信息保留与计算开销之间取得平衡，是当前视觉-激光-惯性组合的主流选择；决策级融合独立性最强，适用于异构传感器的冗余备份与结果互证。面向复杂工业场景的巡检无人机通常采用“紧耦合状态估计+决策级异常认知”的混合融合架构：在定位建图层面追求精度与实时性，在巡检认知层面强调可靠性与可解释性，这一架构思想对自主巡检系统的总体设计具有重要指导意义。
+
+在系统层面，多模态感知融合已支撑起多个代表性自主飞行系统：Scaramuzza等\cite{scaramuzza2014vision}总结了视觉控制微型飞行机器人从系统设计到全球定位系统（Global Positioning System, GPS）拒止环境自主导航的完整技术路线；Faessler等\cite{faessler2016autonomous}实现了基于视觉的四旋翼自主飞行与实时稠密三维建图；Loianno等\cite{loianno2017estimation}仅依靠单目相机与IMU完成了小型四旋翼的高速敏捷飞行；Mohta等\cite{mohta2018fast}在GPS拒止与杂乱环境中实现了快速自主飞行；Ozaslan等\cite{ozaslan2017autonomous}将自主导航与建图技术应用于水电压力钢管与隧道的检测；Petrlík等\cite{petrlik2020robust}研制的鲁棒无人机系统在美国国防高级研究计划局（Defense Advanced Research Projects Agency, DARPA）地下挑战赛的受限环境中得到验证。这些工作表明，多模态融合感知是复杂工业场景无人机自主化的技术基石。
+
+\subsection{复杂工业环境下的感知挑战}
+
+尽管多模态感知技术发展迅速，复杂工业环境仍给无人机感知带来诸多挑战。首先，工业场景中钢结构密集、电磁环境复杂，GNSS信号多径效应与遮挡严重，电磁干扰还可能影响罗差与通信链路\cite{lvyang2019sense,zeng2016wireless}；其次，高空、夜间、雨雾等作业条件导致成像质量下降，可见光与红外图像的对比度、信噪比显著恶化\cite{jadin2012recent,morgenthal2014quality}；再次，巡检对象如导线、销钉、裂纹等目标尺寸小、背景杂乱，对感知算法的分辨率与检测精度提出极限要求\cite{nguyen2018automatic,zhouwq2024review}；此外，机载平台的计算与能源资源受限，感知算法必须在精度与实时性之间取得平衡\cite{kanellakis2017survey,zhou2018computation}。吕洋等\cite{lvyang2019sense}从感知与规避的角度系统梳理了无人机环境感知、路径规划与机动技术，并给出了分级系统架构；Scherer等\cite{scherer2008flying}与Bry等\cite{bry2015aggressive}的工作则表明在障碍密集环境中实现高速低空飞行对感知的视场、延迟与鲁棒性提出了苛刻要求。综合来看，面向复杂工业场景的感知系统需要在多传感器冗余配置、退化环境下的鲁棒状态估计以及轻量化感知算法等方面持续突破。
+
+\section{工业设备缺陷检测与多模态智能认知}
+
+\subsection{工业设备异常类型与检测任务}
+
+工业设备异常形态多样，按表现形式大致可分为：结构表观缺陷（裂纹、锈蚀、剥落、变形、断股）、部件状态异常（缺失、松动、破损、异物悬挂）、热学异常（接头过热、光伏热斑、绝缘劣化发热）以及环境异常（通道树障、施工机械入侵、烟火）等\cite{taox2021survey,nguyen2018automatic,miao2020uav}。陶显等\cite{taox2021survey}将缺陷检测任务按监督程度划分为全监督、无监督与其他方法，并指出工业缺陷检测面临缺陷尺度变化大、成像对比度低、类别不均衡、缺陷样本稀缺等共性难题；Pang等\cite{pang2021deep}与Chalapathy等则从通用异常检测的角度对深度学习方法进行了系统评述。从检测任务的层次看，异常认知包括“是否存在异常”的图像级分类、“异常在哪里”的目标级检测和“异常形态如何”的像素级分割三个粒度\cite{taox2021survey}。工业界还构建了面向无监督异常检测的公开基准，如MVTec AD数据集\cite{bergmann2019mvtec}，为算法评估提供了统一标准。此外，电气设备的红外诊断已形成较为成熟的热缺陷判据体系\cite{jadin2012recent,usamentiaga2014infrared}，为热学异常的自动识别提供了领域知识基础。
+
+\subsection{基于视觉的目标检测与缺陷异常识别}
+
+深度学习的发展极大推动了基于视觉的工业缺陷检测。卷积神经网络（Convolutional Neural Network, CNN）方面，AlexNet\cite{krizhevsky2012imagenet}开启了深度学习在视觉识别中的浪潮，VGG\cite{simonyan2015very}与GoogLeNet加深了网络深度，ResNet\cite{he2016deep}通过残差连接解决了深层网络退化问题，DenseNet进一步强化了特征复用；批归一化\cite{ioffe2015batch}、Dropout\cite{srivastava2014dropout}与Adam优化器\cite{kingma2015adam}等训练技术则保障了深度模型的可训练性；ImageNet\cite{deng2009imagenet}与MS COCO\cite{lin2014microsoft}等大规模数据集为模型预训练与评测提供了基础。面向机载边缘计算，MobileNet\cite{howard2017mobilenets}、MobileNetV2与EfficientNet\cite{tan2019efficientnet}等轻量化网络在精度与效率之间取得了良好平衡。
+
+在目标检测方面，两阶段方法以Fast R-CNN\cite{girshick2015fast}、Faster R-CNN\cite{ren2015faster}和Mask R-CNN\cite{he2017mask}为代表，检测精度高；单阶段方法以YOLO（You Only Look Once）系列\cite{redmon2016you,redmon2017yolo9000,redmon2018yolov3,bochkovskiy2020yolov4,wang2023yolov7}、SSD（Single Shot MultiBox Detector）\cite{liu2016ssd}和RetinaNet\cite{lin2017focal}为代表，满足实时性要求；EfficientDet\cite{tan2020efficientdet}通过复合缩放实现了高效检测。Terven等\cite{terven2025yolo}系统梳理了YOLO系列从v1到v8及YOLO-NAS的演进及其在实时检测中的优势；近年来，基于Transformer的检测器DETR（DEtection TRansformer）\cite{carion2020end}与Deformable DETR\cite{zhu2021deformable}消除了手工锚框设计，端到端检测范式逐渐成熟；视觉Transformer（Vision Transformer, ViT）\cite{dosovitskiy2021image}与Swin Transformer\cite{liu2021swin}以及自注意力机制\cite{vaswani2017attention}的引入，也显著提升了视觉特征建模能力。在像素级缺陷定位方面，全卷积网络（Fully Convolutional Network, FCN）\cite{long2015fully}、U-Net\cite{ronneberger2015u}与DeepLabv3+等语义分割网络被广泛用于裂纹等细小缺陷的精确提取。
+
+
+其中，Faster R-CNN\cite{ren2015faster}是工业缺陷检测中被采用最多的基线框架之一：其卷积层提取的特征图同时送入区域建议网络（Region Proposal Network, RPN）与检测分支，RPN充当“注意力”机制生成候选框，再经感兴趣区域（Region of Interest, RoI）池化完成分类与回归，实现了候选框生成与检测的端到端统一。对于绝缘子、螺栓、防震锤等小目标部件，两阶段方法凭借候选区域的二次精修通常具有更高的召回率；而单阶段方法在机载实时检测中更具速度优势。实际巡检系统中常采用“离线精检+在线快检”的组合策略：机上以轻量单阶段模型完成目标引导与粗筛，地面服务器以两阶段或分割模型完成精细判读\cite{zhouwq2024review,tao2020detection}。
+
+上述通用视觉模型在工业巡检中得到了大量领域化应用：Cha等\cite{cha2017deep}率先将CNN用于混凝土裂缝检测；Yang等\cite{yang2018pixel}基于全卷积网络实现了路面裂缝的像素级自动检测与量化测量；Yeum和Dyke\cite{yeum2015vision}实现了桥梁裂缝的视觉自动检测；Gao和Mosalam\cite{gao2018deep}利用深度迁移学习提升了结构损伤识别的泛化能力；Cha等\cite{cha2018autonomous}进一步提出了基于区域深度学习的多类型损伤自主检测方法；Li和Zhao\cite{li2019image}结合CNN与穷举搜索技术检测混凝土裂缝；Liu等\cite{liu2020image}将无人机图像与三维场景重建结合用于桥墩裂缝评估；Tao等\cite{tao2020detection}针对航拍图像中的绝缘子缺陷设计了级联CNN检测方法。国内研究方面，陶显等\cite{taox2021survey}全面总结了全监督与无监督表面缺陷检测方法，周文青和刘刚\cite{zhouwq2024review}则系统分析了无人机航拍图像架空线路缺陷检测的数据集、算法与评价指标，指出专用数据集缺乏与小目标漏检是当前的主要瓶颈。
+
+\subsection{多模态异常识别与智能预警}
+
+工业场景中缺陷样本稀缺、未知异常类型不断涌现，使得无监督/自监督异常检测成为研究热点。生成式方法方面，变分自编码器（Variational Autoencoder, VAE）\cite{kingma2014auto}与生成对抗网络（Generative Adversarial Network, GAN）\cite{goodfellow2014generative}为重建式异常检测奠定了基础，f-AnoGAN\cite{fangan2019}利用GAN隐空间搜索实现异常定位，GANomaly通过编码-解码-再编码的对抗训练提升了检测性能；单类分类方面，深度支持向量数据描述（Deep Support Vector Data Description, Deep SVDD）\cite{ruff2018deep}将正常样本特征映射到最小超球内以界定正常边界。近年来，基于预训练特征的方法表现突出：SPADE利用深度金字塔对应实现亚图像级异常检测，PaDiM对图像块分布进行高斯建模，PatchCore\cite{roth2022towards}通过核心集采样的特征记忆库实现了接近“完全召回”的工业异常检测；师生网络方面，Bergmann等提出的“无信息学生”模型以学生-教师特征回归误差定位异常，EfficientAD\cite{batzner2024efficientad}将检测延迟降至毫秒级，满足了在线巡检的实时性要求；自监督方面，CutPaste通过剪切粘贴构造伪异常进行训练，DRAEM\cite{zavrtanik2021draem}将重建嵌入与判别分割相结合取得了优异的表面异常检测效果；基于归一化流的FastFlow与CFLOW-AD则通过特征分布密度估计实现高效异常定位。
+
+
+PatchCore\cite{roth2022towards}在MVTec AD基准\cite{bergmann2019mvtec}15个工业类别上的异常分割表明：模型仅在正常样本上训练，即可对瓶体、电缆、胶囊、织物、金属螺母等不同材质、不同形态的缺陷给出像素级定位。这类基于预训练特征记忆库的方法无需缺陷样本、训练成本低、跨类别通用性强，对缺陷样本极度稀缺的工业巡检场景具有重要参考价值。DRAEM\cite{zavrtanik2021draem}采用“人工合成异常+判别分割”技术路线，将重建嵌入与判别分割相结合，在划痕、污渍、破损等多种表面异常上均能输出与真值高度吻合的分割结果，验证了该技术路线的有效性。这两类工作代表了当前无监督工业异常检测的最高水平，也为无人机巡检图像的缺陷自动判读提供了可直接迁移的技术储备。
+
+
+随着视觉-语言基础模型的兴起，异常检测正走向开放词汇与少样本范式：对比语言-图像预训练（Contrastive Language-Image Pre-training, CLIP）\cite{radford2021learning}通过自然语言监督学习到可迁移的视觉表征，WinCLIP\cite{jeong2023winclip}在此基础上实现了零样本/少样本异常分类与分割；分割一切模型（Segment Anything Model, SAM）\cite{kirillov2023segment}提供了通用的可提示分割能力，Grounding DINO\cite{liu2024grounding}支持开放集目标检测，DINOv2\cite{oquab2024dinov2}则提供了无需标注的鲁棒视觉特征，这些基础模型为巡检场景中长尾缺陷的认知提供了新途径。在智能预警层面，多模态融合是提升异常认知可靠性的关键：可见光与红外的融合可同时进行表观缺陷与热缺陷判别\cite{jadin2012recent,usamentiaga2014infrared}，多传感器时空配准与航迹级融合可降低虚警率\cite{zengyj2023review,panq2003basic}，检测结果与设备台账、历史巡检数据的关联分析则可支撑缺陷发展趋势预测与分级预警；进一步地，将巡检数据接入数字孪生体系\cite{tao2019digital}，能够实现设备状态的全生命周期管理与预测性维护，构成“感知—认知—预警—决策”的完整闭环。
+
+\section{无人机自主巡检规划与多无人机协同决策}
+
+\subsection{无人机自主巡检任务规划}
+
+自主巡检任务规划的目标是在满足飞行安全、传感器覆盖、续航与通信等约束的前提下，优化巡检路径与作业序列。王琼等\cite{wangq2019overview}将无人机航迹规划算法分为传统经典算法与现代智能算法两大类并进行了对比；刘庆健等\cite{liuqj2023survey}针对低空环境总结了图搜索、线性规划、智能优化与强化学习等路径规划方法；Aggarwal和Kumar与Radmanesh等分别对无人机路径规划与避障技术进行了比较研究；Goerzen等则从自主制导的角度梳理了运动规划算法体系。对于巡检这类需要对目标区域或结构表面进行完整观测的任务，覆盖路径规划（Coverage Path Planning, CPP）是核心问题：Choset\cite{choset2001coverage}与Acar等奠定了机器人覆盖规划的理论基础，Galceran和Carreras\cite{galceran2013survey}系统总结了覆盖路径规划的分解策略与算法，Cabreira等专门面向无人机场景综述了覆盖规划研究，孙伟昌等\cite{sunwc2026review}从环境建模、问题模型与规划算法三个层面梳理了无人机覆盖路径规划的最新进展。在集群层面，贾高伟和王剑锋\cite{jiagw2021review}综述了无人机集群任务规划方法，杜永浩等\cite{duyh2020survey}从无人机群与多星两类对象总结了集群智能调度技术，贾永楠等\cite{jiayn2020recent}则对无人机集群研究进展进行了全面回顾。
+
+任务规划还需与平台资源约束紧耦合：Zeng等\cite{zeng2016wireless}指出了无人机通信中的机遇与挑战，Mozaffari等\cite{mozaffari2019tutorial}系统论述了无人机无线网络的应用与开放问题，Zhang和Zeng\cite{zhang2019energy}研究了能量高效的无人机通信与轨迹联合优化，Zhou等\cite{zhou2018computation}针对无人机使能的移动边缘计算系统最大化了计算速率。这些工作表明，巡检任务规划正从单纯的几何路径优化走向通信、计算与能量协同的综合优化。
+
+\subsection{动态环境下的自主导航与路径重规划}
+
+路径规划算法可分为图搜索、随机采样与势场/优化类方法。图搜索方面，Dijkstra算法\cite{dijkstra1959note}与A*算法\cite{hart1968formal}奠定了最短路径搜索基础；针对动态环境，Stentz提出的D*\cite{stentz1994optimal}与Koenig等提出的D* Lite\cite{koenig2002d}支持增量式重规划，可在环境信息更新时快速修正路径。随机采样方面，Kavraki等提出的概率路图法（Probabilistic Roadmap, PRM）\cite{kavraki1996probabilistic}与LaValle等提出的快速扩展随机树（Rapidly-exploring Random Tree, RRT）\cite{lavalle2001randomized}适用于高维构型空间，Karaman和Frazzoli提出的RRT*\cite{karaman2011sampling}保证了渐近最优性。局部避障方面，Khatib的人工势场法\cite{khatib1986real}、Fox等的动态窗口法\cite{fox1997dynamic}、Van den Berg等的互惠速度障碍法\cite{van2011reciprocal}以及Rösmann等的定时弹性带（Timed Elastic Band, TEB）局部规划器\cite{rosmann2017trajectory}被广泛用于在线避障。
+
+
+理论分析与实验表明\cite{karaman2011sampling}，在相同采样次数下RRT虽能快速找到可行路径，但路径质量不再改进；RRT*通过“重布线”操作持续优化树的结构，随迭代次数增加渐近收敛到最优路径。这一性质对巡检航迹的全局优化至关重要——巡检路径的长度直接关系到能耗与作业时间，渐近最优性保证了规划结果随计算资源投入而不断改进。需要指出的是，原始RRT*未考虑无人机运动学约束，实际系统中通常将其与动力学可行的轨迹优化方法（如B样条优化\cite{usenko2017real}、最小snap\cite{mellinger2011minimum}）串联使用，形成“前端寻路+后端优化”的两层规划架构。
+
+面向四旋翼的动力学可行轨迹生成，Mellinger和Kumar\cite{mellinger2011minimum}提出了最小snap轨迹生成与控制方法；Usenko等\cite{usenko2017real}利用B样条与三维环形缓冲区实现了微型飞行器的实时轨迹重规划；Gao等提出“示教-重复-重规划”框架，兼顾了复杂环境中的激进飞行与全局最优；Zhou等\cite{zhou2022ego}提出的EGO-Planner不依赖欧几里得符号距离场（Euclidean Signed Distance Field, ESDF）地图即可生成鲁棒高效的局部轨迹，已在自主飞行中广泛采用。在探索与未知环境感知方面，Bircher等\cite{bircher2016receding}提出的“下一最佳视角”规划器为三维自主探索提供了经典方案。工程实现层面，Scherer等\cite{scherer2008flying}验证了障碍间高速低空飞行的可行性，Bry等\cite{bry2015aggressive}实现了室内密集环境中的敏捷飞行，Faessler等\cite{faessler2016autonomous}、Loianno等\cite{loianno2017estimation}与Mohta等\cite{mohta2018fast}分别在视觉自主飞行、单目惯性高速飞行和GPS拒止杂乱环境飞行方面树立了代表性系统标杆，Ozaslan等\cite{ozaslan2017autonomous}与Petrlík等\cite{petrlik2020robust}的工作则直接面向工业受限空间的巡检应用。国内方面，吕洋等\cite{lvyang2019sense}总结了无人机感知与规避的概念、技术与系统，赵春晖等\cite{zhaoch2019review}梳理了景象匹配导航技术，倪磊等\cite{nil2012review}分析了室内无人机自主导航的关键难点，Kendoul\cite{kendoul2012survey}对无人旋翼机的制导、导航与控制进展进行了全面综述。总体来看，动态环境下的自主导航已形成“感知-规划-控制”紧耦合的技术路线，但在传感器退化、动态障碍密集和极端气象条件下的可靠性仍有待提高。
+
+\subsection{多无人机任务分配与协同决策}
+
+面对大范围、多目标的巡检任务，多无人机协同可显著提升作业效率与系统鲁棒性。任务分配的理论基础方面，Gerkey和Matarić\cite{gerkey2004formal}建立了多机器人任务分配的形式化分析框架，Korsah等提出了更为全面的分类体系，Khamis等对多机器人任务分配研究现状进行了评述。市场机制与分布式拍卖是协同分配的主流方法，Choi等提出的基于一致性协议的束拍卖算法（Consensus-Based Bundle Algorithm, CBBA）\cite{choi2009consensus}在鲁棒性与通信开销之间取得了良好平衡；翟政等\cite{zhaiz2023market}综述了基于市场机制的无人集群任务分配研究。智能优化算法方面，张瑞鹏等\cite{zhangrp2022hybrid}提出了多无人机协同任务分配的混合粒子群算法；博弈论方法方面，鞠锴等\cite{jukai2022task}研究了基于势博弈的异构多智能体任务分配与重分配。国内综述工作还包括杜永浩等\cite{duyh2020survey}对无人飞行器集群智能调度的总结、毕文豪等\cite{biwh2024review}对无人机集群任务分配技术的评述、张可为等\cite{zhangkw2021survey}对多无人机侦察任务分配方法的梳理，以及向锦武等\cite{xiangjw2022key}对复杂环境下无人集群系统自主协同关键技术的分析。
+
+多机协同的底层是一致性与群体行为控制理论：Vicsek模型\cite{vicsek1995novel}与Reynolds的群体行为模型\cite{reynolds1987flocks}揭示了集群自组织的基本规律，Olfati-Saber和Murray\cite{olfati2004consensus}、Ren和Beard\cite{ren2005consensus}建立了一致性控制理论，Olfati-Saber\cite{olfati2006flocking}给出了集群蜂拥控制的算法框架；Michael等则展示了空中机器人的协同操作与搬运能力。近年来，多智能体强化学习为协同决策提供了数据驱动的新范式：深度Q网络（Deep Q-Network, DQN）\cite{mnih2015human}证明了深度强化学习达到人类水平的控制能力，近端策略优化（Proximal Policy Optimization, PPO）\cite{schulman2017proximal}、软演员-评论家（Soft Actor-Critic, SAC）\cite{haarnoja2018soft}与深度确定性策略梯度（Deep Deterministic Policy Gradient, DDPG）\cite{lillicrap2016continuous}等单智能体算法构成了基础，多智能体DDPG（Multi-Agent DDPG, MADDPG）\cite{lowe2017multi}、QMIX\cite{rashid2018qmix}与多智能体PPO（Multi-Agent PPO, MAPPO）\cite{yu2022surprising}等专门针对多智能体协作-竞争混合环境，Vinyals等在《星际争霸II》中达到大师级水平，展示了多智能体强化学习的潜力；Gronauer和Diepold\cite{gronauer2022marl}对多智能体深度强化学习的算法体系与发展脉络进行了系统综述；李明哲等\cite{limz2023dynamic}将强化学习应用于无人机集群动态任务规划。在自主集群系统方面，Zhou等\cite{zhou2022swarm}实现了野外环境中的微型飞行机器人集群自主飞行，其去中心化时空轨迹联合规划方法\cite{zhou2021decentralized}使集群仅依靠机载感知与局部通信即可在密林等未知环境中无碰撞穿行；Zhou等\cite{zhou2023racer}提出的RACER系统进一步实现了去中心化的多无人机快速协同探索，通过在线空间覆盖划分与机间分布式交互动态分配探索任务，为面向大范围工业设施的多机协同巡检提供了技术参照。该集群系统在野外树林环境中的真实飞行实验表明，多架四旋翼可在密集树干间自主避障并保持协同队形，全程无外部定位与集中式控制，标志着去中心化集群规划已从仿真走向野外实测。
+
+
+总体而言，多无人机协同巡检正从集中式离线规划走向分布式在线协同，但在通信受限、异构平台与动态任务条件下的可扩展性与安全性仍是开放问题。
+
+\section{总结与展望}
+
+\subsection{现有研究存在的问题}
+
+综合上述分析，面向复杂工业场景的无人机自主巡检研究虽已取得长足进展，但仍存在以下突出问题：
+
+（1）感知系统的环境鲁棒性不足。现有SLAM与感知融合方法在GNSS拒止、光照剧变、雨雾粉尘、强电磁干扰等退化条件下易出现漂移甚至失效\cite{cadena2016past,lvyang2019sense,wujq2021review}，多传感器冗余与退化感知能力仍需加强\cite{petrlik2020robust,mohta2018fast}。
+
+（2）异常检测依赖标注数据且泛化能力有限。监督式缺陷检测需要大量高质量标注样本，而工业缺陷样本稀缺、类别长尾分布严重\cite{taox2021survey,zhouwq2024review}；无监督异常检测虽然缓解了标注依赖\cite{roth2022towards,batzner2024efficientad}，但在跨场景、跨设备迁移时性能下降明显，小样本与开放集条件下的可靠识别仍未解决\cite{pang2021deep,jeong2023winclip}。
+
+（3）机载智能与地面协同的计算矛盾突出。高精度感知与检测模型计算量大，而机载平台算力与能源受限\cite{howard2017mobilenets,zhou2018computation}，端-边-云协同的推理架构与模型轻量化、能耗感知的任务调度仍缺乏系统性解决方案\cite{zhang2019energy,mozaffari2019tutorial}。
+
+（4）多机协同的实用化程度不高。现有任务分配与协同规划方法多在理想通信与静态环境假设下验证\cite{choi2009consensus,biwh2024review}，在通信受限、动态扰动与异构平台条件下的分布式协同决策、安全互避碰与涌现行为验证仍不成熟\cite{xiangjw2022key,zhou2022swarm}，且缺乏面向真实工业巡检场景的大规模实测数据与标准评测体系。
+
+\subsection{未来发展趋势}
+
+针对上述问题，未来研究可从以下方向展开：
+
+（1）基础模型赋能的开放世界巡检认知。借助CLIP\cite{radford2021learning}、SAM\cite{kirillov2023segment}、Grounding DINO\cite{liu2024grounding}与DINOv2\cite{oquab2024dinov2}等视觉基础模型的开放词汇与少样本能力，结合领域微调与提示学习，有望突破长尾缺陷识别瓶颈，实现“一次训练、多场景泛化”的巡检认知\cite{jeong2023winclip,radford2021learning}。
+
+（2）神经隐式表征与语义SLAM融合的场景理解。将神经辐射场等新型三维表征与语义SLAM\cite{huangzx2023survey,campos2021orb}结合，构建兼具几何精度与语义信息的巡检场景地图，为厘米级缺陷定位与变化检测提供支撑\cite{nex2014uav,liu2020image}。
+
+（3）数字孪生驱动的预测性运维。将无人机巡检数据与设备数字孪生模型深度融合\cite{tao2019digital}，实现缺陷演化预测、检修策略优化与巡检任务的自适应生成，形成“以检促修、以修导检”的闭环智能运维体系。
+
+（4）群体智能与端边云协同的规模化巡检。发展通信受限下的分布式协同决策与多智能体强化学习方法\cite{yu2022surprising,zhou2023racer}，结合端边云协同计算\cite{zhou2018computation}与能量感知调度\cite{zhang2019energy}，实现大范围工业设施的多机自主协同巡检；同时，完善自主飞行安全验证与空域合规体系\cite{stoecker2017review,floreano2015science}，推动技术从演示验证走向规模化工程应用。
+
+综上所述，面向复杂工业场景的无人机自主巡检是多学科交叉的前沿方向，其核心在于感知、认知与决策三个层面的能力贯通。随着多模态感知、深度异常认知与群体协同决策技术的持续进步，无人机自主巡检系统必将朝着更高自主性、更强鲁棒性与更广适用性的方向发展，为工业安全生产与智能运维提供坚实的技术支撑。

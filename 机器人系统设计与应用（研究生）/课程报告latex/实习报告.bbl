@@ -1,0 +1,51 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Yan et~al.(2023)Yan, Lai, Meng, She, and Wu]{yan2023disturbance}
+YAN Z, LAI X, MENG Q, et~al.
+\newblock Time-varying disturbance-observer-based tracking control of uncertain
+  flexible-joint manipulator\allowbreak[J/OL].
+\newblock Control Engineering Practice, 2023, 139: 105624.
+\newblock DOI: \doi{10.1016/j.conengprac.2023.105624}.
+
+\bibitem[Yan et~al.(2023)Yan, Lai, Meng, Wu, She, and Iwasaki]{yan2023pendubot}
+YAN Z, LAI X, MENG Q, et~al.
+\newblock Modeling, analysis, and adaptive neural modified-backstepping control
+  of an uncertain horizontal pendubot with double flexible
+  joints\allowbreak[J/OL].
+\newblock Control Engineering Practice, 2023, 139: 105647.
+\newblock DOI: \doi{10.1016/j.conengprac.2023.105647}.
+
+\bibitem[Nu{\~n}o et~al.(2010)Nu{\~n}o, Ortega, and Basañez]{nuno2010adaptive}
+NU{\~N}O E, ORTEGA R, BASAñEZ L.
+\newblock An adaptive controller for nonlinear teleoperators\allowbreak[J/OL].
+\newblock Automatica, 2010, 46\allowbreak (1): 155-159.
+\newblock DOI: \doi{10.1016/j.automatica.2009.10.026}.
+
+\bibitem[Nu{\~n}o et~al.(2011)Nu{\~n}o, Basañez, and
+  Ortega]{nuno2011passivity}
+NU{\~N}O E, BASAñEZ L, ORTEGA R.
+\newblock Passivity-based control for bilateral teleoperation: A
+  tutorial\allowbreak[J/OL].
+\newblock Automatica, 2011, 47\allowbreak (3): 485-495.
+\newblock DOI: \doi{10.1016/j.automatica.2011.01.004}.
+
+\bibitem[Nu{\~n}o et~al.(2014)Nu{\~n}o, Sarras, Basañez, and
+  Kinnaert]{nuno2014teleoperators}
+NU{\~N}O E, SARRAS I, BASAñEZ L, et~al.
+\newblock Control of teleoperators with joint flexibility, uncertain parameters
+  and time-delays\allowbreak[J/OL].
+\newblock Robotics and Autonomous Systems, 2014, 62\allowbreak (12): 1691-1702.
+\newblock DOI: \doi{10.1016/j.robot.2014.08.003}.
+
+\end{thebibliography}

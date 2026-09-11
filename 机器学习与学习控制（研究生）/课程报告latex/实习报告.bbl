@@ -1,0 +1,135 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Ahn et~al.(2007)]{ahn2007}
+AHN H, et~al.
+\newblock Iterative learning control: Brief survey and
+  categorization\allowbreak[J].
+\newblock IEEE Transactions on Systems, Man, and Cybernetics, 2007.
+
+\bibitem[Rogers et~al.(2024)]{ilc_review2024}
+ROGERS E, et~al.
+\newblock Iterative learning control—algorithms, applications and
+  beyond\allowbreak[J/OL].
+\newblock IEEE Transactions on Automatic Control, 2024.
+\newblock DOI: \doi{10.1109/TAC.2024.10886288}.
+
+\bibitem[Foudeh et~al.(2020)]{foudeh2020}
+FOUDEH H, et~al.
+\newblock Application of norm optimal iterative learning control to
+  quadrotor\allowbreak[J].
+\newblock Energies, 2020.
+
+\bibitem[Nekoo et~al.(2025)]{nek2025}
+NEKOO S, et~al.
+\newblock Experimental iterative learning control of a quadrotor in
+  flight\allowbreak[J].
+\newblock Robotica, 2025.
+
+\bibitem[Nguyen et~al.(2021)]{nguyen2021}
+NGUYEN L, et~al.
+\newblock Iterative learning sliding mode control for uav trajectory
+  tracking\allowbreak[J].
+\newblock Electronics, 2021, 10\allowbreak (20).
+
+\bibitem[Schoellig et~al.(2012)]{schoellig2012}
+SCHOELLIG A, et~al.
+\newblock Optimization-based iterative learning for precise quadrocopter
+  trajectory tracking\allowbreak[J].
+\newblock Autonomous Robots, 2012.
+
+\bibitem[Wei et~al.(2025)]{wei2025}
+WEI Y, et~al.
+\newblock Iterative learning control for non-linear discrete-time
+  systems\allowbreak[J].
+\newblock Journal of Intelligent \& Robotic Systems, 2025.
+
+\bibitem[Bhounsule et~al.(202x)]{bhounsule202x}
+BHOUNSULE P, et~al.
+\newblock Iterative learning control for high-fidelity tracking\allowbreak[J].
+\newblock IEEE Robotics and Automation Letters, 202x.
+
+\bibitem[Zhang et~al.(2021)]{deepilc2021}
+ZHANG Y, et~al.
+\newblock Deep iterative learning control for quadrotor's trajectory
+  tracking\allowbreak[J/OL].
+\newblock IEEE Transactions on Robotics, 2021.
+\newblock DOI: \doi{10.1109/TRO.2021.9483044}.
+
+\bibitem[Xu et~al.(2020)]{xu2020}
+XU X, et~al.
+\newblock Iterative learning control (ilc) guided reinforcement learning
+  control\allowbreak[J].
+\newblock IEEE Transactions on Control Systems Technology, 2020.
+
+\bibitem[Tao et~al.(2025)]{tao2025}
+TAO H, et~al.
+\newblock Reinforcement learning based iterative learning
+  control\allowbreak[J].
+\newblock Control Engineering Practice, 2025.
+
+\bibitem[Liu et~al.(2025)]{liu2025}
+LIU Y, et~al.
+\newblock Trajectory tracking controller for quadrotor by continual
+  learning\allowbreak[J].
+\newblock Drones, 2025.
+
+\bibitem[Meindl et~al.(2022)]{meindl2022}
+MEINDL M, et~al.
+\newblock Autonomous motion learning for unknown systems\allowbreak[J].
+\newblock Frontiers in Robotics and AI, 2022.
+
+\bibitem[{MathWorks}(2025)]{mathworks2025}
+{MathWorks}.
+\newblock Quadrotor trajectory tracking using iterative learning
+  control\allowbreak[J/OL].
+\newblock MATLAB Documentation, 2025.
+\newblock
+  \url{https://ww2.mathworks.cn/help/slcontrol/ug/quadrotor-trajectory-tracking-using-ilc.html}.
+
+\bibitem[Adlakha et~al.(2021)]{adlakha2021}
+ADLAKHA R, et~al.
+\newblock A two-step optimization-based iterative learning
+  control\allowbreak[J].
+\newblock Journal of Dynamic Systems, Measurement, and Control, 2021.
+
+\bibitem[Hock et~al.(2016)]{hock2016}
+HOCK A, et~al.
+\newblock Distributed iterative learning control for multi-agent
+  systems\allowbreak[J].
+\newblock IEEE Conference on Decision and Control, 2016.
+
+\bibitem[Fu et~al.(2023)]{fu2023}
+FU X, et~al.
+\newblock Iterative learning control for uavs formation\allowbreak[J].
+\newblock Mathematics and Computers in Simulation, 2023.
+
+\bibitem[Zhang et~al.(2023)]{zhang2023}
+ZHANG L, et~al.
+\newblock A review of machine learning control in building
+  operations\allowbreak[J].
+\newblock NIST Publications, 2023.
+
+\bibitem[Aslam et~al.(2025)]{aslam2025}
+ASLAM M, et~al.
+\newblock Survey of deep learning approaches for securing industrial
+  control\allowbreak[J].
+\newblock Journal of Industrial Information Integration, 2025.
+
+\bibitem[Lazarowska(2026)]{lazarowska2026}
+LAZAROWSKA A.
+\newblock A survey of machine learning algorithms for autonomous
+  vehicles\allowbreak[J].
+\newblock Electronics, 2026.
+
+\end{thebibliography}

@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}引言}{1}{section.1}%
+\contentsline {section}{\numberline {2}迭代学习控制理论基础}{1}{section.2}%
+\contentsline {section}{\numberline {3}四旋翼无人机动力学建模}{2}{section.3}%
+\contentsline {section}{\numberline {4}基于ILC的级联控制系统设计}{3}{section.4}%
+\contentsline {section}{\numberline {5}Simulink仿真实现与结果分析}{5}{section.5}%
+\contentsline {section}{\numberline {6}机器学习与学习控制的融合探讨}{7}{section.6}%
+\contentsline {section}{\numberline {7}结论}{8}{section.7}%
